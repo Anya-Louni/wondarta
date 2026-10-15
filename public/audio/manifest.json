@@ -1,0 +1,12 @@
+{
+  "credits": "UI sounds by Kenney (www.kenney.nl): 'Interface Sounds' and 'UI Audio' packs, CC0 1.0. See LICENSE_*.txt in audio/kenney/.",
+  "files": {
+    "click": "kenney/ui-audio_click3.ogg",
+    "open": "kenney/interface-sounds_open_002.ogg",
+    "pop": "kenney/interface-sounds_drop_002.ogg",
+    "correct": "kenney/interface-sounds_confirmation_002.ogg",
+    "wrong": "kenney/interface-sounds_error_004.ogg",
+    "portal": "kenney/interface-sounds_maximize_006.ogg",
+    "giggle": "kenney/interface-sounds_pluck_001.ogg"
+  }
+}

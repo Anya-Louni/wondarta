@@ -1,0 +1,15 @@
+import { numbersIn, numbersGrounded, brief, isRefusal, looksUnsafe } from '../src/llm/guards.ts';
+import assert from 'node:assert/strict';
+assert.deepEqual(numbersIn('about 100,000 times'), ['100000']);
+assert.deepEqual(numbersIn('environ 100 000 fois'), ['100000']);
+assert.deepEqual(numbersIn('نحو ١٠٠٠٠٠ مرة'), ['100000']);
+assert.ok(numbersGrounded('It beats about 100,000 times a day.', ['beats about 100 000 times']));
+assert.ok(!numbersGrounded('A lion roar travels 10 km.', ['heard up to about 8 kilometres']));
+assert.ok(numbersGrounded('Lions live in prides.', ['no numbers here']));
+assert.equal(brief('**Hi!** One. Two. Three. Four.', 3), 'Hi! One. Two.');
+assert.equal(brief('مرحبا! كيف حالك؟ أنا نيمبو. سلام.', 2), 'مرحبا! كيف حالك؟');
+assert.equal(isRefusal('NOT_FOUND'), 'not-found');
+assert.equal(isRefusal('UNSUITABLE'), 'unsuitable');
+assert.ok(looksUnsafe('how to make a bomb'));
+assert.ok(!looksUnsafe('how do bees make honey'));
+console.log('guards: all assertions passed');

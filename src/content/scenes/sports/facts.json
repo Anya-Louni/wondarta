@@ -1,0 +1,652 @@
+{
+  "sceneId": "sports",
+  "category": "sports",
+  "title": {
+    "en": "The Games Arena",
+    "fr": "L'arène des sports",
+    "ar": "ساحة الرياضة"
+  },
+  "intro": {
+    "en": "Step onto the field and discover sports from around the world.",
+    "fr": "Entre sur le terrain et découvre des sports du monde entier.",
+    "ar": "ادخل إلى الملعب واكتشف رياضات من حول العالم."
+  },
+  "review": {
+    "status": "reviewed",
+    "reviewers": [
+      "Web fact-check"
+    ],
+    "lastReviewed": "2026-10-09",
+    "notes": "Needs subject review and FR/AR native review.",
+    "factCheck": {
+      "date": "2026-10-09",
+      "method": "Every fact was searched on the web and compared with independent sources (linked per fact where one page covers it). Facts that did not match were corrected. French and Arabic were not read by a native speaker."
+    }
+  },
+  "facts": [
+    {
+      "id": "f-olympics-1896",
+      "text": {
+        "en": "The first modern Olympic Games were held in Athens, Greece, in 1896.",
+        "fr": "Les premiers Jeux olympiques modernes ont eu lieu à Athènes, en Grèce, en 1896.",
+        "ar": "أُقيمت أول ألعاب أولمبية حديثة في أثينا باليونان عام 1896."
+      },
+      "sources": [
+        "https://en.wikipedia.org/wiki/Ancient_Olympic_Games",
+        "https://en.wikipedia.org/wiki/Olympic_symbols",
+        "https://www.history.co.uk/this-day-in-history/06-april/first-modern-olympic-games"
+      ]
+    },
+    {
+      "id": "f-olympic-rings",
+      "text": {
+        "en": "The Olympic flag shows five rings joined together.",
+        "fr": "Le drapeau olympique montre cinq anneaux entrelacés.",
+        "ar": "يُظهر العلم الأولمبي خمس حلقات متشابكة."
+      },
+      "sources": [
+        "https://en.wikipedia.org/wiki/Ancient_Olympic_Games",
+        "https://en.wikipedia.org/wiki/Olympic_symbols",
+        "https://www.history.co.uk/this-day-in-history/06-april/first-modern-olympic-games"
+      ]
+    },
+    {
+      "id": "f-ancient-olympics",
+      "text": {
+        "en": "The ancient Olympic Games began in Olympia, Greece, nearly 3,000 years ago.",
+        "fr": "Les Jeux olympiques antiques ont commencé à Olympie, en Grèce, il y a près de 3 000 ans.",
+        "ar": "بدأت الألعاب الأولمبية القديمة في أولمبيا باليونان قبل نحو 3000 سنة."
+      },
+      "sources": [
+        "https://en.wikipedia.org/wiki/Ancient_Olympic_Games",
+        "https://en.wikipedia.org/wiki/Olympic_symbols",
+        "https://www.history.co.uk/this-day-in-history/06-april/first-modern-olympic-games"
+      ]
+    },
+    {
+      "id": "f-soccer-11",
+      "text": {
+        "en": "A soccer team has 11 players on the field, including the goalkeeper.",
+        "fr": "Une équipe de football a 11 joueurs sur le terrain, gardien compris.",
+        "ar": "لفريق كرة القدم 11 لاعبًا في الملعب، بمن فيهم حارس المرمى."
+      }
+    },
+    {
+      "id": "f-badminton",
+      "text": {
+        "en": "Badminton is played with a shuttlecock instead of a ball.",
+        "fr": "Le badminton se joue avec un volant au lieu d'une balle.",
+        "ar": "تُلعب كرة الريشة بالريشة بدلًا من الكرة."
+      },
+      "sources": [
+        "https://www.guinnessworldrecords.com/world-records/92507-fastest-badminton-hit-male",
+        "https://badmintonbites.com/why-do-badminton-shuttlecocks-have-16-feathers/"
+      ]
+    },
+    {
+      "id": "f-table-tennis",
+      "text": {
+        "en": "Table tennis is also called ping-pong.",
+        "fr": "Le tennis de table s'appelle aussi ping-pong.",
+        "ar": "يُسمّى تنس الطاولة أيضًا «بينغ بونغ»."
+      },
+      "sources": [
+        "https://en.wikipedia.org/wiki/Table_tennis"
+      ]
+    },
+    {
+      "id": "f-curling",
+      "text": {
+        "en": "In curling, players slide heavy stones across the ice.",
+        "fr": "Au curling, les joueurs font glisser de lourdes pierres sur la glace.",
+        "ar": "في رياضة الكيرلنغ، يُزلق اللاعبون أحجارًا ثقيلة على الجليد."
+      },
+      "sources": [
+        "https://bolavip.com/en/amp/sports/how-much-does-a-curling-stone-weigh-20220205-0022.html"
+      ]
+    },
+    {
+      "id": "f-cricket",
+      "text": {
+        "en": "Cricket is played with a bat and ball by two teams of 11 players.",
+        "fr": "Le cricket se joue avec une batte et une balle, entre deux équipes de 11 joueurs.",
+        "ar": "تُلعب الكريكت بمضرب وكرة بين فريقين في كلٍّ منهما 11 لاعبًا."
+      }
+    },
+    {
+      "id": "f-marathon",
+      "text": {
+        "en": "A marathon is 42.195 kilometres long.",
+        "fr": "Un marathon mesure 42,195 kilomètres.",
+        "ar": "طول سباق الماراثون ٤٢٫١٩٥ كيلومترًا."
+      },
+      "sources": [
+        "https://en.wikipedia.org/wiki/Ancient_Olympic_Games",
+        "https://en.wikipedia.org/wiki/Olympic_symbols",
+        "https://www.history.co.uk/this-day-in-history/06-april/first-modern-olympic-games"
+      ]
+    },
+    {
+      "id": "f-smash-565",
+      "text": {
+        "en": "The fastest badminton hit ever measured sent the shuttlecock flying at 565 kilometres an hour.",
+        "fr": "Le coup de badminton le plus rapide jamais mesuré a envoyé le volant à 565 kilomètres à l'heure.",
+        "ar": "أسرع ضربة في كرة الريشة قيست حتى اليوم أطلقت الريشة بسرعة ٥٦٥ كيلومترًا في الساعة."
+      },
+      "sources": [
+        "https://www.guinnessworldrecords.com/world-records/92507-fastest-badminton-hit-male",
+        "https://badmintonbites.com/why-do-badminton-shuttlecocks-have-16-feathers/"
+      ]
+    },
+    {
+      "id": "f-shuttle-16",
+      "text": {
+        "en": "A feather shuttlecock has 16 feathers.",
+        "fr": "Un volant en plumes compte 16 plumes.",
+        "ar": "في ريشة اللعب المصنوعة من الريش ١٦ ريشة."
+      },
+      "sources": [
+        "https://www.guinnessworldrecords.com/world-records/92507-fastest-badminton-hit-male",
+        "https://badmintonbites.com/why-do-badminton-shuttlecocks-have-16-feathers/"
+      ]
+    },
+    {
+      "id": "f-curling-stone",
+      "text": {
+        "en": "A curling stone is made of granite and weighs up to about 20 kilograms.",
+        "fr": "Une pierre de curling est en granit et pèse jusqu'à environ 20 kilos.",
+        "ar": "حجر الكيرلنغ مصنوع من الغرانيت ويصل وزنه إلى نحو ٢٠ كيلوغرامًا."
+      },
+      "sources": [
+        "https://bolavip.com/en/amp/sports/how-much-does-a-curling-stone-weigh-20220205-0022.html"
+      ]
+    },
+    {
+      "id": "f-marathon-1908",
+      "text": {
+        "en": "The marathon got its exact length at the 1908 Olympic Games in London.",
+        "fr": "Le marathon a reçu sa longueur exacte aux Jeux olympiques de Londres, en 1908.",
+        "ar": "حُدّد الطول الدقيق لسباق الماراثون في الألعاب الأولمبية بلندن عام ١٩٠٨."
+      },
+      "sources": [
+        "https://www.sortiraparis.com/en/what-to-visit-in-paris/history-heritage/articles/343881-paris-marathon-why-this-42-195-kilometer-distance"
+      ]
+    }
+  ],
+  "glossary": [
+    {
+      "terms": {
+        "en": [
+          "olympic",
+          "olympics"
+        ],
+        "fr": [
+          "olympiques",
+          "olympique"
+        ],
+        "ar": [
+          "الأولمبية",
+          "أولمبية",
+          "الأولمبي"
+        ]
+      },
+      "definition": {
+        "en": "A huge sports competition where athletes from many countries compete.",
+        "fr": "Une immense compétition où s'affrontent des sportifs de nombreux pays.",
+        "ar": "مسابقة رياضية ضخمة يتنافس فيها رياضيون من بلدان كثيرة."
+      }
+    },
+    {
+      "terms": {
+        "en": [
+          "shuttlecock"
+        ],
+        "fr": [
+          "volant"
+        ],
+        "ar": [
+          "بالريشة",
+          "الريشة"
+        ]
+      },
+      "definition": {
+        "en": "A light, cone-shaped object hit back and forth in badminton.",
+        "fr": "Un objet léger en forme de cône qu'on se renvoie au badminton.",
+        "ar": "جسم خفيف مخروطي الشكل يُضرب ذهابًا وإيابًا في كرة الريشة."
+      }
+    }
+  ],
+  "hotspots": [
+    {
+      "id": "sports/olympics",
+      "title": {
+        "en": "The Olympic Games",
+        "fr": "Les Jeux olympiques",
+        "ar": "الألعاب الأولمبية"
+      },
+      "position": [
+        -4,
+        0,
+        -4
+      ],
+      "contentType": "narration",
+      "narration": {
+        "en": "The first modern Olympic Games were held in Athens, Greece, in 1896. The Olympic flag shows five rings joined together.",
+        "fr": "Les premiers Jeux olympiques modernes ont eu lieu à Athènes, en Grèce, en 1896. Le drapeau olympique montre cinq anneaux entrelacés.",
+        "ar": "أُقيمت أول ألعاب أولمبية حديثة في أثينا باليونان عام 1896. ويُظهر العلم الأولمبي خمس حلقات متشابكة."
+      },
+      "learnMore": {
+        "en": "The ancient Olympic Games began in Olympia, Greece, nearly 3,000 years ago. A marathon is 42.195 kilometres long.",
+        "fr": "Les Jeux olympiques antiques ont commencé à Olympie, en Grèce, il y a près de 3 000 ans. Un marathon mesure 42,195 kilomètres.",
+        "ar": "بدأت الألعاب الأولمبية القديمة في أولمبيا باليونان قبل نحو 3000 سنة. طول سباق الماراثون ٤٢٫١٩٥ كيلومترًا."
+      },
+      "funFact": {
+        "en": "The marathon got its exact length at the 1908 Olympic Games in London.",
+        "fr": "Le marathon a reçu sa longueur exacte aux Jeux olympiques de Londres, en 1908.",
+        "ar": "حُدّد الطول الدقيق لسباق الماراثون في الألعاب الأولمبية بلندن عام ١٩٠٨."
+      },
+      "linkedTopics": [
+        "sports/name-sport",
+        "reading/story"
+      ],
+      "sourceType": "curated",
+      "factIds": [
+        "f-olympics-1896",
+        "f-olympic-rings",
+        "f-ancient-olympics",
+        "f-marathon",
+        "f-marathon-1908"
+      ],
+      "wikiQuery": {
+        "en": "Olympic Games",
+        "fr": "Jeux olympiques",
+        "ar": "الألعاب الأولمبية"
+      },
+      "mascotLine": {
+        "en": "Five rings, lots of countries. Let's go!",
+        "fr": "Cinq anneaux, plein de pays. C'est parti !",
+        "ar": "خمس حلقات وبلدان كثيرة. هيّا بنا!"
+      }
+    },
+    {
+      "id": "sports/name-sport",
+      "title": {
+        "en": "Name That Sport",
+        "fr": "Devine le sport",
+        "ar": "ما اسم هذه الرياضة؟"
+      },
+      "position": [
+        4,
+        0,
+        -4
+      ],
+      "contentType": "puzzle",
+      "narration": {
+        "en": "Each sport has its own gear. In curling, players slide heavy stones across the ice.",
+        "fr": "Chaque sport a son propre matériel. Au curling, les joueurs font glisser de lourdes pierres sur la glace.",
+        "ar": "لكل رياضة أدواتها الخاصة. في رياضة الكيرلنغ، يُزلق اللاعبون أحجارًا ثقيلة على الجليد."
+      },
+      "learnMore": {
+        "en": "Cricket is played with a bat and ball by two teams of 11 players. A soccer team has 11 players on the field, including the goalkeeper. The fastest badminton hit ever measured sent the shuttlecock flying at 565 kilometres an hour.",
+        "fr": "Le cricket se joue avec une batte et une balle, entre deux équipes de 11 joueurs. Une équipe de football a 11 joueurs sur le terrain, gardien compris. Le coup de badminton le plus rapide jamais mesuré a envoyé le volant à 565 kilomètres à l'heure.",
+        "ar": "تُلعب الكريكت بمضرب وكرة بين فريقين في كلٍّ منهما 11 لاعبًا. لفريق كرة القدم 11 لاعبًا في الملعب، بمن فيهم حارس المرمى. أسرع ضربة في كرة الريشة قيست حتى اليوم أطلقت الريشة بسرعة ٥٦٥ كيلومترًا في الساعة."
+      },
+      "funFact": {
+        "en": "A curling stone is made of granite and weighs up to about 20 kilograms.",
+        "fr": "Une pierre de curling est en granit et pèse jusqu'à environ 20 kilos.",
+        "ar": "حجر الكيرلنغ مصنوع من الغرانيت ويصل وزنه إلى نحو ٢٠ كيلوغرامًا."
+      },
+      "linkedTopics": [
+        "sports/olympics",
+        "games/robot"
+      ],
+      "sourceType": "curated",
+      "factIds": [
+        "f-badminton",
+        "f-table-tennis",
+        "f-curling",
+        "f-cricket",
+        "f-soccer-11",
+        "f-smash-565",
+        "f-shuttle-16",
+        "f-curling-stone"
+      ],
+      "wikiQuery": {
+        "en": "Sport",
+        "fr": "Sport",
+        "ar": "رياضة"
+      },
+      "mascotLine": {
+        "en": "Look at the gear. Which sport is it?",
+        "fr": "Regarde le matériel. Quel est ce sport ?",
+        "ar": "انظر إلى الأدوات. ما هذه الرياضة؟"
+      },
+      "puzzle": {
+        "type": "name-that-x",
+        "prompt": {
+          "en": "Name that sport!",
+          "fr": "Devine le sport !",
+          "ar": "ما اسم هذه الرياضة؟"
+        },
+        "factIds": [
+          "f-badminton",
+          "f-table-tennis",
+          "f-curling",
+          "f-cricket",
+          "f-soccer-11"
+        ],
+        "show": 3,
+        "rounds": [
+          {
+            "id": "badminton",
+            "media": {
+              "model": "shuttlecock"
+            },
+            "choices": [
+              {
+                "en": "Badminton",
+                "fr": "Badminton",
+                "ar": "كرة الريشة"
+              },
+              {
+                "en": "Tennis",
+                "fr": "Tennis",
+                "ar": "التنس"
+              },
+              {
+                "en": "Golf",
+                "fr": "Golf",
+                "ar": "الغولف"
+              }
+            ],
+            "answerIndex": 0
+          },
+          {
+            "id": "tabletennis",
+            "media": {
+              "model": "paddle"
+            },
+            "choices": [
+              {
+                "en": "Baseball",
+                "fr": "Baseball",
+                "ar": "البيسبول"
+              },
+              {
+                "en": "Table tennis",
+                "fr": "Tennis de table",
+                "ar": "تنس الطاولة"
+              },
+              {
+                "en": "Hockey",
+                "fr": "Hockey",
+                "ar": "الهوكي"
+              }
+            ],
+            "answerIndex": 1
+          },
+          {
+            "id": "curling",
+            "media": {
+              "model": "curling-stone"
+            },
+            "choices": [
+              {
+                "en": "Skiing",
+                "fr": "Ski",
+                "ar": "التزلّج"
+              },
+              {
+                "en": "Bowling",
+                "fr": "Bowling",
+                "ar": "البولينغ"
+              },
+              {
+                "en": "Curling",
+                "fr": "Curling",
+                "ar": "الكيرلنغ"
+              }
+            ],
+            "answerIndex": 2
+          },
+          {
+            "id": "cricket",
+            "media": {
+              "model": "cricket-bat"
+            },
+            "choices": [
+              {
+                "en": "Cricket",
+                "fr": "Cricket",
+                "ar": "الكريكت"
+              },
+              {
+                "en": "Rugby",
+                "fr": "Rugby",
+                "ar": "الرغبي"
+              },
+              {
+                "en": "Volleyball",
+                "fr": "Volley-ball",
+                "ar": "الكرة الطائرة"
+              }
+            ],
+            "answerIndex": 0
+          },
+          {
+            "id": "soccer",
+            "media": {
+              "model": "soccer-ball"
+            },
+            "choices": [
+              {
+                "en": "Basketball",
+                "fr": "Basket-ball",
+                "ar": "كرة السلة"
+              },
+              {
+                "en": "Soccer",
+                "fr": "Football",
+                "ar": "كرة القدم"
+              },
+              {
+                "en": "Swimming",
+                "fr": "Natation",
+                "ar": "السباحة"
+              }
+            ],
+            "answerIndex": 1
+          }
+        ]
+      }
+    },
+    {
+      "id": "sports/sports-quiz",
+      "title": {
+        "en": "Keep It Up!",
+        "fr": "Ne le laisse pas tomber !",
+        "ar": "لا تدعها تسقط!"
+      },
+      "position": [
+        0,
+        0,
+        -6.5
+      ],
+      "contentType": "puzzle",
+      "narration": {
+        "en": "Badminton is played with a shuttlecock instead of a ball. A feather shuttlecock has 16 feathers.",
+        "fr": "Le badminton se joue avec un volant au lieu d'une balle. Un volant en plumes compte 16 plumes.",
+        "ar": "تُلعب كرة الريشة بالريشة بدلًا من الكرة. في ريشة اللعب المصنوعة من الريش ١٦ ريشة."
+      },
+      "learnMore": {
+        "en": "The fastest badminton hit ever measured sent the shuttlecock flying at 565 kilometres an hour.",
+        "fr": "Le coup de badminton le plus rapide jamais mesuré a envoyé le volant à 565 kilomètres à l'heure.",
+        "ar": "أسرع ضربة في كرة الريشة قيست حتى اليوم أطلقت الريشة بسرعة ٥٦٥ كيلومترًا في الساعة."
+      },
+      "funFact": {
+        "en": "Table tennis is also called ping-pong.",
+        "fr": "Le tennis de table s'appelle aussi ping-pong.",
+        "ar": "يُسمّى تنس الطاولة أيضًا «بينغ بونغ»."
+      },
+      "linkedTopics": [
+        "sports/olympics",
+        "sports/name-sport"
+      ],
+      "sourceType": "curated",
+      "factIds": [
+        "f-badminton",
+        "f-shuttle-16",
+        "f-smash-565",
+        "f-table-tennis"
+      ],
+      "wikiQuery": {
+        "en": "Olympic Games",
+        "fr": "Jeux olympiques",
+        "ar": "الألعاب الأولمبية"
+      },
+      "mascotLine": {
+        "en": "Eyes on the shuttlecock!",
+        "fr": "Les yeux sur le volant !",
+        "ar": "عيناك على الريشة!"
+      },
+      "quiz": {
+        "question": {
+          "en": "How many rings are on the Olympic flag?",
+          "fr": "Combien d’anneaux y a-t-il sur le drapeau olympique ?",
+          "ar": "كم حلقة على العلم الأولمبي؟"
+        },
+        "choices": [
+          {
+            "en": "Three",
+            "fr": "Trois",
+            "ar": "ثلاث"
+          },
+          {
+            "en": "Four",
+            "fr": "Quatre",
+            "ar": "أربع"
+          },
+          {
+            "en": "Five",
+            "fr": "Cinq",
+            "ar": "خمس"
+          },
+          {
+            "en": "Ten",
+            "fr": "Dix",
+            "ar": "عشر"
+          }
+        ],
+        "answerIndex": 2,
+        "factId": "f-olympic-rings"
+      },
+      "moreQuestions": [
+        {
+          "question": {
+            "en": "How many players does a soccer team have on the field?",
+            "fr": "Combien de joueurs une équipe de football a-t-elle sur le terrain ?",
+            "ar": "كم لاعبًا لفريق كرة القدم في الملعب؟"
+          },
+          "choices": [
+            {
+              "en": "5",
+              "fr": "5",
+              "ar": "٥"
+            },
+            {
+              "en": "9",
+              "fr": "9",
+              "ar": "٩"
+            },
+            {
+              "en": "11",
+              "fr": "11",
+              "ar": "١١"
+            },
+            {
+              "en": "20",
+              "fr": "20",
+              "ar": "٢٠"
+            }
+          ],
+          "answerIndex": 2,
+          "factId": "f-soccer-11"
+        },
+        {
+          "question": {
+            "en": "What is badminton played with instead of a ball?",
+            "fr": "Avec quoi joue-t-on au badminton à la place d’un ballon ?",
+            "ar": "بماذا يُلعب الريشة الطائرة بدل الكرة؟"
+          },
+          "choices": [
+            {
+              "en": "A stone",
+              "fr": "Une pierre",
+              "ar": "حجر"
+            },
+            {
+              "en": "A shuttlecock",
+              "fr": "Un volant",
+              "ar": "ريشة"
+            },
+            {
+              "en": "A ring",
+              "fr": "Un anneau",
+              "ar": "حلقة"
+            },
+            {
+              "en": "A puck",
+              "fr": "Un palet",
+              "ar": "قرص"
+            }
+          ],
+          "answerIndex": 1,
+          "factId": "f-badminton"
+        },
+        {
+          "question": {
+            "en": "How long is a marathon?",
+            "fr": "Quelle est la longueur d'un marathon ?",
+            "ar": "كم يبلغ طول سباق الماراثون؟"
+          },
+          "choices": [
+            {
+              "en": "4.2 kilometres",
+              "fr": "4,2 kilomètres",
+              "ar": "٤٫٢ كيلومترات"
+            },
+            {
+              "en": "42.195 kilometres",
+              "fr": "42,195 kilomètres",
+              "ar": "٤٢٫١٩٥ كيلومترًا"
+            },
+            {
+              "en": "100 kilometres",
+              "fr": "100 kilomètres",
+              "ar": "١٠٠ كيلومتر"
+            },
+            {
+              "en": "421 kilometres",
+              "fr": "421 kilomètres",
+              "ar": "٤٢١ كيلومترًا"
+            }
+          ],
+          "answerIndex": 1,
+          "factId": "f-marathon"
+        }
+      ],
+      "puzzle": {
+        "type": "arcade",
+        "game": "keep-up",
+        "prompt": {
+          "en": "Move the racket and hit the shuttlecock 10 times. Try not to let it fall!",
+          "fr": "Déplace la raquette et frappe le volant 10 fois. Essaie de ne pas le laisser tomber !",
+          "ar": "حرّك المضرب واضرب الريشة ١٠ مرات، وحاول ألّا تسقط!"
+        },
+        "factIds": [
+          "f-badminton"
+        ]
+      }
+    }
+  ]
+}

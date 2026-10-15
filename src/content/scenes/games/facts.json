@@ -1,0 +1,495 @@
+{
+  "sceneId": "games",
+  "category": "games",
+  "title": {
+    "en": "Robot Coding Lab",
+    "fr": "Le labo de codage du robot",
+    "ar": "مختبر برمجة الروبوت"
+  },
+  "intro": {
+    "en": "Give the little robot step-by-step commands to reach the glowing goal.",
+    "fr": "Donne au petit robot des ordres pas à pas pour atteindre le but lumineux.",
+    "ar": "أعطِ الروبوت الصغير أوامر خطوة بخطوة ليصل إلى الهدف المتوهّج."
+  },
+  "review": {
+    "status": "reviewed",
+    "reviewers": [
+      "Web fact-check"
+    ],
+    "lastReviewed": "2026-10-09",
+    "notes": "Needs subject review and FR/AR native review.",
+    "factCheck": {
+      "date": "2026-10-09",
+      "method": "Every fact was searched on the web and compared with independent sources (linked per fact where one page covers it). Facts that did not match were corrected. French and Arabic were not read by a native speaker."
+    }
+  },
+  "facts": [
+    {
+      "id": "f-algorithm",
+      "text": {
+        "en": "An algorithm is a list of steps, in order, that solves a problem.",
+        "fr": "Un algorithme est une liste d'étapes, dans l'ordre, qui résout un problème.",
+        "ar": "الخوارزمية قائمة من الخطوات المرتّبة تحلّ مشكلة ما."
+      }
+    },
+    {
+      "id": "f-program",
+      "text": {
+        "en": "A computer program is a set of instructions that a computer follows.",
+        "fr": "Un programme informatique est un ensemble d'instructions que l'ordinateur suit.",
+        "ar": "البرنامج الحاسوبي مجموعة من التعليمات التي يتّبعها الحاسوب."
+      }
+    },
+    {
+      "id": "f-bug",
+      "text": {
+        "en": "A mistake in a program is called a bug.",
+        "fr": "Une erreur dans un programme s'appelle un bug.",
+        "ar": "يُسمّى الخطأ في البرنامج «علّة» أو «خلل برمجي»."
+      },
+      "sources": [
+        "https://education.nationalgeographic.org/resource/worlds-first-computer-bug/"
+      ]
+    },
+    {
+      "id": "f-debug",
+      "text": {
+        "en": "Finding and fixing bugs is called debugging.",
+        "fr": "Trouver et corriger les bugs s'appelle le débogage.",
+        "ar": "يُسمّى البحث عن الأخطاء البرمجية وإصلاحها «تصحيح الأخطاء»."
+      },
+      "sources": [
+        "https://education.nationalgeographic.org/resource/worlds-first-computer-bug/"
+      ]
+    },
+    {
+      "id": "f-ada",
+      "text": {
+        "en": "In 1843, Ada Lovelace published what is often called the first computer program.",
+        "fr": "En 1843, Ada Lovelace a publié ce qu'on appelle souvent le premier programme informatique.",
+        "ar": "في عام 1843، نشرت آدا لوفليس ما يُعدّ غالبًا أوّل برنامج حاسوبي."
+      },
+      "sources": [
+        "https://www.britannica.com/story/ada-lovelace-the-first-computer-programmer"
+      ]
+    },
+    {
+      "id": "f-moth-bug",
+      "text": {
+        "en": "In 1947, engineers found a real moth stuck inside a computer. They taped it into their logbook as a 'bug'.",
+        "fr": "En 1947, des ingénieurs ont trouvé un vrai papillon de nuit coincé dans un ordinateur. Ils l'ont collé dans leur carnet et l'ont appelé « bug ».",
+        "ar": "في عام ١٩٤٧ وجد مهندسون عثّة حقيقية عالقة داخل حاسوب، فألصقوها في دفترهم وسمّوها «bug»، أي حشرة."
+      },
+      "sources": [
+        "https://education.nationalgeographic.org/resource/worlds-first-computer-bug/"
+      ]
+    },
+    {
+      "id": "f-ada-music",
+      "text": {
+        "en": "Ada Lovelace imagined that computers could one day work with music, not just numbers.",
+        "fr": "Ada Lovelace imaginait que les ordinateurs pourraient un jour traiter de la musique, pas seulement des nombres.",
+        "ar": "تخيّلت آدا لوفليس أن الحواسيب قد تتعامل يومًا ما مع الموسيقى، لا مع الأرقام فقط."
+      },
+      "sources": [
+        "https://www.britannica.com/story/ada-lovelace-the-first-computer-programmer"
+      ]
+    },
+    {
+      "id": "f-ada-engine",
+      "text": {
+        "en": "Ada Lovelace wrote her program for the Analytical Engine, a machine designed by Charles Babbage.",
+        "fr": "Ada Lovelace a écrit son programme pour la machine analytique, conçue par Charles Babbage.",
+        "ar": "كتبت آدا لوفليس برنامجها للمحرّك التحليلي، وهو آلة صمّمها تشارلز باباج."
+      },
+      "sources": [
+        "https://www.britannica.com/story/ada-lovelace-the-first-computer-programmer"
+      ]
+    },
+    {
+      "id": "f-moth-museum",
+      "text": {
+        "en": "The logbook with the moth still taped inside is kept in a museum in the United States.",
+        "fr": "Le carnet, avec le papillon toujours collé dedans, est conservé dans un musée aux États-Unis.",
+        "ar": "ما يزال الدفتر والعثّة ملصقة فيه محفوظًا في متحف في الولايات المتحدة."
+      },
+      "sources": [
+        "https://education.nationalgeographic.org/resource/worlds-first-computer-bug/"
+      ]
+    }
+  ],
+  "glossary": [
+    {
+      "terms": {
+        "en": [
+          "algorithm",
+          "algorithms"
+        ],
+        "fr": [
+          "algorithme",
+          "algorithmes"
+        ],
+        "ar": [
+          "الخوارزمية",
+          "خوارزمية"
+        ]
+      },
+      "definition": {
+        "en": "Steps, in the right order, that solve a problem.",
+        "fr": "Des étapes, dans le bon ordre, qui résolvent un problème.",
+        "ar": "خطوات مرتّبة بالشكل الصحيح تحلّ مشكلة."
+      }
+    },
+    {
+      "terms": {
+        "en": [
+          "bug",
+          "bugs"
+        ],
+        "fr": [
+          "bug",
+          "bugs"
+        ],
+        "ar": [
+          "علّة",
+          "علة"
+        ]
+      },
+      "definition": {
+        "en": "A mistake in a computer program.",
+        "fr": "Une erreur dans un programme informatique.",
+        "ar": "خطأ في برنامج حاسوبي."
+      }
+    },
+    {
+      "terms": {
+        "en": [
+          "instructions"
+        ],
+        "fr": [
+          "instructions"
+        ],
+        "ar": [
+          "التعليمات"
+        ]
+      },
+      "definition": {
+        "en": "Orders that tell someone or something exactly what to do.",
+        "fr": "Des ordres qui disent exactement quoi faire.",
+        "ar": "أوامر تحدّد بالضبط ما يجب فعله."
+      }
+    }
+  ],
+  "hotspots": [
+    {
+      "id": "games/algorithms",
+      "title": {
+        "en": "What Is an Algorithm?",
+        "fr": "C'est quoi, un algorithme ?",
+        "ar": "ما هي الخوارزمية؟"
+      },
+      "position": [
+        -4,
+        0,
+        -4
+      ],
+      "contentType": "narration",
+      "narration": {
+        "en": "An algorithm is a list of steps, in order, that solves a problem. A computer program is a set of instructions that a computer follows.",
+        "fr": "Un algorithme est une liste d'étapes, dans l'ordre, qui résout un problème. Un programme informatique est un ensemble d'instructions que l'ordinateur suit.",
+        "ar": "الخوارزمية قائمة من الخطوات المرتّبة تحلّ مشكلة ما. والبرنامج الحاسوبي مجموعة من التعليمات التي يتّبعها الحاسوب."
+      },
+      "learnMore": {
+        "en": "In 1843, Ada Lovelace published what is often called the first computer program. Ada Lovelace imagined that computers could one day work with music, not just numbers.",
+        "fr": "En 1843, Ada Lovelace a publié ce qu'on appelle souvent le premier programme informatique. Ada Lovelace imaginait que les ordinateurs pourraient un jour traiter de la musique, pas seulement des nombres.",
+        "ar": "في عام 1843، نشرت آدا لوفليس ما يُعدّ غالبًا أوّل برنامج حاسوبي. تخيّلت آدا لوفليس أن الحواسيب قد تتعامل يومًا ما مع الموسيقى، لا مع الأرقام فقط."
+      },
+      "funFact": {
+        "en": "Ada Lovelace wrote her program for the Analytical Engine, a machine designed by Charles Babbage.",
+        "fr": "Ada Lovelace a écrit son programme pour la machine analytique, conçue par Charles Babbage.",
+        "ar": "كتبت آدا لوفليس برنامجها للمحرّك التحليلي، وهو آلة صمّمها تشارلز باباج."
+      },
+      "linkedTopics": [
+        "games/robot",
+        "people/curie"
+      ],
+      "sourceType": "curated",
+      "factIds": [
+        "f-algorithm",
+        "f-program",
+        "f-ada",
+        "f-ada-music",
+        "f-ada-engine"
+      ],
+      "wikiQuery": {
+        "en": "Algorithm",
+        "fr": "Algorithme",
+        "ar": "خوارزمية"
+      },
+      "mascotLine": {
+        "en": "Robots need very clear steps. Let's learn how!",
+        "fr": "Les robots ont besoin d'étapes très claires. Apprenons comment !",
+        "ar": "تحتاج الروبوتات إلى خطوات واضحة جدًّا. لنتعلّم كيف!"
+      }
+    },
+    {
+      "id": "games/robot",
+      "title": {
+        "en": "Guide the Robot",
+        "fr": "Guide le robot",
+        "ar": "أرشِد الروبوت"
+      },
+      "position": [
+        4,
+        0,
+        -4
+      ],
+      "contentType": "puzzle",
+      "narration": {
+        "en": "Write a program for the robot. If it bumps into a wall, that's a bug: find it and fix it!",
+        "fr": "Écris un programme pour le robot. S'il se cogne contre un mur, c'est un bug : trouve-le et corrige-le !",
+        "ar": "اكتب برنامجًا للروبوت. إذا اصطدم بجدار فهذه علّة: ابحث عنها وأصلحها!"
+      },
+      "learnMore": {
+        "en": "Finding and fixing bugs is called debugging. An algorithm is a list of steps, in order, that solves a problem.",
+        "fr": "Trouver et corriger les bugs s'appelle le débogage. Un algorithme est une liste d'étapes, dans l'ordre, qui résout un problème.",
+        "ar": "يُسمّى البحث عن الأخطاء البرمجية وإصلاحها «تصحيح الأخطاء». الخوارزمية قائمة من الخطوات المرتّبة تحلّ مشكلة ما."
+      },
+      "funFact": {
+        "en": "In 1947, engineers found a real moth stuck inside a computer. They taped it into their logbook as a 'bug'.",
+        "fr": "En 1947, des ingénieurs ont trouvé un vrai papillon de nuit coincé dans un ordinateur. Ils l'ont collé dans leur carnet et l'ont appelé « bug ».",
+        "ar": "في عام ١٩٤٧ وجد مهندسون عثّة حقيقية عالقة داخل حاسوب، فألصقوها في دفترهم وسمّوها «bug»، أي حشرة."
+      },
+      "linkedTopics": [
+        "games/algorithms",
+        "social/secret-message"
+      ],
+      "sourceType": "curated",
+      "factIds": [
+        "f-bug",
+        "f-debug",
+        "f-algorithm",
+        "f-moth-bug"
+      ],
+      "wikiQuery": {
+        "en": "Computer programming",
+        "fr": "Programmation informatique",
+        "ar": "برمجة"
+      },
+      "mascotLine": {
+        "en": "Beep boop! Tell the robot where to go.",
+        "fr": "Bip boup ! Dis au robot où aller.",
+        "ar": "بيب بوب! أخبر الروبوت إلى أين يذهب."
+      },
+      "puzzle": {
+        "type": "command-route",
+        "prompt": {
+          "en": "Add commands, then press Run to reach the star.",
+          "fr": "Ajoute des commandes, puis appuie sur Lancer pour atteindre l'étoile.",
+          "ar": "أضف الأوامر، ثم اضغط «تشغيل» للوصول إلى النجمة."
+        },
+        "factIds": [
+          "f-algorithm",
+          "f-bug"
+        ],
+        "grid": [
+          "S.#.",
+          "#.#.",
+          "....",
+          ".##G"
+        ],
+        "startDir": "E",
+        "maxCommands": 12
+      }
+    },
+    {
+      "id": "games/code-quiz",
+      "title": {
+        "en": "Bug Hunt",
+        "fr": "La chasse aux bugs",
+        "ar": "صيد الأخطاء"
+      },
+      "position": [
+        0,
+        0,
+        -6.5
+      ],
+      "contentType": "puzzle",
+      "narration": {
+        "en": "Finding and fixing bugs is called debugging. In 1947, engineers found a real moth stuck inside a computer. They taped it into their logbook as a 'bug'.",
+        "fr": "Trouver et corriger les bugs s'appelle le débogage. En 1947, des ingénieurs ont trouvé un vrai papillon de nuit coincé dans un ordinateur. Ils l'ont collé dans leur carnet et l'ont appelé « bug ».",
+        "ar": "يُسمّى البحث عن الأخطاء البرمجية وإصلاحها «تصحيح الأخطاء». في عام ١٩٤٧ وجد مهندسون عثّة حقيقية عالقة داخل حاسوب، فألصقوها في دفترهم وسمّوها «bug»، أي حشرة."
+      },
+      "learnMore": {
+        "en": "A mistake in a program is called a bug.",
+        "fr": "Une erreur dans un programme s'appelle un bug.",
+        "ar": "يُسمّى الخطأ في البرنامج «علّة» أو «خلل برمجي»."
+      },
+      "funFact": {
+        "en": "The logbook with the moth still taped inside is kept in a museum in the United States.",
+        "fr": "Le carnet, avec le papillon toujours collé dedans, est conservé dans un musée aux États-Unis.",
+        "ar": "ما يزال الدفتر والعثّة ملصقة فيه محفوظًا في متحف في الولايات المتحدة."
+      },
+      "linkedTopics": [
+        "games/algorithms",
+        "games/robot"
+      ],
+      "sourceType": "curated",
+      "factIds": [
+        "f-debug",
+        "f-moth-bug",
+        "f-moth-museum",
+        "f-bug"
+      ],
+      "wikiQuery": {
+        "en": "Algorithm",
+        "fr": "Algorithme",
+        "ar": "خوارزمية"
+      },
+      "mascotLine": {
+        "en": "The very first computer bug was a real moth!",
+        "fr": "Le tout premier bug était un vrai papillon de nuit !",
+        "ar": "أول خطأ حاسوبي كان عثّة حقيقية!"
+      },
+      "quiz": {
+        "question": {
+          "en": "What is a mistake in a program called?",
+          "fr": "Comment s'appelle une erreur dans un programme ?",
+          "ar": "ماذا يُسمّى الخطأ في البرنامج؟"
+        },
+        "choices": [
+          {
+            "en": "A bug",
+            "fr": "Un bug",
+            "ar": "علّة"
+          },
+          {
+            "en": "A byte",
+            "fr": "Un octet",
+            "ar": "بايت"
+          },
+          {
+            "en": "A mouse",
+            "fr": "Une souris",
+            "ar": "فأرة"
+          },
+          {
+            "en": "A robot",
+            "fr": "Un robot",
+            "ar": "روبوت"
+          }
+        ],
+        "answerIndex": 0,
+        "factId": "f-bug"
+      },
+      "moreQuestions": [
+        {
+          "question": {
+            "en": "What is an algorithm?",
+            "fr": "Qu'est-ce qu'un algorithme ?",
+            "ar": "ما الخوارزمية؟"
+          },
+          "choices": [
+            {
+              "en": "A kind of robot",
+              "fr": "Une sorte de robot",
+              "ar": "نوع من الروبوتات"
+            },
+            {
+              "en": "A list of steps, in order, that solves a problem",
+              "fr": "Une liste d'étapes, dans l'ordre, qui résout un problème",
+              "ar": "قائمة خطوات مرتّبة تحلّ مشكلة"
+            },
+            {
+              "en": "A computer screen",
+              "fr": "Un écran d'ordinateur",
+              "ar": "شاشة حاسوب"
+            },
+            {
+              "en": "A song",
+              "fr": "Une chanson",
+              "ar": "أغنية"
+            }
+          ],
+          "answerIndex": 1,
+          "factId": "f-algorithm"
+        },
+        {
+          "question": {
+            "en": "Who published what is often called the first computer program?",
+            "fr": "Qui a publié ce qu'on appelle souvent le premier programme informatique ?",
+            "ar": "من نشرت ما يُسمّى غالبًا أول برنامج حاسوبي؟"
+          },
+          "choices": [
+            {
+              "en": "Marie Curie",
+              "fr": "Marie Curie",
+              "ar": "ماري كوري"
+            },
+            {
+              "en": "Ada Lovelace",
+              "fr": "Ada Lovelace",
+              "ar": "آدا لوفليس"
+            },
+            {
+              "en": "Julius Caesar",
+              "fr": "Jules César",
+              "ar": "يوليوس قيصر"
+            },
+            {
+              "en": "Leonardo da Vinci",
+              "fr": "Léonard de Vinci",
+              "ar": "ليوناردو دا فينشي"
+            }
+          ],
+          "answerIndex": 1,
+          "factId": "f-ada"
+        },
+        {
+          "question": {
+            "en": "What did engineers find stuck inside a computer in 1947?",
+            "fr": "Qu'ont trouvé des ingénieurs dans un ordinateur en 1947 ?",
+            "ar": "ماذا وجد المهندسون عالقًا داخل حاسوب عام ١٩٤٧؟"
+          },
+          "choices": [
+            {
+              "en": "A mouse",
+              "fr": "Une souris",
+              "ar": "فأرًا"
+            },
+            {
+              "en": "A coin",
+              "fr": "Une pièce de monnaie",
+              "ar": "قطعة نقود"
+            },
+            {
+              "en": "A real moth",
+              "fr": "Un vrai papillon de nuit",
+              "ar": "عثّة حقيقية"
+            },
+            {
+              "en": "A key",
+              "fr": "Une clé",
+              "ar": "مفتاحًا"
+            }
+          ],
+          "answerIndex": 2,
+          "factId": "f-moth-bug"
+        }
+      ],
+      "puzzle": {
+        "type": "arcade",
+        "game": "bug-hunt",
+        "prompt": {
+          "en": "Bugs are crawling over the computer. Tap 10 of them to debug it!",
+          "fr": "Des bugs se promènent sur l'ordinateur. Touche-en 10 pour le déboguer !",
+          "ar": "حشرات تزحف على الحاسوب. المس ١٠ منها لتصلحه!"
+        },
+        "factIds": [
+          "f-debug",
+          "f-moth-bug"
+        ]
+      }
+    }
+  ]
+}

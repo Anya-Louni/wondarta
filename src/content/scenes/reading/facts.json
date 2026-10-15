@@ -1,0 +1,523 @@
+{
+  "sceneId": "reading",
+  "category": "reading",
+  "title": {
+    "en": "The Story Library",
+    "fr": "La bibliothèque des histoires",
+    "ar": "مكتبة الحكايات"
+  },
+  "intro": {
+    "en": "Read a story, then step inside its world.",
+    "fr": "Lis une histoire, puis entre dans son monde.",
+    "ar": "اقرأ حكاية، ثم ادخل إلى عالمها."
+  },
+  "review": {
+    "status": "reviewed",
+    "reviewers": [
+      "Web fact-check"
+    ],
+    "lastReviewed": "2026-10-09",
+    "notes": "The fable is a free retelling of a public-domain Aesop fable. Needs FR/AR native review.",
+    "factCheck": {
+      "date": "2026-10-09",
+      "method": "Every fact was searched on the web and compared with independent sources (linked per fact where one page covers it). Facts that did not match were corrected. French and Arabic were not read by a native speaker."
+    }
+  },
+  "facts": [
+    {
+      "id": "f-aesop",
+      "text": {
+        "en": "'The Tortoise and the Hare' is one of Aesop's fables, very old stories from ancient Greece.",
+        "fr": "« Le Lièvre et la Tortue » est une fable d'Ésope, un conteur de la Grèce antique.",
+        "ar": "«الأرنب والسلحفاة» من حكايات إيسوب، وهي قصص قديمة جدًّا من اليونان القديمة."
+      },
+      "sources": [
+        "https://en.wikipedia.org/wiki/Kal%C4%ABla_wa-Dimna",
+        "https://fr.vikidia.org/wiki/Le_Li%C3%A8vre_et_la_Tortue"
+      ]
+    },
+    {
+      "id": "f-fable",
+      "text": {
+        "en": "A fable is a short story that teaches a lesson, called a moral.",
+        "fr": "Une fable est une courte histoire qui donne une leçon, appelée la morale.",
+        "ar": "الحكاية الخرافية قصة قصيرة تعلّمنا درسًا يُسمّى العِبرة."
+      },
+      "sources": [
+        "https://en.wikipedia.org/wiki/Kal%C4%ABla_wa-Dimna",
+        "https://fr.vikidia.org/wiki/Le_Li%C3%A8vre_et_la_Tortue"
+      ]
+    },
+    {
+      "id": "f-moral",
+      "text": {
+        "en": "The moral of this fable is often told as: slow and steady wins the race.",
+        "fr": "La morale de cette fable est souvent résumée ainsi : rien ne sert de courir, il faut partir à point.",
+        "ar": "تُلخَّص عبرة هذه الحكاية غالبًا هكذا: البطء مع المثابرة يفوز بالسباق."
+      },
+      "sources": [
+        "https://en.wikipedia.org/wiki/Kal%C4%ABla_wa-Dimna",
+        "https://fr.vikidia.org/wiki/Le_Li%C3%A8vre_et_la_Tortue"
+      ]
+    },
+    {
+      "id": "f-seastar",
+      "text": {
+        "en": "A starfish is not really a fish. Scientists call it a sea star.",
+        "fr": "L'étoile de mer n'est pas un poisson.",
+        "ar": "نجم البحر ليس سمكة في الحقيقة."
+      },
+      "sources": [
+        "https://www.visitsealife.com/brighton/information/news/7-amazing-starfish-facts/"
+      ]
+    },
+    {
+      "id": "f-kalila",
+      "text": {
+        "en": "'Kalila wa Dimna' is a famous book of animal fables. It came from India and was put into Arabic more than 1,200 years ago by Ibn al-Muqaffa'.",
+        "fr": "« Kalila wa Dimna » est un célèbre livre de fables d'animaux. Venu d'Inde, il a été traduit en arabe il y a plus de 1 200 ans par Ibn al-Muqaffa.",
+        "ar": "«كليلة ودمنة» كتاب مشهور من حكايات الحيوانات، أصله من الهند، ونقله ابن المقفّع إلى العربية قبل أكثر من ١٢٠٠ سنة."
+      },
+      "sources": [
+        "https://en.wikipedia.org/wiki/Kal%C4%ABla_wa-Dimna",
+        "https://fr.vikidia.org/wiki/Le_Li%C3%A8vre_et_la_Tortue"
+      ]
+    },
+    {
+      "id": "f-lafontaine",
+      "text": {
+        "en": "The French poet Jean de La Fontaine retold the tortoise and the hare in 1668.",
+        "fr": "Le poète français Jean de La Fontaine a repris « Le Lièvre et la Tortue » en 1668.",
+        "ar": "أعاد الشاعر الفرنسي جان دو لافونتين كتابة حكاية الأرنب والسلحفاة عام ١٦٦٨."
+      },
+      "sources": [
+        "https://en.wikipedia.org/wiki/Kal%C4%ABla_wa-Dimna",
+        "https://fr.vikidia.org/wiki/Le_Li%C3%A8vre_et_la_Tortue"
+      ]
+    },
+    {
+      "id": "f-seastar-arms",
+      "text": {
+        "en": "A sea star has no brain and no blood, and it can grow back a lost arm.",
+        "fr": "L'étoile de mer n'a ni cerveau ni sang, et elle peut faire repousser un bras perdu.",
+        "ar": "ليس لنجم البحر دماغ ولا دم، ويستطيع أن يُنبت ذراعًا جديدة بدل المفقودة."
+      },
+      "sources": [
+        "https://www.visitsealife.com/brighton/information/news/7-amazing-starfish-facts/"
+      ]
+    },
+    {
+      "id": "f-aesop-told",
+      "text": {
+        "en": "Nothing written by Aesop himself survives. His fables were passed on by storytellers.",
+        "fr": "Aucun texte écrit par Ésope lui-même n'existe plus. Ses fables ont été transmises par des conteurs.",
+        "ar": "لم يصلنا شيء كتبه إيسوب بنفسه، فقد تناقل الرواة حكاياته."
+      },
+      "sources": [
+        "https://en.wikipedia.org/wiki/Aesop"
+      ]
+    },
+    {
+      "id": "f-seastar-urchin",
+      "text": {
+        "en": "Sea stars are close relatives of sea urchins.",
+        "fr": "Les étoiles de mer sont de proches parentes des oursins.",
+        "ar": "نجوم البحر من أقرب أقارب قنافذ البحر."
+      },
+      "sources": [
+        "https://www.visitsealife.com/brighton/information/news/7-amazing-starfish-facts/"
+      ]
+    }
+  ],
+  "glossary": [
+    {
+      "terms": {
+        "en": [
+          "fable",
+          "fables"
+        ],
+        "fr": [
+          "fable",
+          "fables"
+        ],
+        "ar": [
+          "الحكاية",
+          "حكاية",
+          "حكايات"
+        ]
+      },
+      "definition": {
+        "en": "A short story, often with animals, that teaches a lesson.",
+        "fr": "Une courte histoire, souvent avec des animaux, qui donne une leçon.",
+        "ar": "قصة قصيرة، غالبًا عن الحيوانات، تعلّمنا درسًا."
+      }
+    },
+    {
+      "terms": {
+        "en": [
+          "moral"
+        ],
+        "fr": [
+          "morale"
+        ],
+        "ar": [
+          "العبرة",
+          "عبرة"
+        ]
+      },
+      "definition": {
+        "en": "The lesson a story teaches.",
+        "fr": "La leçon que donne une histoire.",
+        "ar": "الدرس الذي تعلّمنا إياه القصة."
+      }
+    },
+    {
+      "terms": {
+        "en": [
+          "steady"
+        ],
+        "fr": [
+          "point"
+        ],
+        "ar": [
+          "المثابرة"
+        ]
+      },
+      "definition": {
+        "en": "Keeping going at the same pace without stopping.",
+        "fr": "Continuer au même rythme sans s'arrêter.",
+        "ar": "الاستمرار بالوتيرة نفسها دون توقّف."
+      }
+    }
+  ],
+  "hotspots": [
+    {
+      "id": "reading/story",
+      "title": {
+        "en": "The Tortoise and the Hare",
+        "fr": "Le Lièvre et la Tortue",
+        "ar": "الأرنب والسلحفاة"
+      },
+      "position": [
+        -4,
+        0,
+        -4
+      ],
+      "contentType": "narration",
+      "narration": {
+        "en": "A fast hare laughed at a slow tortoise, so they had a race. The hare ran far ahead, then took a nap. The tortoise kept walking, step by step, and crossed the finish line first!",
+        "fr": "Un lièvre rapide se moquait d'une tortue lente, alors ils firent une course. Le lièvre partit loin devant, puis fit une sieste. La tortue continua d'avancer, pas à pas, et franchit la ligne d'arrivée la première !",
+        "ar": "سخر أرنب سريع من سلحفاة بطيئة، فتسابقا. ركض الأرنب بعيدًا ثم نام قليلًا. أمّا السلحفاة فواصلت السير خطوةً بعد خطوة، وعبرت خط النهاية أولًا!"
+      },
+      "learnMore": {
+        "en": "The moral of this fable is often told as: slow and steady wins the race. 'Kalila wa Dimna' is a famous book of animal fables. It came from India and was put into Arabic more than 1,200 years ago by Ibn al-Muqaffa'.",
+        "fr": "La morale de cette fable est souvent résumée ainsi : rien ne sert de courir, il faut partir à point. « Kalila wa Dimna » est un célèbre livre de fables d'animaux. Venu d'Inde, il a été traduit en arabe il y a plus de 1 200 ans par Ibn al-Muqaffa.",
+        "ar": "تُلخَّص عبرة هذه الحكاية غالبًا هكذا: البطء مع المثابرة يفوز بالسباق. «كليلة ودمنة» كتاب مشهور من حكايات الحيوانات، أصله من الهند، ونقله ابن المقفّع إلى العربية قبل أكثر من ١٢٠٠ سنة."
+      },
+      "funFact": {
+        "en": "The French poet Jean de La Fontaine retold the tortoise and the hare in 1668.",
+        "fr": "Le poète français Jean de La Fontaine a repris « Le Lièvre et la Tortue » en 1668.",
+        "ar": "أعاد الشاعر الفرنسي جان دو لافونتين كتابة حكاية الأرنب والسلحفاة عام ١٦٦٨."
+      },
+      "linkedTopics": [
+        "reading/rebus",
+        "history/dinosaurs"
+      ],
+      "sourceType": "curated",
+      "factIds": [
+        "f-aesop",
+        "f-fable",
+        "f-moral",
+        "f-kalila",
+        "f-lafontaine"
+      ],
+      "wikiQuery": {
+        "en": "The Tortoise and the Hare",
+        "fr": "Le Lièvre et la Tortue",
+        "ar": "الأرنب والسلحفاة"
+      },
+      "mascotLine": {
+        "en": "Story time! When it ends, we can jump inside.",
+        "fr": "C'est l'heure de l'histoire ! À la fin, on pourra sauter dedans.",
+        "ar": "حان وقت الحكاية! عندما تنتهي يمكننا أن نقفز داخلها."
+      }
+    },
+    {
+      "id": "reading/rebus",
+      "title": {
+        "en": "Picture Riddle",
+        "fr": "Le rébus",
+        "ar": "لغز الصور"
+      },
+      "position": [
+        4,
+        0,
+        -4
+      ],
+      "contentType": "puzzle",
+      "narration": {
+        "en": "A rebus uses pictures to stand for words. Look at the two glowing objects and put them together.",
+        "fr": "Un rébus utilise des images pour représenter des mots. Regarde les deux objets lumineux et assemble-les.",
+        "ar": "لغز الصور يستخدم الصور بدل الكلمات. انظر إلى الشيئين المتوهّجين واجمعهما معًا."
+      },
+      "learnMore": {
+        "en": "A starfish is not really a fish. Scientists call it a sea star.",
+        "fr": "L'étoile de mer n'est pas un poisson.",
+        "ar": "نجم البحر ليس سمكة في الحقيقة."
+      },
+      "funFact": {
+        "en": "A sea star has no brain and no blood, and it can grow back a lost arm.",
+        "fr": "L'étoile de mer n'a ni cerveau ni sang, et elle peut faire repousser un bras perdu.",
+        "ar": "ليس لنجم البحر دماغ ولا دم، ويستطيع أن يُنبت ذراعًا جديدة بدل المفقودة."
+      },
+      "linkedTopics": [
+        "reading/story",
+        "animals/forest-sort"
+      ],
+      "sourceType": "curated",
+      "factIds": [
+        "f-seastar",
+        "f-seastar-arms"
+      ],
+      "wikiQuery": {
+        "en": "Starfish",
+        "fr": "Étoile de mer",
+        "ar": "نجم البحر"
+      },
+      "mascotLine": {
+        "en": "A star... and the sea? What could that be?",
+        "fr": "Une étoile... et la mer ? Qu'est-ce que ça peut être ?",
+        "ar": "نجمة... وبحر؟ ماذا يمكن أن يكون؟"
+      },
+      "puzzle": {
+        "type": "rebus",
+        "prompt": {
+          "en": "Star + sea = ?",
+          "fr": "Étoile + mer = ?",
+          "ar": "نجم + بحر = ؟"
+        },
+        "factIds": [
+          "f-seastar"
+        ],
+        "parts": [
+          "star",
+          "sea"
+        ],
+        "choices": [
+          {
+            "en": "Shooting star",
+            "fr": "Étoile filante",
+            "ar": "شِهاب"
+          },
+          {
+            "en": "Starfish (sea star)",
+            "fr": "Étoile de mer",
+            "ar": "نجم البحر"
+          },
+          {
+            "en": "Seahorse",
+            "fr": "Hippocampe",
+            "ar": "حصان البحر"
+          },
+          {
+            "en": "Sunfish",
+            "fr": "Poisson-lune",
+            "ar": "سمكة الشمس"
+          }
+        ],
+        "answerIndex": 1
+      }
+    },
+    {
+      "id": "reading/fable-quiz",
+      "title": {
+        "en": "The Big Race",
+        "fr": "La grande course",
+        "ar": "السباق الكبير"
+      },
+      "position": [
+        0,
+        0,
+        -6.5
+      ],
+      "contentType": "puzzle",
+      "narration": {
+        "en": "A fable is a short story that teaches a lesson, called a moral. 'The Tortoise and the Hare' is one of Aesop's fables.",
+        "fr": "Une fable est une courte histoire qui donne une leçon, appelée la morale. « Le Lièvre et la Tortue » est une fable d'Ésope.",
+        "ar": "الحكاية الرمزية قصة قصيرة تعلّم درسًا يُسمّى العبرة. و«السلحفاة والأرنب» من حكايات إيسوب."
+      },
+      "learnMore": {
+        "en": "Nothing written by Aesop himself survives. His fables were passed on by storytellers.",
+        "fr": "Aucun texte écrit par Ésope lui-même n'existe plus. Ses fables ont été transmises par des conteurs.",
+        "ar": "لم يصلنا شيء كتبه إيسوب بنفسه، فقد تناقل الرواة حكاياته."
+      },
+      "funFact": {
+        "en": "Sea stars are close relatives of sea urchins.",
+        "fr": "Les étoiles de mer sont de proches parentes des oursins.",
+        "ar": "نجوم البحر من أقرب أقارب قنافذ البحر."
+      },
+      "linkedTopics": [
+        "reading/story",
+        "reading/rebus"
+      ],
+      "sourceType": "curated",
+      "factIds": [
+        "f-fable",
+        "f-aesop",
+        "f-moral",
+        "f-seastar",
+        "f-kalila",
+        "f-aesop-told",
+        "f-seastar-urchin"
+      ],
+      "wikiQuery": {
+        "en": "Fable",
+        "fr": "Fable",
+        "ar": "حكاية رمزية"
+      },
+      "mascotLine": {
+        "en": "The hare is fast. But watch what it does next.",
+        "fr": "Le lièvre est rapide. Mais regarde ce qu'il fait ensuite.",
+        "ar": "الأرنب سريع، لكن انظر ماذا سيفعل بعد قليل."
+      },
+      "quiz": {
+        "question": {
+          "en": "What is the lesson of a fable called?",
+          "fr": "Comment s'appelle la leçon d'une fable ?",
+          "ar": "ماذا يُسمّى درس الحكاية الرمزية؟"
+        },
+        "choices": [
+          {
+            "en": "The moral",
+            "fr": "La morale",
+            "ar": "العبرة"
+          },
+          {
+            "en": "The title",
+            "fr": "Le titre",
+            "ar": "العنوان"
+          },
+          {
+            "en": "The chapter",
+            "fr": "Le chapitre",
+            "ar": "الفصل"
+          },
+          {
+            "en": "The cover",
+            "fr": "La couverture",
+            "ar": "الغلاف"
+          }
+        ],
+        "answerIndex": 0,
+        "factId": "f-fable"
+      },
+      "moreQuestions": [
+        {
+          "question": {
+            "en": "Who told the fable of the tortoise and the hare?",
+            "fr": "Qui a raconté la fable du lièvre et de la tortue ?",
+            "ar": "من روى حكاية السلحفاة والأرنب؟"
+          },
+          "choices": [
+            {
+              "en": "Aesop",
+              "fr": "Ésope",
+              "ar": "إيسوب"
+            },
+            {
+              "en": "Leonardo da Vinci",
+              "fr": "Léonard de Vinci",
+              "ar": "ليوناردو دا فينشي"
+            },
+            {
+              "en": "Marie Curie",
+              "fr": "Marie Curie",
+              "ar": "ماري كوري"
+            },
+            {
+              "en": "Ada Lovelace",
+              "fr": "Ada Lovelace",
+              "ar": "آدا لوفليس"
+            }
+          ],
+          "answerIndex": 0,
+          "factId": "f-aesop"
+        },
+        {
+          "question": {
+            "en": "Is a starfish really a fish?",
+            "fr": "L'étoile de mer est-elle vraiment un poisson ?",
+            "ar": "هل نجم البحر سمكة حقًّا؟"
+          },
+          "choices": [
+            {
+              "en": "Yes",
+              "fr": "Oui",
+              "ar": "نعم"
+            },
+            {
+              "en": "No, it is a sea star",
+              "fr": "Non, c'est une étoile de mer",
+              "ar": "لا، إنه نجم البحر"
+            },
+            {
+              "en": "It is a bird",
+              "fr": "C'est un oiseau",
+              "ar": "إنه طائر"
+            },
+            {
+              "en": "It is a plant",
+              "fr": "C'est une plante",
+              "ar": "إنه نبات"
+            }
+          ],
+          "answerIndex": 1,
+          "factId": "f-seastar"
+        },
+        {
+          "question": {
+            "en": "Who put the fables of 'Kalila wa Dimna' into Arabic?",
+            "fr": "Qui a traduit en arabe les fables de « Kalila wa Dimna » ?",
+            "ar": "من نقل حكايات «كليلة ودمنة» إلى العربية؟"
+          },
+          "choices": [
+            {
+              "en": "Aesop",
+              "fr": "Ésope",
+              "ar": "إيسوب"
+            },
+            {
+              "en": "Ibn al-Muqaffa'",
+              "fr": "Ibn al-Muqaffa",
+              "ar": "ابن المقفّع"
+            },
+            {
+              "en": "Jean de La Fontaine",
+              "fr": "Jean de La Fontaine",
+              "ar": "جان دو لافونتين"
+            },
+            {
+              "en": "Ibn al-Haytham",
+              "fr": "Ibn al-Haytham",
+              "ar": "ابن الهيثم"
+            }
+          ],
+          "answerIndex": 1,
+          "factId": "f-kalila"
+        }
+      ],
+      "puzzle": {
+        "type": "arcade",
+        "game": "steady-race",
+        "prompt": {
+          "en": "Tap to walk the tortoise. Slow and steady: if you tap too fast, it stumbles!",
+          "fr": "Appuie pour faire avancer la tortue. Lentement mais sûrement : si tu vas trop vite, elle trébuche !",
+          "ar": "اضغط لتمشي السلحفاة. بهدوء وثبات: إن ضغطت بسرعة تتعثّر!"
+        },
+        "factIds": [
+          "f-moral"
+        ]
+      }
+    }
+  ]
+}

@@ -1,0 +1,541 @@
+{
+  "sceneId": "history",
+  "category": "history",
+  "title": {
+    "en": "Prehistory: The Age of Dinosaurs",
+    "fr": "La Préhistoire : l'âge des dinosaures",
+    "ar": "ما قبل التاريخ: عصر الديناصورات"
+  },
+  "intro": {
+    "en": "Step back millions of years, long before any people lived.",
+    "fr": "Remonte des millions d'années en arrière, bien avant les premiers humains.",
+    "ar": "عُد ملايين السنين إلى الوراء، قبل أن يعيش أي إنسان بزمن طويل."
+  },
+  "review": {
+    "status": "reviewed",
+    "reviewers": [
+      "Web fact-check"
+    ],
+    "lastReviewed": "2026-10-09",
+    "notes": "Needs subject review and FR/AR native review.",
+    "factCheck": {
+      "date": "2026-10-09",
+      "method": "Every fact was searched on the web and compared with independent sources (linked per fact where one page covers it). Facts that did not match were corrected. French and Arabic were not read by a native speaker."
+    }
+  },
+  "facts": [
+    {
+      "id": "f-dino-span",
+      "text": {
+        "en": "Dinosaurs lived on Earth for more than 150 million years.",
+        "fr": "Les dinosaures ont vécu sur Terre pendant plus de 150 millions d'années.",
+        "ar": "عاشت الديناصورات على الأرض أكثر من 150 مليون سنة."
+      },
+      "sources": [
+        "https://www.nhm.ac.uk/discover/why-are-birds-the-only-surviving-dinosaurs.html"
+      ]
+    },
+    {
+      "id": "f-dino-extinct",
+      "text": {
+        "en": "All dinosaurs except birds died out about 66 million years ago.",
+        "fr": "Tous les dinosaures, sauf les oiseaux, ont disparu il y a environ 66 millions d'années.",
+        "ar": "انقرضت كل الديناصورات، ما عدا الطيور، قبل نحو 66 مليون سنة."
+      },
+      "sources": [
+        "https://www.nhm.ac.uk/discover/why-are-birds-the-only-surviving-dinosaurs.html"
+      ]
+    },
+    {
+      "id": "f-dino-birds",
+      "text": {
+        "en": "Birds are living dinosaurs: they come from small meat-eating dinosaurs.",
+        "fr": "Les oiseaux sont des dinosaures vivants : ils descendent de petits dinosaures carnivores.",
+        "ar": "الطيور ديناصورات حيّة: فهي تنحدر من ديناصورات صغيرة آكلة للحوم."
+      },
+      "sources": [
+        "https://www.nhm.ac.uk/discover/why-are-birds-the-only-surviving-dinosaurs.html"
+      ]
+    },
+    {
+      "id": "f-dino-humans",
+      "text": {
+        "en": "No person ever saw a living T. rex: people appeared millions of years later.",
+        "fr": "Aucun humain n'a jamais vu de T. rex vivant : les humains sont apparus des millions d'années plus tard.",
+        "ar": "لم يرَ أي إنسان ديناصور تي ركس حيًّا، فقد ظهر البشر بعده بملايين السنين."
+      },
+      "sources": [
+        "https://www.nhm.ac.uk/discover/why-are-birds-the-only-surviving-dinosaurs.html"
+      ]
+    },
+    {
+      "id": "f-mammoth",
+      "text": {
+        "en": "The woolly mammoth was a hairy relative of today's elephants, not a dinosaur.",
+        "fr": "Le mammouth laineux était un cousin poilu des éléphants d'aujourd'hui, pas un dinosaure.",
+        "ar": "كان الماموث الصوفي قريبًا مكسوًّا بالشعر لفيلة اليوم، ولم يكن ديناصورًا."
+      },
+      "sources": [
+        "https://www.worldatlas.com/articles/did-woolly-mammoths-still-roam-parts-of-earth-when-the-great-pyramids-were-built.html"
+      ]
+    },
+    {
+      "id": "f-fossil",
+      "text": {
+        "en": "We know about dinosaurs from fossils: remains of living things kept in rock.",
+        "fr": "Nous connaissons les dinosaures grâce aux fossiles : des restes d'êtres vivants conservés dans la roche.",
+        "ar": "نعرف الديناصورات من المستحاثات، وهي بقايا كائنات حيّة محفوظة في الصخور."
+      },
+      "sources": [
+        "https://www.nhm.ac.uk/discover/why-are-birds-the-only-surviving-dinosaurs.html"
+      ]
+    },
+    {
+      "id": "f-trex-stego",
+      "text": {
+        "en": "T. rex lived closer in time to you than to Stegosaurus.",
+        "fr": "Le T. rex a vécu plus près de notre époque que de celle du stégosaure.",
+        "ar": "عاش تي ركس في زمن أقرب إلى زماننا منه إلى زمن الستيغوصور."
+      },
+      "sources": [
+        "https://www.nhm.ac.uk/discover/why-are-birds-the-only-surviving-dinosaurs.html"
+      ]
+    },
+    {
+      "id": "f-mammoth-pyramids",
+      "text": {
+        "en": "The last woolly mammoths were still alive when the pyramids of Egypt were built.",
+        "fr": "Les derniers mammouths laineux vivaient encore quand on a construit les pyramides d'Égypte.",
+        "ar": "كانت آخر حيوانات الماموث الصوفي ما تزال حيّة عندما بُنيت أهرامات مصر."
+      },
+      "sources": [
+        "https://www.worldatlas.com/articles/did-woolly-mammoths-still-roam-parts-of-earth-when-the-great-pyramids-were-built.html"
+      ]
+    },
+    {
+      "id": "f-mammoth-wrangel",
+      "text": {
+        "en": "The last mammoths lived on Wrangel Island in the Arctic until about 4,000 years ago.",
+        "fr": "Les derniers mammouths ont vécu sur l'île Wrangel, dans l'Arctique, jusqu'à il y a environ 4 000 ans.",
+        "ar": "عاشت آخر حيوانات الماموث في جزيرة رانجل في القطب الشمالي حتى قبل نحو ٤٠٠٠ سنة."
+      },
+      "sources": [
+        "https://www.worldatlas.com/articles/did-woolly-mammoths-still-roam-parts-of-earth-when-the-great-pyramids-were-built.html"
+      ]
+    },
+    {
+      "id": "f-bird-survive",
+      "text": {
+        "en": "Scientists think birds survived because they were small, could eat many foods and could fly.",
+        "fr": "Les scientifiques pensent que les oiseaux ont survécu parce qu'ils étaient petits, mangeaient de tout et savaient voler.",
+        "ar": "يرى العلماء أن الطيور نجت لأنها كانت صغيرة وتأكل أطعمة كثيرة وتستطيع الطيران."
+      },
+      "sources": [
+        "https://www.nhm.ac.uk/discover/why-are-birds-the-only-surviving-dinosaurs.html"
+      ]
+    }
+  ],
+  "glossary": [
+    {
+      "terms": {
+        "en": [
+          "fossils",
+          "fossil"
+        ],
+        "fr": [
+          "fossiles",
+          "fossile"
+        ],
+        "ar": [
+          "المستحاثات",
+          "مستحاثات",
+          "مستحاثة"
+        ]
+      },
+      "definition": {
+        "en": "Remains or traces of very old living things, kept in rock.",
+        "fr": "Des restes ou des traces d'êtres vivants très anciens, conservés dans la roche.",
+        "ar": "بقايا أو آثار كائنات حيّة قديمة جدًّا محفوظة في الصخور."
+      }
+    },
+    {
+      "terms": {
+        "en": [
+          "prehistory"
+        ],
+        "fr": [
+          "préhistoire"
+        ],
+        "ar": [
+          "التاريخ"
+        ]
+      },
+      "definition": {
+        "en": "The very long time before people wrote things down.",
+        "fr": "La très longue période avant que les humains n'écrivent.",
+        "ar": "الزمن الطويل جدًّا قبل أن يبدأ البشر بالكتابة."
+      }
+    }
+  ],
+  "hotspots": [
+    {
+      "id": "history/dinosaurs",
+      "title": {
+        "en": "When Dinosaurs Ruled",
+        "fr": "Au temps des dinosaures",
+        "ar": "حين سادت الديناصورات"
+      },
+      "position": [
+        -4,
+        0,
+        -4
+      ],
+      "contentType": "narration",
+      "narration": {
+        "en": "Dinosaurs lived on Earth for more than 150 million years. All of them except birds died out about 66 million years ago.",
+        "fr": "Les dinosaures ont vécu sur Terre pendant plus de 150 millions d'années. Tous, sauf les oiseaux, ont disparu il y a environ 66 millions d'années.",
+        "ar": "عاشت الديناصورات على الأرض أكثر من 150 مليون سنة. وانقرضت كلها، ما عدا الطيور، قبل نحو 66 مليون سنة."
+      },
+      "learnMore": {
+        "en": "No person ever saw a living T. rex: people appeared millions of years later.",
+        "fr": "Aucun humain n'a jamais vu de T. rex vivant : les humains sont apparus des millions d'années plus tard.",
+        "ar": "لم يرَ أي إنسان ديناصور تي ركس حيًّا، فقد ظهر البشر بعده بملايين السنين."
+      },
+      "funFact": {
+        "en": "T. rex lived closer in time to you than to Stegosaurus.",
+        "fr": "Le T. rex a vécu plus près de notre époque que de celle du stégosaure.",
+        "ar": "عاش تي ركس في زمن أقرب إلى زماننا منه إلى زمن الستيغوصور."
+      },
+      "linkedTopics": [
+        "history/odd-dino",
+        "animals/owl"
+      ],
+      "sourceType": "curated",
+      "factIds": [
+        "f-dino-span",
+        "f-dino-extinct",
+        "f-fossil",
+        "f-dino-humans",
+        "f-trex-stego"
+      ],
+      "wikiQuery": {
+        "en": "Dinosaur",
+        "fr": "Dinosaure",
+        "ar": "ديناصور"
+      },
+      "mascotLine": {
+        "en": "These bones are older than you can imagine!",
+        "fr": "Ces os sont plus vieux que tu ne l'imagines !",
+        "ar": "هذه العظام أقدم مما تتخيّل!"
+      }
+    },
+    {
+      "id": "history/odd-dino",
+      "title": {
+        "en": "Who Doesn't Belong?",
+        "fr": "L'intrus",
+        "ar": "من الغريب هنا؟"
+      },
+      "position": [
+        4,
+        0,
+        -4
+      ],
+      "contentType": "puzzle",
+      "narration": {
+        "en": "Not every big prehistoric animal was a dinosaur. The woolly mammoth was a hairy relative of today's elephants.",
+        "fr": "Tous les grands animaux préhistoriques n'étaient pas des dinosaures. Le mammouth laineux était un cousin poilu des éléphants d'aujourd'hui.",
+        "ar": "لم يكن كل حيوان كبير في عصور ما قبل التاريخ ديناصورًا. كان الماموث الصوفي قريبًا مكسوًّا بالشعر لفيلة اليوم."
+      },
+      "learnMore": {
+        "en": "The last woolly mammoths were still alive when the pyramids of Egypt were built.",
+        "fr": "Les derniers mammouths laineux vivaient encore quand on a construit les pyramides d'Égypte.",
+        "ar": "كانت آخر حيوانات الماموث الصوفي ما تزال حيّة عندما بُنيت أهرامات مصر."
+      },
+      "funFact": {
+        "en": "The last mammoths lived on Wrangel Island in the Arctic until about 4,000 years ago.",
+        "fr": "Les derniers mammouths ont vécu sur l'île Wrangel, dans l'Arctique, jusqu'à il y a environ 4 000 ans.",
+        "ar": "عاشت آخر حيوانات الماموث في جزيرة رانجل في القطب الشمالي حتى قبل نحو ٤٠٠٠ سنة."
+      },
+      "linkedTopics": [
+        "history/dinosaurs",
+        "animals/elephant"
+      ],
+      "sourceType": "curated",
+      "factIds": [
+        "f-mammoth",
+        "f-dino-span",
+        "f-mammoth-pyramids",
+        "f-mammoth-wrangel"
+      ],
+      "wikiQuery": {
+        "en": "Woolly mammoth",
+        "fr": "Mammouth laineux",
+        "ar": "ماموث صوفي"
+      },
+      "mascotLine": {
+        "en": "One of these is not a dinosaur. Which one?",
+        "fr": "L'un d'eux n'est pas un dinosaure. Lequel ?",
+        "ar": "واحد من هؤلاء ليس ديناصورًا. أيّهم؟"
+      },
+      "puzzle": {
+        "type": "odd-one-out",
+        "prompt": {
+          "en": "Which one is NOT a dinosaur?",
+          "fr": "Lequel n'est PAS un dinosaure ?",
+          "ar": "أيّها ليس ديناصورًا؟"
+        },
+        "factIds": [
+          "f-mammoth"
+        ],
+        "options": [
+          {
+            "id": "trex",
+            "label": {
+              "en": "Tyrannosaurus rex",
+              "fr": "Tyrannosaure",
+              "ar": "تيرانوصور ركس"
+            },
+            "media": {
+              "wikiImage": "Tyrannosaurus",
+              "model": "trex"
+            }
+          },
+          {
+            "id": "diplodocus",
+            "label": {
+              "en": "Diplodocus",
+              "fr": "Diplodocus",
+              "ar": "ديبلودوكس"
+            },
+            "media": {
+              "wikiImage": "Diplodocus",
+              "model": "diplodocus"
+            }
+          },
+          {
+            "id": "mammoth",
+            "label": {
+              "en": "Woolly mammoth",
+              "fr": "Mammouth laineux",
+              "ar": "الماموث الصوفي"
+            },
+            "media": {
+              "wikiImage": "Woolly mammoth",
+              "model": "mammoth"
+            }
+          },
+          {
+            "id": "triceratops",
+            "label": {
+              "en": "Triceratops",
+              "fr": "Tricératops",
+              "ar": "ترايسيراتوبس"
+            },
+            "media": {
+              "wikiImage": "Triceratops",
+              "model": "triceratops"
+            }
+          }
+        ],
+        "answerId": "mammoth",
+        "explanation": {
+          "en": "The woolly mammoth was a hairy relative of today's elephants, not a dinosaur.",
+          "fr": "Le mammouth laineux était un cousin poilu des éléphants d'aujourd'hui, pas un dinosaure.",
+          "ar": "كان الماموث الصوفي قريبًا مكسوًّا بالشعر لفيلة اليوم، ولم يكن ديناصورًا."
+        }
+      }
+    },
+    {
+      "id": "history/dino-quiz",
+      "title": {
+        "en": "Fossil Dig",
+        "fr": "La fouille aux fossiles",
+        "ar": "التنقيب عن الأحافير"
+      },
+      "position": [
+        0,
+        0,
+        -6.5
+      ],
+      "contentType": "puzzle",
+      "narration": {
+        "en": "Dinosaurs lived on Earth for more than 150 million years. We know about them from fossils kept in rock.",
+        "fr": "Les dinosaures ont vécu sur Terre pendant plus de 150 millions d'années. On les connaît grâce aux fossiles gardés dans la roche.",
+        "ar": "عاشت الديناصورات على الأرض أكثر من ١٥٠ مليون سنة، ونعرفها من الأحافير المحفوظة في الصخور."
+      },
+      "learnMore": {
+        "en": "Birds are living dinosaurs: they come from small meat-eating dinosaurs.",
+        "fr": "Les oiseaux sont des dinosaures vivants : ils descendent de petits dinosaures carnivores.",
+        "ar": "الطيور ديناصورات حيّة: فهي تنحدر من ديناصورات صغيرة آكلة للحوم."
+      },
+      "funFact": {
+        "en": "Scientists think birds survived because they were small, could eat many foods and could fly.",
+        "fr": "Les scientifiques pensent que les oiseaux ont survécu parce qu'ils étaient petits, mangeaient de tout et savaient voler.",
+        "ar": "يرى العلماء أن الطيور نجت لأنها كانت صغيرة وتأكل أطعمة كثيرة وتستطيع الطيران."
+      },
+      "linkedTopics": [
+        "history/dinosaurs",
+        "history/odd-dino"
+      ],
+      "sourceType": "curated",
+      "factIds": [
+        "f-dino-span",
+        "f-dino-extinct",
+        "f-dino-birds",
+        "f-dino-humans",
+        "f-fossil",
+        "f-mammoth",
+        "f-bird-survive"
+      ],
+      "wikiQuery": {
+        "en": "Dinosaur",
+        "fr": "Dinosaure",
+        "ar": "ديناصور"
+      },
+      "mascotLine": {
+        "en": "Careful... there are old bones under here!",
+        "fr": "Doucement... il y a de vieux os là-dessous !",
+        "ar": "على مهل... تحت الصخر عظام قديمة!"
+      },
+      "quiz": {
+        "question": {
+          "en": "Which animals alive today are dinosaurs?",
+          "fr": "Quels animaux vivants aujourd'hui sont des dinosaures ?",
+          "ar": "أي الحيوانات الحيّة اليوم ديناصورات؟"
+        },
+        "choices": [
+          {
+            "en": "Birds",
+            "fr": "Les oiseaux",
+            "ar": "الطيور"
+          },
+          {
+            "en": "Cats",
+            "fr": "Les chats",
+            "ar": "القطط"
+          },
+          {
+            "en": "Fish",
+            "fr": "Les poissons",
+            "ar": "الأسماك"
+          },
+          {
+            "en": "Frogs",
+            "fr": "Les grenouilles",
+            "ar": "الضفادع"
+          }
+        ],
+        "answerIndex": 0,
+        "factId": "f-dino-birds"
+      },
+      "moreQuestions": [
+        {
+          "question": {
+            "en": "How do we know about dinosaurs?",
+            "fr": "Comment connaît-on les dinosaures ?",
+            "ar": "كيف نعرف الديناصورات؟"
+          },
+          "choices": [
+            {
+              "en": "From photos",
+              "fr": "Grâce à des photos",
+              "ar": "من الصور"
+            },
+            {
+              "en": "From fossils in rock",
+              "fr": "Grâce aux fossiles dans la roche",
+              "ar": "من الأحافير في الصخور"
+            },
+            {
+              "en": "From old films",
+              "fr": "Grâce à de vieux films",
+              "ar": "من الأفلام القديمة"
+            },
+            {
+              "en": "From people who saw them",
+              "fr": "Grâce aux gens qui les ont vus",
+              "ar": "من أناس رأوها"
+            }
+          ],
+          "answerIndex": 1,
+          "factId": "f-fossil"
+        },
+        {
+          "question": {
+            "en": "About when did the dinosaurs (except birds) die out?",
+            "fr": "Quand les dinosaures (sauf les oiseaux) ont-ils disparu ?",
+            "ar": "متى انقرضت الديناصورات (ما عدا الطيور)؟"
+          },
+          "choices": [
+            {
+              "en": "66 years ago",
+              "fr": "Il y a 66 ans",
+              "ar": "قبل ٦٦ سنة"
+            },
+            {
+              "en": "66 thousand years ago",
+              "fr": "Il y a 66 000 ans",
+              "ar": "قبل ٦٦ ألف سنة"
+            },
+            {
+              "en": "66 million years ago",
+              "fr": "Il y a 66 millions d'années",
+              "ar": "قبل ٦٦ مليون سنة"
+            },
+            {
+              "en": "Last week",
+              "fr": "La semaine dernière",
+              "ar": "الأسبوع الماضي"
+            }
+          ],
+          "answerIndex": 2,
+          "factId": "f-dino-extinct"
+        },
+        {
+          "question": {
+            "en": "Was the woolly mammoth a dinosaur?",
+            "fr": "Le mammouth laineux était-il un dinosaure ?",
+            "ar": "هل كان الماموث الصوفي ديناصورًا؟"
+          },
+          "choices": [
+            {
+              "en": "Yes",
+              "fr": "Oui",
+              "ar": "نعم"
+            },
+            {
+              "en": "No, it was a relative of elephants",
+              "fr": "Non, c'était un parent des éléphants",
+              "ar": "لا، كان من أقارب الفيلة"
+            },
+            {
+              "en": "No, it was a bird",
+              "fr": "Non, c'était un oiseau",
+              "ar": "لا، كان طائرًا"
+            },
+            {
+              "en": "No, it was a fish",
+              "fr": "Non, c'était un poisson",
+              "ar": "لا، كان سمكة"
+            }
+          ],
+          "answerIndex": 1,
+          "factId": "f-mammoth"
+        }
+      ],
+      "puzzle": {
+        "type": "arcade",
+        "game": "fossil-dig",
+        "prompt": {
+          "en": "Brush away the rock to uncover the fossil.",
+          "fr": "Brosse la roche pour dégager le fossile.",
+          "ar": "انفض الصخر بالفرشاة لتكشف الأحفورة."
+        },
+        "factIds": [
+          "f-fossil"
+        ]
+      }
+    }
+  ]
+}

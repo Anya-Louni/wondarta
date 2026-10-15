@@ -1,0 +1,513 @@
+{
+  "sceneId": "social",
+  "category": "social",
+  "title": {
+    "en": "Maps & Messages",
+    "fr": "Cartes et messages",
+    "ar": "الخرائط والرسائل"
+  },
+  "intro": {
+    "en": "Find your way with a map, then crack a secret message.",
+    "fr": "Trouve ton chemin avec une carte, puis déchiffre un message secret.",
+    "ar": "اعثر على طريقك بالخريطة، ثم حُلّ رسالة سرّية."
+  },
+  "review": {
+    "status": "reviewed",
+    "reviewers": [
+      "Web fact-check"
+    ],
+    "lastReviewed": "2026-10-09",
+    "notes": "Needs subject review and FR/AR native review. Cipher text is computed from the plain word at runtime.",
+    "factCheck": {
+      "date": "2026-10-09",
+      "method": "Every fact was searched on the web and compared with independent sources (linked per fact where one page covers it). Facts that did not match were corrected. French and Arabic were not read by a native speaker."
+    }
+  },
+  "facts": [
+    {
+      "id": "f-compass-rose",
+      "text": {
+        "en": "A compass rose on a map shows the directions north, east, south and west.",
+        "fr": "La rose des vents d'une carte indique le nord, l'est, le sud et l'ouest.",
+        "ar": "تُظهر وردة الرياح على الخريطة الاتجاهات: الشمال والشرق والجنوب والغرب."
+      },
+      "sources": [
+        "https://en.wikipedia.org/wiki/History_of_the_compass",
+        "https://pwg.gsfc.nasa.gov/earthmag/mill_2.htm"
+      ]
+    },
+    {
+      "id": "f-compass-north",
+      "text": {
+        "en": "A compass needle points north.",
+        "fr": "L'aiguille d'une boussole indique le nord.",
+        "ar": "تشير إبرة البوصلة إلى الشمال."
+      },
+      "sources": [
+        "https://en.wikipedia.org/wiki/History_of_the_compass",
+        "https://pwg.gsfc.nasa.gov/earthmag/mill_2.htm"
+      ]
+    },
+    {
+      "id": "f-sun-east",
+      "text": {
+        "en": "The Sun rises in the eastern part of the sky and sets in the western part.",
+        "fr": "Le Soleil se lève dans la partie est du ciel et se couche dans la partie ouest.",
+        "ar": "تشرق الشمس من جهة الشرق في السماء وتغرب من جهة الغرب."
+      }
+    },
+    {
+      "id": "f-map-key",
+      "text": {
+        "en": "A map key, or legend, explains what the symbols on a map mean.",
+        "fr": "La légende d'une carte explique ce que veulent dire ses symboles.",
+        "ar": "مفتاح الخريطة يشرح معاني الرموز المرسومة عليها."
+      }
+    },
+    {
+      "id": "f-shift-cipher",
+      "text": {
+        "en": "In a shift cipher, every letter moves the same number of places along the alphabet.",
+        "fr": "Dans un chiffrement par décalage, chaque lettre avance du même nombre de places dans l'alphabet.",
+        "ar": "في شيفرة الإزاحة، يتحرّك كل حرف العدد نفسه من المواضع في الأبجدية."
+      },
+      "sources": [
+        "https://simonsingh.com/The_Black_Chamber/caesar.html"
+      ]
+    },
+    {
+      "id": "f-caesar",
+      "text": {
+        "en": "Julius Caesar is said to have sent secret messages by shifting each letter 3 places.",
+        "fr": "On raconte que Jules César envoyait des messages secrets en décalant chaque lettre de 3 places.",
+        "ar": "يُروى أن يوليوس قيصر كان يرسل رسائل سرّية بإزاحة كل حرف 3 مواضع."
+      },
+      "sources": [
+        "https://simonsingh.com/The_Black_Chamber/caesar.html"
+      ]
+    },
+    {
+      "id": "f-earth-magnet",
+      "text": {
+        "en": "A compass works because the Earth itself acts like a giant magnet.",
+        "fr": "La boussole marche parce que la Terre elle-même agit comme un aimant géant.",
+        "ar": "تعمل البوصلة لأن الأرض نفسها تعمل كمغناطيس عملاق."
+      },
+      "sources": [
+        "https://en.wikipedia.org/wiki/History_of_the_compass",
+        "https://pwg.gsfc.nasa.gov/earthmag/mill_2.htm"
+      ]
+    },
+    {
+      "id": "f-compass-china",
+      "text": {
+        "en": "The first compasses were made in China about 2,000 years ago, from a magnetic stone.",
+        "fr": "Les premières boussoles ont été fabriquées en Chine il y a environ 2 000 ans, avec une pierre aimantée.",
+        "ar": "صُنعت أولى البوصلات في الصين قبل نحو ٢٠٠٠ سنة من حجر مغناطيسي."
+      },
+      "sources": [
+        "https://en.wikipedia.org/wiki/History_of_the_compass",
+        "https://pwg.gsfc.nasa.gov/earthmag/mill_2.htm"
+      ]
+    },
+    {
+      "id": "f-caesar-example",
+      "text": {
+        "en": "With a shift of 3, A becomes D and B becomes E.",
+        "fr": "Avec un décalage de 3, A devient D et B devient E.",
+        "ar": "عند الإزاحة بثلاثة مواضع يصير الحرف A حرف D، ويصير B حرف E."
+      },
+      "sources": [
+        "https://simonsingh.com/The_Black_Chamber/caesar.html"
+      ]
+    }
+  ],
+  "glossary": [
+    {
+      "terms": {
+        "en": [
+          "compass"
+        ],
+        "fr": [
+          "boussole"
+        ],
+        "ar": [
+          "البوصلة"
+        ]
+      },
+      "definition": {
+        "en": "A tool with a needle that points north.",
+        "fr": "Un instrument dont l'aiguille indique le nord.",
+        "ar": "أداة فيها إبرة تشير إلى الشمال."
+      }
+    },
+    {
+      "terms": {
+        "en": [
+          "cipher"
+        ],
+        "fr": [
+          "chiffrement"
+        ],
+        "ar": [
+          "شيفرة"
+        ]
+      },
+      "definition": {
+        "en": "A secret way of writing a message.",
+        "fr": "Une façon secrète d'écrire un message.",
+        "ar": "طريقة سرّية لكتابة رسالة."
+      }
+    },
+    {
+      "terms": {
+        "en": [
+          "legend"
+        ],
+        "fr": [
+          "légende"
+        ],
+        "ar": [
+          "مفتاح"
+        ]
+      },
+      "definition": {
+        "en": "The box on a map that explains its symbols.",
+        "fr": "Le cadre d'une carte qui explique ses symboles.",
+        "ar": "الإطار في الخريطة الذي يشرح رموزها."
+      }
+    }
+  ],
+  "hotspots": [
+    {
+      "id": "social/compass",
+      "title": {
+        "en": "The Compass Rose",
+        "fr": "La rose des vents",
+        "ar": "وردة الرياح"
+      },
+      "position": [
+        -4,
+        0,
+        -4
+      ],
+      "contentType": "narration",
+      "narration": {
+        "en": "A compass rose on a map shows the directions north, east, south and west. The Sun rises in the eastern part of the sky and sets in the western part.",
+        "fr": "La rose des vents d'une carte indique le nord, l'est, le sud et l'ouest. Le Soleil se lève dans la partie est du ciel et se couche dans la partie ouest.",
+        "ar": "تُظهر وردة الرياح على الخريطة الاتجاهات: الشمال والشرق والجنوب والغرب. تشرق الشمس من جهة الشرق في السماء وتغرب من جهة الغرب."
+      },
+      "learnMore": {
+        "en": "A compass works because the Earth itself acts like a giant magnet.",
+        "fr": "La boussole marche parce que la Terre elle-même agit comme un aimant géant.",
+        "ar": "تعمل البوصلة لأن الأرض نفسها تعمل كمغناطيس عملاق."
+      },
+      "funFact": {
+        "en": "The first compasses were made in China about 2,000 years ago, from a magnetic stone.",
+        "fr": "Les premières boussoles ont été fabriquées en Chine il y a environ 2 000 ans, avec une pierre aimantée.",
+        "ar": "صُنعت أولى البوصلات في الصين قبل نحو ٢٠٠٠ سنة من حجر مغناطيسي."
+      },
+      "linkedTopics": [
+        "social/secret-message",
+        "places/hello"
+      ],
+      "sourceType": "curated",
+      "factIds": [
+        "f-compass-rose",
+        "f-sun-east",
+        "f-compass-north",
+        "f-map-key",
+        "f-earth-magnet",
+        "f-compass-china"
+      ],
+      "wikiQuery": {
+        "en": "Compass rose",
+        "fr": "Rose des vents",
+        "ar": "وردة الرياح"
+      },
+      "mascotLine": {
+        "en": "Which way is north? Let's find out!",
+        "fr": "Où est le nord ? Découvrons-le !",
+        "ar": "أين الشمال؟ لنكتشف ذلك!"
+      }
+    },
+    {
+      "id": "social/secret-message",
+      "title": {
+        "en": "Secret Message",
+        "fr": "Le message secret",
+        "ar": "الرسالة السرّية"
+      },
+      "position": [
+        4,
+        0,
+        -4
+      ],
+      "contentType": "puzzle",
+      "narration": {
+        "en": "Someone left a coded direction! In a shift cipher, every letter moves the same number of places along the alphabet.",
+        "fr": "Quelqu'un a laissé une direction codée ! Dans un chiffrement par décalage, chaque lettre avance du même nombre de places dans l'alphabet.",
+        "ar": "ترك أحدهم اتجاهًا مشفّرًا! في شيفرة الإزاحة، يتحرّك كل حرف العدد نفسه من المواضع في الأبجدية."
+      },
+      "learnMore": {
+        "en": "Julius Caesar is said to have sent secret messages by shifting each letter 3 places.",
+        "fr": "On raconte que Jules César envoyait des messages secrets en décalant chaque lettre de 3 places.",
+        "ar": "يُروى أن يوليوس قيصر كان يرسل رسائل سرّية بإزاحة كل حرف 3 مواضع."
+      },
+      "funFact": {
+        "en": "With a shift of 3, A becomes D and B becomes E.",
+        "fr": "Avec un décalage de 3, A devient D et B devient E.",
+        "ar": "عند الإزاحة بثلاثة مواضع يصير الحرف A حرف D، ويصير B حرف E."
+      },
+      "linkedTopics": [
+        "social/compass",
+        "games/robot"
+      ],
+      "sourceType": "curated",
+      "factIds": [
+        "f-shift-cipher",
+        "f-caesar",
+        "f-caesar-example"
+      ],
+      "wikiQuery": {
+        "en": "Caesar cipher",
+        "fr": "Chiffrement par décalage",
+        "ar": "شيفرة قيصر"
+      },
+      "mascotLine": {
+        "en": "A secret code! Each letter moved one step forward.",
+        "fr": "Un code secret ! Chaque lettre a avancé d'un pas.",
+        "ar": "شيفرة سرّية! كل حرف تقدّم خطوة واحدة."
+      },
+      "puzzle": {
+        "type": "cipher",
+        "prompt": {
+          "en": "Each letter moved 1 step forward. Move each one back to decode it!",
+          "fr": "Chaque lettre a avancé d'1 pas. Recule-les pour décoder !",
+          "ar": "تقدّم كل حرف خطوة واحدة. أرجِع كل حرف خطوة لتحلّ الشيفرة!"
+        },
+        "factIds": [
+          "f-shift-cipher"
+        ],
+        "plain": {
+          "en": "NORTH",
+          "fr": "NORD",
+          "ar": "شمال"
+        },
+        "shift": 1,
+        "choices": [
+          {
+            "en": "NORTH",
+            "fr": "NORD",
+            "ar": "شمال"
+          },
+          {
+            "en": "SOUTH",
+            "fr": "SUD",
+            "ar": "جنوب"
+          },
+          {
+            "en": "EAST",
+            "fr": "EST",
+            "ar": "شرق"
+          },
+          {
+            "en": "WEST",
+            "fr": "OUEST",
+            "ar": "غرب"
+          }
+        ]
+      }
+    },
+    {
+      "id": "social/map-quiz",
+      "title": {
+        "en": "Treasure Hunt",
+        "fr": "La chasse au trésor",
+        "ar": "البحث عن الكنز"
+      },
+      "position": [
+        0,
+        0,
+        -6.5
+      ],
+      "contentType": "puzzle",
+      "narration": {
+        "en": "Maps help us find our way. A compass rose shows the directions, and a map key explains the symbols.",
+        "fr": "Les cartes nous aident à trouver notre chemin. La rose des vents montre les directions, et la légende explique les symboles.",
+        "ar": "تساعدنا الخرائط على إيجاد الطريق. وردة الرياح تُظهر الاتجاهات، ومفتاح الخريطة يشرح الرموز."
+      },
+      "learnMore": {
+        "en": "The Sun rises in the eastern part of the sky and sets in the western part. Julius Caesar is said to have sent secret messages by shifting each letter 3 places.",
+        "fr": "Le Soleil se lève dans la partie est du ciel et se couche dans la partie ouest. On raconte que Jules César envoyait des messages secrets en décalant chaque lettre de 3 places.",
+        "ar": "تشرق الشمس من جهة الشرق في السماء وتغرب من جهة الغرب. يُروى أن يوليوس قيصر كان يرسل رسائل سرّية بإزاحة كل حرف 3 مواضع."
+      },
+      "funFact": {
+        "en": "A compass works because the Earth itself acts like a giant magnet.",
+        "fr": "La boussole marche parce que la Terre elle-même agit comme un aimant géant.",
+        "ar": "تعمل البوصلة لأن الأرض نفسها تعمل كمغناطيس عملاق."
+      },
+      "linkedTopics": [
+        "social/compass",
+        "social/secret-message"
+      ],
+      "sourceType": "curated",
+      "factIds": [
+        "f-compass-rose",
+        "f-compass-north",
+        "f-sun-east",
+        "f-map-key",
+        "f-caesar",
+        "f-earth-magnet"
+      ],
+      "wikiQuery": {
+        "en": "Compass rose",
+        "fr": "Rose des vents",
+        "ar": "وردة الرياح"
+      },
+      "mascotLine": {
+        "en": "North, east, south, west. Count your steps!",
+        "fr": "Nord, est, sud, ouest. Compte tes pas !",
+        "ar": "شمال، شرق، جنوب، غرب. عُدَّ خطواتك!"
+      },
+      "quiz": {
+        "question": {
+          "en": "Which way does a compass needle point?",
+          "fr": "Vers où pointe l'aiguille d'une boussole ?",
+          "ar": "إلى أين تشير إبرة البوصلة؟"
+        },
+        "choices": [
+          {
+            "en": "North",
+            "fr": "Le nord",
+            "ar": "الشمال"
+          },
+          {
+            "en": "South",
+            "fr": "Le sud",
+            "ar": "الجنوب"
+          },
+          {
+            "en": "Up",
+            "fr": "Le haut",
+            "ar": "الأعلى"
+          },
+          {
+            "en": "At the Moon",
+            "fr": "Vers la Lune",
+            "ar": "نحو القمر"
+          }
+        ],
+        "answerIndex": 0,
+        "factId": "f-compass-north"
+      },
+      "moreQuestions": [
+        {
+          "question": {
+            "en": "Where does the Sun rise?",
+            "fr": "Où se lève le soleil ?",
+            "ar": "من أين تشرق الشمس؟"
+          },
+          "choices": [
+            {
+              "en": "In the west",
+              "fr": "À l'ouest",
+              "ar": "من الغرب"
+            },
+            {
+              "en": "In the east",
+              "fr": "À l'est",
+              "ar": "من الشرق"
+            },
+            {
+              "en": "In the north",
+              "fr": "Au nord",
+              "ar": "من الشمال"
+            },
+            {
+              "en": "Underground",
+              "fr": "Sous la terre",
+              "ar": "من تحت الأرض"
+            }
+          ],
+          "answerIndex": 1,
+          "factId": "f-sun-east"
+        },
+        {
+          "question": {
+            "en": "What explains the symbols on a map?",
+            "fr": "Qu’est-ce qui explique les symboles sur une carte ?",
+            "ar": "ما الذي يشرح رموز الخريطة؟"
+          },
+          "choices": [
+            {
+              "en": "The map key",
+              "fr": "La légende",
+              "ar": "مفتاح الخريطة"
+            },
+            {
+              "en": "The compass needle",
+              "fr": "L'aiguille de la boussole",
+              "ar": "إبرة البوصلة"
+            },
+            {
+              "en": "The title",
+              "fr": "Le titre",
+              "ar": "العنوان"
+            },
+            {
+              "en": "The paper",
+              "fr": "Le papier",
+              "ar": "الورق"
+            }
+          ],
+          "answerIndex": 0,
+          "factId": "f-map-key"
+        },
+        {
+          "question": {
+            "en": "Why does a compass work?",
+            "fr": "Pourquoi la boussole marche-t-elle ?",
+            "ar": "لماذا تعمل البوصلة؟"
+          },
+          "choices": [
+            {
+              "en": "The Earth acts like a giant magnet",
+              "fr": "La Terre agit comme un aimant géant",
+              "ar": "لأن الأرض تعمل كمغناطيس عملاق"
+            },
+            {
+              "en": "The wind pushes the needle",
+              "fr": "Le vent pousse l'aiguille",
+              "ar": "لأن الريح تدفع الإبرة"
+            },
+            {
+              "en": "The Sun pulls the needle",
+              "fr": "Le Soleil tire l'aiguille",
+              "ar": "لأن الشمس تجذب الإبرة"
+            },
+            {
+              "en": "It has a tiny battery",
+              "fr": "Elle a une petite pile",
+              "ar": "لأن فيها بطارية صغيرة"
+            }
+          ],
+          "answerIndex": 0,
+          "factId": "f-earth-magnet"
+        }
+      ],
+      "puzzle": {
+        "type": "arcade",
+        "game": "treasure",
+        "prompt": {
+          "en": "Follow the clues from the red flag, then dig for the treasure.",
+          "fr": "Suis les indices depuis le drapeau rouge, puis creuse pour trouver le trésor.",
+          "ar": "اتبع الإشارات ابتداءً من العلم الأحمر، ثم احفر لتجد الكنز."
+        },
+        "factIds": [
+          "f-compass-rose"
+        ]
+      }
+    }
+  ]
+}

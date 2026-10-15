@@ -1,0 +1,3435 @@
+{
+  "sceneId": "animals",
+  "category": "animals",
+  "title": {
+    "en": "The Living World",
+    "fr": "Le Monde vivant",
+    "ar": "العالم الحي"
+  },
+  "intro": {
+    "en": "Walk through the savanna, the forest and the pond. Look for the glowing lights!",
+    "fr": "Traverse la savane, la forêt et la mare. Cherche les lumières brillantes !",
+    "ar": "تجوّل في السافانا والغابة والبركة. ابحث عن الأضواء المتوهّجة!"
+  },
+  "review": {
+    "status": "reviewed",
+    "reviewers": [
+      "Web fact-check"
+    ],
+    "lastReviewed": "2026-10-09",
+    "notes": "Drafted by the dev team. Needs a subject-matter review of every fact and a native-speaker review of the FR and AR text (especially the AR collective noun 'زمرة' for a pride of lions) before release.",
+    "factCheck": {
+      "date": "2026-10-09",
+      "method": "Every fact was searched on the web and compared with independent sources (linked per fact where one page covers it). Facts that did not match were corrected. French and Arabic were not read by a native speaker."
+    }
+  },
+  "facts": [
+    {
+      "id": "f-elephant-largest",
+      "text": {
+        "en": "The African elephant is the largest land animal on Earth.",
+        "fr": "L'éléphant d'Afrique est le plus grand animal terrestre de la planète.",
+        "ar": "الفيل الأفريقي هو أكبر حيوان يعيش على اليابسة."
+      },
+      "sources": [
+        "https://www.sanparks.org/conservation/parks/kruger/letaba-elephant-hall/about-elephants/african-elephant-biology"
+      ]
+    },
+    {
+      "id": "f-elephant-trunk",
+      "text": {
+        "en": "An elephant uses its trunk to breathe, smell, drink and grab things.",
+        "fr": "L'éléphant se sert de sa trompe pour respirer, sentir, boire et attraper des choses.",
+        "ar": "يستخدم الفيل خرطومه للتنفّس والشمّ والشرب والإمساك بالأشياء."
+      },
+      "sources": [
+        "https://www.sanparks.org/conservation/parks/kruger/letaba-elephant-hall/about-elephants/african-elephant-biology"
+      ]
+    },
+    {
+      "id": "f-elephant-ears",
+      "text": {
+        "en": "Elephants flap their big ears to help them cool down.",
+        "fr": "Les éléphants agitent leurs grandes oreilles pour se rafraîchir.",
+        "ar": "يحرّك الفيل أذنيه الكبيرتين ليساعد جسمه على التبرّد."
+      },
+      "sources": [
+        "https://www.sanparks.org/conservation/parks/kruger/letaba-elephant-hall/about-elephants/african-elephant-biology"
+      ]
+    },
+    {
+      "id": "f-lion-pride",
+      "text": {
+        "en": "Lions live in family groups called prides.",
+        "fr": "Les lions vivent en groupes familiaux appelés troupes.",
+        "ar": "تعيش الأسود في مجموعات عائلية تُسمّى الزُّمْرة."
+      },
+      "sources": [
+        "https://www.ifaw.org/journal/facts-about-lions"
+      ]
+    },
+    {
+      "id": "f-lion-roar",
+      "text": {
+        "en": "A lion's roar can be heard up to about 8 kilometres away.",
+        "fr": "Le rugissement d'un lion peut s'entendre jusqu'à environ 8 kilomètres.",
+        "ar": "يمكن سماع زئير الأسد من مسافة تصل إلى نحو 8 كيلومترات."
+      },
+      "sources": [
+        "https://www.ifaw.org/journal/facts-about-lions"
+      ]
+    },
+    {
+      "id": "f-lion-hunt",
+      "text": {
+        "en": "In a pride, the lionesses do most of the hunting.",
+        "fr": "Dans une troupe, ce sont les lionnes qui chassent le plus.",
+        "ar": "في الزُّمْرة، تقوم اللبؤات بمعظم الصيد."
+      },
+      "sources": [
+        "https://www.ifaw.org/journal/facts-about-lions"
+      ]
+    },
+    {
+      "id": "f-zebra-stripes",
+      "text": {
+        "en": "Every zebra has its own pattern of stripes.",
+        "fr": "Chaque zèbre a son propre motif de rayures.",
+        "ar": "لكل حمار وحشي نمط خطوط خاص به."
+      },
+      "sources": [
+        "https://www.britannica.com/animal/zebra"
+      ]
+    },
+    {
+      "id": "f-giraffe-tallest",
+      "text": {
+        "en": "The giraffe is the tallest animal in the world.",
+        "fr": "La girafe est l'animal le plus grand du monde.",
+        "ar": "الزرافة هي أطول حيوان في العالم."
+      },
+      "sources": [
+        "https://www.snopes.com/fact-check/giraffes-neck-bones-humans/"
+      ]
+    },
+    {
+      "id": "f-hippo-water",
+      "text": {
+        "en": "Hippos spend most of the day in water to stay cool.",
+        "fr": "Les hippopotames passent la plus grande partie de la journée dans l'eau pour rester au frais.",
+        "ar": "يقضي فرس النهر معظم النهار في الماء ليبقى باردًا."
+      },
+      "sources": [
+        "https://pmc.ncbi.nlm.nih.gov/articles/PMC7341244/"
+      ]
+    },
+    {
+      "id": "f-rhino-horn",
+      "text": {
+        "en": "A rhino's horn is made of keratin, the same material as your fingernails.",
+        "fr": "La corne du rhinocéros est faite de kératine, la même matière que tes ongles.",
+        "ar": "قرن وحيد القرن مصنوع من الكيراتين، وهي المادة نفسها التي تتكوّن منها أظافرك."
+      },
+      "sources": [
+        "https://www.savetherhino.org/our-work/protecting-rhinos/what-is-rhino-horn-made-of/",
+        "https://en.wikipedia.org/wiki/Rhinoceros"
+      ]
+    },
+    {
+      "id": "f-owl-night",
+      "text": {
+        "en": "Most owls hunt at night.",
+        "fr": "La plupart des chouettes et des hiboux chassent la nuit.",
+        "ar": "تصطاد معظم أنواع البوم في الليل."
+      },
+      "sources": [
+        "https://www.reconnectwithnature.org/news-events/the-buzz/owl-facts",
+        "https://a-z-animals.com/articles/why-owl-eyes-are-tubes-and-not-balls-like-ours/"
+      ]
+    },
+    {
+      "id": "f-owl-silent",
+      "text": {
+        "en": "Special soft feathers let owls fly almost silently.",
+        "fr": "Des plumes spéciales et douces permettent aux chouettes de voler presque sans bruit.",
+        "ar": "يساعد الريش الناعم الخاص البومةَ على الطيران بصمت تقريبًا."
+      },
+      "sources": [
+        "https://www.reconnectwithnature.org/news-events/the-buzz/owl-facts",
+        "https://a-z-animals.com/articles/why-owl-eyes-are-tubes-and-not-balls-like-ours/"
+      ]
+    },
+    {
+      "id": "f-owl-head",
+      "text": {
+        "en": "Many owls can turn their heads about 270 degrees.",
+        "fr": "Beaucoup de chouettes et de hiboux peuvent tourner la tête d'environ 270 degrés.",
+        "ar": "تستطيع أنواع كثيرة من البوم أن تدير رأسها نحو 270 درجة."
+      },
+      "sources": [
+        "https://www.reconnectwithnature.org/news-events/the-buzz/owl-facts",
+        "https://a-z-animals.com/articles/why-owl-eyes-are-tubes-and-not-balls-like-ours/"
+      ]
+    },
+    {
+      "id": "f-mammal-fur",
+      "text": {
+        "en": "Mammals have hair or fur and feed their babies milk.",
+        "fr": "Les mammifères ont des poils ou de la fourrure et nourrissent leurs petits avec du lait.",
+        "ar": "للثدييات شعر أو فرو، وهي تُرضع صغارها الحليب."
+      }
+    },
+    {
+      "id": "f-bird-feathers",
+      "text": {
+        "en": "Birds are the only animals alive today that have feathers.",
+        "fr": "Les oiseaux sont les seuls animaux vivants aujourd'hui à avoir des plumes.",
+        "ar": "الطيور هي الحيوانات الوحيدة التي تعيش اليوم ولها ريش."
+      },
+      "sources": [
+        "https://www.nhm.ac.uk/discover/how-dinosaurs-evolved-into-birds.html"
+      ]
+    },
+    {
+      "id": "f-reptile-scales",
+      "text": {
+        "en": "Reptiles, like snakes and turtles, have dry, scaly skin.",
+        "fr": "Les reptiles, comme les serpents et les tortues, ont une peau sèche couverte d'écailles.",
+        "ar": "للزواحف، مثل الثعابين والسلاحف، جلد جاف مغطّى بالحراشف."
+      }
+    },
+    {
+      "id": "f-fish-scales",
+      "text": {
+        "en": "Most fish are covered in scales.",
+        "fr": "La plupart des poissons sont couverts d'écailles.",
+        "ar": "معظم الأسماك مغطّاة بالحراشف."
+      }
+    },
+    {
+      "id": "f-bat-mammal",
+      "text": {
+        "en": "Bats are mammals, and they are the only mammals that can truly fly.",
+        "fr": "Les chauves-souris sont des mammifères, et ce sont les seuls mammifères capables de vraiment voler.",
+        "ar": "الخفافيش من الثدييات، وهي الثدييات الوحيدة القادرة على الطيران الحقيقي."
+      },
+      "sources": [
+        "https://www.batcon.org/bats-vs-birds/",
+        "https://en.wikipedia.org/wiki/Bat_flight"
+      ]
+    },
+    {
+      "id": "f-plant-photosynthesis",
+      "text": {
+        "en": "Plants use sunlight, water and carbon dioxide to make their own food. This is called photosynthesis.",
+        "fr": "Les plantes utilisent la lumière du soleil, l'eau et le dioxyde de carbone pour fabriquer leur nourriture. C'est la photosynthèse.",
+        "ar": "تستخدم النباتات ضوء الشمس والماء وثاني أكسيد الكربون لتصنع غذاءها. تُسمّى هذه العملية التمثيل الضوئي."
+      },
+      "sources": [
+        "https://www.revisiondojo.com/ib/ib-biology-new/ib-biology-new-c133-oxygen-as-a-by-product-of-photosynthesis/notes"
+      ]
+    },
+    {
+      "id": "f-plant-oxygen",
+      "text": {
+        "en": "When plants make food, they give off oxygen, which animals need to breathe.",
+        "fr": "Quand les plantes fabriquent leur nourriture, elles rejettent de l'oxygène, dont les animaux ont besoin pour respirer.",
+        "ar": "عندما تصنع النباتات غذاءها، تُطلق الأكسجين الذي تحتاجه الحيوانات لتتنفّس."
+      },
+      "sources": [
+        "https://www.revisiondojo.com/ib/ib-biology-new/ib-biology-new-c133-oxygen-as-a-by-product-of-photosynthesis/notes"
+      ]
+    },
+    {
+      "id": "f-oak-acorn",
+      "text": {
+        "en": "An oak tree grows from a small nut called an acorn.",
+        "fr": "Un chêne pousse à partir d'un petit fruit appelé gland.",
+        "ar": "تنمو شجرة البلوط من ثمرة صغيرة تُسمّى البلّوطة."
+      },
+      "sources": [
+        "https://treenewal.com/the-average-lifespan-and-cycle-of-an-oak-tree-what-you-need-to-know/"
+      ]
+    },
+    {
+      "id": "f-plant-roots",
+      "text": {
+        "en": "Roots hold a plant in the ground and take in water.",
+        "fr": "Les racines tiennent la plante dans le sol et absorbent l'eau.",
+        "ar": "تثبّت الجذور النبات في التربة وتمتصّ الماء."
+      },
+      "sources": [
+        "https://www.amnh.org/learn-teach/curriculum-collections/biodiversity-counts/plant-identification/plant-morphology/parts-of-a-flower"
+      ]
+    },
+    {
+      "id": "f-plant-stem",
+      "text": {
+        "en": "The stem holds the plant up and carries water to the leaves.",
+        "fr": "La tige soutient la plante et transporte l'eau jusqu'aux feuilles.",
+        "ar": "تحمل الساق النبات وتنقل الماء إلى الأوراق."
+      },
+      "sources": [
+        "https://www.amnh.org/learn-teach/curriculum-collections/biodiversity-counts/plant-identification/plant-morphology/parts-of-a-flower"
+      ]
+    },
+    {
+      "id": "f-plant-leaf",
+      "text": {
+        "en": "Leaves catch sunlight to make food.",
+        "fr": "Les feuilles captent la lumière du soleil pour fabriquer la nourriture.",
+        "ar": "تلتقط الأوراق ضوء الشمس لصنع الغذاء."
+      },
+      "sources": [
+        "https://www.amnh.org/learn-teach/curriculum-collections/biodiversity-counts/plant-identification/plant-morphology/parts-of-a-flower"
+      ]
+    },
+    {
+      "id": "f-plant-flower",
+      "text": {
+        "en": "Flowers make seeds so that new plants can grow.",
+        "fr": "Les fleurs produisent des graines pour que de nouvelles plantes puissent pousser.",
+        "ar": "تصنع الأزهار البذور لكي تنمو نباتات جديدة."
+      },
+      "sources": [
+        "https://www.amnh.org/learn-teach/curriculum-collections/biodiversity-counts/plant-identification/plant-morphology/parts-of-a-flower"
+      ]
+    },
+    {
+      "id": "f-frog-tadpole",
+      "text": {
+        "en": "A baby frog is called a tadpole, and it breathes with gills.",
+        "fr": "Un bébé grenouille s'appelle un têtard, et il respire avec des branchies.",
+        "ar": "يُسمّى صغير الضفدع الشُّرغوف، وهو يتنفّس بالخياشيم."
+      },
+      "sources": [
+        "https://www.timeforkids.com/k1/lifecycle-of-a-frog/",
+        "https://www.topmarks.co.uk/spring/tadpoles-develop-gills/ks2"
+      ]
+    },
+    {
+      "id": "f-frog-lifecycle",
+      "text": {
+        "en": "A frog's life cycle goes: egg, tadpole, froglet, frog.",
+        "fr": "Le cycle de vie de la grenouille : œuf, têtard, jeune grenouille, grenouille.",
+        "ar": "دورة حياة الضفدع: بيضة، ثم شُرغوف، ثم ضفدع صغير، ثم ضفدع بالغ."
+      },
+      "sources": [
+        "https://www.timeforkids.com/k1/lifecycle-of-a-frog/",
+        "https://www.topmarks.co.uk/spring/tadpoles-develop-gills/ks2"
+      ]
+    },
+    {
+      "id": "f-frog-skin",
+      "text": {
+        "en": "Frogs can take in oxygen through their skin.",
+        "fr": "Les grenouilles peuvent absorber de l'oxygène par leur peau.",
+        "ar": "تستطيع الضفادع أن تمتصّ الأكسجين عبر جلدها."
+      },
+      "sources": [
+        "https://www.timeforkids.com/k1/lifecycle-of-a-frog/",
+        "https://www.topmarks.co.uk/spring/tadpoles-develop-gills/ks2"
+      ]
+    },
+    {
+      "id": "f-amphibian",
+      "text": {
+        "en": "Amphibians, like frogs, usually start life in water and later live on land too.",
+        "fr": "Les amphibiens, comme les grenouilles, commencent souvent leur vie dans l'eau puis vivent aussi sur terre.",
+        "ar": "البرمائيات، مثل الضفادع، تبدأ حياتها عادةً في الماء ثم تعيش على اليابسة أيضًا."
+      },
+      "sources": [
+        "https://www.timeforkids.com/k1/lifecycle-of-a-frog/",
+        "https://www.topmarks.co.uk/spring/tadpoles-develop-gills/ks2"
+      ]
+    },
+    {
+      "id": "f-elephant-africa",
+      "text": {
+        "en": "African elephants live in sub-Saharan Africa, in countries like Kenya, Tanzania, Botswana and Namibia.",
+        "fr": "Les éléphants d'Afrique vivent en Afrique subsaharienne, dans des pays comme le Kenya, la Tanzanie, le Botswana et la Namibie.",
+        "ar": "تعيش الفيلة الأفريقية في أفريقيا جنوب الصحراء، في دول مثل كينيا وتنزانيا وبوتسوانا وناميبيا."
+      },
+      "sources": [
+        "https://en.wikipedia.org/wiki/African_bush_elephant"
+      ]
+    },
+    {
+      "id": "f-lion-where",
+      "text": {
+        "en": "Wild lions live in Africa south of the Sahara. One small group also lives in the Gir forest in India.",
+        "fr": "Les lions sauvages vivent en Afrique, au sud du Sahara. Un petit groupe vit aussi dans la forêt de Gir, en Inde.",
+        "ar": "تعيش الأسود البرية في أفريقيا جنوب الصحراء. وتعيش مجموعة صغيرة أيضًا في غابة جير في الهند."
+      },
+      "sources": [
+        "https://www.ifaw.org/journal/facts-about-lions"
+      ]
+    },
+    {
+      "id": "f-zebra-giraffe-where",
+      "text": {
+        "en": "Plains zebras and giraffes both live in the grasslands of eastern and southern Africa.",
+        "fr": "Les zèbres des plaines et les girafes vivent tous dans les savanes de l'Afrique de l'Est et du Sud.",
+        "ar": "يعيش الحمار الوحشي السهلي والزرافة في أعشاب شرق أفريقيا وجنوبها."
+      },
+      "sources": [
+        "https://en.wikipedia.org/wiki/Plains_zebra",
+        "https://en.wikipedia.org/wiki/Giraffe"
+      ]
+    },
+    {
+      "id": "f-owls-everywhere",
+      "text": {
+        "en": "Owls live on every continent except Antarctica.",
+        "fr": "Les hiboux vivent sur tous les continents sauf l'Antarctique.",
+        "ar": "تعيش البوم في كل القارات ما عدا القارة القطبية الجنوبية."
+      },
+      "sources": [
+        "https://www.reconnectwithnature.org/news-events/the-buzz/owl-facts",
+        "https://a-z-animals.com/articles/why-owl-eyes-are-tubes-and-not-balls-like-ours/"
+      ]
+    },
+    {
+      "id": "f-oak-where",
+      "text": {
+        "en": "Oak trees grow across the northern half of the world, in Europe, Asia and North America.",
+        "fr": "Les chênes poussent dans toute la moitié nord du monde : en Europe, en Asie et en Amérique du Nord.",
+        "ar": "تنمو أشجار البلّوط في النصف الشمالي من العالم: في أوروبا وآسيا وأمريكا الشمالية."
+      },
+      "sources": [
+        "https://treenewal.com/the-average-lifespan-and-cycle-of-an-oak-tree-what-you-need-to-know/"
+      ]
+    },
+    {
+      "id": "f-panda-china",
+      "text": {
+        "en": "Giant pandas live only in the mountains of China, in Sichuan, Shaanxi and Gansu.",
+        "fr": "Les pandas géants vivent uniquement dans les montagnes de Chine : au Sichuan, au Shaanxi et au Gansu.",
+        "ar": "تعيش الباندا العملاقة في جبال الصين فقط: في سيتشوان وشنشي وقانسو."
+      },
+      "sources": [
+        "https://www.wwf.org.au/what-we-do/species/giant-panda",
+        "https://www.sciencealert.com/all-giant-panda-cubs-are-basically-born-premature-and-that-s-why-they-re-so-small"
+      ]
+    },
+    {
+      "id": "f-panda-bamboo",
+      "text": {
+        "en": "Almost everything a panda eats is bamboo — about 9 to 14 kilograms of it a day.",
+        "fr": "Presque tout ce que mange un panda est du bambou : environ 9 à 14 kilos par jour.",
+        "ar": "كل ما تأكله الباندا تقريبًا هو الخيزران: نحو ٩ إلى ١٤ كيلوغرامًا في اليوم."
+      },
+      "sources": [
+        "https://www.wwf.org.au/what-we-do/species/giant-panda",
+        "https://www.sciencealert.com/all-giant-panda-cubs-are-basically-born-premature-and-that-s-why-they-re-so-small"
+      ]
+    },
+    {
+      "id": "f-kangaroo-australia",
+      "text": {
+        "en": "Red kangaroos live in mainland Australia, mostly in the dry grasslands and deserts.",
+        "fr": "Les kangourous roux vivent sur le continent australien, surtout dans les prairies sèches et les déserts.",
+        "ar": "تعيش الكناغر الحمراء في البرّ الأسترالي، وغالبًا في السهول الجافة والصحاري."
+      },
+      "sources": [
+        "https://kids.nationalgeographic.com/animals/mammals/kangaroo/"
+      ]
+    },
+    {
+      "id": "f-kangaroo-hop",
+      "text": {
+        "en": "A big male red kangaroo can cover 8 to 9 metres in a single hop.",
+        "fr": "Un grand kangourou roux mâle peut franchir 8 à 9 mètres en un seul bond.",
+        "ar": "يمكن للكنغر الأحمر الكبير أن يقطع من ٨ إلى ٩ أمتار في قفزة واحدة."
+      },
+      "sources": [
+        "https://kids.nationalgeographic.com/animals/mammals/kangaroo/"
+      ]
+    },
+    {
+      "id": "f-penguin-antarctica",
+      "text": {
+        "en": "Emperor penguins live only in Antarctica, the coldest place on Earth.",
+        "fr": "Les manchots empereurs vivent uniquement en Antarctique, l'endroit le plus froid de la Terre.",
+        "ar": "تعيش بطاريق الإمبراطور في القارة القطبية الجنوبية فقط، أبرد مكان على الأرض."
+      },
+      "sources": [
+        "https://www.guinnessworldrecords.com/world-records/540367-longest-egg-incubation-for-a-penguin",
+        "https://www.antarctica.gov.au/about-antarctica/animals/penguins/emperor-penguin/how-deep-can-they-dive/"
+      ]
+    },
+    {
+      "id": "f-penguin-dad",
+      "text": {
+        "en": "The father penguin keeps the egg warm on his feet for about nine weeks while the mother is away feeding.",
+        "fr": "Le papa manchot garde l'œuf au chaud sur ses pieds pendant environ neuf semaines, pendant que la mère part se nourrir.",
+        "ar": "يحفظ الأب البطريق البيضة دافئة على قدميه نحو تسعة أسابيع، بينما تذهب الأم للتغذية."
+      },
+      "sources": [
+        "https://www.guinnessworldrecords.com/world-records/540367-longest-egg-incubation-for-a-penguin",
+        "https://www.antarctica.gov.au/about-antarctica/animals/penguins/emperor-penguin/how-deep-can-they-dive/"
+      ]
+    },
+    {
+      "id": "f-flower-petals",
+      "text": {
+        "en": "Bright petals and sweet smells invite bees and butterflies to visit a flower.",
+        "fr": "Les pétales vifs et les odeurs sucrées invitent les abeilles et les papillons à visiter une fleur.",
+        "ar": "البتلات الزاهية والروائح الحلوة تدعو النحل والفراشات إلى زيارة الزهرة."
+      },
+      "sources": [
+        "https://www.amnh.org/learn-teach/curriculum-collections/biodiversity-counts/plant-identification/plant-morphology/parts-of-a-flower"
+      ]
+    },
+    {
+      "id": "f-flower-sepals",
+      "text": {
+        "en": "Sepals are small green leaves that protect the flower while it is still a bud.",
+        "fr": "Les sépales sont de petites feuilles vertes qui protègent la fleur quand elle n'est encore qu'un bouton.",
+        "ar": "السَّبلات أوراق خضراء صغيرة تحمي الزهرة وهي ما تزال برعمًا."
+      },
+      "sources": [
+        "https://www.amnh.org/learn-teach/curriculum-collections/biodiversity-counts/plant-identification/plant-morphology/parts-of-a-flower"
+      ]
+    },
+    {
+      "id": "f-flower-stamen",
+      "text": {
+        "en": "Stamens make pollen, a fine yellow powder.",
+        "fr": "Les étamines fabriquent le pollen, une fine poudre jaune.",
+        "ar": "تصنع الأسدية حبوب اللقاح، وهي مسحوق أصفر ناعم."
+      },
+      "sources": [
+        "https://www.amnh.org/learn-teach/curriculum-collections/biodiversity-counts/plant-identification/plant-morphology/parts-of-a-flower"
+      ]
+    },
+    {
+      "id": "f-flower-pistil",
+      "text": {
+        "en": "The pistil catches pollen. Its bottom part grows into a fruit, and the seeds form inside it.",
+        "fr": "Le pistil attrape le pollen. Sa partie du bas devient un fruit, et les graines se forment à l'intérieur.",
+        "ar": "تلتقط المدقّة حبوب اللقاح. يصبح جزؤها السفلي ثمرة، وتتكوّن البذور داخلها."
+      },
+      "sources": [
+        "https://www.amnh.org/learn-teach/curriculum-collections/biodiversity-counts/plant-identification/plant-morphology/parts-of-a-flower"
+      ]
+    },
+    {
+      "id": "f-roots",
+      "text": {
+        "en": "Roots hold a plant in the ground and drink up water.",
+        "fr": "Les racines tiennent la plante dans le sol et absorbent l'eau.",
+        "ar": "تثبّت الجذور النبات في التربة وتمتصّ الماء."
+      },
+      "sources": [
+        "https://www.amnh.org/learn-teach/curriculum-collections/biodiversity-counts/plant-identification/plant-morphology/parts-of-a-flower"
+      ]
+    },
+    {
+      "id": "f-pollination",
+      "text": {
+        "en": "Pollination is when pollen travels from one flower to another, so the plant can make seeds.",
+        "fr": "La pollinisation, c'est quand le pollen voyage d'une fleur à une autre, pour que la plante puisse faire des graines.",
+        "ar": "التلقيح هو انتقال حبوب اللقاح من زهرة إلى أخرى، لتستطيع النبتة أن تصنع البذور."
+      },
+      "sources": [
+        "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC10517183/"
+      ]
+    },
+    {
+      "id": "f-pollinators-80",
+      "text": {
+        "en": "Nearly 9 out of 10 flowering plants need animals like bees, butterflies, birds or bats to carry their pollen.",
+        "fr": "Près de 9 plantes à fleurs sur 10 ont besoin d'animaux, comme les abeilles, les papillons, les oiseaux ou les chauves-souris, pour transporter leur pollen.",
+        "ar": "نحو ٩ من كل ١٠ نباتات مزهرة تحتاج إلى حيوانات مثل النحل والفراشات والطيور والخفافيش لتنقل حبوب لقاحها."
+      },
+      "sources": [
+        "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC10517183/"
+      ]
+    },
+    {
+      "id": "f-honey-nectar",
+      "text": {
+        "en": "Honey bees drink sweet nectar from flowers and turn it into honey in their hive.",
+        "fr": "Les abeilles domestiques boivent le nectar sucré des fleurs et le transforment en miel dans leur ruche.",
+        "ar": "يشرب نحل العسل الرحيق الحلو من الأزهار ويحوّله إلى عسل في خليته."
+      },
+      "sources": [
+        "https://www.missouribotanicalgarden.org/Portals/0/Gardening/Gardening%20Help/Factsheets/Honeybees20.pdf",
+        "https://localhivehoney.com/blogs/blog/how-much-honey-does-a-bee-make"
+      ]
+    },
+    {
+      "id": "f-bee-basket",
+      "text": {
+        "en": "Bees carry pollen home in little baskets on their back legs.",
+        "fr": "Les abeilles rapportent le pollen dans de petites corbeilles sur leurs pattes arrière.",
+        "ar": "يحمل النحل حبوب اللقاح إلى الخلية في سلال صغيرة على أرجله الخلفية."
+      },
+      "sources": [
+        "https://www.missouribotanicalgarden.org/Portals/0/Gardening/Gardening%20Help/Factsheets/Honeybees20.pdf",
+        "https://localhivehoney.com/blogs/blog/how-much-honey-does-a-bee-make"
+      ]
+    },
+    {
+      "id": "f-bee-dance",
+      "text": {
+        "en": "A honey bee dances a \"waggle dance\" to tell the others where the flowers are.",
+        "fr": "Une abeille fait une « danse frétillante » pour dire aux autres où sont les fleurs.",
+        "ar": "ترقص النحلة «رقصة الاهتزاز» لتخبر رفيقاتها بمكان الأزهار."
+      },
+      "sources": [
+        "https://www.missouribotanicalgarden.org/Portals/0/Gardening/Gardening%20Help/Factsheets/Honeybees20.pdf",
+        "https://localhivehoney.com/blogs/blog/how-much-honey-does-a-bee-make"
+      ]
+    },
+    {
+      "id": "f-hive-size",
+      "text": {
+        "en": "In summer, one healthy hive can hold about 50,000 bees.",
+        "fr": "En été, une ruche en bonne santé peut abriter environ 50 000 abeilles.",
+        "ar": "في الصيف قد تضمّ خلية سليمة واحدة نحو ٥٠ ألف نحلة."
+      },
+      "sources": [
+        "https://www.missouribotanicalgarden.org/Portals/0/Gardening/Gardening%20Help/Factsheets/Honeybees20.pdf",
+        "https://localhivehoney.com/blogs/blog/how-much-honey-does-a-bee-make"
+      ]
+    },
+    {
+      "id": "f-sunflower-florets",
+      "text": {
+        "en": "A sunflower head is not one flower. It is made of hundreds of tiny flowers packed together.",
+        "fr": "La tête d'un tournesol n'est pas une seule fleur : ce sont des centaines de toutes petites fleurs serrées.",
+        "ar": "رأس زهرة الشمس ليس زهرة واحدة، بل مئات الأزهار الصغيرة المتراصّة."
+      },
+      "sources": [
+        "https://www.guinnessworldrecords.com/world-records/tallest-sunflower",
+        "https://www.kqed.org/science/1994840/why-do-sunflowers-face-the-sunrise",
+        "https://asknature.org/strategy/fibonacci-sequence-optimizes-packing/"
+      ]
+    },
+    {
+      "id": "f-sunflower-sun",
+      "text": {
+        "en": "Young sunflowers turn to follow the sun. Grown-up sunflowers stop and face east.",
+        "fr": "Les jeunes tournesols tournent pour suivre le soleil. Les tournesols adultes s'arrêtent et regardent vers l'est.",
+        "ar": "تدور زهور الشمس الصغيرة لتتبع الشمس، أما الكبيرة فتتوقّف وتتّجه نحو الشرق."
+      },
+      "sources": [
+        "https://www.guinnessworldrecords.com/world-records/tallest-sunflower",
+        "https://www.kqed.org/science/1994840/why-do-sunflowers-face-the-sunrise",
+        "https://asknature.org/strategy/fibonacci-sequence-optimizes-packing/"
+      ]
+    },
+    {
+      "id": "f-sunflower-tall",
+      "text": {
+        "en": "Tall kinds of sunflower can grow about 3 metres high. The record is almost 11 metres!",
+        "fr": "Les grands tournesols peuvent mesurer environ 3 mètres. Le record est de presque 11 mètres !",
+        "ar": "قد يبلغ طول الأنواع الطويلة من زهرة الشمس نحو ٣ أمتار، والرقم القياسي نحو ١١ مترًا!"
+      },
+      "sources": [
+        "https://www.guinnessworldrecords.com/world-records/tallest-sunflower",
+        "https://www.kqed.org/science/1994840/why-do-sunflowers-face-the-sunrise",
+        "https://asknature.org/strategy/fibonacci-sequence-optimizes-packing/"
+      ]
+    },
+    {
+      "id": "f-sunflower-spirals",
+      "text": {
+        "en": "Sunflower seeds grow in spirals, like 34 turning one way and 55 the other.",
+        "fr": "Les graines de tournesol poussent en spirales, par exemple 34 dans un sens et 55 dans l'autre.",
+        "ar": "تنمو بذور زهرة الشمس في حلزونات، مثل ٣٤ في اتجاه و٥٥ في الاتجاه الآخر."
+      },
+      "sources": [
+        "https://www.guinnessworldrecords.com/world-records/tallest-sunflower",
+        "https://www.kqed.org/science/1994840/why-do-sunflowers-face-the-sunrise",
+        "https://asknature.org/strategy/fibonacci-sequence-optimizes-packing/"
+      ]
+    },
+    {
+      "id": "f-sound-elephant",
+      "text": {
+        "en": "Elephants trumpet through their trunk when they are excited or upset.",
+        "fr": "Les éléphants barrissent avec leur trompe quand ils sont excités ou inquiets.",
+        "ar": "تُطلق الفيلة صوت البوق عبر خرطومها حين تكون متحمّسة أو منزعجة."
+      },
+      "sources": [
+        "https://en.wikipedia.org/wiki/Elephant",
+        "https://en.wikipedia.org/wiki/Elephant_communication"
+      ]
+    },
+    {
+      "id": "f-sound-zebra",
+      "text": {
+        "en": "A zebra's call is a high bark or bray.",
+        "fr": "Le cri du zèbre est un aboiement aigu ou un braiment.",
+        "ar": "نداء الحمار الوحشي نباح حادّ أو نهيق."
+      },
+      "sources": [
+        "https://en.wikipedia.org/wiki/Grévy's_zebra"
+      ]
+    },
+    {
+      "id": "f-sound-owl",
+      "text": {
+        "en": "Owls hoot to call to each other, mostly at night.",
+        "fr": "Les hiboux hululent pour s'appeler, surtout la nuit.",
+        "ar": "تنعق البوم لتنادي بعضها، وغالبًا في الليل."
+      },
+      "sources": [
+        "https://en.wikipedia.org/wiki/Owl",
+        "https://en.wikipedia.org/wiki/Long-eared_owl"
+      ]
+    },
+    {
+      "id": "f-sound-frog",
+      "text": {
+        "en": "Male frogs croak to call females. Each kind of frog has its own song.",
+        "fr": "Les grenouilles mâles coassent pour appeler les femelles. Chaque espèce a son propre chant.",
+        "ar": "تنقّ ذكور الضفادع لتنادي الإناث، ولكل نوع أغنيته الخاصة."
+      },
+      "sources": [
+        "https://en.wikipedia.org/wiki/Frog"
+      ]
+    },
+    {
+      "id": "f-sound-bee",
+      "text": {
+        "en": "The buzz of a bee is the sound of its wings beating very fast.",
+        "fr": "Le bourdonnement d'une abeille, c'est le bruit de ses ailes qui battent très vite.",
+        "ar": "طنين النحلة هو صوت أجنحتها وهي تخفق بسرعة كبيرة."
+      },
+      "sources": [
+        "https://en.wikipedia.org/wiki/Bumblebee",
+        "https://en.wikipedia.org/wiki/Insect_flight"
+      ]
+    },
+    {
+      "id": "f-sound-cricket",
+      "text": {
+        "en": "Crickets chirp by rubbing their wings together. Only the males sing.",
+        "fr": "Les grillons chantent en frottant leurs ailes l'une contre l'autre. Seuls les mâles chantent.",
+        "ar": "تصرّ الجداجد بحكّ أجنحتها ببعضها، والذكور وحدها هي التي تغنّي."
+      },
+      "sources": [
+        "https://en.wikipedia.org/wiki/Cricket_(insect)"
+      ]
+    },
+    {
+      "id": "f-elephant-jump",
+      "text": {
+        "en": "A grown-up elephant is so heavy that it cannot jump.",
+        "fr": "Un éléphant adulte est si lourd qu'il ne peut pas sauter.",
+        "ar": "الفيل البالغ ثقيل جدًّا حتى إنه لا يستطيع القفز."
+      },
+      "sources": [
+        "https://www.sanparks.org/conservation/parks/kruger/letaba-elephant-hall/about-elephants/african-elephant-biology"
+      ]
+    },
+    {
+      "id": "f-giraffe-neck",
+      "text": {
+        "en": "A giraffe has just seven bones in its long neck, the same number as you.",
+        "fr": "La girafe n'a que sept os dans son long cou : le même nombre que toi.",
+        "ar": "في رقبة الزرافة الطويلة سبع عظام فقط، وهو العدد نفسه في رقبتك."
+      },
+      "sources": [
+        "https://www.snopes.com/fact-check/giraffes-neck-bones-humans/"
+      ]
+    },
+    {
+      "id": "f-hippo-whale",
+      "text": {
+        "en": "The hippo's closest living relatives are whales.",
+        "fr": "Les plus proches parents vivants de l'hippopotame sont les baleines.",
+        "ar": "أقرب أقارب فرس النهر الأحياء هي الحيتان."
+      },
+      "sources": [
+        "https://www.rom.on.ca/blogs/hippos-and-whales-unlikely-cousins"
+      ]
+    },
+    {
+      "id": "f-owl-eyes",
+      "text": {
+        "en": "An owl's eyes are shaped like tubes, so it cannot roll them. It turns its whole head instead.",
+        "fr": "Les yeux de la chouette ont la forme de tubes : elle ne peut pas les bouger. Elle tourne donc toute la tête.",
+        "ar": "عينا البومة على شكل أنبوبين، فلا تستطيع تحريكهما، ولذلك تدير رأسها كله."
+      },
+      "sources": [
+        "https://www.reconnectwithnature.org/news-events/the-buzz/owl-facts",
+        "https://a-z-animals.com/articles/why-owl-eyes-are-tubes-and-not-balls-like-ours/"
+      ]
+    },
+    {
+      "id": "f-panda-baby",
+      "text": {
+        "en": "A newborn panda is pink and about the size of a stick of butter.",
+        "fr": "Le panda qui vient de naître est rose et à peu près de la taille d'une plaquette de beurre.",
+        "ar": "صغير الباندا حديث الولادة ورديّ اللون وبحجم قالب زبدة تقريبًا."
+      },
+      "sources": [
+        "https://www.wwf.org.au/what-we-do/species/giant-panda",
+        "https://www.sciencealert.com/all-giant-panda-cubs-are-basically-born-premature-and-that-s-why-they-re-so-small"
+      ]
+    },
+    {
+      "id": "f-joey-bean",
+      "text": {
+        "en": "A newborn kangaroo, called a joey, is about the size of a jellybean.",
+        "fr": "Le bébé kangourou qui vient de naître est à peu près de la taille d'un petit bonbon.",
+        "ar": "صغير الكنغر حديث الولادة بحجم حبّة حلوى صغيرة تقريبًا."
+      },
+      "sources": [
+        "https://kids.nationalgeographic.com/animals/mammals/kangaroo/"
+      ]
+    },
+    {
+      "id": "f-penguin-dive",
+      "text": {
+        "en": "An emperor penguin once dived 564 metres deep, the deepest dive ever measured for a bird.",
+        "fr": "Un manchot empereur a plongé à 564 mètres de profondeur : le record mesuré chez un oiseau.",
+        "ar": "غاص بطريق إمبراطوري مرةً إلى عمق ٥٦٤ مترًا، وهو أعمق غوص قيس لطائر."
+      },
+      "sources": [
+        "https://www.guinnessworldrecords.com/world-records/540367-longest-egg-incubation-for-a-penguin",
+        "https://www.antarctica.gov.au/about-antarctica/animals/penguins/emperor-penguin/how-deep-can-they-dive/"
+      ]
+    },
+    {
+      "id": "f-bee-spoon",
+      "text": {
+        "en": "In her whole life, one worker bee makes only about one twelfth of a teaspoon of honey.",
+        "fr": "Dans toute sa vie, une abeille ouvrière ne fabrique qu'environ un douzième de cuillère à café de miel.",
+        "ar": "تصنع النحلة العاملة في حياتها كلها نحو جزء من اثني عشر جزءًا من ملعقة صغيرة من العسل فقط."
+      },
+      "sources": [
+        "https://www.missouribotanicalgarden.org/Portals/0/Gardening/Gardening%20Help/Factsheets/Honeybees20.pdf",
+        "https://localhivehoney.com/blogs/blog/how-much-honey-does-a-bee-make"
+      ]
+    },
+    {
+      "id": "f-oak-old",
+      "text": {
+        "en": "Some oak trees live for more than 1,000 years.",
+        "fr": "Certains chênes vivent plus de 1 000 ans.",
+        "ar": "تعيش بعض أشجار البلوط أكثر من ١٠٠٠ سنة."
+      },
+      "sources": [
+        "https://treenewal.com/the-average-lifespan-and-cycle-of-an-oak-tree-what-you-need-to-know/"
+      ]
+    },
+    {
+      "id": "f-roots-minerals",
+      "text": {
+        "en": "Roots also take in minerals from the soil, which the plant needs to grow.",
+        "fr": "Les racines absorbent aussi les minéraux du sol, dont la plante a besoin pour grandir.",
+        "ar": "تمتصّ الجذور أيضًا الأملاح المعدنية من التربة، وهي ضرورية لنموّ النبات."
+      },
+      "sources": [
+        "https://www.sciencing.com/what-are-the-functions-of-plant-parts-for-kids-13426234"
+      ]
+    },
+    {
+      "id": "f-frog-eggs",
+      "text": {
+        "en": "Frog eggs look like tiny balls of jelly. They are laid in ponds and streams.",
+        "fr": "Les œufs de grenouille ressemblent à de petites billes de gelée. Ils sont pondus dans les mares et les ruisseaux.",
+        "ar": "يشبه بيض الضفادع كرات صغيرة من الهلام، ويوضع في البرك والجداول."
+      },
+      "sources": [
+        "https://earthhow.com/frog-lifecycle/"
+      ]
+    },
+    {
+      "id": "f-froglet-tail",
+      "text": {
+        "en": "A froglet has four legs but still keeps a short tail for a while.",
+        "fr": "La jeune grenouille a quatre pattes mais garde encore une petite queue pendant un moment.",
+        "ar": "للضفدع الصغير أربع أرجل، لكنه يحتفظ بذيل قصير مدةً من الزمن."
+      },
+      "sources": [
+        "https://earthhow.com/frog-lifecycle/"
+      ]
+    }
+  ],
+  "glossary": [
+    {
+      "terms": {
+        "en": [
+          "savanna",
+          "savannas"
+        ],
+        "fr": [
+          "savane",
+          "savanes"
+        ],
+        "ar": [
+          "السافانا",
+          "سافانا"
+        ]
+      },
+      "definition": {
+        "en": "A big, warm grassland with only a few trees.",
+        "fr": "Une grande prairie chaude avec seulement quelques arbres.",
+        "ar": "أرض عشبية واسعة ودافئة فيها أشجار قليلة."
+      }
+    },
+    {
+      "terms": {
+        "en": [
+          "trunk"
+        ],
+        "fr": [
+          "trompe"
+        ],
+        "ar": [
+          "خرطوم",
+          "خرطومه"
+        ]
+      },
+      "definition": {
+        "en": "An elephant's long nose and upper lip, joined together.",
+        "fr": "Le long nez de l'éléphant, soudé à sa lèvre supérieure.",
+        "ar": "أنف الفيل الطويل المتّصل بشفته العليا."
+      }
+    },
+    {
+      "terms": {
+        "en": [
+          "pride",
+          "prides"
+        ],
+        "fr": [
+          "troupe",
+          "troupes"
+        ],
+        "ar": [
+          "زمرة",
+          "الزمرة"
+        ]
+      },
+      "definition": {
+        "en": "A family group of lions that live together.",
+        "fr": "Un groupe familial de lions qui vivent ensemble.",
+        "ar": "مجموعة عائلية من الأسود تعيش معًا."
+      }
+    },
+    {
+      "terms": {
+        "en": [
+          "lionesses",
+          "lioness"
+        ],
+        "fr": [
+          "lionnes",
+          "lionne"
+        ],
+        "ar": [
+          "اللبؤات",
+          "لبؤة",
+          "اللبؤة"
+        ]
+      },
+      "definition": {
+        "en": "Female lions.",
+        "fr": "Les lions femelles.",
+        "ar": "إناث الأسود."
+      }
+    },
+    {
+      "terms": {
+        "en": [
+          "mammal",
+          "mammals"
+        ],
+        "fr": [
+          "mammifère",
+          "mammifères"
+        ],
+        "ar": [
+          "الثدييات",
+          "ثدييات",
+          "الثديي"
+        ]
+      },
+      "definition": {
+        "en": "An animal with hair or fur that feeds its babies milk.",
+        "fr": "Un animal à poils ou à fourrure qui nourrit ses petits avec du lait.",
+        "ar": "حيوان له شعر أو فرو ويُرضع صغاره الحليب."
+      }
+    },
+    {
+      "terms": {
+        "en": [
+          "reptiles",
+          "reptile"
+        ],
+        "fr": [
+          "reptiles",
+          "reptile"
+        ],
+        "ar": [
+          "الزواحف",
+          "زواحف"
+        ]
+      },
+      "definition": {
+        "en": "Animals with dry, scaly skin, like snakes, lizards and turtles.",
+        "fr": "Des animaux à la peau sèche et écailleuse, comme les serpents, les lézards et les tortues.",
+        "ar": "حيوانات جلدها جاف ومغطّى بالحراشف، مثل الثعابين والسحالي والسلاحف."
+      }
+    },
+    {
+      "terms": {
+        "en": [
+          "keratin"
+        ],
+        "fr": [
+          "kératine"
+        ],
+        "ar": [
+          "الكيراتين",
+          "كيراتين"
+        ]
+      },
+      "definition": {
+        "en": "A tough material that makes up hair, nails, horns and feathers.",
+        "fr": "Une matière solide qui forme les cheveux, les ongles, les cornes et les plumes.",
+        "ar": "مادة قوية تتكوّن منها الشعور والأظافر والقرون والريش."
+      }
+    },
+    {
+      "terms": {
+        "en": [
+          "photosynthesis"
+        ],
+        "fr": [
+          "photosynthèse"
+        ],
+        "ar": [
+          "التمثيل",
+          "الضوئي"
+        ]
+      },
+      "definition": {
+        "en": "How plants use sunlight to make their own food.",
+        "fr": "La façon dont les plantes utilisent la lumière pour fabriquer leur nourriture.",
+        "ar": "الطريقة التي تستخدم بها النباتات ضوء الشمس لتصنع غذاءها."
+      }
+    },
+    {
+      "terms": {
+        "en": [
+          "oxygen"
+        ],
+        "fr": [
+          "oxygène"
+        ],
+        "ar": [
+          "الأكسجين",
+          "أكسجين"
+        ]
+      },
+      "definition": {
+        "en": "A gas in the air that people and animals need to breathe.",
+        "fr": "Un gaz de l'air dont les humains et les animaux ont besoin pour respirer.",
+        "ar": "غاز في الهواء يحتاجه الإنسان والحيوان للتنفّس."
+      }
+    },
+    {
+      "terms": {
+        "en": [
+          "acorn",
+          "acorns"
+        ],
+        "fr": [
+          "gland",
+          "glands"
+        ],
+        "ar": [
+          "البلوطة",
+          "بلوطة"
+        ]
+      },
+      "definition": {
+        "en": "The nut of an oak tree, which holds a seed.",
+        "fr": "Le fruit du chêne, qui contient une graine.",
+        "ar": "ثمرة شجرة البلوط، وفيها بذرة."
+      }
+    },
+    {
+      "terms": {
+        "en": [
+          "amphibians",
+          "amphibian"
+        ],
+        "fr": [
+          "amphibiens",
+          "amphibien"
+        ],
+        "ar": [
+          "البرمائيات",
+          "برمائيات"
+        ]
+      },
+      "definition": {
+        "en": "Animals like frogs that live part of their life in water and part on land.",
+        "fr": "Des animaux comme les grenouilles qui vivent une partie de leur vie dans l'eau et une partie sur terre.",
+        "ar": "حيوانات مثل الضفادع تعيش جزءًا من حياتها في الماء وجزءًا على اليابسة."
+      }
+    },
+    {
+      "terms": {
+        "en": [
+          "tadpole",
+          "tadpoles"
+        ],
+        "fr": [
+          "têtard",
+          "têtards"
+        ],
+        "ar": [
+          "الشرغوف",
+          "شرغوف"
+        ]
+      },
+      "definition": {
+        "en": "A baby frog that lives in water and has a tail.",
+        "fr": "Un bébé grenouille qui vit dans l'eau et a une queue.",
+        "ar": "صغير الضفدع الذي يعيش في الماء وله ذيل."
+      }
+    },
+    {
+      "terms": {
+        "en": [
+          "gills"
+        ],
+        "fr": [
+          "branchies"
+        ],
+        "ar": [
+          "بالخياشيم",
+          "الخياشيم",
+          "خياشيم"
+        ]
+      },
+      "definition": {
+        "en": "Body parts that let an animal breathe underwater.",
+        "fr": "Des organes qui permettent à un animal de respirer sous l'eau.",
+        "ar": "أعضاء تسمح للحيوان بالتنفّس تحت الماء."
+      }
+    },
+    {
+      "terms": {
+        "en": [
+          "roots"
+        ],
+        "fr": [
+          "racines"
+        ],
+        "ar": [
+          "الجذور",
+          "جذور"
+        ]
+      },
+      "definition": {
+        "en": "The part of a plant that grows under the ground.",
+        "fr": "La partie d'une plante qui pousse sous la terre.",
+        "ar": "جزء النبات الذي ينمو تحت الأرض."
+      }
+    }
+  ],
+  "hotspots": [
+    {
+      "id": "animals/elephant",
+      "title": {
+        "en": "African Elephant",
+        "fr": "L'éléphant d'Afrique",
+        "ar": "الفيل الأفريقي"
+      },
+      "zone": "savanna",
+      "position": [
+        -12,
+        0,
+        2
+      ],
+      "contentType": "narration",
+      "narration": {
+        "en": "The African elephant is the largest land animal on Earth. It uses its trunk to breathe, smell, drink and grab things.",
+        "fr": "L'éléphant d'Afrique est le plus grand animal terrestre de la planète. Il se sert de sa trompe pour respirer, sentir, boire et attraper des choses.",
+        "ar": "الفيل الأفريقي هو أكبر حيوان يعيش على اليابسة. يستخدم خرطومه للتنفّس والشمّ والشرب والإمساك بالأشياء."
+      },
+      "learnMore": {
+        "en": "Elephants flap their big ears to help them cool down. Mammals have hair or fur and feed their babies milk. African elephants live in sub-Saharan Africa, in countries like Kenya, Tanzania, Botswana and Namibia.",
+        "fr": "Les éléphants agitent leurs grandes oreilles pour se rafraîchir. Les mammifères ont des poils ou de la fourrure et nourrissent leurs petits avec du lait. Les éléphants d'Afrique vivent en Afrique subsaharienne, dans des pays comme le Kenya, la Tanzanie, le Botswana et la Namibie.",
+        "ar": "يحرّك الفيل أذنيه الكبيرتين ليساعد جسمه على التبرّد. للثدييات شعر أو فرو، وهي تُرضع صغارها الحليب. تعيش الفيلة الأفريقية في أفريقيا جنوب الصحراء، في دول مثل كينيا وتنزانيا وبوتسوانا وناميبيا."
+      },
+      "funFact": {
+        "en": "A grown-up elephant is so heavy that it cannot jump.",
+        "fr": "Un éléphant adulte est si lourd qu'il ne peut pas sauter.",
+        "ar": "الفيل البالغ ثقيل جدًّا حتى إنه لا يستطيع القفز."
+      },
+      "linkedTopics": [
+        "animals/lion",
+        "animals/savanna-animals"
+      ],
+      "sourceType": "curated",
+      "factIds": [
+        "f-elephant-largest",
+        "f-elephant-trunk",
+        "f-elephant-ears",
+        "f-mammal-fur",
+        "f-elephant-africa",
+        "f-elephant-jump"
+      ],
+      "wikiQuery": {
+        "en": "African elephant",
+        "fr": "Éléphant de savane d'Afrique",
+        "ar": "فيل أفريقي"
+      },
+      "mascotLine": {
+        "en": "Whoa, look how big! Let's meet the elephant.",
+        "fr": "Ouah, qu'il est grand ! Allons voir l'éléphant.",
+        "ar": "واو، انظر كم هو كبير! لنتعرّف على الفيل."
+      },
+      "origin": {
+        "continents": [
+          "africa"
+        ],
+        "where": {
+          "en": "Sub-Saharan Africa: the savannas and woodlands of countries like Kenya, Tanzania, Botswana and Namibia.",
+          "fr": "Afrique subsaharienne : les savanes et les forêts de pays comme le Kenya, la Tanzanie, le Botswana et la Namibie.",
+          "ar": "أفريقيا جنوب الصحراء: سافانا وغابات دول مثل كينيا وتنزانيا وبوتسوانا وناميبيا."
+        },
+        "pins": [
+          {
+            "lat": -2.3,
+            "lon": 34.8
+          },
+          {
+            "lat": -19,
+            "lon": 23.4
+          },
+          {
+            "lat": -1.4,
+            "lon": 32
+          },
+          {
+            "lat": -18.9,
+            "lon": 15.9
+          }
+        ],
+        "sources": [
+          "https://en.wikipedia.org/wiki/African_bush_elephant"
+        ]
+      }
+    },
+    {
+      "id": "animals/where-in-the-world",
+      "title": {
+        "en": "Where in the World?",
+        "fr": "Où dans le monde ?",
+        "ar": "أين في العالم؟"
+      },
+      "position": [
+        6.2,
+        0,
+        3.4
+      ],
+      "contentType": "puzzle",
+      "narration": {
+        "en": "Every animal has a home somewhere on Earth. Some live on one mountain range only; others live nearly everywhere.",
+        "fr": "Chaque animal a une maison quelque part sur Terre. Certains ne vivent que dans une seule chaîne de montagnes, d'autres presque partout.",
+        "ar": "لكل حيوان بيت في مكان ما على الأرض. بعضها لا يعيش إلا في سلسلة جبال واحدة، وبعضها يعيش في كل مكان تقريبًا."
+      },
+      "learnMore": {
+        "en": "Giant pandas live only in the mountains of China, in Sichuan, Shaanxi and Gansu. Almost everything a panda eats is bamboo — about 9 to 14 kilograms of it a day. Red kangaroos live in mainland Australia, mostly in the dry grasslands and deserts. A big male red kangaroo can cover 8 to 9 metres in a single hop.",
+        "fr": "Les pandas géants vivent uniquement dans les montagnes de Chine : au Sichuan, au Shaanxi et au Gansu. Presque tout ce que mange un panda est du bambou : environ 9 à 14 kilos par jour. Les kangourous roux vivent sur le continent australien, surtout dans les prairies sèches et les déserts. Un grand kangourou roux mâle peut franchir 8 à 9 mètres en un seul bond.",
+        "ar": "تعيش الباندا العملاقة في جبال الصين فقط: في سيتشوان وشنشي وقانسو. كل ما تأكله الباندا تقريبًا هو الخيزران: نحو ٩ إلى ١٤ كيلوغرامًا في اليوم. تعيش الكناغر الحمراء في البرّ الأسترالي، وغالبًا في السهول الجافة والصحاري. يمكن للكنغر الأحمر الكبير أن يقطع من ٨ إلى ٩ أمتار في قفزة واحدة."
+      },
+      "funFact": {
+        "en": "An emperor penguin once dived 564 metres deep, the deepest dive ever measured for a bird.",
+        "fr": "Un manchot empereur a plongé à 564 mètres de profondeur : le record mesuré chez un oiseau.",
+        "ar": "غاص بطريق إمبراطوري مرةً إلى عمق ٥٦٤ مترًا، وهو أعمق غوص قيس لطائر."
+      },
+      "linkedTopics": [
+        "animals/elephant",
+        "animals/lion"
+      ],
+      "sourceType": "curated",
+      "factIds": [
+        "f-panda-china",
+        "f-panda-bamboo",
+        "f-kangaroo-australia",
+        "f-kangaroo-hop",
+        "f-penguin-antarctica",
+        "f-penguin-dad",
+        "f-elephant-africa",
+        "f-panda-baby",
+        "f-joey-bean",
+        "f-penguin-dive"
+      ],
+      "wikiQuery": {
+        "en": "Animal geographic distribution",
+        "fr": "Répartition géographique des animaux",
+        "ar": "التوزيع الجغرافي للحيوانات"
+      },
+      "mascotLine": {
+        "en": "I brought the world map! Can you find where each animal lives?",
+        "fr": "J'ai apporté la carte du monde ! Peux-tu trouver où vit chaque animal ?",
+        "ar": "أحضرتُ خريطة العالم! هل تجد أين يعيش كل حيوان؟"
+      },
+      "puzzle": {
+        "type": "map-find",
+        "prompt": {
+          "en": "Tap the continent where each animal lives in the wild.",
+          "fr": "Touche le continent où chaque animal vit à l'état sauvage.",
+          "ar": "المس القارة التي يعيش فيها كل حيوان في البرية."
+        },
+        "factIds": [
+          "f-panda-china",
+          "f-kangaroo-australia",
+          "f-penguin-antarctica",
+          "f-elephant-africa"
+        ],
+        "options": [
+          "africa",
+          "europe",
+          "asia",
+          "north-america",
+          "south-america",
+          "oceania",
+          "antarctica"
+        ],
+        "rounds": [
+          {
+            "id": "panda",
+            "media": {
+              "model": "panda"
+            },
+            "question": {
+              "en": "Where do giant pandas live?",
+              "fr": "Où vivent les pandas géants ?",
+              "ar": "أين تعيش الباندا العملاقة؟"
+            },
+            "answer": "asia",
+            "pins": [
+              {
+                "lat": 30.9,
+                "lon": 103
+              },
+              {
+                "lat": 33.6,
+                "lon": 107
+              },
+              {
+                "lat": 33.1,
+                "lon": 104.4
+              }
+            ],
+            "note": {
+              "en": "Only in the mountains of China: Sichuan, Shaanxi and Gansu.",
+              "fr": "Uniquement dans les montagnes de Chine : Sichuan, Shaanxi et Gansu.",
+              "ar": "في جبال الصين فقط: سيتشوان وشنشي وقانسو."
+            },
+            "factId": "f-panda-china"
+          },
+          {
+            "id": "kangaroo",
+            "media": {
+              "model": "kangaroo"
+            },
+            "question": {
+              "en": "Where do red kangaroos live?",
+              "fr": "Où vivent les kangourous roux ?",
+              "ar": "أين تعيش الكناغر الحمراء؟"
+            },
+            "answer": "oceania",
+            "pins": [
+              {
+                "lat": -25.3,
+                "lon": 133
+              },
+              {
+                "lat": -30,
+                "lon": 121
+              },
+              {
+                "lat": -23.7,
+                "lon": 145
+              }
+            ],
+            "note": {
+              "en": "Across mainland Australia, mostly in dry grassland and desert.",
+              "fr": "Sur tout le continent australien, surtout dans les prairies sèches et le désert.",
+              "ar": "في أنحاء البرّ الأسترالي، وغالبًا في السهول الجافة والصحراء."
+            },
+            "factId": "f-kangaroo-australia"
+          },
+          {
+            "id": "penguin",
+            "media": {
+              "model": "penguin"
+            },
+            "question": {
+              "en": "Where do emperor penguins live?",
+              "fr": "Où vivent les manchots empereurs ?",
+              "ar": "أين تعيش بطاريق الإمبراطور؟"
+            },
+            "answer": "antarctica",
+            "pins": [
+              {
+                "lat": -77,
+                "lon": 166
+              },
+              {
+                "lat": -70,
+                "lon": -10
+              },
+              {
+                "lat": -66.5,
+                "lon": 110
+              }
+            ],
+            "note": {
+              "en": "Only in Antarctica, on the sea ice around the whole continent.",
+              "fr": "Uniquement en Antarctique, sur la banquise autour de tout le continent.",
+              "ar": "في القارة القطبية الجنوبية فقط، على الجليد البحري حول القارة كلها."
+            },
+            "factId": "f-penguin-antarctica"
+          },
+          {
+            "id": "elephant",
+            "media": {
+              "model": "elephant"
+            },
+            "question": {
+              "en": "Where do African elephants live?",
+              "fr": "Où vivent les éléphants d'Afrique ?",
+              "ar": "أين تعيش الفيلة الأفريقية؟"
+            },
+            "answer": "africa",
+            "pins": [
+              {
+                "lat": -2.3,
+                "lon": 34.8
+              },
+              {
+                "lat": -19,
+                "lon": 23.4
+              },
+              {
+                "lat": -18.9,
+                "lon": 15.9
+              },
+              {
+                "lat": 1.4,
+                "lon": 32
+              }
+            ],
+            "note": {
+              "en": "Across sub-Saharan Africa, from Kenya and Tanzania to Botswana and Namibia.",
+              "fr": "Dans toute l'Afrique subsaharienne, du Kenya et de la Tanzanie au Botswana et à la Namibie.",
+              "ar": "في أنحاء أفريقيا جنوب الصحراء، من كينيا وتنزانيا إلى بوتسوانا وناميبيا."
+            },
+            "factId": "f-elephant-africa"
+          }
+        ]
+      },
+      "origin": {
+        "continents": [
+          "africa",
+          "asia",
+          "oceania",
+          "antarctica"
+        ],
+        "where": {
+          "en": "Four animals, four homes: China, Australia, Antarctica and sub-Saharan Africa.",
+          "fr": "Quatre animaux, quatre maisons : la Chine, l'Australie, l'Antarctique et l'Afrique subsaharienne.",
+          "ar": "أربعة حيوانات وأربعة بيوت: الصين وأستراليا والقارة القطبية الجنوبية وأفريقيا جنوب الصحراء."
+        },
+        "pins": [
+          {
+            "lat": 30.9,
+            "lon": 103
+          },
+          {
+            "lat": -25.3,
+            "lon": 133
+          },
+          {
+            "lat": -75,
+            "lon": 0
+          },
+          {
+            "lat": -2.3,
+            "lon": 34.8
+          }
+        ],
+        "sources": [
+          "https://en.wikipedia.org/wiki/Giant_panda",
+          "https://en.wikipedia.org/wiki/Red_kangaroo",
+          "https://en.wikipedia.org/wiki/Emperor_penguin",
+          "https://en.wikipedia.org/wiki/African_bush_elephant"
+        ]
+      }
+    },
+    {
+      "id": "animals/lion",
+      "title": {
+        "en": "Lion Pride",
+        "fr": "La troupe de lions",
+        "ar": "زُمْرة الأسود"
+      },
+      "zone": "savanna",
+      "position": [
+        -7,
+        0,
+        -6
+      ],
+      "contentType": "puzzle",
+      "narration": {
+        "en": "Lions live in family groups. In a pride, the lionesses do most of the hunting.",
+        "fr": "Les lions vivent en groupes familiaux. Dans une troupe, ce sont les lionnes qui chassent le plus.",
+        "ar": "تعيش الأسود في مجموعات عائلية. في الزُّمْرة، تقوم اللبؤات بمعظم الصيد."
+      },
+      "learnMore": {
+        "en": "A lion's roar can be heard up to about 8 kilometres away.",
+        "fr": "Le rugissement d'un lion peut s'entendre jusqu'à environ 8 kilomètres.",
+        "ar": "يمكن سماع زئير الأسد من مسافة تصل إلى نحو 8 كيلومترات."
+      },
+      "funFact": {
+        "en": "Wild lions live in Africa south of the Sahara. One small group also lives in the Gir forest in India.",
+        "fr": "Les lions sauvages vivent en Afrique, au sud du Sahara. Un petit groupe vit aussi dans la forêt de Gir, en Inde.",
+        "ar": "تعيش الأسود البرية في أفريقيا جنوب الصحراء. وتعيش مجموعة صغيرة أيضًا في غابة جير في الهند."
+      },
+      "linkedTopics": [
+        "animals/elephant",
+        "animals/forest-sort"
+      ],
+      "sourceType": "curated",
+      "factIds": [
+        "f-lion-pride",
+        "f-lion-roar",
+        "f-lion-hunt",
+        "f-lion-where"
+      ],
+      "wikiQuery": {
+        "en": "Lion",
+        "fr": "Lion",
+        "ar": "أسد"
+      },
+      "mascotLine": {
+        "en": "The lionesses do most of the hunting. Today this lion gets a turn!",
+        "fr": "Ce sont surtout les lionnes qui chassent. Aujourd'hui, c'est le tour de ce lion !",
+        "ar": "اللبؤات يقمن بمعظم الصيد، واليوم جاء دور هذا الأسد!"
+      },
+      "quiz": {
+        "question": {
+          "en": "What is a family group of lions called?",
+          "fr": "Comment appelle-t-on un groupe familial de lions ?",
+          "ar": "ماذا تُسمّى المجموعة العائلية من الأسود؟"
+        },
+        "choices": [
+          {
+            "en": "A pride",
+            "fr": "Une troupe",
+            "ar": "زُمْرة"
+          },
+          {
+            "en": "A flock",
+            "fr": "Une volée",
+            "ar": "سِرْب"
+          },
+          {
+            "en": "A school",
+            "fr": "Un banc",
+            "ar": "خليّة"
+          },
+          {
+            "en": "A herd",
+            "fr": "Une harde",
+            "ar": "قطيع"
+          }
+        ],
+        "answerIndex": 0,
+        "factId": "f-lion-pride"
+      },
+      "moreQuestions": [
+        {
+          "question": {
+            "en": "In a pride, who does most of the hunting?",
+            "fr": "Dans une troupe, qui chasse le plus ?",
+            "ar": "في الزُّمْرة، من يقوم بمعظم الصيد؟"
+          },
+          "choices": [
+            {
+              "en": "The lionesses",
+              "fr": "Les lionnes",
+              "ar": "اللبؤات"
+            },
+            {
+              "en": "The cubs",
+              "fr": "Les lionceaux",
+              "ar": "الأشبال"
+            },
+            {
+              "en": "The zebras",
+              "fr": "Les zèbres",
+              "ar": "الحُمُر الوحشية"
+            },
+            {
+              "en": "The elephants",
+              "fr": "Les éléphants",
+              "ar": "الفيلة"
+            }
+          ],
+          "answerIndex": 0,
+          "factId": "f-lion-hunt"
+        },
+        {
+          "question": {
+            "en": "About how far away can a lion's roar be heard?",
+            "fr": "À peu près jusqu'à quelle distance peut-on entendre le rugissement d'un lion ?",
+            "ar": "من أي مسافة تقريبًا يمكن سماع زئير الأسد؟"
+          },
+          "choices": [
+            {
+              "en": "About 8 metres",
+              "fr": "Environ 8 mètres",
+              "ar": "نحو 8 أمتار"
+            },
+            {
+              "en": "About 8 kilometres",
+              "fr": "Environ 8 kilomètres",
+              "ar": "نحو 8 كيلومترات"
+            },
+            {
+              "en": "About 800 kilometres",
+              "fr": "Environ 800 kilomètres",
+              "ar": "نحو 800 كيلومتر"
+            },
+            {
+              "en": "It makes no sound",
+              "fr": "Il ne fait aucun bruit",
+              "ar": "لا يُصدر أي صوت"
+            }
+          ],
+          "answerIndex": 1,
+          "factId": "f-lion-roar"
+        }
+      ],
+      "origin": {
+        "continents": [
+          "africa",
+          "asia"
+        ],
+        "where": {
+          "en": "Africa south of the Sahara — and one small group of Asiatic lions in the Gir forest in India.",
+          "fr": "L'Afrique au sud du Sahara — et un petit groupe de lions d'Asie dans la forêt de Gir, en Inde.",
+          "ar": "أفريقيا جنوب الصحراء، ومجموعة صغيرة من الأسود الآسيوية في غابة جير بالهند."
+        },
+        "pins": [
+          {
+            "lat": -2.3,
+            "lon": 34.8
+          },
+          {
+            "lat": -19.4,
+            "lon": 23.6
+          },
+          {
+            "lat": -24,
+            "lon": 31.5
+          },
+          {
+            "lat": 21.1,
+            "lon": 70.8
+          }
+        ],
+        "sources": [
+          "https://en.wikipedia.org/wiki/Lion",
+          "https://en.wikipedia.org/wiki/Asiatic_lion"
+        ]
+      },
+      "puzzle": {
+        "type": "arcade",
+        "game": "stalk",
+        "prompt": {
+          "en": "Hold to creep through the grass. Stop when the zebra looks up!",
+          "fr": "Appuie longtemps pour ramper dans l'herbe. Arrête-toi quand le zèbre lève la tête !",
+          "ar": "اضغط مطوّلًا ليزحف الأسد بين الأعشاب، وتوقّف عندما يرفع الحمار الوحشي رأسه!"
+        },
+        "factIds": [
+          "f-lion-hunt"
+        ]
+      }
+    },
+    {
+      "id": "animals/savanna-animals",
+      "title": {
+        "en": "Savanna Spotting",
+        "fr": "Qui vit dans la savane ?",
+        "ar": "حيوانات السافانا"
+      },
+      "zone": "savanna",
+      "position": [
+        -15,
+        0,
+        -11
+      ],
+      "contentType": "puzzle",
+      "narration": {
+        "en": "Lots of big animals share the savanna. Every zebra has its own pattern of stripes.",
+        "fr": "Beaucoup de grands animaux partagent la savane. Chaque zèbre a son propre motif de rayures.",
+        "ar": "تتشارك حيوانات كبيرة كثيرة السافانا. لكل حمار وحشي نمط خطوط خاص به."
+      },
+      "learnMore": {
+        "en": "The giraffe is the tallest animal in the world. Hippos spend most of the day in water to stay cool. A rhino's horn is made of keratin, the same material as your fingernails. Plains zebras and giraffes both live in the grasslands of eastern and southern Africa.",
+        "fr": "La girafe est l'animal le plus grand du monde. Les hippopotames passent la plus grande partie de la journée dans l'eau pour rester au frais. La corne du rhinocéros est faite de kératine, la même matière que tes ongles. Les zèbres des plaines et les girafes vivent tous dans les savanes de l'Afrique de l'Est et du Sud.",
+        "ar": "الزرافة هي أطول حيوان في العالم. يقضي فرس النهر معظم النهار في الماء ليبقى باردًا. قرن وحيد القرن مصنوع من الكيراتين، وهي المادة نفسها التي تتكوّن منها أظافرك. يعيش الحمار الوحشي السهلي والزرافة في أعشاب شرق أفريقيا وجنوبها."
+      },
+      "funFact": {
+        "en": "The hippo's closest living relatives are whales.",
+        "fr": "Les plus proches parents vivants de l'hippopotame sont les baleines.",
+        "ar": "أقرب أقارب فرس النهر الأحياء هي الحيتان."
+      },
+      "linkedTopics": [
+        "animals/elephant",
+        "animals/lion"
+      ],
+      "sourceType": "curated",
+      "factIds": [
+        "f-zebra-stripes",
+        "f-giraffe-tallest",
+        "f-hippo-water",
+        "f-rhino-horn",
+        "f-zebra-giraffe-where",
+        "f-giraffe-neck",
+        "f-hippo-whale"
+      ],
+      "wikiQuery": {
+        "en": "Savanna",
+        "fr": "Savane",
+        "ar": "سافانا"
+      },
+      "mascotLine": {
+        "en": "Can you match each animal to its name?",
+        "fr": "Peux-tu associer chaque animal à son nom ?",
+        "ar": "هل تستطيع أن تطابق كل حيوان مع اسمه؟"
+      },
+      "puzzle": {
+        "type": "photo-to-label-match",
+        "prompt": {
+          "en": "Match each animal to its name.",
+          "fr": "Associe chaque animal à son nom.",
+          "ar": "طابِق كل حيوان مع اسمه."
+        },
+        "factIds": [
+          "f-zebra-stripes",
+          "f-giraffe-tallest",
+          "f-hippo-water",
+          "f-rhino-horn"
+        ],
+        "show": 4,
+        "pairs": [
+          {
+            "id": "zebra",
+            "label": {
+              "en": "Zebra",
+              "fr": "Zèbre",
+              "ar": "حمار وحشي"
+            },
+            "media": {
+              "wikiImage": "Zebra",
+              "model": "zebra"
+            }
+          },
+          {
+            "id": "giraffe",
+            "label": {
+              "en": "Giraffe",
+              "fr": "Girafe",
+              "ar": "زرافة"
+            },
+            "media": {
+              "wikiImage": "Giraffe",
+              "model": "giraffe"
+            }
+          },
+          {
+            "id": "rhino",
+            "label": {
+              "en": "Rhinoceros",
+              "fr": "Rhinocéros",
+              "ar": "وحيد القرن"
+            },
+            "media": {
+              "wikiImage": "Rhinoceros",
+              "model": "rhino"
+            }
+          },
+          {
+            "id": "hippo",
+            "label": {
+              "en": "Hippopotamus",
+              "fr": "Hippopotame",
+              "ar": "فرس النهر"
+            },
+            "media": {
+              "wikiImage": "Hippopotamus",
+              "model": "hippo"
+            }
+          },
+          {
+            "id": "elephant",
+            "label": {
+              "en": "Elephant",
+              "fr": "Éléphant",
+              "ar": "فيل"
+            },
+            "media": {
+              "wikiImage": "African elephant",
+              "model": "elephant"
+            }
+          },
+          {
+            "id": "lion",
+            "label": {
+              "en": "Lion",
+              "fr": "Lion",
+              "ar": "أسد"
+            },
+            "media": {
+              "wikiImage": "Lion",
+              "model": "lion"
+            }
+          }
+        ]
+      },
+      "origin": {
+        "continents": [
+          "africa"
+        ],
+        "where": {
+          "en": "The grasslands of eastern and southern Africa, where zebras, giraffes and rhinos share the same plains.",
+          "fr": "Les savanes de l'Afrique de l'Est et du Sud, où zèbres, girafes et rhinocéros partagent les mêmes plaines.",
+          "ar": "سهول شرق أفريقيا وجنوبها، حيث يتشارك الحمار الوحشي والزرافة والخرتيت المراعي نفسها."
+        },
+        "pins": [
+          {
+            "lat": -1.4,
+            "lon": 35.1
+          },
+          {
+            "lat": -2.5,
+            "lon": 34.8
+          },
+          {
+            "lat": -22.9,
+            "lon": 18.5
+          },
+          {
+            "lat": -24.9,
+            "lon": 31.6
+          }
+        ],
+        "sources": [
+          "https://en.wikipedia.org/wiki/Plains_zebra",
+          "https://en.wikipedia.org/wiki/Giraffe"
+        ]
+      }
+    },
+    {
+      "id": "animals/owl",
+      "title": {
+        "en": "Night Owl",
+        "fr": "La chouette de nuit",
+        "ar": "بومة الليل"
+      },
+      "zone": "forest",
+      "position": [
+        -3,
+        0,
+        -17
+      ],
+      "contentType": "video",
+      "narration": {
+        "en": "Most owls hunt at night. Special soft feathers let owls fly almost silently.",
+        "fr": "La plupart des chouettes et des hiboux chassent la nuit. Des plumes spéciales et douces leur permettent de voler presque sans bruit.",
+        "ar": "تصطاد معظم أنواع البوم في الليل. يساعد الريش الناعم الخاص البومةَ على الطيران بصمت تقريبًا."
+      },
+      "learnMore": {
+        "en": "Many owls can turn their heads about 270 degrees. Owls live on every continent except Antarctica.",
+        "fr": "Beaucoup de chouettes et de hiboux peuvent tourner la tête d'environ 270 degrés. Les hiboux vivent sur tous les continents sauf l'Antarctique.",
+        "ar": "تستطيع أنواع كثيرة من البوم أن تدير رأسها نحو 270 درجة. تعيش البوم في كل القارات ما عدا القارة القطبية الجنوبية."
+      },
+      "funFact": {
+        "en": "An owl's eyes are shaped like tubes, so it cannot roll them. It turns its whole head instead.",
+        "fr": "Les yeux de la chouette ont la forme de tubes : elle ne peut pas les bouger. Elle tourne donc toute la tête.",
+        "ar": "عينا البومة على شكل أنبوبين، فلا تستطيع تحريكهما، ولذلك تدير رأسها كله."
+      },
+      "linkedTopics": [
+        "animals/forest-sort",
+        "animals/oak"
+      ],
+      "sourceType": "curated",
+      "factIds": [
+        "f-owl-night",
+        "f-owl-silent",
+        "f-owl-head",
+        "f-bird-feathers",
+        "f-owls-everywhere",
+        "f-owl-eyes"
+      ],
+      "wikiQuery": {
+        "en": "Owl",
+        "fr": "Strigiformes",
+        "ar": "بومة"
+      },
+      "mascotLine": {
+        "en": "Shh, the owl is waking up. Let's watch!",
+        "fr": "Chut, la chouette se réveille. Regardons !",
+        "ar": "صه، البومة تستيقظ. لنشاهد!"
+      },
+      "video": {
+        "wikiArticle": "Owl",
+        "frames": [
+          {
+            "media": {
+              "model": "moon"
+            },
+            "factId": "f-owl-night"
+          },
+          {
+            "media": {
+              "model": "feather"
+            },
+            "factId": "f-owl-silent"
+          },
+          {
+            "media": {
+              "model": "owl"
+            },
+            "factId": "f-owl-head"
+          }
+        ]
+      },
+      "origin": {
+        "continents": [
+          "africa",
+          "europe",
+          "asia",
+          "north-america",
+          "south-america",
+          "oceania"
+        ],
+        "where": {
+          "en": "Almost everywhere: owls live on every continent except Antarctica.",
+          "fr": "Presque partout : les hiboux vivent sur tous les continents sauf l'Antarctique.",
+          "ar": "في كل مكان تقريبًا: تعيش البوم في كل القارات ما عدا القارة القطبية الجنوبية."
+        },
+        "pins": [
+          {
+            "lat": 51.5,
+            "lon": -0.1
+          },
+          {
+            "lat": 45,
+            "lon": 10
+          },
+          {
+            "lat": 39,
+            "lon": -98
+          },
+          {
+            "lat": -10,
+            "lon": -55
+          },
+          {
+            "lat": -2,
+            "lon": 22
+          },
+          {
+            "lat": -25,
+            "lon": 134
+          },
+          {
+            "lat": 55,
+            "lon": 90
+          }
+        ],
+        "sources": [
+          "https://en.wikipedia.org/wiki/Owl"
+        ]
+      }
+    },
+    {
+      "id": "animals/forest-sort",
+      "title": {
+        "en": "Fur, Feathers or Scales?",
+        "fr": "Poils, plumes ou écailles ?",
+        "ar": "فرو أم ريش أم حراشف؟"
+      },
+      "zone": "forest",
+      "position": [
+        5,
+        0,
+        -18
+      ],
+      "contentType": "puzzle",
+      "narration": {
+        "en": "Animals can be sorted by what covers their bodies. Mammals have hair or fur, and birds are the only animals alive today that have feathers.",
+        "fr": "On peut trier les animaux selon ce qui recouvre leur corps. Les mammifères ont des poils ou de la fourrure, et les oiseaux sont les seuls animaux vivants aujourd'hui à avoir des plumes.",
+        "ar": "يمكن تصنيف الحيوانات حسب ما يغطّي أجسامها. للثدييات شعر أو فرو، والطيور هي الحيوانات الوحيدة التي تعيش اليوم ولها ريش."
+      },
+      "learnMore": {
+        "en": "Reptiles, like snakes and turtles, have dry, scaly skin.",
+        "fr": "Les reptiles, comme les serpents et les tortues, ont une peau sèche couverte d'écailles.",
+        "ar": "للزواحف، مثل الثعابين والسلاحف، جلد جاف مغطّى بالحراشف."
+      },
+      "funFact": {
+        "en": "Most fish are covered in scales.",
+        "fr": "La plupart des poissons sont couverts d'écailles.",
+        "ar": "معظم الأسماك مغطّاة بالحراشف."
+      },
+      "linkedTopics": [
+        "animals/owl",
+        "animals/frog"
+      ],
+      "sourceType": "curated",
+      "factIds": [
+        "f-mammal-fur",
+        "f-bird-feathers",
+        "f-reptile-scales",
+        "f-fish-scales",
+        "f-bat-mammal"
+      ],
+      "wikiQuery": {
+        "en": "Animal",
+        "fr": "Animal",
+        "ar": "حيوان"
+      },
+      "mascotLine": {
+        "en": "Sorting time! Fur, feathers or scales?",
+        "fr": "C'est l'heure de trier ! Poils, plumes ou écailles ?",
+        "ar": "حان وقت التصنيف! فرو أم ريش أم حراشف؟"
+      },
+      "puzzle": {
+        "type": "sort-match",
+        "prompt": {
+          "en": "Sort each animal by what covers its body.",
+          "fr": "Trie chaque animal selon ce qui recouvre son corps.",
+          "ar": "صنّف كل حيوان حسب ما يغطّي جسمه."
+        },
+        "factIds": [
+          "f-mammal-fur",
+          "f-bird-feathers",
+          "f-reptile-scales",
+          "f-fish-scales",
+          "f-bat-mammal"
+        ],
+        "show": 6,
+        "bins": [
+          {
+            "id": "fur",
+            "label": {
+              "en": "Hair or fur",
+              "fr": "Poils ou fourrure",
+              "ar": "شعر أو فرو"
+            }
+          },
+          {
+            "id": "feathers",
+            "label": {
+              "en": "Feathers",
+              "fr": "Plumes",
+              "ar": "ريش"
+            }
+          },
+          {
+            "id": "scales",
+            "label": {
+              "en": "Scales",
+              "fr": "Écailles",
+              "ar": "حراشف"
+            }
+          }
+        ],
+        "items": [
+          {
+            "id": "fox",
+            "label": {
+              "en": "Fox",
+              "fr": "Renard",
+              "ar": "ثعلب"
+            },
+            "media": {
+              "wikiImage": "Red fox",
+              "model": "fox"
+            },
+            "bin": "fur"
+          },
+          {
+            "id": "bat",
+            "label": {
+              "en": "Bat",
+              "fr": "Chauve-souris",
+              "ar": "خفّاش"
+            },
+            "media": {
+              "wikiImage": "Bat",
+              "model": "bat"
+            },
+            "bin": "fur"
+          },
+          {
+            "id": "deer",
+            "label": {
+              "en": "Deer",
+              "fr": "Cerf",
+              "ar": "أيّل"
+            },
+            "media": {
+              "wikiImage": "Deer",
+              "model": "deer"
+            },
+            "bin": "fur"
+          },
+          {
+            "id": "rabbit",
+            "label": {
+              "en": "Rabbit",
+              "fr": "Lapin",
+              "ar": "أرنب"
+            },
+            "media": {
+              "wikiImage": "Rabbit",
+              "model": "rabbit"
+            },
+            "bin": "fur"
+          },
+          {
+            "id": "owl",
+            "label": {
+              "en": "Owl",
+              "fr": "Chouette",
+              "ar": "بومة"
+            },
+            "media": {
+              "wikiImage": "Owl",
+              "model": "owl"
+            },
+            "bin": "feathers"
+          },
+          {
+            "id": "eagle",
+            "label": {
+              "en": "Eagle",
+              "fr": "Aigle",
+              "ar": "نسر"
+            },
+            "media": {
+              "wikiImage": "Eagle",
+              "model": "eagle"
+            },
+            "bin": "feathers"
+          },
+          {
+            "id": "parrot",
+            "label": {
+              "en": "Parrot",
+              "fr": "Perroquet",
+              "ar": "ببغاء"
+            },
+            "media": {
+              "wikiImage": "Parrot",
+              "model": "parrot"
+            },
+            "bin": "feathers"
+          },
+          {
+            "id": "penguin",
+            "label": {
+              "en": "Penguin",
+              "fr": "Manchot",
+              "ar": "بطريق"
+            },
+            "media": {
+              "wikiImage": "Penguin",
+              "model": "penguin"
+            },
+            "bin": "feathers"
+          },
+          {
+            "id": "snake",
+            "label": {
+              "en": "Snake",
+              "fr": "Serpent",
+              "ar": "ثعبان"
+            },
+            "media": {
+              "wikiImage": "Snake",
+              "model": "snake"
+            },
+            "bin": "scales"
+          },
+          {
+            "id": "turtle",
+            "label": {
+              "en": "Turtle",
+              "fr": "Tortue",
+              "ar": "سلحفاة"
+            },
+            "media": {
+              "wikiImage": "Turtle",
+              "model": "turtle"
+            },
+            "bin": "scales"
+          },
+          {
+            "id": "lizard",
+            "label": {
+              "en": "Lizard",
+              "fr": "Lézard",
+              "ar": "سحلية"
+            },
+            "media": {
+              "wikiImage": "Lizard",
+              "model": "lizard"
+            },
+            "bin": "scales"
+          },
+          {
+            "id": "fish",
+            "label": {
+              "en": "Fish",
+              "fr": "Poisson",
+              "ar": "سمكة"
+            },
+            "media": {
+              "wikiImage": "Fish",
+              "model": "fish"
+            },
+            "bin": "scales"
+          }
+        ]
+      }
+    },
+    {
+      "id": "animals/oak",
+      "title": {
+        "en": "The Mighty Oak",
+        "fr": "Le grand chêne",
+        "ar": "شجرة البلوط"
+      },
+      "zone": "forest",
+      "position": [
+        0,
+        0,
+        -9
+      ],
+      "contentType": "narration",
+      "narration": {
+        "en": "Plants use sunlight, water and carbon dioxide to make their own food. This is called photosynthesis. An oak tree grows from a small nut called an acorn.",
+        "fr": "Les plantes utilisent la lumière du soleil, l'eau et le dioxyde de carbone pour fabriquer leur nourriture. C'est la photosynthèse. Un chêne pousse à partir d'un petit fruit appelé gland.",
+        "ar": "تستخدم النباتات ضوء الشمس والماء وثاني أكسيد الكربون لتصنع غذاءها. تُسمّى هذه العملية التمثيل الضوئي. تنمو شجرة البلوط من ثمرة صغيرة تُسمّى البلّوطة."
+      },
+      "learnMore": {
+        "en": "When plants make food, they give off oxygen, which animals need to breathe. Oak trees grow across the northern half of the world, in Europe, Asia and North America.",
+        "fr": "Quand les plantes fabriquent leur nourriture, elles rejettent de l'oxygène, dont les animaux ont besoin pour respirer. Les chênes poussent dans toute la moitié nord du monde : en Europe, en Asie et en Amérique du Nord.",
+        "ar": "عندما تصنع النباتات غذاءها، تُطلق الأكسجين الذي تحتاجه الحيوانات لتتنفّس. تنمو أشجار البلّوط في النصف الشمالي من العالم: في أوروبا وآسيا وأمريكا الشمالية."
+      },
+      "funFact": {
+        "en": "Some oak trees live for more than 1,000 years.",
+        "fr": "Certains chênes vivent plus de 1 000 ans.",
+        "ar": "تعيش بعض أشجار البلوط أكثر من ١٠٠٠ سنة."
+      },
+      "linkedTopics": [
+        "animals/plant-parts",
+        "science/heart"
+      ],
+      "sourceType": "curated",
+      "factIds": [
+        "f-plant-photosynthesis",
+        "f-plant-oxygen",
+        "f-oak-acorn",
+        "f-plant-leaf",
+        "f-oak-where",
+        "f-oak-old"
+      ],
+      "wikiQuery": {
+        "en": "Oak",
+        "fr": "Chêne",
+        "ar": "بلوط"
+      },
+      "mascotLine": {
+        "en": "Trees make food from sunshine. Isn't that amazing?",
+        "fr": "Les arbres fabriquent leur nourriture avec le soleil. Incroyable, non ?",
+        "ar": "الأشجار تصنع غذاءها من ضوء الشمس. أليس هذا مدهشًا؟"
+      },
+      "origin": {
+        "continents": [
+          "europe",
+          "asia",
+          "north-america"
+        ],
+        "where": {
+          "en": "The northern half of the world: oaks grow wild in Europe, Asia and North America.",
+          "fr": "La moitié nord du monde : les chênes poussent à l'état sauvage en Europe, en Asie et en Amérique du Nord.",
+          "ar": "النصف الشمالي من العالم: ينمو البلّوط في أوروبا وآسيا وأمريكا الشمالية."
+        },
+        "pins": [
+          {
+            "lat": 48,
+            "lon": 2
+          },
+          {
+            "lat": 52,
+            "lon": -1.5
+          },
+          {
+            "lat": 40,
+            "lon": -80
+          },
+          {
+            "lat": 36,
+            "lon": 138
+          }
+        ],
+        "sources": [
+          "https://en.wikipedia.org/wiki/Oak"
+        ]
+      }
+    },
+    {
+      "id": "animals/plant-parts",
+      "title": {
+        "en": "Parts of a Plant",
+        "fr": "Les parties d'une plante",
+        "ar": "أجزاء النبات"
+      },
+      "zone": "forest",
+      "position": [
+        8,
+        0,
+        -10
+      ],
+      "contentType": "puzzle",
+      "narration": {
+        "en": "Every part of a plant has a job. Roots hold a plant in the ground and take in water.",
+        "fr": "Chaque partie d'une plante a un rôle. Les racines tiennent la plante dans le sol et absorbent l'eau.",
+        "ar": "لكل جزء من النبات وظيفة. تثبّت الجذور النبات في التربة وتمتصّ الماء."
+      },
+      "learnMore": {
+        "en": "Flowers make seeds so that new plants can grow.",
+        "fr": "Les fleurs produisent des graines pour que de nouvelles plantes puissent pousser.",
+        "ar": "تصنع الأزهار البذور لكي تنمو نباتات جديدة."
+      },
+      "funFact": {
+        "en": "Roots also take in minerals from the soil, which the plant needs to grow.",
+        "fr": "Les racines absorbent aussi les minéraux du sol, dont la plante a besoin pour grandir.",
+        "ar": "تمتصّ الجذور أيضًا الأملاح المعدنية من التربة، وهي ضرورية لنموّ النبات."
+      },
+      "linkedTopics": [
+        "animals/oak",
+        "science/body-parts"
+      ],
+      "sourceType": "curated",
+      "factIds": [
+        "f-plant-roots",
+        "f-plant-stem",
+        "f-plant-leaf",
+        "f-plant-flower",
+        "f-roots-minerals"
+      ],
+      "wikiQuery": {
+        "en": "Plant",
+        "fr": "Plante",
+        "ar": "نبات"
+      },
+      "mascotLine": {
+        "en": "Help me put the labels on this plant!",
+        "fr": "Aide-moi à placer les étiquettes sur cette plante !",
+        "ar": "ساعدني في وضع الأسماء على هذا النبات!"
+      },
+      "puzzle": {
+        "type": "drag-to-label",
+        "prompt": {
+          "en": "Drag each label to the right part of the plant.",
+          "fr": "Fais glisser chaque étiquette sur la bonne partie de la plante.",
+          "ar": "اسحب كل اسم إلى الجزء الصحيح من النبات."
+        },
+        "factIds": [
+          "f-plant-roots",
+          "f-plant-stem",
+          "f-plant-leaf",
+          "f-plant-flower"
+        ],
+        "diagram": "plant",
+        "slots": [
+          {
+            "id": "flower",
+            "x": 50,
+            "y": 14,
+            "label": {
+              "en": "Flower",
+              "fr": "Fleur",
+              "ar": "زهرة"
+            },
+            "hint": {
+              "en": "Makes seeds",
+              "fr": "Produit des graines",
+              "ar": "تصنع البذور"
+            }
+          },
+          {
+            "id": "leaf",
+            "x": 76,
+            "y": 46,
+            "label": {
+              "en": "Leaf",
+              "fr": "Feuille",
+              "ar": "ورقة"
+            },
+            "hint": {
+              "en": "Catches sunlight",
+              "fr": "Capte la lumière",
+              "ar": "تلتقط ضوء الشمس"
+            }
+          },
+          {
+            "id": "stem",
+            "x": 50,
+            "y": 60,
+            "label": {
+              "en": "Stem",
+              "fr": "Tige",
+              "ar": "ساق"
+            },
+            "hint": {
+              "en": "Carries water up",
+              "fr": "Transporte l'eau",
+              "ar": "تنقل الماء"
+            }
+          },
+          {
+            "id": "roots",
+            "x": 50,
+            "y": 90,
+            "label": {
+              "en": "Roots",
+              "fr": "Racines",
+              "ar": "جذور"
+            },
+            "hint": {
+              "en": "Take in water",
+              "fr": "Absorbent l'eau",
+              "ar": "تمتصّ الماء"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "id": "animals/frog",
+      "title": {
+        "en": "Pond Frog",
+        "fr": "La grenouille de la mare",
+        "ar": "ضفدع البركة"
+      },
+      "zone": "pond",
+      "position": [
+        12,
+        0,
+        -3
+      ],
+      "contentType": "puzzle",
+      "narration": {
+        "en": "Frogs are amphibians. They usually start life in water and later live on land too.",
+        "fr": "Les grenouilles sont des amphibiens. Elles commencent souvent leur vie dans l'eau puis vivent aussi sur terre.",
+        "ar": "الضفادع من البرمائيات. تبدأ حياتها عادةً في الماء ثم تعيش على اليابسة أيضًا."
+      },
+      "learnMore": {
+        "en": "A baby frog is called a tadpole, and it breathes with gills.",
+        "fr": "Un bébé grenouille s'appelle un têtard, et il respire avec des branchies.",
+        "ar": "يُسمّى صغير الضفدع الشُّرغوف، وهو يتنفّس بالخياشيم."
+      },
+      "funFact": {
+        "en": "Frogs can take in oxygen through their skin.",
+        "fr": "Les grenouilles peuvent absorber de l'oxygène par leur peau.",
+        "ar": "تستطيع الضفادع أن تمتصّ الأكسجين عبر جلدها."
+      },
+      "linkedTopics": [
+        "animals/frog-lifecycle",
+        "animals/forest-sort"
+      ],
+      "sourceType": "curated",
+      "factIds": [
+        "f-amphibian",
+        "f-frog-tadpole",
+        "f-frog-skin",
+        "f-frog-lifecycle"
+      ],
+      "wikiQuery": {
+        "en": "Frog",
+        "fr": "Grenouille",
+        "ar": "ضفدع"
+      },
+      "mascotLine": {
+        "en": "Eat up, little tadpole. Legs are coming!",
+        "fr": "Mange bien, petit têtard. Tes pattes arrivent !",
+        "ar": "كُل جيدًا أيها الشُّرغوف الصغير، فأرجلك قادمة!"
+      },
+      "quiz": {
+        "question": {
+          "en": "What is a baby frog called?",
+          "fr": "Comment s'appelle un bébé grenouille ?",
+          "ar": "ماذا يُسمّى صغير الضفدع؟"
+        },
+        "choices": [
+          {
+            "en": "A cub",
+            "fr": "Un lionceau",
+            "ar": "شِبل"
+          },
+          {
+            "en": "A tadpole",
+            "fr": "Un têtard",
+            "ar": "شُرغوف"
+          },
+          {
+            "en": "A chick",
+            "fr": "Un poussin",
+            "ar": "كتكوت"
+          },
+          {
+            "en": "A kitten",
+            "fr": "Un chaton",
+            "ar": "هُرَيرة"
+          }
+        ],
+        "answerIndex": 1,
+        "factId": "f-frog-tadpole"
+      },
+      "moreQuestions": [
+        {
+          "question": {
+            "en": "How does a tadpole breathe?",
+            "fr": "Comment respire un têtard ?",
+            "ar": "كيف يتنفّس الشُّرغوف؟"
+          },
+          "choices": [
+            {
+              "en": "With gills",
+              "fr": "Avec des branchies",
+              "ar": "بالخياشيم"
+            },
+            {
+              "en": "Through its tail",
+              "fr": "Par sa queue",
+              "ar": "عبر ذيله"
+            },
+            {
+              "en": "It does not breathe",
+              "fr": "Il ne respire pas",
+              "ar": "لا يتنفّس"
+            },
+            {
+              "en": "With a trunk",
+              "fr": "Avec une trompe",
+              "ar": "بخرطوم"
+            }
+          ],
+          "answerIndex": 0,
+          "factId": "f-frog-tadpole"
+        },
+        {
+          "question": {
+            "en": "What can frogs take in through their skin?",
+            "fr": "Qu'est-ce que les grenouilles peuvent absorber par leur peau ?",
+            "ar": "ماذا تستطيع الضفادع أن تمتصّ عبر جلدها؟"
+          },
+          "choices": [
+            {
+              "en": "Sand",
+              "fr": "Du sable",
+              "ar": "الرمل"
+            },
+            {
+              "en": "Sunlight to make food",
+              "fr": "La lumière pour fabriquer leur nourriture",
+              "ar": "ضوء الشمس لصنع الغذاء"
+            },
+            {
+              "en": "Oxygen",
+              "fr": "De l'oxygène",
+              "ar": "الأكسجين"
+            },
+            {
+              "en": "Milk",
+              "fr": "Du lait",
+              "ar": "الحليب"
+            }
+          ],
+          "answerIndex": 2,
+          "factId": "f-frog-skin"
+        }
+      ],
+      "puzzle": {
+        "type": "arcade",
+        "game": "tadpole",
+        "prompt": {
+          "en": "Swim the tadpole to the green food and watch it grow into a frog. Keep away from the fish!",
+          "fr": "Fais nager le têtard vers la nourriture verte et regarde-le devenir grenouille. Évite les poissons !",
+          "ar": "اسبح بالشُّرغوف نحو الطعام الأخضر وشاهده يتحوّل إلى ضفدع، وابتعد عن الأسماك!"
+        },
+        "factIds": [
+          "f-frog-lifecycle",
+          "f-frog-tadpole"
+        ]
+      }
+    },
+    {
+      "id": "animals/frog-lifecycle",
+      "title": {
+        "en": "A Frog's Life",
+        "fr": "La vie d'une grenouille",
+        "ar": "حياة الضفدع"
+      },
+      "zone": "pond",
+      "position": [
+        15,
+        0,
+        6
+      ],
+      "contentType": "puzzle",
+      "narration": {
+        "en": "A frog changes a lot as it grows. Its life cycle goes: egg, tadpole, froglet, frog.",
+        "fr": "Une grenouille change beaucoup en grandissant. Son cycle de vie : œuf, têtard, jeune grenouille, grenouille.",
+        "ar": "يتغيّر الضفدع كثيرًا وهو ينمو. دورة حياته: بيضة، ثم شُرغوف، ثم ضفدع صغير، ثم ضفدع بالغ."
+      },
+      "learnMore": {
+        "en": "Frog eggs look like tiny balls of jelly. They are laid in ponds and streams.",
+        "fr": "Les œufs de grenouille ressemblent à de petites billes de gelée. Ils sont pondus dans les mares et les ruisseaux.",
+        "ar": "يشبه بيض الضفادع كرات صغيرة من الهلام، ويوضع في البرك والجداول."
+      },
+      "funFact": {
+        "en": "A froglet has four legs but still keeps a short tail for a while.",
+        "fr": "La jeune grenouille a quatre pattes mais garde encore une petite queue pendant un moment.",
+        "ar": "للضفدع الصغير أربع أرجل، لكنه يحتفظ بذيل قصير مدةً من الزمن."
+      },
+      "linkedTopics": [
+        "animals/frog",
+        "history/dinosaurs"
+      ],
+      "sourceType": "curated",
+      "factIds": [
+        "f-frog-lifecycle",
+        "f-frog-tadpole",
+        "f-amphibian",
+        "f-frog-eggs",
+        "f-froglet-tail"
+      ],
+      "wikiQuery": {
+        "en": "Frog life cycle",
+        "fr": "Têtard",
+        "ar": "شرغوف"
+      },
+      "mascotLine": {
+        "en": "What comes next in the frog's life?",
+        "fr": "Qu'est-ce qui vient ensuite dans la vie de la grenouille ?",
+        "ar": "ماذا يأتي بعد ذلك في حياة الضفدع؟"
+      },
+      "puzzle": {
+        "type": "pattern-series",
+        "prompt": {
+          "en": "What comes next?",
+          "fr": "Qu'est-ce qui vient ensuite ?",
+          "ar": "ماذا يأتي بعد ذلك؟"
+        },
+        "factIds": [
+          "f-frog-lifecycle"
+        ],
+        "sequence": [
+          {
+            "label": {
+              "en": "Egg",
+              "fr": "Œuf",
+              "ar": "بيضة"
+            },
+            "media": {
+              "model": "frogspawn"
+            }
+          },
+          {
+            "label": {
+              "en": "Tadpole",
+              "fr": "Têtard",
+              "ar": "شُرغوف"
+            },
+            "media": {
+              "model": "tadpole"
+            }
+          },
+          {
+            "label": {
+              "en": "Froglet",
+              "fr": "Jeune grenouille",
+              "ar": "ضفدع صغير"
+            },
+            "media": {
+              "model": "froglet"
+            }
+          }
+        ],
+        "choices": [
+          {
+            "id": "fish",
+            "label": {
+              "en": "Fish",
+              "fr": "Poisson",
+              "ar": "سمكة"
+            },
+            "media": {
+              "model": "fish"
+            }
+          },
+          {
+            "id": "frog",
+            "label": {
+              "en": "Frog",
+              "fr": "Grenouille",
+              "ar": "ضفدع"
+            },
+            "media": {
+              "model": "frog"
+            }
+          },
+          {
+            "id": "butterfly",
+            "label": {
+              "en": "Butterfly",
+              "fr": "Papillon",
+              "ar": "فراشة"
+            },
+            "media": {
+              "model": "butterfly"
+            }
+          },
+          {
+            "id": "tadpole",
+            "label": {
+              "en": "Tadpole",
+              "fr": "Têtard",
+              "ar": "شُرغوف"
+            },
+            "media": {
+              "model": "tadpole"
+            }
+          }
+        ],
+        "answerId": "frog"
+      }
+    },
+    {
+      "id": "animals/busy-bees",
+      "title": {
+        "en": "Busy Bees",
+        "fr": "Les abeilles au travail",
+        "ar": "النحل النشيط"
+      },
+      "zone": "meadow",
+      "position": [
+        13.2,
+        0,
+        10.8
+      ],
+      "contentType": "puzzle",
+      "narration": {
+        "en": "Bees visit flower after flower. They drink nectar and carry pollen, and that helps plants make seeds.",
+        "fr": "Les abeilles visitent fleur après fleur. Elles boivent le nectar et transportent le pollen, ce qui aide les plantes à faire des graines.",
+        "ar": "يزور النحل زهرة بعد زهرة، فيشرب الرحيق وينقل حبوب اللقاح، وهذا يساعد النباتات على صنع البذور."
+      },
+      "learnMore": {
+        "en": "Bees carry pollen home in little baskets on their back legs. A honey bee dances a \"waggle dance\" to tell the others where the flowers are. In summer, one healthy hive can hold about 50,000 bees. Nearly 9 out of 10 flowering plants need animals like bees, butterflies, birds or bats to carry their pollen.",
+        "fr": "Les abeilles rapportent le pollen dans de petites corbeilles sur leurs pattes arrière. Une abeille fait une « danse frétillante » pour dire aux autres où sont les fleurs. En été, une ruche en bonne santé peut abriter environ 50 000 abeilles. Près de 9 plantes à fleurs sur 10 ont besoin d'animaux, comme les abeilles, les papillons, les oiseaux ou les chauves-souris, pour transporter leur pollen.",
+        "ar": "يحمل النحل حبوب اللقاح إلى الخلية في سلال صغيرة على أرجله الخلفية. ترقص النحلة «رقصة الاهتزاز» لتخبر رفيقاتها بمكان الأزهار. في الصيف قد تضمّ خلية سليمة واحدة نحو ٥٠ ألف نحلة. نحو ٩ من كل ١٠ نباتات مزهرة تحتاج إلى حيوانات مثل النحل والفراشات والطيور والخفافيش لتنقل حبوب لقاحها."
+      },
+      "funFact": {
+        "en": "In her whole life, one worker bee makes only about one twelfth of a teaspoon of honey.",
+        "fr": "Dans toute sa vie, une abeille ouvrière ne fabrique qu'environ un douzième de cuillère à café de miel.",
+        "ar": "تصنع النحلة العاملة في حياتها كلها نحو جزء من اثني عشر جزءًا من ملعقة صغيرة من العسل فقط."
+      },
+      "linkedTopics": [
+        "animals/flower-parts",
+        "animals/sunflower"
+      ],
+      "sourceType": "curated",
+      "factIds": [
+        "f-pollination",
+        "f-honey-nectar",
+        "f-bee-basket",
+        "f-bee-dance",
+        "f-hive-size",
+        "f-pollinators-80",
+        "f-bee-spoon"
+      ],
+      "wikiQuery": {
+        "en": "Pollination",
+        "fr": "Pollinisation",
+        "ar": "تلقيح (نبات)"
+      },
+      "mascotLine": {
+        "en": "Bzzz! Follow me to the flowers.",
+        "fr": "Bzzz ! Suis-moi jusqu'aux fleurs.",
+        "ar": "بزز! اتبعني إلى الأزهار."
+      },
+      "quiz": {
+        "question": {
+          "en": "What do honey bees make from nectar?",
+          "fr": "Que fabriquent les abeilles avec le nectar ?",
+          "ar": "ماذا يصنع نحل العسل من الرحيق؟"
+        },
+        "choices": [
+          {
+            "en": "Milk",
+            "fr": "Du lait",
+            "ar": "الحليب"
+          },
+          {
+            "en": "Honey",
+            "fr": "Du miel",
+            "ar": "العسل"
+          },
+          {
+            "en": "Juice",
+            "fr": "Du jus",
+            "ar": "العصير"
+          },
+          {
+            "en": "Wax crayons",
+            "fr": "Des crayons de cire",
+            "ar": "أقلام شمع"
+          }
+        ],
+        "answerIndex": 1,
+        "factId": "f-honey-nectar"
+      },
+      "moreQuestions": [
+        {
+          "question": {
+            "en": "How does a bee tell the others where the flowers are?",
+            "fr": "Comment une abeille dit-elle aux autres où sont les fleurs ?",
+            "ar": "كيف تخبر النحلة رفيقاتها بمكان الأزهار؟"
+          },
+          "choices": [
+            {
+              "en": "It dances",
+              "fr": "Elle danse",
+              "ar": "ترقص"
+            },
+            {
+              "en": "It sings",
+              "fr": "Elle chante",
+              "ar": "تغنّي"
+            },
+            {
+              "en": "It draws a map",
+              "fr": "Elle dessine une carte",
+              "ar": "ترسم خريطة"
+            },
+            {
+              "en": "It sleeps",
+              "fr": "Elle dort",
+              "ar": "تنام"
+            }
+          ],
+          "answerIndex": 0,
+          "factId": "f-bee-dance"
+        },
+        {
+          "question": {
+            "en": "Where do bees carry pollen?",
+            "fr": "Où les abeilles transportent-elles le pollen ?",
+            "ar": "أين يحمل النحل حبوب اللقاح؟"
+          },
+          "choices": [
+            {
+              "en": "In their mouth",
+              "fr": "Dans leur bouche",
+              "ar": "في أفواهها"
+            },
+            {
+              "en": "On their wings",
+              "fr": "Sur leurs ailes",
+              "ar": "على أجنحتها"
+            },
+            {
+              "en": "In baskets on their back legs",
+              "fr": "Dans des corbeilles sur leurs pattes arrière",
+              "ar": "في سلال على أرجلها الخلفية"
+            },
+            {
+              "en": "In their ears",
+              "fr": "Dans leurs oreilles",
+              "ar": "في آذانها"
+            }
+          ],
+          "answerIndex": 2,
+          "factId": "f-bee-basket"
+        },
+        {
+          "question": {
+            "en": "About how many flowering plants need animals to carry their pollen?",
+            "fr": "Combien de plantes à fleurs ont besoin d'animaux pour transporter leur pollen ?",
+            "ar": "كم من النباتات المزهرة تحتاج إلى حيوانات لنقل حبوب لقاحها؟"
+          },
+          "choices": [
+            {
+              "en": "1 in 10",
+              "fr": "1 sur 10",
+              "ar": "١ من ١٠"
+            },
+            {
+              "en": "3 in 10",
+              "fr": "3 sur 10",
+              "ar": "٣ من ١٠"
+            },
+            {
+              "en": "9 in 10",
+              "fr": "9 sur 10",
+              "ar": "٩ من ١٠"
+            },
+            {
+              "en": "None",
+              "fr": "Aucune",
+              "ar": "لا شيء"
+            }
+          ],
+          "answerIndex": 2,
+          "factId": "f-pollinators-80"
+        }
+      ],
+      "puzzle": {
+        "type": "arcade",
+        "game": "pollinate",
+        "prompt": {
+          "en": "Fly the bee from flower to flower to carry pollen. When every flower has a fruit, fly home to the hive.",
+          "fr": "Fais voler l'abeille de fleur en fleur pour porter le pollen. Quand chaque fleur a un fruit, rentre à la ruche.",
+          "ar": "طِر بالنحلة من زهرة إلى زهرة لتنقل حبوب اللقاح. وعندما تحمل كل زهرة ثمرة، عُد إلى الخلية."
+        },
+        "factIds": [
+          "f-pollination",
+          "f-bee-basket"
+        ]
+      }
+    },
+    {
+      "id": "animals/flower-parts",
+      "title": {
+        "en": "Build a Flower",
+        "fr": "Construis une fleur",
+        "ar": "ابنِ زهرة"
+      },
+      "zone": "meadow",
+      "position": [
+        9.6,
+        0,
+        11.6
+      ],
+      "contentType": "puzzle",
+      "narration": {
+        "en": "Every part of a flower has a job. Roots drink, the stem carries water up, and the flower makes seeds.",
+        "fr": "Chaque partie d'une fleur a un travail. Les racines boivent, la tige fait monter l'eau, et la fleur fabrique les graines.",
+        "ar": "لكل جزء من الزهرة عمل: الجذور تشرب، والساق ترفع الماء، والزهرة تصنع البذور."
+      },
+      "learnMore": {
+        "en": "Sepals are small green leaves that protect the flower while it is still a bud. Bright petals and sweet smells invite bees and butterflies to visit a flower. Stamens make pollen, a fine yellow powder.",
+        "fr": "Les sépales sont de petites feuilles vertes qui protègent la fleur quand elle n'est encore qu'un bouton. Les pétales vifs et les odeurs sucrées invitent les abeilles et les papillons à visiter une fleur. Les étamines fabriquent le pollen, une fine poudre jaune.",
+        "ar": "السَّبلات أوراق خضراء صغيرة تحمي الزهرة وهي ما تزال برعمًا. البتلات الزاهية والروائح الحلوة تدعو النحل والفراشات إلى زيارة الزهرة. تصنع الأسدية حبوب اللقاح، وهي مسحوق أصفر ناعم."
+      },
+      "funFact": {
+        "en": "The pistil catches pollen. Its bottom part grows into a fruit, and the seeds form inside it.",
+        "fr": "Le pistil attrape le pollen. Sa partie du bas devient un fruit, et les graines se forment à l'intérieur.",
+        "ar": "تلتقط المدقّة حبوب اللقاح. يصبح جزؤها السفلي ثمرة، وتتكوّن البذور داخلها."
+      },
+      "linkedTopics": [
+        "animals/busy-bees",
+        "animals/plant-parts"
+      ],
+      "sourceType": "curated",
+      "factIds": [
+        "f-roots",
+        "f-flower-sepals",
+        "f-flower-petals",
+        "f-flower-stamen",
+        "f-flower-pistil"
+      ],
+      "wikiQuery": {
+        "en": "Flower",
+        "fr": "Fleur",
+        "ar": "زهرة"
+      },
+      "mascotLine": {
+        "en": "Let's grow a flower, part by part!",
+        "fr": "Faisons pousser une fleur, partie par partie !",
+        "ar": "لننمِّ زهرة، جزءًا بعد جزء!"
+      },
+      "puzzle": {
+        "type": "build-flower",
+        "prompt": {
+          "en": "Build the flower from the ground up.",
+          "fr": "Construis la fleur en partant du sol.",
+          "ar": "ابنِ الزهرة من الأرض إلى الأعلى."
+        },
+        "factIds": [
+          "f-roots",
+          "f-flower-sepals",
+          "f-flower-petals",
+          "f-flower-stamen",
+          "f-flower-pistil"
+        ],
+        "parts": [
+          {
+            "id": "roots",
+            "label": {
+              "en": "Roots",
+              "fr": "Racines",
+              "ar": "الجذور"
+            },
+            "job": {
+              "en": "Hold the plant and drink water",
+              "fr": "Tiennent la plante et boivent l'eau",
+              "ar": "تثبّت النبتة وتشرب الماء"
+            },
+            "factId": "f-roots"
+          },
+          {
+            "id": "stem",
+            "label": {
+              "en": "Stem",
+              "fr": "Tige",
+              "ar": "الساق"
+            },
+            "job": {
+              "en": "Carries water up to the leaves",
+              "fr": "Fait monter l'eau jusqu'aux feuilles",
+              "ar": "ترفع الماء إلى الأوراق"
+            },
+            "factId": "f-roots"
+          },
+          {
+            "id": "leaves",
+            "label": {
+              "en": "Leaves",
+              "fr": "Feuilles",
+              "ar": "الأوراق"
+            },
+            "job": {
+              "en": "Make food from sunlight",
+              "fr": "Fabriquent de la nourriture avec la lumière",
+              "ar": "تصنع الغذاء من ضوء الشمس"
+            },
+            "factId": "f-roots"
+          },
+          {
+            "id": "sepals",
+            "label": {
+              "en": "Sepals",
+              "fr": "Sépales",
+              "ar": "السَّبلات"
+            },
+            "job": {
+              "en": "Protect the bud",
+              "fr": "Protègent le bouton",
+              "ar": "تحمي البرعم"
+            },
+            "factId": "f-flower-sepals"
+          },
+          {
+            "id": "petals",
+            "label": {
+              "en": "Petals",
+              "fr": "Pétales",
+              "ar": "البتلات"
+            },
+            "job": {
+              "en": "Invite bees and butterflies",
+              "fr": "Invitent abeilles et papillons",
+              "ar": "تدعو النحل والفراشات"
+            },
+            "factId": "f-flower-petals"
+          },
+          {
+            "id": "stamens",
+            "label": {
+              "en": "Stamens",
+              "fr": "Étamines",
+              "ar": "الأسدية"
+            },
+            "job": {
+              "en": "Make pollen",
+              "fr": "Fabriquent le pollen",
+              "ar": "تصنع حبوب اللقاح"
+            },
+            "factId": "f-flower-stamen"
+          },
+          {
+            "id": "pistil",
+            "label": {
+              "en": "Pistil",
+              "fr": "Pistil",
+              "ar": "المدقّة"
+            },
+            "job": {
+              "en": "Catches pollen and makes seeds",
+              "fr": "Attrape le pollen et fait les graines",
+              "ar": "تلتقط حبوب اللقاح وتصنع البذور"
+            },
+            "factId": "f-flower-pistil"
+          }
+        ]
+      }
+    },
+    {
+      "id": "animals/sunflower",
+      "title": {
+        "en": "The Sunflower",
+        "fr": "Le tournesol",
+        "ar": "زهرة الشمس"
+      },
+      "zone": "meadow",
+      "position": [
+        15.4,
+        0,
+        7.6
+      ],
+      "contentType": "puzzle",
+      "narration": {
+        "en": "A sunflower head is really hundreds of tiny flowers packed together. Young sunflowers turn to follow the sun across the sky.",
+        "fr": "La tête d'un tournesol, ce sont en fait des centaines de petites fleurs serrées. Les jeunes tournesols tournent pour suivre le soleil dans le ciel.",
+        "ar": "رأس زهرة الشمس هو في الحقيقة مئات الأزهار الصغيرة المتراصّة. وتدور زهور الشمس الصغيرة لتتبع الشمس في السماء."
+      },
+      "learnMore": {
+        "en": "Tall kinds of sunflower can grow about 3 metres high. The record is almost 11 metres!",
+        "fr": "Les grands tournesols peuvent mesurer environ 3 mètres. Le record est de presque 11 mètres !",
+        "ar": "قد يبلغ طول الأنواع الطويلة من زهرة الشمس نحو ٣ أمتار، والرقم القياسي نحو ١١ مترًا!"
+      },
+      "funFact": {
+        "en": "Sunflower seeds grow in spirals, like 34 turning one way and 55 the other.",
+        "fr": "Les graines de tournesol poussent en spirales, par exemple 34 dans un sens et 55 dans l'autre.",
+        "ar": "تنمو بذور زهرة الشمس في حلزونات، مثل ٣٤ في اتجاه و٥٥ في الاتجاه الآخر."
+      },
+      "linkedTopics": [
+        "animals/flower-parts",
+        "animals/busy-bees"
+      ],
+      "sourceType": "curated",
+      "factIds": [
+        "f-sunflower-florets",
+        "f-sunflower-sun",
+        "f-sunflower-tall",
+        "f-sunflower-spirals"
+      ],
+      "wikiQuery": {
+        "en": "Common sunflower",
+        "fr": "Tournesol",
+        "ar": "دوار الشمس"
+      },
+      "mascotLine": {
+        "en": "Morning in the east, evening in the west. Follow it!",
+        "fr": "Le matin à l'est, le soir à l'ouest. Suis-le !",
+        "ar": "صباحًا في الشرق ومساءً في الغرب. اتبعها!"
+      },
+      "quiz": {
+        "question": {
+          "en": "Which way do grown-up sunflowers face?",
+          "fr": "Vers où regardent les tournesols adultes ?",
+          "ar": "إلى أي اتجاه تتّجه زهور الشمس الكبيرة؟"
+        },
+        "choices": [
+          {
+            "en": "North",
+            "fr": "Le nord",
+            "ar": "الشمال"
+          },
+          {
+            "en": "East",
+            "fr": "L'est",
+            "ar": "الشرق"
+          },
+          {
+            "en": "South",
+            "fr": "Le sud",
+            "ar": "الجنوب"
+          },
+          {
+            "en": "Down",
+            "fr": "Le sol",
+            "ar": "الأسفل"
+          }
+        ],
+        "answerIndex": 1,
+        "factId": "f-sunflower-sun"
+      },
+      "moreQuestions": [
+        {
+          "question": {
+            "en": "What is a sunflower head made of?",
+            "fr": "De quoi est faite la tête d'un tournesol ?",
+            "ar": "ممّ يتكوّن رأس زهرة الشمس؟"
+          },
+          "choices": [
+            {
+              "en": "One big petal",
+              "fr": "Un seul grand pétale",
+              "ar": "بتلة واحدة كبيرة"
+            },
+            {
+              "en": "Hundreds of tiny flowers",
+              "fr": "Des centaines de petites fleurs",
+              "ar": "مئات الأزهار الصغيرة"
+            },
+            {
+              "en": "Leaves",
+              "fr": "Des feuilles",
+              "ar": "أوراق"
+            },
+            {
+              "en": "Seeds only",
+              "fr": "Seulement des graines",
+              "ar": "بذور فقط"
+            }
+          ],
+          "answerIndex": 1,
+          "factId": "f-sunflower-florets"
+        },
+        {
+          "question": {
+            "en": "About how tall can a tall sunflower grow?",
+            "fr": "Quelle taille peut atteindre un grand tournesol ?",
+            "ar": "كم قد يبلغ طول زهرة شمس طويلة؟"
+          },
+          "choices": [
+            {
+              "en": "30 centimetres",
+              "fr": "30 centimètres",
+              "ar": "٣٠ سنتيمترًا"
+            },
+            {
+              "en": "About 3 metres",
+              "fr": "Environ 3 mètres",
+              "ar": "نحو ٣ أمتار"
+            },
+            {
+              "en": "30 metres",
+              "fr": "30 mètres",
+              "ar": "٣٠ مترًا"
+            },
+            {
+              "en": "As tall as a mountain",
+              "fr": "Aussi grand qu'une montagne",
+              "ar": "بطول جبل"
+            }
+          ],
+          "answerIndex": 1,
+          "factId": "f-sunflower-tall"
+        }
+      ],
+      "puzzle": {
+        "type": "arcade",
+        "game": "sun-track",
+        "prompt": {
+          "en": "Turn the young sunflower to face the sun as it crosses the sky. Watch it grow!",
+          "fr": "Tourne le jeune tournesol vers le soleil pendant qu'il traverse le ciel. Regarde-le grandir !",
+          "ar": "أدِر زهرة الشمس الصغيرة نحو الشمس وهي تعبر السماء، وشاهدها تكبر!"
+        },
+        "factIds": [
+          "f-sunflower-sun"
+        ]
+      }
+    },
+    {
+      "id": "animals/sound-safari",
+      "title": {
+        "en": "Sound Safari",
+        "fr": "Safari des sons",
+        "ar": "رحلة الأصوات"
+      },
+      "position": [
+        -3.6,
+        0,
+        6.8
+      ],
+      "contentType": "puzzle",
+      "narration": {
+        "en": "Animals talk with sounds. Listen closely: every sound here was recorded from a real animal.",
+        "fr": "Les animaux se parlent avec des sons. Écoute bien : chaque son ici a été enregistré sur un vrai animal.",
+        "ar": "تتكلّم الحيوانات بالأصوات. أنصت جيدًا: كل صوت هنا مسجّل من حيوان حقيقي."
+      },
+      "learnMore": {
+        "en": "Elephants trumpet through their trunk when they are excited or upset. A zebra's call is a high bark or bray. Owls hoot to call to each other, mostly at night. Male frogs croak to call females. Each kind of frog has its own song.",
+        "fr": "Les éléphants barrissent avec leur trompe quand ils sont excités ou inquiets. Le cri du zèbre est un aboiement aigu ou un braiment. Les hiboux hululent pour s'appeler, surtout la nuit. Les grenouilles mâles coassent pour appeler les femelles. Chaque espèce a son propre chant.",
+        "ar": "تُطلق الفيلة صوت البوق عبر خرطومها حين تكون متحمّسة أو منزعجة. نداء الحمار الوحشي نباح حادّ أو نهيق. تنعق البوم لتنادي بعضها، وغالبًا في الليل. تنقّ ذكور الضفادع لتنادي الإناث، ولكل نوع أغنيته الخاصة."
+      },
+      "funFact": {
+        "en": "Crickets chirp by rubbing their wings together. Only the males sing.",
+        "fr": "Les grillons chantent en frottant leurs ailes l'une contre l'autre. Seuls les mâles chantent.",
+        "ar": "تصرّ الجداجد بحكّ أجنحتها ببعضها، والذكور وحدها هي التي تغنّي."
+      },
+      "linkedTopics": [
+        "animals/elephant",
+        "animals/owl"
+      ],
+      "sourceType": "curated",
+      "factIds": [
+        "f-sound-elephant",
+        "f-sound-zebra",
+        "f-sound-owl",
+        "f-sound-frog",
+        "f-sound-bee",
+        "f-sound-cricket"
+      ],
+      "wikiQuery": {
+        "en": "Animal communication",
+        "fr": "Communication animale",
+        "ar": "تواصل الحيوانات"
+      },
+      "mascotLine": {
+        "en": "Shh... listen! Who is making that sound?",
+        "fr": "Chut... écoute ! Qui fait ce bruit ?",
+        "ar": "صه... أنصت! من يصدر هذا الصوت؟"
+      },
+      "puzzle": {
+        "type": "sound-match",
+        "prompt": {
+          "en": "Listen, then tap the animal you hear.",
+          "fr": "Écoute, puis touche l'animal que tu entends.",
+          "ar": "أنصت، ثم المس الحيوان الذي تسمعه."
+        },
+        "factIds": [
+          "f-sound-elephant",
+          "f-sound-zebra",
+          "f-sound-owl",
+          "f-sound-frog",
+          "f-sound-bee",
+          "f-sound-cricket"
+        ],
+        "show": 5,
+        "choices": 3,
+        "animals": [
+          {
+            "id": "elephant",
+            "label": {
+              "en": "Elephant",
+              "fr": "Éléphant",
+              "ar": "فيل"
+            },
+            "media": {
+              "model": "elephant"
+            },
+            "sound": "elephant",
+            "note": {
+              "en": "Elephants trumpet through their trunk.",
+              "fr": "Les éléphants barrissent avec leur trompe.",
+              "ar": "تُطلق الفيلة صوت البوق عبر خرطومها."
+            },
+            "factId": "f-sound-elephant"
+          },
+          {
+            "id": "zebra",
+            "label": {
+              "en": "Zebra",
+              "fr": "Zèbre",
+              "ar": "حمار وحشي"
+            },
+            "media": {
+              "model": "zebra"
+            },
+            "sound": "zebra",
+            "note": {
+              "en": "A high bark or bray: that's a zebra.",
+              "fr": "Un aboiement aigu ou un braiment : c'est un zèbre.",
+              "ar": "نباح حادّ أو نهيق: إنه حمار وحشي."
+            },
+            "factId": "f-sound-zebra"
+          },
+          {
+            "id": "owl",
+            "label": {
+              "en": "Owl",
+              "fr": "Hibou",
+              "ar": "بومة"
+            },
+            "media": {
+              "model": "owl"
+            },
+            "sound": "owl",
+            "note": {
+              "en": "Owls hoot to call each other, mostly at night.",
+              "fr": "Les hiboux hululent pour s'appeler, surtout la nuit.",
+              "ar": "تنعق البوم لتنادي بعضها، غالبًا في الليل."
+            },
+            "factId": "f-sound-owl"
+          },
+          {
+            "id": "frog",
+            "label": {
+              "en": "Frog",
+              "fr": "Grenouille",
+              "ar": "ضفدع"
+            },
+            "media": {
+              "model": "frog"
+            },
+            "sound": "frog",
+            "note": {
+              "en": "Male frogs croak to call females.",
+              "fr": "Les grenouilles mâles coassent pour appeler les femelles.",
+              "ar": "تنقّ ذكور الضفادع لتنادي الإناث."
+            },
+            "factId": "f-sound-frog"
+          },
+          {
+            "id": "bee",
+            "label": {
+              "en": "Bee",
+              "fr": "Abeille",
+              "ar": "نحلة"
+            },
+            "media": {
+              "model": "bee"
+            },
+            "sound": "bee",
+            "note": {
+              "en": "That buzz is wings beating very fast.",
+              "fr": "Ce bourdonnement, ce sont des ailes qui battent très vite.",
+              "ar": "هذا الطنين هو خفقان الأجنحة السريع."
+            },
+            "factId": "f-sound-bee"
+          },
+          {
+            "id": "cricket",
+            "label": {
+              "en": "Cricket",
+              "fr": "Grillon",
+              "ar": "جدجد"
+            },
+            "media": {
+              "model": "cricket"
+            },
+            "sound": "cricket",
+            "note": {
+              "en": "Crickets chirp by rubbing their wings together.",
+              "fr": "Les grillons chantent en frottant leurs ailes.",
+              "ar": "تصرّ الجداجد بحكّ أجنحتها ببعضها."
+            },
+            "factId": "f-sound-cricket"
+          }
+        ]
+      }
+    }
+  ]
+}

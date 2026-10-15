@@ -1,0 +1,949 @@
+{
+  "sceneId": "science",
+  "category": "science",
+  "title": {
+    "en": "Inside the Human Body",
+    "fr": "Voyage dans le corps humain",
+    "ar": "داخل جسم الإنسان"
+  },
+  "intro": {
+    "en": "We shrank down tiny! Explore the body from the inside.",
+    "fr": "Nous sommes devenus minuscules ! Explore le corps de l'intérieur.",
+    "ar": "لقد صرنا صغارًا جدًّا! استكشف الجسم من الداخل."
+  },
+  "review": {
+    "status": "reviewed",
+    "reviewers": [
+      "Web fact-check"
+    ],
+    "lastReviewed": "2026-10-09",
+    "notes": "Needs subject review and FR/AR native review.",
+    "factCheck": {
+      "date": "2026-10-09",
+      "method": "Every fact was searched on the web and compared with independent sources (linked per fact where one page covers it). Facts that did not match were corrected. French and Arabic were not read by a native speaker."
+    }
+  },
+  "facts": [
+    {
+      "id": "f-heart-pump",
+      "text": {
+        "en": "Your heart is a muscle that pumps blood around your body.",
+        "fr": "Ton cœur est un muscle qui pompe le sang dans tout ton corps.",
+        "ar": "قلبك عضلة تضخّ الدم إلى كل أنحاء جسمك."
+      },
+      "sources": [
+        "https://en.wikipedia.org/wiki/Heart"
+      ]
+    },
+    {
+      "id": "f-heart-fist",
+      "text": {
+        "en": "Your heart is about the size of your fist.",
+        "fr": "Ton cœur a à peu près la taille de ton poing.",
+        "ar": "حجم قلبك يقارب حجم قبضة يدك."
+      },
+      "sources": [
+        "https://en.wikipedia.org/wiki/Heart"
+      ]
+    },
+    {
+      "id": "f-heart-beats",
+      "text": {
+        "en": "An adult's heart beats about 100,000 times a day.",
+        "fr": "Le cœur d'un adulte bat environ 100 000 fois par jour.",
+        "ar": "ينبض قلب الإنسان البالغ نحو 100000 مرة في اليوم."
+      },
+      "sources": [
+        "https://www.bhf.org.uk/informationsupport/how-a-healthy-heart-works",
+        "https://health.clevelandclinic.org/fun-facts-about-your-heart"
+      ]
+    },
+    {
+      "id": "f-brain",
+      "text": {
+        "en": "Your brain controls your body and helps you think.",
+        "fr": "Ton cerveau commande ton corps et t'aide à réfléchir.",
+        "ar": "يتحكّم دماغك في جسمك ويساعدك على التفكير."
+      },
+      "sources": [
+        "https://www.brainfacts.org/in-the-lab/meet-the-researcher/2018/how-many-neurons-are-in-the-brain-120418"
+      ]
+    },
+    {
+      "id": "f-lungs",
+      "text": {
+        "en": "Your lungs take in oxygen from the air you breathe.",
+        "fr": "Tes poumons prennent l'oxygène de l'air que tu respires.",
+        "ar": "تأخذ رئتاك الأكسجين من الهواء الذي تتنفّسه."
+      },
+      "sources": [
+        "https://en.wikipedia.org/wiki/Lung"
+      ]
+    },
+    {
+      "id": "f-stomach",
+      "text": {
+        "en": "Your stomach helps break down the food you eat.",
+        "fr": "Ton estomac aide à décomposer les aliments que tu manges.",
+        "ar": "تساعد معدتك على هضم الطعام الذي تأكله."
+      },
+      "sources": [
+        "https://en.wikipedia.org/wiki/Stomach"
+      ]
+    },
+    {
+      "id": "f-intestine",
+      "text": {
+        "en": "Your small intestine takes in most of the goodness from your food. In a grown-up it is 3 to 5 metres long.",
+        "fr": "Ton intestin grêle absorbe presque tout ce qui est bon dans les aliments. Chez un adulte, il mesure de 3 à 5 mètres de long.",
+        "ar": "تمتصّ أمعاؤك الدقيقة معظم الفائدة من طعامك. ويبلغ طولها عند البالغ من ٣ إلى ٥ أمتار."
+      },
+      "sources": [
+        "https://en.wikipedia.org/wiki/Small_intestine"
+      ]
+    },
+    {
+      "id": "f-liver",
+      "text": {
+        "en": "Your liver is your heaviest organ inside the body. In a grown-up it weighs about 1.5 kilograms.",
+        "fr": "Ton foie est ton organe interne le plus lourd. Chez un adulte, il pèse environ 1,5 kilo.",
+        "ar": "الكبد أثقل عضو داخل جسمك، ويزن عند البالغ نحو ١٫٥ كيلوغرام."
+      },
+      "sources": [
+        "https://www.discovermagazine.com/health/scientists-try-to-reduce-organ-transplants-with-liver-regeneration"
+      ]
+    },
+    {
+      "id": "f-liver-regrow",
+      "text": {
+        "en": "The liver can grow back: even a quarter of a liver can grow into a whole one.",
+        "fr": "Le foie peut repousser : même un quart de foie peut redevenir un foie entier.",
+        "ar": "يستطيع الكبد أن ينمو من جديد: حتى رُبع كبد يمكن أن يصبح كبدًا كاملًا."
+      },
+      "sources": [
+        "https://www.discovermagazine.com/health/scientists-try-to-reduce-organ-transplants-with-liver-regeneration"
+      ]
+    },
+    {
+      "id": "f-kidneys",
+      "text": {
+        "en": "You have two bean-shaped kidneys. They clean your blood and make urine.",
+        "fr": "Tu as deux reins en forme de haricot. Ils nettoient ton sang et fabriquent l'urine.",
+        "ar": "لديك كليتان على شكل حبّة الفاصولياء، تنظّفان دمك وتصنعان البول."
+      },
+      "sources": [
+        "https://kidshealth.org/en/kids/kidneys.html"
+      ]
+    },
+    {
+      "id": "f-large-intestine",
+      "text": {
+        "en": "Your large intestine takes water back from food waste. It is about 1.5 metres long.",
+        "fr": "Ton gros intestin récupère l'eau des restes de nourriture. Il mesure environ 1,5 mètre.",
+        "ar": "تستعيد أمعاؤك الغليظة الماء من فضلات الطعام، ويبلغ طولها نحو ١٫٥ متر."
+      },
+      "sources": [
+        "https://en.wikipedia.org/wiki/Small_intestine"
+      ]
+    },
+    {
+      "id": "f-large-wider",
+      "text": {
+        "en": "It is called \"large\" because it is wider, not longer: the small intestine is longer.",
+        "fr": "On l'appelle « gros » parce qu'il est plus large, pas plus long : l'intestin grêle est plus long.",
+        "ar": "سُمّيت «غليظة» لأنها أعرض لا أطول: فالأمعاء الدقيقة أطول منها."
+      },
+      "sources": [
+        "https://en.wikipedia.org/wiki/Small_intestine"
+      ]
+    },
+    {
+      "id": "f-lungs-heart-room",
+      "text": {
+        "en": "Your left lung is a little smaller than your right one, to make room for your heart.",
+        "fr": "Ton poumon gauche est un peu plus petit que le droit, pour laisser de la place à ton cœur.",
+        "ar": "رئتك اليسرى أصغر قليلًا من اليمنى لتترك مكانًا لقلبك."
+      },
+      "sources": [
+        "https://med.libretexts.org/Bookshelves/Anatomy_and_Physiology/Anatomy_and_Physiology_(Boundless)/21:_Respiratory_System/21.4:_The_Lungs_and_Pleurae/21.4B:_Lobes_Fissures_and_Lobules"
+      ]
+    },
+    {
+      "id": "f-lungs-lobes",
+      "text": {
+        "en": "Your right lung has three parts, called lobes. Your left lung has two.",
+        "fr": "Ton poumon droit a trois parties, appelées lobes. Ton poumon gauche en a deux.",
+        "ar": "لرئتك اليمنى ثلاثة أجزاء تُسمّى الفصوص، ولليسرى فصّان."
+      },
+      "sources": [
+        "https://med.libretexts.org/Bookshelves/Anatomy_and_Physiology/Anatomy_and_Physiology_(Boundless)/21:_Respiratory_System/21.4:_The_Lungs_and_Pleurae/21.4B:_Lobes_Fissures_and_Lobules"
+      ]
+    },
+    {
+      "id": "f-bones-300",
+      "text": {
+        "en": "A baby is born with about 300 bones. Many join together as it grows, so a grown-up has 206.",
+        "fr": "Un bébé naît avec environ 300 os. Beaucoup se soudent en grandissant : un adulte en a 206.",
+        "ar": "يولد الطفل وله نحو ٣٠٠ عظمة، ثم يلتحم كثير منها وهو يكبر، فيصير للبالغ ٢٠٦ عظام."
+      },
+      "sources": [
+        "https://vinmec.com/eng/article/all-about-human-skeleton-en"
+      ]
+    },
+    {
+      "id": "f-stapes",
+      "text": {
+        "en": "Your smallest bone is inside your ear. It is only about 3 millimetres long.",
+        "fr": "Ton plus petit os se trouve dans ton oreille. Il mesure environ 3 millimètres.",
+        "ar": "أصغر عظمة في جسمك موجودة داخل أذنك، وطولها نحو ٣ ملّيمترات فقط."
+      },
+      "sources": [
+        "https://vinmec.com/eng/article/all-about-human-skeleton-en"
+      ]
+    },
+    {
+      "id": "f-brain-neurons",
+      "text": {
+        "en": "Your brain has about 86 billion nerve cells.",
+        "fr": "Ton cerveau contient environ 86 milliards de cellules nerveuses.",
+        "ar": "في دماغك نحو ٨٦ مليار خلية عصبية."
+      },
+      "sources": [
+        "https://www.brainfacts.org/in-the-lab/meet-the-researcher/2018/how-many-neurons-are-in-the-brain-120418"
+      ]
+    }
+  ],
+  "glossary": [
+    {
+      "terms": {
+        "en": [
+          "muscle"
+        ],
+        "fr": [
+          "muscle"
+        ],
+        "ar": [
+          "عضلة"
+        ]
+      },
+      "definition": {
+        "en": "A body part that tightens and relaxes to make things move.",
+        "fr": "Une partie du corps qui se contracte et se relâche pour faire bouger.",
+        "ar": "جزء من الجسم ينقبض وينبسط ليُحدث الحركة."
+      }
+    },
+    {
+      "terms": {
+        "en": [
+          "pumps",
+          "pump"
+        ],
+        "fr": [
+          "pompe"
+        ],
+        "ar": [
+          "تضخ",
+          "تضخّ"
+        ]
+      },
+      "definition": {
+        "en": "Pushes a liquid along, again and again.",
+        "fr": "Pousse un liquide, encore et encore.",
+        "ar": "تدفع سائلًا مرةً بعد مرة."
+      }
+    },
+    {
+      "terms": {
+        "en": [
+          "oxygen"
+        ],
+        "fr": [
+          "oxygène"
+        ],
+        "ar": [
+          "الأكسجين"
+        ]
+      },
+      "definition": {
+        "en": "A gas in the air that people and animals need to breathe.",
+        "fr": "Un gaz de l'air dont les humains et les animaux ont besoin pour respirer.",
+        "ar": "غاز في الهواء يحتاجه الإنسان والحيوان للتنفّس."
+      }
+    }
+  ],
+  "hotspots": [
+    {
+      "id": "science/heart",
+      "title": {
+        "en": "The Heart",
+        "fr": "Le cœur",
+        "ar": "القلب"
+      },
+      "position": [
+        -4,
+        0,
+        -4
+      ],
+      "contentType": "narration",
+      "narration": {
+        "en": "Your heart is a muscle that pumps blood around your body. It is about the size of your fist.",
+        "fr": "Ton cœur est un muscle qui pompe le sang dans tout ton corps. Il a à peu près la taille de ton poing.",
+        "ar": "قلبك عضلة تضخّ الدم إلى كل أنحاء جسمك. وحجمه يقارب حجم قبضة يدك."
+      },
+      "learnMore": {
+        "en": "An adult's heart beats about 100,000 times a day.",
+        "fr": "Le cœur d'un adulte bat environ 100 000 fois par jour.",
+        "ar": "ينبض قلب الإنسان البالغ نحو 100000 مرة في اليوم."
+      },
+      "funFact": {
+        "en": "Your left lung is a little smaller than your right one, to make room for your heart.",
+        "fr": "Ton poumon gauche est un peu plus petit que le droit, pour laisser de la place à ton cœur.",
+        "ar": "رئتك اليسرى أصغر قليلًا من اليمنى لتترك مكانًا لقلبك."
+      },
+      "linkedTopics": [
+        "science/body-parts",
+        "animals/elephant"
+      ],
+      "sourceType": "curated",
+      "factIds": [
+        "f-heart-pump",
+        "f-heart-fist",
+        "f-heart-beats",
+        "f-lungs-heart-room"
+      ],
+      "wikiQuery": {
+        "en": "Heart",
+        "fr": "Cœur",
+        "ar": "قلب"
+      },
+      "mascotLine": {
+        "en": "Listen... thump, thump! That's the heart.",
+        "fr": "Écoute... boum, boum ! C'est le cœur.",
+        "ar": "استمع... دُم، دُم! هذا هو القلب."
+      }
+    },
+    {
+      "id": "science/body-parts",
+      "title": {
+        "en": "Body Map",
+        "fr": "La carte du corps",
+        "ar": "خريطة الجسم"
+      },
+      "position": [
+        4,
+        0,
+        -4
+      ],
+      "contentType": "puzzle",
+      "narration": {
+        "en": "Your organs work as a team. Your brain controls your body and helps you think.",
+        "fr": "Tes organes travaillent en équipe. Ton cerveau commande ton corps et t'aide à réfléchir.",
+        "ar": "تعمل أعضاؤك كفريق واحد. يتحكّم دماغك في جسمك ويساعدك على التفكير."
+      },
+      "learnMore": {
+        "en": "Your lungs take in oxygen from the air you breathe. Your stomach helps break down the food you eat. Your small intestine takes in most of the goodness from your food. In a grown-up it is 3 to 5 metres long.",
+        "fr": "Tes poumons prennent l'oxygène de l'air que tu respires. Ton estomac aide à décomposer les aliments que tu manges. Ton intestin grêle absorbe presque tout ce qui est bon dans les aliments. Chez un adulte, il mesure de 3 à 5 mètres de long.",
+        "ar": "تأخذ رئتاك الأكسجين من الهواء الذي تتنفّسه. تساعد معدتك على هضم الطعام الذي تأكله. تمتصّ أمعاؤك الدقيقة معظم الفائدة من طعامك. ويبلغ طولها عند البالغ من ٣ إلى ٥ أمتار."
+      },
+      "funFact": {
+        "en": "Your brain has about 86 billion nerve cells.",
+        "fr": "Ton cerveau contient environ 86 milliards de cellules nerveuses.",
+        "ar": "في دماغك نحو ٨٦ مليار خلية عصبية."
+      },
+      "linkedTopics": [
+        "science/heart",
+        "animals/plant-parts"
+      ],
+      "sourceType": "curated",
+      "factIds": [
+        "f-brain",
+        "f-lungs",
+        "f-stomach",
+        "f-heart-pump",
+        "f-intestine",
+        "f-brain-neurons"
+      ],
+      "wikiQuery": {
+        "en": "Human body",
+        "fr": "Corps humain",
+        "ar": "جسم الإنسان"
+      },
+      "mascotLine": {
+        "en": "Can you find where each organ lives?",
+        "fr": "Sais-tu où se trouve chaque organe ?",
+        "ar": "هل تعرف أين يوجد كل عضو؟"
+      },
+      "puzzle": {
+        "type": "drag-to-label",
+        "prompt": {
+          "en": "Drag each organ name onto the right place in the body.",
+          "fr": "Fais glisser le nom de chaque organe au bon endroit dans le corps.",
+          "ar": "اسحب اسم كل عضو إلى موضعه الصحيح في الجسم."
+        },
+        "factIds": [
+          "f-brain",
+          "f-lungs",
+          "f-heart-pump",
+          "f-stomach",
+          "f-intestine"
+        ],
+        "diagram": "body",
+        "slots": [
+          {
+            "id": "brain",
+            "x": 46,
+            "y": 8,
+            "label": {
+              "en": "Brain",
+              "fr": "Cerveau",
+              "ar": "الدماغ"
+            },
+            "hint": {
+              "en": "Helps you think",
+              "fr": "Aide à réfléchir",
+              "ar": "يساعدك على التفكير"
+            }
+          },
+          {
+            "id": "lungs",
+            "x": 38,
+            "y": 32,
+            "label": {
+              "en": "Lungs",
+              "fr": "Poumons",
+              "ar": "الرئتان"
+            },
+            "hint": {
+              "en": "Breathe in air",
+              "fr": "Respirent l'air",
+              "ar": "تتنفّسان الهواء"
+            }
+          },
+          {
+            "id": "heart",
+            "x": 55,
+            "y": 37,
+            "label": {
+              "en": "Heart",
+              "fr": "Cœur",
+              "ar": "القلب"
+            },
+            "hint": {
+              "en": "Pumps blood",
+              "fr": "Pompe le sang",
+              "ar": "يضخّ الدم"
+            }
+          },
+          {
+            "id": "stomach",
+            "x": 42,
+            "y": 54,
+            "label": {
+              "en": "Stomach",
+              "fr": "Estomac",
+              "ar": "المعدة"
+            },
+            "hint": {
+              "en": "Breaks down food",
+              "fr": "Décompose les aliments",
+              "ar": "تهضم الطعام"
+            }
+          },
+          {
+            "id": "intestine",
+            "x": 52,
+            "y": 68,
+            "label": {
+              "en": "Small intestine",
+              "fr": "Intestin grêle",
+              "ar": "الأمعاء الدقيقة"
+            },
+            "hint": {
+              "en": "Takes in the goodness",
+              "fr": "Absorbe les nutriments",
+              "ar": "تمتصّ الغذاء"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "id": "science/body-quiz",
+      "title": {
+        "en": "X-ray Explorer",
+        "fr": "L'explorateur aux rayons X",
+        "ar": "مستكشف الأشعّة السينية"
+      },
+      "position": [
+        5.5,
+        0,
+        1.5
+      ],
+      "contentType": "puzzle",
+      "narration": {
+        "en": "Your organs are a team. Each one has one big job, and they all work at the same time, day and night.",
+        "fr": "Tes organes forment une équipe. Chacun a un grand travail, et ils travaillent tous en même temps, jour et nuit.",
+        "ar": "أعضاؤك فريق واحد. لكل عضو عمل كبير، وكلها تعمل في الوقت نفسه، ليلًا ونهارًا."
+      },
+      "learnMore": {
+        "en": "Your liver is your heaviest organ inside the body. In a grown-up it weighs about 1.5 kilograms. The liver can grow back: even a quarter of a liver can grow into a whole one. You have two bean-shaped kidneys. They clean your blood and make urine. It is called \"large\" because it is wider, not longer: the small intestine is longer.",
+        "fr": "Ton foie est ton organe interne le plus lourd. Chez un adulte, il pèse environ 1,5 kilo. Le foie peut repousser : même un quart de foie peut redevenir un foie entier. Tu as deux reins en forme de haricot. Ils nettoient ton sang et fabriquent l'urine. On l'appelle « gros » parce qu'il est plus large, pas plus long : l'intestin grêle est plus long.",
+        "ar": "الكبد أثقل عضو داخل جسمك، ويزن عند البالغ نحو ١٫٥ كيلوغرام. يستطيع الكبد أن ينمو من جديد: حتى رُبع كبد يمكن أن يصبح كبدًا كاملًا. لديك كليتان على شكل حبّة الفاصولياء، تنظّفان دمك وتصنعان البول. سُمّيت «غليظة» لأنها أعرض لا أطول: فالأمعاء الدقيقة أطول منها."
+      },
+      "funFact": {
+        "en": "Your smallest bone is inside your ear. It is only about 3 millimetres long.",
+        "fr": "Ton plus petit os se trouve dans ton oreille. Il mesure environ 3 millimètres.",
+        "ar": "أصغر عظمة في جسمك موجودة داخل أذنك، وطولها نحو ٣ ملّيمترات فقط."
+      },
+      "linkedTopics": [
+        "science/body-build",
+        "science/heart"
+      ],
+      "sourceType": "curated",
+      "factIds": [
+        "f-heart-fist",
+        "f-heart-beats",
+        "f-liver",
+        "f-liver-regrow",
+        "f-kidneys",
+        "f-lungs-heart-room",
+        "f-intestine",
+        "f-large-wider",
+        "f-bones-300",
+        "f-stapes",
+        "f-heart-pump"
+      ],
+      "wikiQuery": {
+        "en": "Human body",
+        "fr": "Corps humain",
+        "ar": "جسم الإنسان"
+      },
+      "mascotLine": {
+        "en": "Let's peek inside. No tickling!",
+        "fr": "Regardons à l'intérieur. Sans chatouilles !",
+        "ar": "هيا ننظر إلى الداخل. بلا دغدغة!"
+      },
+      "quiz": {
+        "question": {
+          "en": "About how big is your heart?",
+          "fr": "Quelle est à peu près la taille de ton cœur ?",
+          "ar": "ما حجم قلبك تقريبًا؟"
+        },
+        "choices": [
+          {
+            "en": "The size of your fist",
+            "fr": "La taille de ton poing",
+            "ar": "بحجم قبضتك"
+          },
+          {
+            "en": "The size of a pea",
+            "fr": "La taille d'un petit pois",
+            "ar": "بحجم حبّة البازلاء"
+          },
+          {
+            "en": "The size of a football",
+            "fr": "La taille d'un ballon",
+            "ar": "بحجم كرة القدم"
+          },
+          {
+            "en": "The size of your head",
+            "fr": "La taille de ta tête",
+            "ar": "بحجم رأسك"
+          }
+        ],
+        "answerIndex": 0,
+        "factId": "f-heart-fist"
+      },
+      "moreQuestions": [
+        {
+          "question": {
+            "en": "Which organ is the heaviest inside your body?",
+            "fr": "Quel organe est le plus lourd dans ton corps ?",
+            "ar": "ما أثقل عضو داخل جسمك؟"
+          },
+          "choices": [
+            {
+              "en": "Heart",
+              "fr": "Le cœur",
+              "ar": "القلب"
+            },
+            {
+              "en": "Liver",
+              "fr": "Le foie",
+              "ar": "الكبد"
+            },
+            {
+              "en": "Stomach",
+              "fr": "L'estomac",
+              "ar": "المعدة"
+            },
+            {
+              "en": "Brain",
+              "fr": "Le cerveau",
+              "ar": "الدماغ"
+            }
+          ],
+          "answerIndex": 1,
+          "factId": "f-liver"
+        },
+        {
+          "question": {
+            "en": "How many kidneys do you have?",
+            "fr": "Combien de reins as-tu ?",
+            "ar": "كم كلية لديك؟"
+          },
+          "choices": [
+            {
+              "en": "One",
+              "fr": "Un",
+              "ar": "واحدة"
+            },
+            {
+              "en": "Two",
+              "fr": "Deux",
+              "ar": "اثنتان"
+            },
+            {
+              "en": "Three",
+              "fr": "Trois",
+              "ar": "ثلاث"
+            },
+            {
+              "en": "Five",
+              "fr": "Cinq",
+              "ar": "خمس"
+            }
+          ],
+          "answerIndex": 1,
+          "factId": "f-kidneys"
+        },
+        {
+          "question": {
+            "en": "Why is your left lung a little smaller?",
+            "fr": "Pourquoi ton poumon gauche est-il un peu plus petit ?",
+            "ar": "لماذا رئتك اليسرى أصغر قليلًا؟"
+          },
+          "choices": [
+            {
+              "en": "To make room for your heart",
+              "fr": "Pour laisser de la place au cœur",
+              "ar": "لتترك مكانًا للقلب"
+            },
+            {
+              "en": "It is still growing",
+              "fr": "Il grandit encore",
+              "ar": "ما زالت تنمو"
+            },
+            {
+              "en": "It is lazy",
+              "fr": "Il est paresseux",
+              "ar": "لأنها كسولة"
+            },
+            {
+              "en": "It holds food",
+              "fr": "Il garde la nourriture",
+              "ar": "لأنها تخزّن الطعام"
+            }
+          ],
+          "answerIndex": 0,
+          "factId": "f-lungs-heart-room"
+        },
+        {
+          "question": {
+            "en": "Which intestine is longer?",
+            "fr": "Quel intestin est le plus long ?",
+            "ar": "أي الأمعاء أطول؟"
+          },
+          "choices": [
+            {
+              "en": "The small intestine",
+              "fr": "L'intestin grêle",
+              "ar": "الأمعاء الدقيقة"
+            },
+            {
+              "en": "The large intestine",
+              "fr": "Le gros intestin",
+              "ar": "الأمعاء الغليظة"
+            },
+            {
+              "en": "They are the same",
+              "fr": "C'est pareil",
+              "ar": "متساويتان"
+            },
+            {
+              "en": "Neither, they are round",
+              "fr": "Aucun, ils sont ronds",
+              "ar": "لا هذه ولا تلك"
+            }
+          ],
+          "answerIndex": 0,
+          "factId": "f-large-wider"
+        },
+        {
+          "question": {
+            "en": "About how many times does a grown-up heart beat in one day?",
+            "fr": "Combien de fois bat le cœur d'un adulte en un jour ?",
+            "ar": "كم مرة ينبض قلب البالغ في اليوم تقريبًا؟"
+          },
+          "choices": [
+            {
+              "en": "About 100",
+              "fr": "Environ 100",
+              "ar": "نحو ١٠٠"
+            },
+            {
+              "en": "About 1,000",
+              "fr": "Environ 1 000",
+              "ar": "نحو ١٠٠٠"
+            },
+            {
+              "en": "About 100,000",
+              "fr": "Environ 100 000",
+              "ar": "نحو ١٠٠ ألف"
+            },
+            {
+              "en": "About 10",
+              "fr": "Environ 10",
+              "ar": "نحو ١٠"
+            }
+          ],
+          "answerIndex": 2,
+          "factId": "f-heart-beats"
+        },
+        {
+          "question": {
+            "en": "How many bones does a grown-up have?",
+            "fr": "Combien d'os a un adulte ?",
+            "ar": "كم عظمة في جسم الإنسان البالغ؟"
+          },
+          "choices": [
+            {
+              "en": "26",
+              "fr": "26",
+              "ar": "٢٦"
+            },
+            {
+              "en": "206",
+              "fr": "206",
+              "ar": "٢٠٦"
+            },
+            {
+              "en": "106",
+              "fr": "106",
+              "ar": "١٠٦"
+            },
+            {
+              "en": "2,006",
+              "fr": "2 006",
+              "ar": "٢٠٠٦"
+            }
+          ],
+          "answerIndex": 1,
+          "factId": "f-bones-300"
+        }
+      ],
+      "puzzle": {
+        "type": "arcade",
+        "game": "xray",
+        "prompt": {
+          "en": "Move the X-ray over the body. Find the part shown in the box and tap it.",
+          "fr": "Promène les rayons X sur le corps. Trouve la partie montrée dans la case et touche-la.",
+          "ar": "حرّك الأشعّة السينية فوق الجسم، وابحث عن الجزء الظاهر في الإطار ثم المسه."
+        },
+        "factIds": [
+          "f-kidneys",
+          "f-liver",
+          "f-stapes",
+          "f-heart-pump"
+        ]
+      }
+    },
+    {
+      "id": "science/body-build",
+      "title": {
+        "en": "Build a Body",
+        "fr": "Construis un corps",
+        "ar": "ابنِ جسمًا"
+      },
+      "position": [
+        -5.5,
+        0,
+        1.5
+      ],
+      "contentType": "puzzle",
+      "narration": {
+        "en": "These organs were made from scans of a real person, so each one has its true shape and size. Can you put them back in place?",
+        "fr": "Ces organes viennent des scanners d'une vraie personne : chacun a sa vraie forme et sa vraie taille. Sauras-tu les remettre à leur place ?",
+        "ar": "صُنعت هذه الأعضاء من صور مسح لشخص حقيقي، فلكل عضو شكله وحجمه الحقيقيّان. هل تستطيع إعادتها إلى أماكنها؟"
+      },
+      "learnMore": {
+        "en": "Your large intestine takes water back from food waste. It is about 1.5 metres long.",
+        "fr": "Ton gros intestin récupère l'eau des restes de nourriture. Il mesure environ 1,5 mètre.",
+        "ar": "تستعيد أمعاؤك الغليظة الماء من فضلات الطعام، ويبلغ طولها نحو ١٫٥ متر."
+      },
+      "funFact": {
+        "en": "Your right lung has three parts, called lobes. Your left lung has two.",
+        "fr": "Ton poumon droit a trois parties, appelées lobes. Ton poumon gauche en a deux.",
+        "ar": "لرئتك اليمنى ثلاثة أجزاء تُسمّى الفصوص، ولليسرى فصّان."
+      },
+      "linkedTopics": [
+        "science/body-quiz",
+        "science/body-parts"
+      ],
+      "sourceType": "curated",
+      "factIds": [
+        "f-brain",
+        "f-lungs",
+        "f-heart-pump",
+        "f-liver",
+        "f-stomach",
+        "f-kidneys",
+        "f-intestine",
+        "f-large-intestine",
+        "f-lungs-lobes"
+      ],
+      "wikiQuery": {
+        "en": "Organ (biology)",
+        "fr": "Organe",
+        "ar": "عضو (تشريح)"
+      },
+      "mascotLine": {
+        "en": "Oh no, the body is empty! Help me put it back together.",
+        "fr": "Oh non, le corps est vide ! Aide-moi à le reconstruire.",
+        "ar": "يا إلهي، الجسم فارغ! ساعدني في إعادة بنائه."
+      },
+      "puzzle": {
+        "type": "body-build",
+        "prompt": {
+          "en": "Something glows inside the body. Which organ goes there?",
+          "fr": "Quelque chose brille dans le corps. Quel organe va là ?",
+          "ar": "شيء ما يضيء داخل الجسم. أي عضو يوضع هناك؟"
+        },
+        "factIds": [
+          "f-brain",
+          "f-lungs",
+          "f-heart-pump",
+          "f-liver",
+          "f-stomach",
+          "f-kidneys",
+          "f-intestine",
+          "f-large-intestine"
+        ],
+        "organs": [
+          {
+            "id": "brain",
+            "label": {
+              "en": "Brain",
+              "fr": "Cerveau",
+              "ar": "الدماغ"
+            },
+            "job": {
+              "en": "Controls your body and helps you think",
+              "fr": "Commande ton corps et t'aide à réfléchir",
+              "ar": "يتحكّم في جسمك ويساعدك على التفكير"
+            },
+            "factId": "f-brain"
+          },
+          {
+            "id": "lungs",
+            "label": {
+              "en": "Lungs",
+              "fr": "Poumons",
+              "ar": "الرئتان"
+            },
+            "job": {
+              "en": "Take in oxygen from the air",
+              "fr": "Prennent l'oxygène de l'air",
+              "ar": "تأخذان الأكسجين من الهواء"
+            },
+            "factId": "f-lungs"
+          },
+          {
+            "id": "heart",
+            "label": {
+              "en": "Heart",
+              "fr": "Cœur",
+              "ar": "القلب"
+            },
+            "job": {
+              "en": "Pumps blood around your body",
+              "fr": "Pompe le sang dans tout ton corps",
+              "ar": "يضخّ الدم في جسمك"
+            },
+            "factId": "f-heart-pump"
+          },
+          {
+            "id": "liver",
+            "label": {
+              "en": "Liver",
+              "fr": "Foie",
+              "ar": "الكبد"
+            },
+            "job": {
+              "en": "Your heaviest organ inside; it can grow back",
+              "fr": "Ton organe interne le plus lourd ; il peut repousser",
+              "ar": "أثقل عضو في داخلك، ويستطيع أن ينمو من جديد"
+            },
+            "factId": "f-liver"
+          },
+          {
+            "id": "stomach",
+            "label": {
+              "en": "Stomach",
+              "fr": "Estomac",
+              "ar": "المعدة"
+            },
+            "job": {
+              "en": "Breaks down the food you eat",
+              "fr": "Décompose ce que tu manges",
+              "ar": "تهضم الطعام الذي تأكله"
+            },
+            "factId": "f-stomach"
+          },
+          {
+            "id": "kidneys",
+            "label": {
+              "en": "Kidneys",
+              "fr": "Reins",
+              "ar": "الكليتان"
+            },
+            "job": {
+              "en": "Clean your blood and make urine",
+              "fr": "Nettoient ton sang et font l'urine",
+              "ar": "تنظّفان الدم وتصنعان البول"
+            },
+            "factId": "f-kidneys"
+          },
+          {
+            "id": "small-intestine",
+            "label": {
+              "en": "Small intestine",
+              "fr": "Intestin grêle",
+              "ar": "الأمعاء الدقيقة"
+            },
+            "job": {
+              "en": "Takes in the goodness from food",
+              "fr": "Absorbe les bonnes choses des aliments",
+              "ar": "تمتصّ الفائدة من الطعام"
+            },
+            "factId": "f-intestine"
+          },
+          {
+            "id": "large-intestine",
+            "label": {
+              "en": "Large intestine",
+              "fr": "Gros intestin",
+              "ar": "الأمعاء الغليظة"
+            },
+            "job": {
+              "en": "Takes water back from waste",
+              "fr": "Récupère l'eau des restes",
+              "ar": "تستعيد الماء من الفضلات"
+            },
+            "factId": "f-large-intestine"
+          }
+        ]
+      }
+    }
+  ]
+}

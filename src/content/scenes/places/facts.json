@@ -1,0 +1,540 @@
+{
+  "sceneId": "places",
+  "category": "places",
+  "title": {
+    "en": "Languages of the World",
+    "fr": "Les langues du monde",
+    "ar": "لغات العالم"
+  },
+  "intro": {
+    "en": "People all over the world say hello in different ways. Listen, then explore the writing stones.",
+    "fr": "Partout dans le monde, on dit bonjour de façons différentes. Écoute, puis explore les pierres d'écriture.",
+    "ar": "يلقي الناس في أنحاء العالم التحية بطرق مختلفة. استمع، ثم استكشف أحجار الكتابة."
+  },
+  "review": {
+    "status": "reviewed",
+    "reviewers": [
+      "Web fact-check"
+    ],
+    "lastReviewed": "2026-10-09",
+    "notes": "Needs subject review and FR/AR native review. TTS voices vary by device.",
+    "factCheck": {
+      "date": "2026-10-09",
+      "method": "Every fact was searched on the web and compared with independent sources (linked per fact where one page covers it). Facts that did not match were corrected. French and Arabic were not read by a native speaker."
+    }
+  },
+  "facts": [
+    {
+      "id": "f-hello-fr",
+      "text": {
+        "en": "'Bonjour' means hello in French.",
+        "fr": "« Bonjour » est la façon de dire bonjour en français.",
+        "ar": "«بونجور» تعني مرحبًا باللغة الفرنسية."
+      },
+      "sources": [
+        "https://www.fluentu.com/blog/learn/how-to-say-hello-in-different-languages/"
+      ]
+    },
+    {
+      "id": "f-hello-es",
+      "text": {
+        "en": "'Hola' means hello in Spanish.",
+        "fr": "« Hola » veut dire bonjour en espagnol.",
+        "ar": "«أولا» تعني مرحبًا باللغة الإسبانية."
+      },
+      "sources": [
+        "https://www.fluentu.com/blog/learn/how-to-say-hello-in-different-languages/"
+      ]
+    },
+    {
+      "id": "f-hello-ar",
+      "text": {
+        "en": "'Marhaban' means hello in Arabic.",
+        "fr": "« Marhaban » veut dire bonjour en arabe.",
+        "ar": "«مرحبًا» كلمة تحية باللغة العربية."
+      },
+      "sources": [
+        "https://www.fluentu.com/blog/learn/how-to-say-hello-in-different-languages/"
+      ]
+    },
+    {
+      "id": "f-hello-ja",
+      "text": {
+        "en": "'Konnichiwa' means hello in Japanese.",
+        "fr": "« Konnichiwa » veut dire bonjour en japonais.",
+        "ar": "«كونيتشيوا» تعني مرحبًا باللغة اليابانية."
+      },
+      "sources": [
+        "https://www.fluentu.com/blog/learn/how-to-say-hello-in-different-languages/"
+      ]
+    },
+    {
+      "id": "f-languages-count",
+      "text": {
+        "en": "People around the world speak more than 7,000 languages.",
+        "fr": "Dans le monde, on parle plus de 7 000 langues.",
+        "ar": "يتحدّث الناس حول العالم أكثر من 7000 لغة."
+      },
+      "sources": [
+        "https://www.ethnologue.com/faq/country-most-languages",
+        "https://www.babbel.com/en/magazine/how-many-languages-are-there-in-the-world"
+      ]
+    },
+    {
+      "id": "f-arabic-rtl",
+      "text": {
+        "en": "Arabic is written from right to left.",
+        "fr": "L'arabe s'écrit de droite à gauche.",
+        "ar": "تُكتب اللغة العربية من اليمين إلى اليسار."
+      },
+      "sources": [
+        "https://en.wikipedia.org/wiki/Arabic_alphabet"
+      ]
+    },
+    {
+      "id": "f-arabic-28",
+      "text": {
+        "en": "The Arabic alphabet has 28 letters.",
+        "fr": "L'alphabet arabe compte 28 lettres.",
+        "ar": "تتكوّن الأبجدية العربية من 28 حرفًا."
+      },
+      "sources": [
+        "https://en.wikipedia.org/wiki/Arabic_alphabet"
+      ]
+    },
+    {
+      "id": "f-latin-26",
+      "text": {
+        "en": "English and French use the Latin alphabet, which has 26 basic letters.",
+        "fr": "L'anglais et le français utilisent l'alphabet latin, qui compte 26 lettres de base.",
+        "ar": "تستخدم الإنجليزية والفرنسية الأبجدية اللاتينية، وفيها 26 حرفًا أساسيًّا."
+      },
+      "sources": [
+        "https://en.wikipedia.org/wiki/Latin-script_alphabet"
+      ]
+    },
+    {
+      "id": "f-chinese-chars",
+      "text": {
+        "en": "Chinese is written with characters instead of an alphabet.",
+        "fr": "Le chinois s'écrit avec des caractères plutôt qu'avec un alphabet.",
+        "ar": "تُكتب اللغة الصينية بالرموز بدلًا من الأبجدية."
+      }
+    },
+    {
+      "id": "f-png-840",
+      "text": {
+        "en": "Papua New Guinea has about 840 languages, more than any other country.",
+        "fr": "La Papouasie-Nouvelle-Guinée compte environ 840 langues, plus que tout autre pays.",
+        "ar": "في بابوا غينيا الجديدة نحو ٨٤٠ لغة، أكثر من أي بلد آخر."
+      },
+      "sources": [
+        "https://www.ethnologue.com/faq/country-most-languages",
+        "https://www.babbel.com/en/magazine/how-many-languages-are-there-in-the-world"
+      ]
+    },
+    {
+      "id": "f-arabic-shapes",
+      "text": {
+        "en": "Most Arabic letters change shape depending on where they sit in a word.",
+        "fr": "La plupart des lettres arabes changent de forme selon leur place dans le mot.",
+        "ar": "معظم الحروف العربية يتغيّر شكلها بحسب موضعها في الكلمة."
+      },
+      "sources": [
+        "https://en.wikipedia.org/wiki/Arabic_alphabet"
+      ]
+    }
+  ],
+  "glossary": [
+    {
+      "terms": {
+        "en": [
+          "alphabet",
+          "alphabets"
+        ],
+        "fr": [
+          "alphabet"
+        ],
+        "ar": [
+          "الأبجدية",
+          "أبجدية"
+        ]
+      },
+      "definition": {
+        "en": "The set of letters used to write a language, in order.",
+        "fr": "L'ensemble des lettres utilisées pour écrire une langue, dans l'ordre.",
+        "ar": "مجموعة الحروف المرتّبة التي تُكتب بها لغة ما."
+      }
+    },
+    {
+      "terms": {
+        "en": [
+          "characters"
+        ],
+        "fr": [
+          "caractères"
+        ],
+        "ar": [
+          "بالرموز",
+          "الرموز"
+        ]
+      },
+      "definition": {
+        "en": "Written signs; in Chinese, each one has its own meaning.",
+        "fr": "Des signes écrits ; en chinois, chacun a son propre sens.",
+        "ar": "علامات مكتوبة؛ في الصينية لكل رمز معنى خاص."
+      }
+    }
+  ],
+  "hotspots": [
+    {
+      "id": "places/hello",
+      "title": {
+        "en": "Hello, World!",
+        "fr": "Bonjour le monde !",
+        "ar": "مرحبًا يا عالم!"
+      },
+      "position": [
+        -4,
+        0,
+        -4
+      ],
+      "contentType": "audio-match",
+      "narration": {
+        "en": "People around the world speak more than 7,000 languages. Listen to each hello and guess the language.",
+        "fr": "Dans le monde, on parle plus de 7 000 langues. Écoute chaque salutation et devine la langue.",
+        "ar": "يتحدّث الناس حول العالم أكثر من 7000 لغة. استمع إلى كل تحية وخمّن اللغة."
+      },
+      "learnMore": {
+        "en": "'Bonjour' means hello in French. 'Hola' means hello in Spanish. 'Marhaban' means hello in Arabic.",
+        "fr": "« Bonjour » est la façon de dire bonjour en français. « Hola » veut dire bonjour en espagnol. « Marhaban » veut dire bonjour en arabe.",
+        "ar": "«بونجور» تعني مرحبًا باللغة الفرنسية. «أولا» تعني مرحبًا باللغة الإسبانية. «مرحبًا» كلمة تحية باللغة العربية."
+      },
+      "funFact": {
+        "en": "Papua New Guinea has about 840 languages, more than any other country.",
+        "fr": "La Papouasie-Nouvelle-Guinée compte environ 840 langues, plus que tout autre pays.",
+        "ar": "في بابوا غينيا الجديدة نحو ٨٤٠ لغة، أكثر من أي بلد آخر."
+      },
+      "linkedTopics": [
+        "places/scripts",
+        "social/compass"
+      ],
+      "sourceType": "curated",
+      "factIds": [
+        "f-hello-fr",
+        "f-hello-es",
+        "f-hello-ar",
+        "f-hello-ja",
+        "f-languages-count",
+        "f-png-840"
+      ],
+      "wikiQuery": {
+        "en": "Language",
+        "fr": "Langue",
+        "ar": "لغة"
+      },
+      "mascotLine": {
+        "en": "Listen closely! Who is saying hello?",
+        "fr": "Écoute bien ! Qui dit bonjour ?",
+        "ar": "استمع جيدًا! من يلقي التحية؟"
+      },
+      "audioMatch": {
+        "prompt": {
+          "en": "Play each hello, then pick its language.",
+          "fr": "Écoute chaque bonjour, puis choisis sa langue.",
+          "ar": "شغّل كل تحية، ثم اختر لغتها."
+        },
+        "factIds": [
+          "f-hello-fr",
+          "f-hello-es",
+          "f-hello-ar",
+          "f-hello-ja"
+        ],
+        "clips": [
+          {
+            "id": "fr",
+            "text": "Bonjour",
+            "speakLang": "fr-FR",
+            "answer": {
+              "en": "French",
+              "fr": "Français",
+              "ar": "الفرنسية"
+            }
+          },
+          {
+            "id": "es",
+            "text": "Hola",
+            "speakLang": "es-ES",
+            "answer": {
+              "en": "Spanish",
+              "fr": "Espagnol",
+              "ar": "الإسبانية"
+            }
+          },
+          {
+            "id": "ar",
+            "text": "مرحبًا",
+            "speakLang": "ar-SA",
+            "answer": {
+              "en": "Arabic",
+              "fr": "Arabe",
+              "ar": "العربية"
+            }
+          },
+          {
+            "id": "ja",
+            "text": "こんにちは",
+            "speakLang": "ja-JP",
+            "answer": {
+              "en": "Japanese",
+              "fr": "Japonais",
+              "ar": "اليابانية"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "id": "places/scripts",
+      "title": {
+        "en": "Writing Stones",
+        "fr": "Les pierres d'écriture",
+        "ar": "أحجار الكتابة"
+      },
+      "position": [
+        4,
+        0,
+        -4
+      ],
+      "contentType": "narration",
+      "narration": {
+        "en": "Languages are written in different ways. Arabic is written from right to left, and Chinese is written with characters instead of an alphabet.",
+        "fr": "Les langues s'écrivent de façons différentes. L'arabe s'écrit de droite à gauche, et le chinois s'écrit avec des caractères plutôt qu'avec un alphabet.",
+        "ar": "تُكتب اللغات بطرق مختلفة. تُكتب العربية من اليمين إلى اليسار، وتُكتب الصينية بالرموز بدلًا من الأبجدية."
+      },
+      "learnMore": {
+        "en": "English and French use the Latin alphabet, which has 26 basic letters.",
+        "fr": "L'anglais et le français utilisent l'alphabet latin, qui compte 26 lettres de base.",
+        "ar": "تستخدم الإنجليزية والفرنسية الأبجدية اللاتينية، وفيها 26 حرفًا أساسيًّا."
+      },
+      "funFact": {
+        "en": "Most Arabic letters change shape depending on where they sit in a word.",
+        "fr": "La plupart des lettres arabes changent de forme selon leur place dans le mot.",
+        "ar": "معظم الحروف العربية يتغيّر شكلها بحسب موضعها في الكلمة."
+      },
+      "linkedTopics": [
+        "places/hello",
+        "reading/story"
+      ],
+      "sourceType": "curated",
+      "factIds": [
+        "f-arabic-rtl",
+        "f-chinese-chars",
+        "f-arabic-28",
+        "f-latin-26",
+        "f-arabic-shapes"
+      ],
+      "wikiQuery": {
+        "en": "Writing system",
+        "fr": "Système d'écriture",
+        "ar": "نظام كتابة"
+      },
+      "mascotLine": {
+        "en": "Each stone shows a different way to write!",
+        "fr": "Chaque pierre montre une façon différente d'écrire !",
+        "ar": "كل حجر يُظهر طريقة مختلفة للكتابة!"
+      }
+    },
+    {
+      "id": "places/language-quiz",
+      "title": {
+        "en": "Write It!",
+        "fr": "À toi d'écrire !",
+        "ar": "اكتبها بنفسك!"
+      },
+      "position": [
+        0,
+        0,
+        -6.5
+      ],
+      "contentType": "puzzle",
+      "narration": {
+        "en": "People around the world speak more than 7,000 languages, and they write them in different ways.",
+        "fr": "Dans le monde, on parle plus de 7 000 langues, et on les écrit de différentes façons.",
+        "ar": "يتحدّث الناس حول العالم أكثر من ٧٠٠٠ لغة، ويكتبونها بطرق مختلفة."
+      },
+      "learnMore": {
+        "en": "Papua New Guinea has about 840 languages, more than any other country.",
+        "fr": "La Papouasie-Nouvelle-Guinée compte environ 840 langues, plus que tout autre pays.",
+        "ar": "في بابوا غينيا الجديدة نحو ٨٤٠ لغة، أكثر من أي بلد آخر."
+      },
+      "funFact": {
+        "en": "'Konnichiwa' means hello in Japanese.",
+        "fr": "« Konnichiwa » veut dire bonjour en japonais.",
+        "ar": "«كونيتشيوا» تعني مرحبًا باللغة اليابانية."
+      },
+      "linkedTopics": [
+        "places/hello",
+        "places/scripts"
+      ],
+      "sourceType": "curated",
+      "factIds": [
+        "f-languages-count",
+        "f-arabic-rtl",
+        "f-arabic-28",
+        "f-hello-ja",
+        "f-chinese-chars",
+        "f-png-840"
+      ],
+      "wikiQuery": {
+        "en": "Language",
+        "fr": "Langue",
+        "ar": "لغة"
+      },
+      "mascotLine": {
+        "en": "Arabic starts on the right. Ready?",
+        "fr": "L'arabe commence à droite. Prêt ?",
+        "ar": "العربية تبدأ من اليمين. هل أنت مستعد؟"
+      },
+      "quiz": {
+        "question": {
+          "en": "Which way is Arabic written?",
+          "fr": "Dans quel sens s'écrit l'arabe ?",
+          "ar": "في أي اتجاه تُكتب العربية؟"
+        },
+        "choices": [
+          {
+            "en": "Left to right",
+            "fr": "De gauche à droite",
+            "ar": "من اليسار إلى اليمين"
+          },
+          {
+            "en": "Right to left",
+            "fr": "De droite à gauche",
+            "ar": "من اليمين إلى اليسار"
+          },
+          {
+            "en": "Top to bottom only",
+            "fr": "Seulement de haut en bas",
+            "ar": "من الأعلى إلى الأسفل فقط"
+          },
+          {
+            "en": "In circles",
+            "fr": "En cercles",
+            "ar": "في دوائر"
+          }
+        ],
+        "answerIndex": 1,
+        "factId": "f-arabic-rtl"
+      },
+      "moreQuestions": [
+        {
+          "question": {
+            "en": "How do you say hello in Japanese?",
+            "fr": "Comment dit-on bonjour en japonais ?",
+            "ar": "كيف تقول مرحبًا باليابانية؟"
+          },
+          "choices": [
+            {
+              "en": "Hola",
+              "fr": "Hola",
+              "ar": "أولا"
+            },
+            {
+              "en": "Konnichiwa",
+              "fr": "Konnichiwa",
+              "ar": "كونيتشيوا"
+            },
+            {
+              "en": "Bonjour",
+              "fr": "Bonjour",
+              "ar": "بونجور"
+            },
+            {
+              "en": "Marhaban",
+              "fr": "Marhaban",
+              "ar": "مرحبًا"
+            }
+          ],
+          "answerIndex": 1,
+          "factId": "f-hello-ja"
+        },
+        {
+          "question": {
+            "en": "About how many languages do people speak in the world?",
+            "fr": "Combien de langues parle-t-on dans le monde ?",
+            "ar": "كم لغة يتحدّث الناس في العالم تقريبًا؟"
+          },
+          "choices": [
+            {
+              "en": "About 70",
+              "fr": "Environ 70",
+              "ar": "نحو ٧٠"
+            },
+            {
+              "en": "About 700",
+              "fr": "Environ 700",
+              "ar": "نحو ٧٠٠"
+            },
+            {
+              "en": "More than 7,000",
+              "fr": "Plus de 7 000",
+              "ar": "أكثر من ٧٠٠٠"
+            },
+            {
+              "en": "Just one",
+              "fr": "Une seule",
+              "ar": "لغة واحدة"
+            }
+          ],
+          "answerIndex": 2,
+          "factId": "f-languages-count"
+        },
+        {
+          "question": {
+            "en": "Which country has the most languages?",
+            "fr": "Quel pays compte le plus de langues ?",
+            "ar": "أيّ بلد فيه أكبر عدد من اللغات؟"
+          },
+          "choices": [
+            {
+              "en": "France",
+              "fr": "La France",
+              "ar": "فرنسا"
+            },
+            {
+              "en": "Japan",
+              "fr": "Le Japon",
+              "ar": "اليابان"
+            },
+            {
+              "en": "Egypt",
+              "fr": "L'Égypte",
+              "ar": "مصر"
+            },
+            {
+              "en": "Papua New Guinea",
+              "fr": "La Papouasie-Nouvelle-Guinée",
+              "ar": "بابوا غينيا الجديدة"
+            }
+          ],
+          "answerIndex": 3,
+          "factId": "f-png-840"
+        }
+      ],
+      "puzzle": {
+        "type": "arcade",
+        "game": "dots",
+        "prompt": {
+          "en": "Join the dots in order to write a letter. Watch which way each one goes.",
+          "fr": "Relie les points dans l'ordre pour écrire une lettre. Regarde dans quel sens va chacune.",
+          "ar": "صِل النقاط بالترتيب لتكتب حرفًا، وانتبه إلى اتجاه كل حرف."
+        },
+        "factIds": [
+          "f-arabic-rtl",
+          "f-chinese-chars"
+        ]
+      }
+    }
+  ]
+}

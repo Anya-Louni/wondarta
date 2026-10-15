@@ -1,0 +1,516 @@
+{
+  "sceneId": "people",
+  "category": "people",
+  "title": {
+    "en": "Hall of Curious Minds",
+    "fr": "Le hall des esprits curieux",
+    "ar": "قاعة العقول الفضولية"
+  },
+  "intro": {
+    "en": "Meet people whose curiosity changed what we know.",
+    "fr": "Rencontre des personnes dont la curiosité a changé nos connaissances.",
+    "ar": "تعرّف على أشخاص غيّر فضولهم ما نعرفه."
+  },
+  "review": {
+    "status": "reviewed",
+    "reviewers": [
+      "Web fact-check"
+    ],
+    "lastReviewed": "2026-10-09",
+    "notes": "Needs subject review and FR/AR native review.",
+    "factCheck": {
+      "date": "2026-10-09",
+      "method": "Every fact was searched on the web and compared with independent sources (linked per fact where one page covers it). Facts that did not match were corrected. French and Arabic were not read by a native speaker."
+    }
+  },
+  "facts": [
+    {
+      "id": "f-curie-first",
+      "text": {
+        "en": "Marie Curie was the first woman to win a Nobel Prize.",
+        "fr": "Marie Curie a été la première femme à recevoir un prix Nobel.",
+        "ar": "كانت ماري كوري أول امرأة تفوز بجائزة نوبل."
+      },
+      "sources": [
+        "https://www.nobelprize.org/stories/women-who-changed-science/marie-curie/",
+        "https://spectrum.ieee.org/how-marie-curie-helped-save-a-million-soldiers-during-world-war-i"
+      ]
+    },
+    {
+      "id": "f-curie-two",
+      "text": {
+        "en": "Marie Curie is the only person to win Nobel Prizes in two different sciences: physics and chemistry.",
+        "fr": "Marie Curie est la seule personne à avoir reçu des prix Nobel dans deux sciences différentes : la physique et la chimie.",
+        "ar": "ماري كوري هي الشخص الوحيد الذي فاز بجائزتَي نوبل في علمين مختلفين: الفيزياء والكيمياء."
+      },
+      "sources": [
+        "https://www.nobelprize.org/stories/women-who-changed-science/marie-curie/",
+        "https://spectrum.ieee.org/how-marie-curie-helped-save-a-million-soldiers-during-world-war-i"
+      ]
+    },
+    {
+      "id": "f-curie-elements",
+      "text": {
+        "en": "With her husband Pierre, Marie Curie discovered two elements: polonium and radium.",
+        "fr": "Avec son mari Pierre, Marie Curie a découvert deux éléments : le polonium et le radium.",
+        "ar": "اكتشفت ماري كوري مع زوجها بيار عنصرين هما البولونيوم والراديوم."
+      },
+      "sources": [
+        "https://www.nobelprize.org/stories/women-who-changed-science/marie-curie/",
+        "https://spectrum.ieee.org/how-marie-curie-helped-save-a-million-soldiers-during-world-war-i"
+      ]
+    },
+    {
+      "id": "f-haytham-optics",
+      "text": {
+        "en": "Ibn al-Haytham wrote the Book of Optics, explaining that we see when light enters our eyes.",
+        "fr": "Ibn al-Haytham a écrit le Livre de l'optique, où il explique que nous voyons quand la lumière entre dans nos yeux.",
+        "ar": "ألّف ابن الهيثم «كتاب المناظر» وشرح فيه أننا نرى عندما يدخل الضوء إلى أعيننا."
+      },
+      "sources": [
+        "https://en.wikipedia.org/wiki/Ibn_al-Haytham"
+      ]
+    },
+    {
+      "id": "f-haytham-when",
+      "text": {
+        "en": "Ibn al-Haytham lived about 1,000 years ago and worked in Cairo.",
+        "fr": "Ibn al-Haytham a vécu il y a environ 1 000 ans et a travaillé au Caire.",
+        "ar": "عاش ابن الهيثم قبل نحو 1000 سنة وعمل في القاهرة."
+      },
+      "sources": [
+        "https://en.wikipedia.org/wiki/Ibn_al-Haytham"
+      ]
+    },
+    {
+      "id": "f-haytham-experiments",
+      "text": {
+        "en": "Ibn al-Haytham tested his ideas with careful experiments.",
+        "fr": "Ibn al-Haytham vérifiait ses idées par des expériences soigneuses.",
+        "ar": "كان ابن الهيثم يختبر أفكاره بتجارب دقيقة."
+      },
+      "sources": [
+        "https://en.wikipedia.org/wiki/Ibn_al-Haytham"
+      ]
+    },
+    {
+      "id": "f-curie-notebooks",
+      "text": {
+        "en": "Marie Curie's notebooks are still radioactive today, so they are kept in boxes lined with lead.",
+        "fr": "Les carnets de Marie Curie sont encore radioactifs aujourd'hui : on les garde dans des boîtes doublées de plomb.",
+        "ar": "ما تزال دفاتر ماري كوري مشعّة إلى اليوم، ولذلك تُحفظ في صناديق مبطّنة بالرصاص."
+      },
+      "sources": [
+        "https://www.nobelprize.org/stories/women-who-changed-science/marie-curie/",
+        "https://spectrum.ieee.org/how-marie-curie-helped-save-a-million-soldiers-during-world-war-i"
+      ]
+    },
+    {
+      "id": "f-curie-xray",
+      "text": {
+        "en": "During the First World War, she set up X-ray cars that drove to wounded soldiers. They were called 'little Curies'.",
+        "fr": "Pendant la Première Guerre mondiale, elle a équipé des voitures de rayons X pour aller vers les soldats blessés. On les appelait les « petites Curies ».",
+        "ar": "في الحرب العالمية الأولى جهّزت سيارات فيها أجهزة أشعّة سينية تذهب إلى الجنود الجرحى، وسُمّيت «كوري الصغيرة»."
+      },
+      "sources": [
+        "https://www.nobelprize.org/stories/women-who-changed-science/marie-curie/",
+        "https://spectrum.ieee.org/how-marie-curie-helped-save-a-million-soldiers-during-world-war-i"
+      ]
+    },
+    {
+      "id": "f-haytham-camera",
+      "text": {
+        "en": "Ibn al-Haytham showed that light passing through a tiny hole into a dark room makes an upside-down picture. Cameras work the same way.",
+        "fr": "Ibn al-Haytham a montré que la lumière qui passe par un petit trou dans une pièce sombre forme une image à l'envers. Les appareils photo marchent de la même façon.",
+        "ar": "بيّن ابن الهيثم أن الضوء المارّ من ثقب صغير إلى غرفة مظلمة يرسم صورة مقلوبة، وهكذا تعمل آلات التصوير."
+      },
+      "sources": [
+        "https://en.wikipedia.org/wiki/Ibn_al-Haytham"
+      ]
+    }
+  ],
+  "glossary": [
+    {
+      "terms": {
+        "en": [
+          "nobel"
+        ],
+        "fr": [
+          "nobel"
+        ],
+        "ar": [
+          "نوبل"
+        ]
+      },
+      "definition": {
+        "en": "Famous prizes given for great work in science, writing and peace.",
+        "fr": "Des prix célèbres qui récompensent de grands travaux en science, en littérature et pour la paix.",
+        "ar": "جوائز مشهورة تُمنح لأعمال عظيمة في العلوم والأدب والسلام."
+      }
+    },
+    {
+      "terms": {
+        "en": [
+          "elements"
+        ],
+        "fr": [
+          "éléments"
+        ],
+        "ar": [
+          "عنصرين",
+          "عناصر"
+        ]
+      },
+      "definition": {
+        "en": "The simplest pure substances that everything is made of.",
+        "fr": "Les substances pures les plus simples dont tout est fait.",
+        "ar": "أبسط المواد النقية التي يتكوّن منها كل شيء."
+      }
+    },
+    {
+      "terms": {
+        "en": [
+          "optics"
+        ],
+        "fr": [
+          "optique"
+        ],
+        "ar": [
+          "المناظر"
+        ]
+      },
+      "definition": {
+        "en": "The science of light and how we see.",
+        "fr": "La science de la lumière et de la vision.",
+        "ar": "علم الضوء وكيف نرى."
+      }
+    }
+  ],
+  "hotspots": [
+    {
+      "id": "people/curie",
+      "title": {
+        "en": "Marie Curie",
+        "fr": "Marie Curie",
+        "ar": "ماري كوري"
+      },
+      "position": [
+        -4,
+        0,
+        -4
+      ],
+      "contentType": "narration",
+      "narration": {
+        "en": "Marie Curie was the first woman to win a Nobel Prize. With her husband Pierre, she discovered two elements: polonium and radium.",
+        "fr": "Marie Curie a été la première femme à recevoir un prix Nobel. Avec son mari Pierre, elle a découvert deux éléments : le polonium et le radium.",
+        "ar": "كانت ماري كوري أول امرأة تفوز بجائزة نوبل. واكتشفت مع زوجها بيار عنصرين هما البولونيوم والراديوم."
+      },
+      "learnMore": {
+        "en": "Marie Curie is the only person to win Nobel Prizes in two different sciences: physics and chemistry. Marie Curie's notebooks are still radioactive today, so they are kept in boxes lined with lead.",
+        "fr": "Marie Curie est la seule personne à avoir reçu des prix Nobel dans deux sciences différentes : la physique et la chimie. Les carnets de Marie Curie sont encore radioactifs aujourd'hui : on les garde dans des boîtes doublées de plomb.",
+        "ar": "ماري كوري هي الشخص الوحيد الذي فاز بجائزتَي نوبل في علمين مختلفين: الفيزياء والكيمياء. ما تزال دفاتر ماري كوري مشعّة إلى اليوم، ولذلك تُحفظ في صناديق مبطّنة بالرصاص."
+      },
+      "funFact": {
+        "en": "During the First World War, she set up X-ray cars that drove to wounded soldiers. They were called 'little Curies'.",
+        "fr": "Pendant la Première Guerre mondiale, elle a équipé des voitures de rayons X pour aller vers les soldats blessés. On les appelait les « petites Curies ».",
+        "ar": "في الحرب العالمية الأولى جهّزت سيارات فيها أجهزة أشعّة سينية تذهب إلى الجنود الجرحى، وسُمّيت «كوري الصغيرة»."
+      },
+      "linkedTopics": [
+        "people/riddle",
+        "games/algorithms"
+      ],
+      "sourceType": "curated",
+      "factIds": [
+        "f-curie-first",
+        "f-curie-two",
+        "f-curie-elements",
+        "f-curie-notebooks",
+        "f-curie-xray"
+      ],
+      "wikiQuery": {
+        "en": "Marie Curie",
+        "fr": "Marie Curie",
+        "ar": "ماري كوري"
+      },
+      "mascotLine": {
+        "en": "She never stopped asking questions. Just like you!",
+        "fr": "Elle n'a jamais arrêté de poser des questions. Comme toi !",
+        "ar": "لم تتوقّف أبدًا عن طرح الأسئلة. مثلك تمامًا!"
+      }
+    },
+    {
+      "id": "people/riddle",
+      "title": {
+        "en": "Who Am I?",
+        "fr": "Qui suis-je ?",
+        "ar": "من أنا؟"
+      },
+      "position": [
+        4,
+        0,
+        -4
+      ],
+      "contentType": "puzzle",
+      "narration": {
+        "en": "Long ago, a scientist in Cairo tested his ideas with careful experiments. Read the riddle and guess who he was.",
+        "fr": "Il y a longtemps, un savant du Caire vérifiait ses idées par des expériences soigneuses. Lis la devinette et trouve qui c'était.",
+        "ar": "قبل زمن طويل، كان عالم في القاهرة يختبر أفكاره بتجارب دقيقة. اقرأ اللغز وخمّن من هو."
+      },
+      "learnMore": {
+        "en": "Ibn al-Haytham wrote the Book of Optics, explaining that we see when light enters our eyes. Ibn al-Haytham showed that light passing through a tiny hole into a dark room makes an upside-down picture. Cameras work the same way.",
+        "fr": "Ibn al-Haytham a écrit le Livre de l'optique, où il explique que nous voyons quand la lumière entre dans nos yeux. Ibn al-Haytham a montré que la lumière qui passe par un petit trou dans une pièce sombre forme une image à l'envers. Les appareils photo marchent de la même façon.",
+        "ar": "ألّف ابن الهيثم «كتاب المناظر» وشرح فيه أننا نرى عندما يدخل الضوء إلى أعيننا. بيّن ابن الهيثم أن الضوء المارّ من ثقب صغير إلى غرفة مظلمة يرسم صورة مقلوبة، وهكذا تعمل آلات التصوير."
+      },
+      "funFact": {
+        "en": "Ibn al-Haytham lived about 1,000 years ago and worked in Cairo.",
+        "fr": "Ibn al-Haytham a vécu il y a environ 1 000 ans et a travaillé au Caire.",
+        "ar": "عاش ابن الهيثم قبل نحو 1000 سنة وعمل في القاهرة."
+      },
+      "linkedTopics": [
+        "people/curie",
+        "science/body-parts"
+      ],
+      "sourceType": "curated",
+      "factIds": [
+        "f-haytham-optics",
+        "f-haytham-when",
+        "f-haytham-experiments",
+        "f-haytham-camera"
+      ],
+      "wikiQuery": {
+        "en": "Ibn al-Haytham",
+        "fr": "Ibn al-Haytham",
+        "ar": "ابن الهيثم"
+      },
+      "mascotLine": {
+        "en": "Riddle time! Read the clues carefully.",
+        "fr": "C'est l'heure de la devinette ! Lis bien les indices.",
+        "ar": "حان وقت اللغز! اقرأ الأدلّة بعناية."
+      },
+      "puzzle": {
+        "type": "riddle",
+        "prompt": {
+          "en": "Who am I?",
+          "fr": "Qui suis-je ?",
+          "ar": "من أنا؟"
+        },
+        "factIds": [
+          "f-haytham-optics",
+          "f-haytham-when"
+        ],
+        "riddle": {
+          "en": "I lived about 1,000 years ago and worked in Cairo. I wrote the Book of Optics, explaining that we see when light enters our eyes. Who am I?",
+          "fr": "J'ai vécu il y a environ 1 000 ans et j'ai travaillé au Caire. J'ai écrit le Livre de l'optique, où j'explique que nous voyons quand la lumière entre dans nos yeux. Qui suis-je ?",
+          "ar": "عشت قبل نحو 1000 سنة وعملت في القاهرة. ألّفت «كتاب المناظر» وشرحت فيه أننا نرى عندما يدخل الضوء إلى أعيننا. من أنا؟"
+        },
+        "choices": [
+          {
+            "en": "Marie Curie",
+            "fr": "Marie Curie",
+            "ar": "ماري كوري"
+          },
+          {
+            "en": "Leonardo da Vinci",
+            "fr": "Léonard de Vinci",
+            "ar": "ليوناردو دافنشي"
+          },
+          {
+            "en": "Ibn al-Haytham",
+            "fr": "Ibn al-Haytham",
+            "ar": "ابن الهيثم"
+          }
+        ],
+        "answerIndex": 2
+      }
+    },
+    {
+      "id": "people/minds-quiz",
+      "title": {
+        "en": "The Dark Room",
+        "fr": "La chambre noire",
+        "ar": "الغرفة المظلمة"
+      },
+      "position": [
+        0,
+        0,
+        -6.5
+      ],
+      "contentType": "puzzle",
+      "narration": {
+        "en": "Ibn al-Haytham showed that light passing through a tiny hole into a dark room makes an upside-down picture. Cameras work the same way. Ibn al-Haytham wrote the Book of Optics, explaining that we see when light enters our eyes.",
+        "fr": "Ibn al-Haytham a montré que la lumière qui passe par un petit trou dans une pièce sombre forme une image à l'envers. Les appareils photo marchent de la même façon. Ibn al-Haytham a écrit le Livre de l'optique, où il explique que nous voyons quand la lumière entre dans nos yeux.",
+        "ar": "بيّن ابن الهيثم أن الضوء المارّ من ثقب صغير إلى غرفة مظلمة يرسم صورة مقلوبة، وهكذا تعمل آلات التصوير. ألّف ابن الهيثم «كتاب المناظر» وشرح فيه أننا نرى عندما يدخل الضوء إلى أعيننا."
+      },
+      "learnMore": {
+        "en": "Ibn al-Haytham lived about 1,000 years ago and worked in Cairo.",
+        "fr": "Ibn al-Haytham a vécu il y a environ 1 000 ans et a travaillé au Caire.",
+        "ar": "عاش ابن الهيثم قبل نحو 1000 سنة وعمل في القاهرة."
+      },
+      "funFact": {
+        "en": "Ibn al-Haytham tested his ideas with careful experiments.",
+        "fr": "Ibn al-Haytham vérifiait ses idées par des expériences soigneuses.",
+        "ar": "كان ابن الهيثم يختبر أفكاره بتجارب دقيقة."
+      },
+      "linkedTopics": [
+        "people/curie",
+        "people/riddle"
+      ],
+      "sourceType": "curated",
+      "factIds": [
+        "f-haytham-experiments",
+        "f-haytham-camera",
+        "f-haytham-optics",
+        "f-haytham-when"
+      ],
+      "wikiQuery": {
+        "en": "Marie Curie",
+        "fr": "Marie Curie",
+        "ar": "ماري كوري"
+      },
+      "mascotLine": {
+        "en": "Ibn al-Haytham tried this in a dark room, 1,000 years ago.",
+        "fr": "Ibn al-Haytham a essayé ça dans une pièce sombre, il y a 1 000 ans.",
+        "ar": "جرّب ابن الهيثم هذا في غرفة مظلمة قبل ألف عام."
+      },
+      "quiz": {
+        "question": {
+          "en": "Who was the first woman to win a Nobel Prize?",
+          "fr": "Qui a été la première femme à recevoir un prix Nobel ?",
+          "ar": "من أول امرأة فازت بجائزة نوبل؟"
+        },
+        "choices": [
+          {
+            "en": "Marie Curie",
+            "fr": "Marie Curie",
+            "ar": "ماري كوري"
+          },
+          {
+            "en": "Ada Lovelace",
+            "fr": "Ada Lovelace",
+            "ar": "آدا لوفليس"
+          },
+          {
+            "en": "The Mona Lisa",
+            "fr": "La Joconde",
+            "ar": "الموناليزا"
+          },
+          {
+            "en": "Aesop",
+            "fr": "Ésope",
+            "ar": "إيسوب"
+          }
+        ],
+        "answerIndex": 0,
+        "factId": "f-curie-first"
+      },
+      "moreQuestions": [
+        {
+          "question": {
+            "en": "What did Ibn al-Haytham explain in his Book of Optics?",
+            "fr": "Qu'a expliqué Ibn al-Haytham dans son Livre de l'optique ?",
+            "ar": "ماذا شرح ابن الهيثم في «كتاب المناظر»؟"
+          },
+          "choices": [
+            {
+              "en": "How plants grow",
+              "fr": "Comment poussent les plantes",
+              "ar": "كيف تنمو النباتات"
+            },
+            {
+              "en": "That we see when light enters our eyes",
+              "fr": "Que nous voyons quand la lumière entre dans nos yeux",
+              "ar": "أننا نرى حين يدخل الضوء أعيننا"
+            },
+            {
+              "en": "How to build robots",
+              "fr": "Comment construire des robots",
+              "ar": "كيف نصنع الروبوتات"
+            },
+            {
+              "en": "How to play football",
+              "fr": "Comment jouer au foot",
+              "ar": "كيف نلعب كرة القدم"
+            }
+          ],
+          "answerIndex": 1,
+          "factId": "f-haytham-optics"
+        },
+        {
+          "question": {
+            "en": "Which two elements did Marie and Pierre Curie discover?",
+            "fr": "Quels éléments Marie et Pierre Curie ont-ils découverts ?",
+            "ar": "ما العنصران اللذان اكتشفهما ماري وبيير كوري؟"
+          },
+          "choices": [
+            {
+              "en": "Gold and silver",
+              "fr": "L’or et l’argent",
+              "ar": "الذهب والفضة"
+            },
+            {
+              "en": "Polonium and radium",
+              "fr": "Le polonium et le radium",
+              "ar": "البولونيوم والراديوم"
+            },
+            {
+              "en": "Iron and copper",
+              "fr": "Le fer et le cuivre",
+              "ar": "الحديد والنحاس"
+            },
+            {
+              "en": "Water and air",
+              "fr": "L'eau et l'air",
+              "ar": "الماء والهواء"
+            }
+          ],
+          "answerIndex": 1,
+          "factId": "f-curie-elements"
+        },
+        {
+          "question": {
+            "en": "Why are Marie Curie's notebooks kept in boxes lined with lead?",
+            "fr": "Pourquoi garde-t-on les carnets de Marie Curie dans des boîtes doublées de plomb ?",
+            "ar": "لماذا تُحفظ دفاتر ماري كوري في صناديق مبطّنة بالرصاص؟"
+          },
+          "choices": [
+            {
+              "en": "They are very heavy",
+              "fr": "Ils sont très lourds",
+              "ar": "لأنها ثقيلة جدًّا"
+            },
+            {
+              "en": "They are written in gold",
+              "fr": "Ils sont écrits en or",
+              "ar": "لأنها مكتوبة بالذهب"
+            },
+            {
+              "en": "They are still radioactive",
+              "fr": "Ils sont encore radioactifs",
+              "ar": "لأنها ما تزال مشعّة"
+            },
+            {
+              "en": "They are very small",
+              "fr": "Ils sont très petits",
+              "ar": "لأنها صغيرة جدًّا"
+            }
+          ],
+          "answerIndex": 2,
+          "factId": "f-curie-notebooks"
+        }
+      ],
+      "puzzle": {
+        "type": "arcade",
+        "game": "pinhole",
+        "prompt": {
+          "en": "Move the candle up and down. Put its upside-down picture on the dotted shape, 3 times.",
+          "fr": "Monte et descends la bougie. Place son image à l'envers sur la forme en pointillés, 3 fois.",
+          "ar": "حرّك الشمعة إلى أعلى وأسفل، وضع صورتها المقلوبة على الشكل المنقّط، ثلاث مرات."
+        },
+        "factIds": [
+          "f-haytham-camera",
+          "f-haytham-experiments"
+        ]
+      }
+    }
+  ]
+}

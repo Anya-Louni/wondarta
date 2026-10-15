@@ -1,0 +1,551 @@
+{
+  "sceneId": "arts",
+  "category": "arts",
+  "title": {
+    "en": "The Color Studio",
+    "fr": "L'atelier des couleurs",
+    "ar": "مرسم الألوان"
+  },
+  "intro": {
+    "en": "Mix paints like a real artist, then visit a very famous painting.",
+    "fr": "Mélange les peintures comme un vrai artiste, puis découvre un tableau très célèbre.",
+    "ar": "امزج الألوان مثل فنان حقيقي، ثم زُر لوحة مشهورة جدًّا."
+  },
+  "review": {
+    "status": "reviewed",
+    "reviewers": [
+      "Web fact-check"
+    ],
+    "lastReviewed": "2026-10-09",
+    "notes": "Colour mixing follows the traditional painters' red-yellow-blue model. Needs FR/AR native review.",
+    "factCheck": {
+      "date": "2026-10-09",
+      "method": "Every fact was searched on the web and compared with independent sources (linked per fact where one page covers it). Facts that did not match were corrected. French and Arabic were not read by a native speaker."
+    }
+  },
+  "facts": [
+    {
+      "id": "f-primary",
+      "text": {
+        "en": "In painting, red, yellow and blue are called the primary colours.",
+        "fr": "En peinture, le rouge, le jaune et le bleu sont appelés les couleurs primaires.",
+        "ar": "في الرسم، يُسمّى الأحمر والأصفر والأزرق الألوان الأساسية."
+      },
+      "sources": [
+        "https://www.britannica.com/science/primary-color"
+      ]
+    },
+    {
+      "id": "f-mix-green",
+      "text": {
+        "en": "Mixing blue and yellow paint makes green.",
+        "fr": "En mélangeant de la peinture bleue et jaune, on obtient du vert.",
+        "ar": "مزج اللون الأزرق مع الأصفر يعطي اللون الأخضر."
+      },
+      "sources": [
+        "https://www.britannica.com/science/primary-color"
+      ]
+    },
+    {
+      "id": "f-mix-orange",
+      "text": {
+        "en": "Mixing red and yellow paint makes orange.",
+        "fr": "En mélangeant de la peinture rouge et jaune, on obtient de l'orange.",
+        "ar": "مزج اللون الأحمر مع الأصفر يعطي اللون البرتقالي."
+      },
+      "sources": [
+        "https://www.britannica.com/science/primary-color"
+      ]
+    },
+    {
+      "id": "f-mix-purple",
+      "text": {
+        "en": "Mixing red and blue paint makes purple.",
+        "fr": "En mélangeant de la peinture rouge et bleue, on obtient du violet.",
+        "ar": "مزج اللون الأحمر مع الأزرق يعطي اللون البنفسجي."
+      },
+      "sources": [
+        "https://www.britannica.com/science/primary-color"
+      ]
+    },
+    {
+      "id": "f-mona-lisa",
+      "text": {
+        "en": "The Mona Lisa was painted by Leonardo da Vinci.",
+        "fr": "La Joconde a été peinte par Léonard de Vinci.",
+        "ar": "رسم ليوناردو دافنشي لوحة الموناليزا."
+      },
+      "sources": [
+        "https://en.wikipedia.org/wiki/Mona_Lisa"
+      ]
+    },
+    {
+      "id": "f-louvre",
+      "text": {
+        "en": "The Mona Lisa hangs in the Louvre museum in Paris.",
+        "fr": "La Joconde est exposée au musée du Louvre, à Paris.",
+        "ar": "تُعرض لوحة الموناليزا في متحف اللوفر في باريس."
+      },
+      "sources": [
+        "https://en.wikipedia.org/wiki/Mona_Lisa"
+      ]
+    },
+    {
+      "id": "f-mona-wood",
+      "text": {
+        "en": "The Mona Lisa is painted on a wooden board, not on canvas. It is only 77 centimetres tall.",
+        "fr": "La Joconde est peinte sur un panneau de bois, pas sur une toile. Elle ne mesure que 77 centimètres de haut.",
+        "ar": "الموناليزا مرسومة على لوح من الخشب لا على قماش، وارتفاعها ٧٧ سنتيمترًا فقط."
+      },
+      "sources": [
+        "https://en.wikipedia.org/wiki/Mona_Lisa"
+      ]
+    },
+    {
+      "id": "f-mona-stolen",
+      "text": {
+        "en": "In 1911 the Mona Lisa was stolen from the Louvre. It was found more than two years later.",
+        "fr": "En 1911, la Joconde a été volée au Louvre. On l'a retrouvée plus de deux ans plus tard.",
+        "ar": "في عام ١٩١١ سُرقت الموناليزا من متحف اللوفر، ثم عُثر عليها بعد أكثر من سنتين."
+      },
+      "sources": [
+        "https://en.wikipedia.org/wiki/Mona_Lisa"
+      ]
+    },
+    {
+      "id": "f-mix-range",
+      "text": {
+        "en": "By mixing the three primary colours in different amounts, painters can make a huge range of colours.",
+        "fr": "En mélangeant les trois couleurs primaires en quantités différentes, les peintres obtiennent une immense variété de couleurs.",
+        "ar": "بمزج الألوان الأساسية الثلاثة بمقادير مختلفة يحصل الرسّامون على تشكيلة واسعة جدًّا من الألوان."
+      },
+      "sources": [
+        "https://artstudiolife.com/primary-colors-painting/"
+      ]
+    },
+    {
+      "id": "f-mona-1503",
+      "text": {
+        "en": "Leonardo started painting the Mona Lisa around the year 1503.",
+        "fr": "Léonard a commencé à peindre la Joconde vers l'an 1503.",
+        "ar": "بدأ ليوناردو رسم الموناليزا نحو عام ١٥٠٣."
+      },
+      "sources": [
+        "https://en.wikipedia.org/wiki/Mona_Lisa"
+      ]
+    }
+  ],
+  "glossary": [
+    {
+      "terms": {
+        "en": [
+          "primary"
+        ],
+        "fr": [
+          "primaires"
+        ],
+        "ar": [
+          "الأساسية"
+        ]
+      },
+      "definition": {
+        "en": "Colours you can't make by mixing other paints.",
+        "fr": "Des couleurs qu'on ne peut pas obtenir en mélangeant d'autres peintures.",
+        "ar": "ألوان لا يمكن الحصول عليها بمزج ألوان أخرى."
+      }
+    },
+    {
+      "terms": {
+        "en": [
+          "museum"
+        ],
+        "fr": [
+          "musée"
+        ],
+        "ar": [
+          "متحف"
+        ]
+      },
+      "definition": {
+        "en": "A building where important objects and art are kept and shown.",
+        "fr": "Un bâtiment où l'on garde et montre des objets et des œuvres d'art importants.",
+        "ar": "مبنى تُحفظ فيه الأشياء والأعمال الفنية المهمة وتُعرض."
+      }
+    }
+  ],
+  "hotspots": [
+    {
+      "id": "arts/color-mix",
+      "title": {
+        "en": "Paint Mixer",
+        "fr": "Le mélangeur de peinture",
+        "ar": "خلّاط الألوان"
+      },
+      "position": [
+        -4,
+        0,
+        -4
+      ],
+      "contentType": "puzzle",
+      "narration": {
+        "en": "In painting, red, yellow and blue are called the primary colours. Mix two of them to make a brand-new colour!",
+        "fr": "En peinture, le rouge, le jaune et le bleu sont appelés les couleurs primaires. Mélanges-en deux pour créer une nouvelle couleur !",
+        "ar": "في الرسم، يُسمّى الأحمر والأصفر والأزرق الألوان الأساسية. امزج اثنين منها لتصنع لونًا جديدًا!"
+      },
+      "learnMore": {
+        "en": "Mixing red and yellow paint makes orange. Mixing red and blue paint makes purple.",
+        "fr": "En mélangeant de la peinture rouge et jaune, on obtient de l'orange. En mélangeant de la peinture rouge et bleue, on obtient du violet.",
+        "ar": "مزج اللون الأحمر مع الأصفر يعطي اللون البرتقالي. مزج اللون الأحمر مع الأزرق يعطي اللون البنفسجي."
+      },
+      "funFact": {
+        "en": "By mixing the three primary colours in different amounts, painters can make a huge range of colours.",
+        "fr": "En mélangeant les trois couleurs primaires en quantités différentes, les peintres obtiennent une immense variété de couleurs.",
+        "ar": "بمزج الألوان الأساسية الثلاثة بمقادير مختلفة يحصل الرسّامون على تشكيلة واسعة جدًّا من الألوان."
+      },
+      "linkedTopics": [
+        "arts/mona-lisa",
+        "animals/plant-parts"
+      ],
+      "sourceType": "curated",
+      "factIds": [
+        "f-primary",
+        "f-mix-green",
+        "f-mix-orange",
+        "f-mix-purple",
+        "f-mix-range"
+      ],
+      "wikiQuery": {
+        "en": "Primary color",
+        "fr": "Couleur primaire",
+        "ar": "لون أساسي"
+      },
+      "mascotLine": {
+        "en": "Grab a brush! Let's build some colours.",
+        "fr": "Prends un pinceau ! Fabriquons des couleurs.",
+        "ar": "أمسك الفرشاة! لنصنع بعض الألوان."
+      },
+      "puzzle": {
+        "type": "construction",
+        "prompt": {
+          "en": "Drop two paints into each pot to build the colour.",
+          "fr": "Verse deux peintures dans chaque pot pour obtenir la couleur.",
+          "ar": "ضع لونين في كل وعاء لتصنع اللون المطلوب."
+        },
+        "factIds": [
+          "f-mix-green",
+          "f-mix-orange",
+          "f-mix-purple"
+        ],
+        "targets": [
+          {
+            "id": "green",
+            "label": {
+              "en": "Green",
+              "fr": "Vert",
+              "ar": "أخضر"
+            },
+            "swatch": "#3fae4a",
+            "needs": [
+              "blue",
+              "yellow"
+            ]
+          },
+          {
+            "id": "orange",
+            "label": {
+              "en": "Orange",
+              "fr": "Orange",
+              "ar": "برتقالي"
+            },
+            "swatch": "#f28c28",
+            "needs": [
+              "red",
+              "yellow"
+            ]
+          },
+          {
+            "id": "purple",
+            "label": {
+              "en": "Purple",
+              "fr": "Violet",
+              "ar": "بنفسجي"
+            },
+            "swatch": "#8a4fc0",
+            "needs": [
+              "red",
+              "blue"
+            ]
+          }
+        ],
+        "parts": [
+          {
+            "id": "red",
+            "label": {
+              "en": "Red",
+              "fr": "Rouge",
+              "ar": "أحمر"
+            },
+            "swatch": "#e0393e"
+          },
+          {
+            "id": "yellow",
+            "label": {
+              "en": "Yellow",
+              "fr": "Jaune",
+              "ar": "أصفر"
+            },
+            "swatch": "#f7d531"
+          },
+          {
+            "id": "blue",
+            "label": {
+              "en": "Blue",
+              "fr": "Bleu",
+              "ar": "أزرق"
+            },
+            "swatch": "#2f6fe0"
+          }
+        ]
+      }
+    },
+    {
+      "id": "arts/mona-lisa",
+      "title": {
+        "en": "The Mona Lisa",
+        "fr": "La Joconde",
+        "ar": "الموناليزا"
+      },
+      "position": [
+        4,
+        0,
+        -4
+      ],
+      "contentType": "narration",
+      "narration": {
+        "en": "The Mona Lisa was painted by Leonardo da Vinci. It hangs in the Louvre museum in Paris.",
+        "fr": "La Joconde a été peinte par Léonard de Vinci. Elle est exposée au musée du Louvre, à Paris.",
+        "ar": "رسم ليوناردو دافنشي لوحة الموناليزا. وهي تُعرض في متحف اللوفر في باريس."
+      },
+      "learnMore": {
+        "en": "The Mona Lisa is painted on a wooden board, not on canvas. It is only 77 centimetres tall.",
+        "fr": "La Joconde est peinte sur un panneau de bois, pas sur une toile. Elle ne mesure que 77 centimètres de haut.",
+        "ar": "الموناليزا مرسومة على لوح من الخشب لا على قماش، وارتفاعها ٧٧ سنتيمترًا فقط."
+      },
+      "funFact": {
+        "en": "In 1911 the Mona Lisa was stolen from the Louvre. It was found more than two years later.",
+        "fr": "En 1911, la Joconde a été volée au Louvre. On l'a retrouvée plus de deux ans plus tard.",
+        "ar": "في عام ١٩١١ سُرقت الموناليزا من متحف اللوفر، ثم عُثر عليها بعد أكثر من سنتين."
+      },
+      "linkedTopics": [
+        "arts/color-mix",
+        "people/curie"
+      ],
+      "sourceType": "curated",
+      "factIds": [
+        "f-mona-lisa",
+        "f-louvre",
+        "f-mona-wood",
+        "f-mona-stolen"
+      ],
+      "wikiQuery": {
+        "en": "Mona Lisa",
+        "fr": "La Joconde",
+        "ar": "الموناليزا"
+      },
+      "mascotLine": {
+        "en": "She's smiling at us! Or is she?",
+        "fr": "Elle nous sourit ! Ou pas ?",
+        "ar": "إنها تبتسم لنا! أم لا؟"
+      }
+    },
+    {
+      "id": "arts/colour-quiz",
+      "title": {
+        "en": "Mona Lisa Puzzle",
+        "fr": "Le puzzle de la Joconde",
+        "ar": "أحجية الموناليزا"
+      },
+      "position": [
+        0,
+        0,
+        -6.5
+      ],
+      "contentType": "puzzle",
+      "narration": {
+        "en": "Leonardo started painting the Mona Lisa around the year 1503.",
+        "fr": "Léonard a commencé à peindre la Joconde vers l'an 1503.",
+        "ar": "بدأ ليوناردو رسم الموناليزا نحو عام ١٥٠٣."
+      },
+      "learnMore": {
+        "en": "In 1911 the Mona Lisa was stolen from the Louvre. It was found more than two years later.",
+        "fr": "En 1911, la Joconde a été volée au Louvre. On l'a retrouvée plus de deux ans plus tard.",
+        "ar": "في عام ١٩١١ سُرقت الموناليزا من متحف اللوفر، ثم عُثر عليها بعد أكثر من سنتين."
+      },
+      "funFact": {
+        "en": "The Mona Lisa is painted on a wooden board, not on canvas. It is only 77 centimetres tall.",
+        "fr": "La Joconde est peinte sur un panneau de bois, pas sur une toile. Elle ne mesure que 77 centimètres de haut.",
+        "ar": "الموناليزا مرسومة على لوح من الخشب لا على قماش، وارتفاعها ٧٧ سنتيمترًا فقط."
+      },
+      "linkedTopics": [
+        "arts/color-mix",
+        "arts/mona-lisa"
+      ],
+      "sourceType": "curated",
+      "factIds": [
+        "f-mona-1503",
+        "f-mona-wood",
+        "f-mona-stolen",
+        "f-mona-lisa",
+        "f-louvre"
+      ],
+      "wikiQuery": {
+        "en": "Primary color",
+        "fr": "Couleur primaire",
+        "ar": "لون أساسي"
+      },
+      "mascotLine": {
+        "en": "Oh no, who shuffled the Mona Lisa?",
+        "fr": "Oh non, qui a mélangé la Joconde ?",
+        "ar": "يا إلهي، من بعثر الموناليزا؟"
+      },
+      "quiz": {
+        "question": {
+          "en": "Which colours are the primary colours in painting?",
+          "fr": "Quelles sont les couleurs primaires en peinture ?",
+          "ar": "ما الألوان الأساسية في الرسم؟"
+        },
+        "choices": [
+          {
+            "en": "Red, yellow and blue",
+            "fr": "Rouge, jaune et bleu",
+            "ar": "الأحمر والأصفر والأزرق"
+          },
+          {
+            "en": "Green, pink and grey",
+            "fr": "Vert, rose et gris",
+            "ar": "الأخضر والوردي والرمادي"
+          },
+          {
+            "en": "Black and white",
+            "fr": "Noir et blanc",
+            "ar": "الأسود والأبيض"
+          },
+          {
+            "en": "Orange and purple",
+            "fr": "Orange et violet",
+            "ar": "البرتقالي والبنفسجي"
+          }
+        ],
+        "answerIndex": 0,
+        "factId": "f-primary"
+      },
+      "moreQuestions": [
+        {
+          "question": {
+            "en": "What do you get when you mix blue and yellow paint?",
+            "fr": "Que donne le mélange de peinture bleue et jaune ?",
+            "ar": "ماذا ينتج عن مزج الأزرق والأصفر؟"
+          },
+          "choices": [
+            {
+              "en": "Orange",
+              "fr": "Orange",
+              "ar": "برتقالي"
+            },
+            {
+              "en": "Green",
+              "fr": "Vert",
+              "ar": "أخضر"
+            },
+            {
+              "en": "Purple",
+              "fr": "Violet",
+              "ar": "بنفسجي"
+            },
+            {
+              "en": "Brown",
+              "fr": "Marron",
+              "ar": "بني"
+            }
+          ],
+          "answerIndex": 1,
+          "factId": "f-mix-green"
+        },
+        {
+          "question": {
+            "en": "Who painted the Mona Lisa?",
+            "fr": "Qui a peint la Joconde ?",
+            "ar": "من رسم الموناليزا؟"
+          },
+          "choices": [
+            {
+              "en": "Leonardo da Vinci",
+              "fr": "Léonard de Vinci",
+              "ar": "ليوناردو دا فينشي"
+            },
+            {
+              "en": "Marie Curie",
+              "fr": "Marie Curie",
+              "ar": "ماري كوري"
+            },
+            {
+              "en": "Ada Lovelace",
+              "fr": "Ada Lovelace",
+              "ar": "آدا لوفليس"
+            },
+            {
+              "en": "Aesop",
+              "fr": "Ésope",
+              "ar": "إيسوب"
+            }
+          ],
+          "answerIndex": 0,
+          "factId": "f-mona-lisa"
+        },
+        {
+          "question": {
+            "en": "What is the Mona Lisa painted on?",
+            "fr": "Sur quoi la Joconde est-elle peinte ?",
+            "ar": "على ماذا رُسمت الموناليزا؟"
+          },
+          "choices": [
+            {
+              "en": "Canvas",
+              "fr": "Une toile",
+              "ar": "قماش"
+            },
+            {
+              "en": "Paper",
+              "fr": "Du papier",
+              "ar": "ورق"
+            },
+            {
+              "en": "A wall",
+              "fr": "Un mur",
+              "ar": "جدار"
+            },
+            {
+              "en": "A wooden board",
+              "fr": "Un panneau de bois",
+              "ar": "لوح من الخشب"
+            }
+          ],
+          "answerIndex": 3,
+          "factId": "f-mona-wood"
+        }
+      ],
+      "puzzle": {
+        "type": "arcade",
+        "game": "jigsaw",
+        "prompt": {
+          "en": "The painting is mixed up. Tap two pieces to swap them.",
+          "fr": "Le tableau est mélangé. Touche deux pièces pour les échanger.",
+          "ar": "اللوحة مبعثرة. المس قطعتين لتبدّل مكانيهما."
+        },
+        "factIds": [
+          "f-mona-lisa"
+        ]
+      }
+    }
+  ]
+}

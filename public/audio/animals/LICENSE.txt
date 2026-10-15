@@ -1,0 +1,6 @@
+Animal recordings, trimmed and level-matched for Wondarta.
+bee, cricket, frog, owl: Joseph SARDIN - BigSoundBank.com, CC0 1.0
+elephant: "Elephant voice - trumpeting.ogg", Wikimedia Commons, CC0
+zebra: "Grevys zebra (Sound Effects).ogg" by DiegoC472, Wikimedia Commons, CC BY-SA 4.0
+  https://creativecommons.org/licenses/by-sa/4.0/ (this trimmed clip is shared under the same licence)
+Details and links: CREDITS.md

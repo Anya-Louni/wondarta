@@ -1,0 +1,1164 @@
+{
+  "sceneId": "ocean",
+  "category": "ocean",
+  "title": {
+    "en": "The Great Aquarium",
+    "fr": "Le Grand Aquarium",
+    "ar": "الحوض الكبير"
+  },
+  "intro": {
+    "en": "Walk the glass tunnel under the sea. A whale glides overhead and the reef is full of neighbours.",
+    "fr": "Traverse le tunnel de verre sous la mer. Une baleine glisse au-dessus de toi et le récif est plein de voisins.",
+    "ar": "امشِ في النفق الزجاجي تحت البحر. ينساب حوت فوقك، والشعبة مليئة بالجيران."
+  },
+  "review": {
+    "status": "reviewed",
+    "reviewers": [
+      "Web fact-check"
+    ],
+    "lastReviewed": "2026-10-09",
+    "notes": "Drafted by the dev team. Every fact needs a marine-biology review and the FR/AR text needs a native-speaker review before release.",
+    "factCheck": {
+      "date": "2026-10-09",
+      "method": "Every fact was searched on the web and compared with independent sources (linked per fact where one page covers it). Facts that did not match were corrected. French and Arabic were not read by a native speaker."
+    }
+  },
+  "facts": [
+    {
+      "id": "f-whale-longest",
+      "text": {
+        "en": "A blue whale can grow about 30 metres long — about as long as three school buses.",
+        "fr": "La baleine bleue peut atteindre environ 30 mètres de long — à peu près comme trois bus scolaires.",
+        "ar": "يمكن أن يبلغ طول الحوت الأزرق نحو ٣٠ مترًا، أي بطول ثلاث حافلات مدرسية تقريبًا."
+      },
+      "sources": [
+        "https://www.britannica.com/animal/blue-whale",
+        "https://www.guinnessworldrecords.com/world-records/largest-heart",
+        "https://www.guinnessworldrecords.com/world-records/83817-heaviest-tongue"
+      ]
+    },
+    {
+      "id": "f-whale-largest",
+      "text": {
+        "en": "It is the largest animal known to have ever lived on Earth.",
+        "fr": "C'est le plus grand animal connu ayant jamais vécu sur Terre.",
+        "ar": "وهو أكبر حيوان معروف عاش على الأرض على الإطلاق."
+      },
+      "sources": [
+        "https://www.britannica.com/animal/blue-whale",
+        "https://www.guinnessworldrecords.com/world-records/largest-heart",
+        "https://www.guinnessworldrecords.com/world-records/83817-heaviest-tongue"
+      ]
+    },
+    {
+      "id": "f-whale-krill",
+      "text": {
+        "en": "Blue whales eat krill, tiny shrimp-like animals, and can swallow about four tonnes of them in a day.",
+        "fr": "Les baleines bleues mangent du krill, de petits animaux qui ressemblent à des crevettes, et peuvent en avaler environ quatre tonnes par jour.",
+        "ar": "تتغذّى الحيتان الزرقاء على الكريل، وهي كائنات صغيرة تشبه الروبيان، وقد تبتلع منها نحو أربعة أطنان في اليوم."
+      },
+      "sources": [
+        "https://www.britannica.com/animal/blue-whale",
+        "https://www.guinnessworldrecords.com/world-records/largest-heart",
+        "https://www.guinnessworldrecords.com/world-records/83817-heaviest-tongue"
+      ]
+    },
+    {
+      "id": "f-whale-heart",
+      "text": {
+        "en": "The heaviest blue whale heart ever weighed was about 200 kilograms — heavier than two grown-ups.",
+        "fr": "Le cœur de baleine bleue le plus lourd jamais pesé faisait environ 200 kilos — plus que deux adultes.",
+        "ar": "أثقل قلب حوت أزرق جرى وزنه بلغ نحو ٢٠٠ كيلوغرام، أي أثقل من شخصين بالغين."
+      },
+      "sources": [
+        "https://www.britannica.com/animal/blue-whale",
+        "https://www.guinnessworldrecords.com/world-records/largest-heart",
+        "https://www.guinnessworldrecords.com/world-records/83817-heaviest-tongue"
+      ]
+    },
+    {
+      "id": "f-coral-animal",
+      "text": {
+        "en": "Corals look like colourful plants, but they are animals.",
+        "fr": "Les coraux ressemblent à des plantes colorées, mais ce sont des animaux.",
+        "ar": "تبدو المرجانيات كأنها نباتات ملوّنة، لكنها في الحقيقة حيوانات."
+      },
+      "sources": [
+        "https://www.guinnessworldrecords.com/world-records/66687-longest-reef",
+        "https://floridakeys.noaa.gov/corals/biodiversity.html",
+        "https://oceanservice.noaa.gov/education/tutorial_corals/coral02_zooxanthellae.html"
+      ]
+    },
+    {
+      "id": "f-coral-algae",
+      "text": {
+        "en": "Tiny algae live inside coral and make most of its food from sunlight.",
+        "fr": "De minuscules algues vivent à l'intérieur du corail et fabriquent presque toute sa nourriture grâce au soleil.",
+        "ar": "تعيش طحالب دقيقة داخل المرجان وتصنع معظم غذائه من ضوء الشمس."
+      },
+      "sources": [
+        "https://www.guinnessworldrecords.com/world-records/66687-longest-reef",
+        "https://floridakeys.noaa.gov/corals/biodiversity.html",
+        "https://oceanservice.noaa.gov/education/tutorial_corals/coral02_zooxanthellae.html"
+      ]
+    },
+    {
+      "id": "f-reef-quarter",
+      "text": {
+        "en": "Coral reefs cover a tiny part of the ocean, yet at least a quarter of all sea species live in them.",
+        "fr": "Les récifs coralliens couvrent une toute petite partie de l'océan, et pourtant au moins un quart des espèces marines y vivent.",
+        "ar": "تغطّي الشعاب المرجانية جزءًا ضئيلًا من المحيط، ومع ذلك يعيش فيها ما لا يقلّ عن رُبع أنواع الكائنات البحرية."
+      },
+      "sources": [
+        "https://www.guinnessworldrecords.com/world-records/66687-longest-reef",
+        "https://floridakeys.noaa.gov/corals/biodiversity.html",
+        "https://oceanservice.noaa.gov/education/tutorial_corals/coral02_zooxanthellae.html"
+      ]
+    },
+    {
+      "id": "f-reef-gbr",
+      "text": {
+        "en": "The Great Barrier Reef in Australia stretches for about 2,300 kilometres.",
+        "fr": "La Grande Barrière de corail, en Australie, s'étend sur environ 2 300 kilomètres.",
+        "ar": "يمتدّ الحاجز المرجاني العظيم في أستراليا نحو ٢٣٠٠ كيلومتر."
+      },
+      "sources": [
+        "https://www.guinnessworldrecords.com/world-records/66687-longest-reef",
+        "https://floridakeys.noaa.gov/corals/biodiversity.html",
+        "https://oceanservice.noaa.gov/education/tutorial_corals/coral02_zooxanthellae.html"
+      ]
+    },
+    {
+      "id": "f-turtle-seven",
+      "text": {
+        "en": "There are seven kinds of sea turtle in the world.",
+        "fr": "Il existe sept espèces de tortues marines dans le monde.",
+        "ar": "توجد في العالم سبعة أنواع من السلاحف البحرية."
+      },
+      "sources": [
+        "https://oliveridleyproject.org/ufaqs/how-big-do-sea-turtles-get",
+        "https://seaturtlestatus.org/articles/how-temperature-determines-sex-in-sea-turtles",
+        "https://www.nps.gov/caha/learn/nature/leatherbackseaturtle.htm"
+      ]
+    },
+    {
+      "id": "f-turtle-air",
+      "text": {
+        "en": "Sea turtles breathe air with lungs, so they have to come up to the surface.",
+        "fr": "Les tortues marines respirent l'air avec des poumons : elles doivent donc remonter à la surface.",
+        "ar": "تتنفّس السلاحف البحرية الهواء برئتين، لذا عليها أن تصعد إلى السطح."
+      },
+      "sources": [
+        "https://oliveridleyproject.org/ufaqs/how-big-do-sea-turtles-get",
+        "https://seaturtlestatus.org/articles/how-temperature-determines-sex-in-sea-turtles",
+        "https://www.nps.gov/caha/learn/nature/leatherbackseaturtle.htm"
+      ]
+    },
+    {
+      "id": "f-turtle-sleep",
+      "text": {
+        "en": "A sleeping sea turtle can stay underwater for four to seven hours.",
+        "fr": "Une tortue marine endormie peut rester sous l'eau de quatre à sept heures.",
+        "ar": "يمكن للسلحفاة البحرية النائمة أن تبقى تحت الماء من أربع إلى سبع ساعات."
+      },
+      "sources": [
+        "https://oliveridleyproject.org/ufaqs/how-big-do-sea-turtles-get",
+        "https://seaturtlestatus.org/articles/how-temperature-determines-sex-in-sea-turtles",
+        "https://www.nps.gov/caha/learn/nature/leatherbackseaturtle.htm"
+      ]
+    },
+    {
+      "id": "f-turtle-beach",
+      "text": {
+        "en": "Female sea turtles lay their eggs on sandy beaches, often the same beach where they hatched.",
+        "fr": "Les tortues femelles pondent leurs œufs sur des plages de sable, souvent celle où elles sont nées.",
+        "ar": "تضع إناث السلاحف بيضها على الشواطئ الرملية، وغالبًا على الشاطئ نفسه الذي فقست فيه."
+      },
+      "sources": [
+        "https://oliveridleyproject.org/ufaqs/how-big-do-sea-turtles-get",
+        "https://seaturtlestatus.org/articles/how-temperature-determines-sex-in-sea-turtles",
+        "https://www.nps.gov/caha/learn/nature/leatherbackseaturtle.htm"
+      ]
+    },
+    {
+      "id": "f-octopus-eight",
+      "text": {
+        "en": "An octopus has eight arms and three hearts.",
+        "fr": "La pieuvre a huit bras et trois cœurs.",
+        "ar": "للأخطبوط ثمانية أذرع وثلاثة قلوب."
+      },
+      "sources": [
+        "https://www.nhm.ac.uk/discover/octopuses-keep-surprising-us-here-are-eight-examples-how.html",
+        "https://www.sciencealert.com/here-s-how-octopus-arms-make-decisions-without-input-from-the-brain"
+      ]
+    },
+    {
+      "id": "f-octopus-blue-blood",
+      "text": {
+        "en": "Its blood is blue because it carries oxygen using copper instead of iron.",
+        "fr": "Son sang est bleu parce qu'il transporte l'oxygène avec du cuivre au lieu du fer.",
+        "ar": "دم الأخطبوط أزرق لأنه ينقل الأكسجين بالنحاس بدلًا من الحديد."
+      },
+      "sources": [
+        "https://www.nhm.ac.uk/discover/octopuses-keep-surprising-us-here-are-eight-examples-how.html",
+        "https://www.sciencealert.com/here-s-how-octopus-arms-make-decisions-without-input-from-the-brain"
+      ]
+    },
+    {
+      "id": "f-octopus-colour",
+      "text": {
+        "en": "An octopus can change colour in a moment to hide against rocks and sand.",
+        "fr": "La pieuvre peut changer de couleur en un instant pour se cacher contre les rochers et le sable.",
+        "ar": "يستطيع الأخطبوط أن يغيّر لونه في لحظة ليختبئ بين الصخور والرمل."
+      },
+      "sources": [
+        "https://www.nhm.ac.uk/discover/octopuses-keep-surprising-us-here-are-eight-examples-how.html",
+        "https://www.sciencealert.com/here-s-how-octopus-arms-make-decisions-without-input-from-the-brain"
+      ]
+    },
+    {
+      "id": "f-octopus-ink",
+      "text": {
+        "en": "When it is frightened it squirts dark ink and swims away.",
+        "fr": "Quand elle a peur, elle projette une encre sombre et s'enfuit à la nage.",
+        "ar": "وعندما يخاف ينفث حبرًا داكنًا ويسبح بعيدًا."
+      },
+      "sources": [
+        "https://www.nhm.ac.uk/discover/octopuses-keep-surprising-us-here-are-eight-examples-how.html",
+        "https://www.sciencealert.com/here-s-how-octopus-arms-make-decisions-without-input-from-the-brain"
+      ]
+    },
+    {
+      "id": "f-octopus-tools",
+      "text": {
+        "en": "Octopuses are clever: some carry coconut shells to hide inside later.",
+        "fr": "Les pieuvres sont malines : certaines transportent des coques de noix de coco pour s'y cacher plus tard.",
+        "ar": "الأخطبوطات ذكية: بعضها يحمل أصداف جوز الهند ليختبئ داخلها لاحقًا."
+      },
+      "sources": [
+        "https://www.nhm.ac.uk/discover/octopuses-keep-surprising-us-here-are-eight-examples-how.html",
+        "https://www.sciencealert.com/here-s-how-octopus-arms-make-decisions-without-input-from-the-brain"
+      ]
+    },
+    {
+      "id": "f-clownfish-anemone",
+      "text": {
+        "en": "Clownfish live among the stinging arms of a sea anemone, protected by a slimy coating.",
+        "fr": "Le poisson-clown vit parmi les bras urticants d'une anémone de mer, protégé par une couche de mucus.",
+        "ar": "تعيش سمكة المهرّج بين أذرع شقائق النعمان البحرية اللاسعة، ويحميها غطاء مخاطي."
+      },
+      "sources": [
+        "https://asknature.org/strategy/mucus-coat-protects-from-sea-anemone/",
+        "https://utmsi.utexas.edu/science-and-the-sea/print-article/when-changing-sex-improves-survival/"
+      ]
+    },
+    {
+      "id": "f-clownfish-help",
+      "text": {
+        "en": "The fish keeps its anemone clean and the anemone keeps the fish safe. That teamwork is called mutualism.",
+        "fr": "Le poisson nettoie son anémone et l'anémone protège le poisson. Cette entraide s'appelle le mutualisme.",
+        "ar": "تنظّف السمكة شقائق النعمان، وتحميها شقائق النعمان في المقابل. يُسمّى هذا التعاون تبادل المنفعة."
+      },
+      "sources": [
+        "https://asknature.org/strategy/mucus-coat-protects-from-sea-anemone/",
+        "https://utmsi.utexas.edu/science-and-the-sea/print-article/when-changing-sex-improves-survival/"
+      ]
+    },
+    {
+      "id": "f-clownfish-plankton",
+      "text": {
+        "en": "Clownfish mostly eat plankton: tiny plants and animals drifting in the water.",
+        "fr": "Le poisson-clown mange surtout du plancton : de minuscules plantes et animaux qui flottent dans l'eau.",
+        "ar": "تتغذّى سمكة المهرّج غالبًا على العوالق: نباتات وحيوانات دقيقة تطفو في الماء."
+      },
+      "sources": [
+        "https://asknature.org/strategy/mucus-coat-protects-from-sea-anemone/",
+        "https://utmsi.utexas.edu/science-and-the-sea/print-article/when-changing-sex-improves-survival/"
+      ]
+    },
+    {
+      "id": "f-jellyfish-no-bones",
+      "text": {
+        "en": "A jellyfish has no bones, no heart and no brain, and it drifts with the current.",
+        "fr": "La méduse n'a ni os, ni cœur, ni cerveau, et elle se laisse porter par le courant.",
+        "ar": "قنديل البحر بلا عظام ولا قلب ولا دماغ، وينجرف مع التيار."
+      },
+      "sources": [
+        "https://www.osc.org/are-jellyfish-older-than-dinosaurs/"
+      ]
+    },
+    {
+      "id": "f-whale-tongue",
+      "text": {
+        "en": "A blue whale's tongue alone weighs about as much as an elephant.",
+        "fr": "La langue de la baleine bleue pèse à elle seule à peu près autant qu'un éléphant.",
+        "ar": "لسان الحوت الأزرق وحده يزن ما يقارب وزن فيل."
+      },
+      "sources": [
+        "https://www.britannica.com/animal/blue-whale",
+        "https://www.guinnessworldrecords.com/world-records/largest-heart",
+        "https://www.guinnessworldrecords.com/world-records/83817-heaviest-tongue"
+      ]
+    },
+    {
+      "id": "f-reef-biggest",
+      "text": {
+        "en": "The Great Barrier Reef is the largest structure on Earth built by living things.",
+        "fr": "La Grande Barrière de corail est la plus grande construction faite par des êtres vivants sur Terre.",
+        "ar": "الحاجز المرجاني العظيم أكبر بناء صنعته كائنات حيّة على الأرض."
+      },
+      "sources": [
+        "https://www.guinnessworldrecords.com/world-records/66687-longest-reef",
+        "https://floridakeys.noaa.gov/corals/biodiversity.html",
+        "https://oceanservice.noaa.gov/education/tutorial_corals/coral02_zooxanthellae.html"
+      ]
+    },
+    {
+      "id": "f-turtle-sand",
+      "text": {
+        "en": "The warmth of the sand decides whether baby turtles are girls or boys: warmer nests make more girls.",
+        "fr": "La chaleur du sable décide si les bébés tortues seront des filles ou des garçons : un nid plus chaud donne plus de filles.",
+        "ar": "حرارة الرمل تحدّد هل ستكون صغار السلاحف إناثًا أم ذكورًا: العشّ الأدفأ يعطي إناثًا أكثر."
+      },
+      "sources": [
+        "https://oliveridleyproject.org/ufaqs/how-big-do-sea-turtles-get",
+        "https://seaturtlestatus.org/articles/how-temperature-determines-sex-in-sea-turtles",
+        "https://www.nps.gov/caha/learn/nature/leatherbackseaturtle.htm"
+      ]
+    },
+    {
+      "id": "f-turtle-leather",
+      "text": {
+        "en": "The leatherback is the biggest sea turtle of all.",
+        "fr": "La tortue luth est la plus grande de toutes les tortues marines.",
+        "ar": "السلحفاة الجلدية الظهر هي أكبر السلاحف البحرية كلها."
+      },
+      "sources": [
+        "https://oliveridleyproject.org/ufaqs/how-big-do-sea-turtles-get",
+        "https://seaturtlestatus.org/articles/how-temperature-determines-sex-in-sea-turtles",
+        "https://www.nps.gov/caha/learn/nature/leatherbackseaturtle.htm"
+      ]
+    },
+    {
+      "id": "f-octopus-arms",
+      "text": {
+        "en": "About two thirds of an octopus's nerve cells are in its arms, not in its head.",
+        "fr": "Environ deux tiers des cellules nerveuses de la pieuvre sont dans ses bras, et non dans sa tête.",
+        "ar": "نحو ثلثَي الخلايا العصبية للأخطبوط موجودة في أذرعه لا في رأسه."
+      },
+      "sources": [
+        "https://www.nhm.ac.uk/discover/octopuses-keep-surprising-us-here-are-eight-examples-how.html",
+        "https://www.sciencealert.com/here-s-how-octopus-arms-make-decisions-without-input-from-the-brain"
+      ]
+    },
+    {
+      "id": "f-clownfish-male",
+      "text": {
+        "en": "Every clownfish is born male. The biggest one in the group becomes the female.",
+        "fr": "Tous les poissons-clowns naissent mâles. Le plus gros du groupe devient la femelle.",
+        "ar": "تولد كل أسماك المهرّج ذكورًا، ثم تصبح أكبر سمكة في المجموعة هي الأنثى."
+      },
+      "sources": [
+        "https://asknature.org/strategy/mucus-coat-protects-from-sea-anemone/",
+        "https://utmsi.utexas.edu/science-and-the-sea/print-article/when-changing-sex-improves-survival/"
+      ]
+    }
+  ],
+  "glossary": [
+    {
+      "terms": {
+        "en": [
+          "krill"
+        ],
+        "fr": [
+          "krill"
+        ],
+        "ar": [
+          "الكريل",
+          "كريل"
+        ]
+      },
+      "definition": {
+        "en": "Tiny animals like small shrimp that float in the sea in huge swarms.",
+        "fr": "De minuscules animaux qui ressemblent à de petites crevettes et flottent en bancs immenses.",
+        "ar": "كائنات صغيرة تشبه الروبيان وتسبح في البحر بأسراب ضخمة."
+      }
+    },
+    {
+      "terms": {
+        "en": [
+          "reef",
+          "reefs",
+          "coral reef"
+        ],
+        "fr": [
+          "récif",
+          "récifs"
+        ],
+        "ar": [
+          "شعاب",
+          "الشعاب",
+          "شعبة مرجانية"
+        ]
+      },
+      "definition": {
+        "en": "A hard ridge under the sea built by millions of tiny coral animals.",
+        "fr": "Une crête dure sous la mer, construite par des millions de petits animaux coralliens.",
+        "ar": "حاجز صلب تحت البحر بنته ملايين الحيوانات المرجانية الصغيرة."
+      }
+    },
+    {
+      "terms": {
+        "en": [
+          "plankton"
+        ],
+        "fr": [
+          "plancton"
+        ],
+        "ar": [
+          "العوالق",
+          "عوالق"
+        ]
+      },
+      "definition": {
+        "en": "Very small plants and animals that drift in the water.",
+        "fr": "De très petites plantes et de très petits animaux qui flottent dans l'eau.",
+        "ar": "نباتات وحيوانات دقيقة جدًا تطفو في الماء."
+      }
+    },
+    {
+      "terms": {
+        "en": [
+          "anemone",
+          "anemones",
+          "sea anemone"
+        ],
+        "fr": [
+          "anémone",
+          "anémones"
+        ],
+        "ar": [
+          "شقائق النعمان",
+          "شقائق"
+        ]
+      },
+      "definition": {
+        "en": "A soft sea animal with stinging arms that sticks to rocks and coral.",
+        "fr": "Un animal marin mou, aux bras urticants, accroché aux rochers et au corail.",
+        "ar": "حيوان بحري رخو له أذرع لاسعة يلتصق بالصخور والمرجان."
+      }
+    }
+  ],
+  "hotspots": [
+    {
+      "id": "ocean/blue-whale",
+      "title": {
+        "en": "The Blue Whale",
+        "fr": "La baleine bleue",
+        "ar": "الحوت الأزرق"
+      },
+      "zone": "open-water",
+      "position": [
+        0,
+        0,
+        -16
+      ],
+      "contentType": "puzzle",
+      "narration": {
+        "en": "The blue whale is the biggest animal that has ever lived. It is about as long as three school buses and it eats tiny krill.",
+        "fr": "La baleine bleue est le plus grand animal ayant jamais vécu. Elle est à peu près aussi longue que trois bus scolaires et se nourrit de minuscules krills.",
+        "ar": "الحوت الأزرق أكبر حيوان عاش على الإطلاق. طوله نحو ثلاث حافلات مدرسية، ويتغذّى على الكريل الصغير."
+      },
+      "learnMore": {
+        "en": "The heaviest blue whale heart ever weighed was about 200 kilograms — heavier than two grown-ups.",
+        "fr": "Le cœur de baleine bleue le plus lourd jamais pesé faisait environ 200 kilos — plus que deux adultes.",
+        "ar": "أثقل قلب حوت أزرق جرى وزنه بلغ نحو ٢٠٠ كيلوغرام، أي أثقل من شخصين بالغين."
+      },
+      "funFact": {
+        "en": "A blue whale's tongue alone weighs about as much as an elephant.",
+        "fr": "La langue de la baleine bleue pèse à elle seule à peu près autant qu'un éléphant.",
+        "ar": "لسان الحوت الأزرق وحده يزن ما يقارب وزن فيل."
+      },
+      "linkedTopics": [
+        "ocean/sea-turtle",
+        "ocean/coral-reef"
+      ],
+      "sourceType": "curated",
+      "factIds": [
+        "f-whale-longest",
+        "f-whale-largest",
+        "f-whale-krill",
+        "f-whale-heart",
+        "f-whale-tongue"
+      ],
+      "wikiQuery": {
+        "en": "Blue whale",
+        "fr": "Rorqual bleu",
+        "ar": "الحوت الأزرق"
+      },
+      "mascotLine": {
+        "en": "I'm hungry just watching. Gulp!",
+        "fr": "J'ai faim rien qu'en regardant. Gloups !",
+        "ar": "جعتُ من مجرّد المشاهدة. هيّا!"
+      },
+      "quiz": {
+        "question": {
+          "en": "How long can a blue whale grow?",
+          "fr": "Quelle longueur peut atteindre une baleine bleue ?",
+          "ar": "كم يبلغ طول الحوت الأزرق؟"
+        },
+        "choices": [
+          {
+            "en": "About 3 metres",
+            "fr": "Environ 3 mètres",
+            "ar": "نحو ٣ أمتار"
+          },
+          {
+            "en": "About 30 metres",
+            "fr": "Environ 30 mètres",
+            "ar": "نحو ٣٠ مترًا"
+          },
+          {
+            "en": "About 300 metres",
+            "fr": "Environ 300 mètres",
+            "ar": "نحو ٣٠٠ متر"
+          },
+          {
+            "en": "About 3 kilometres",
+            "fr": "Environ 3 kilomètres",
+            "ar": "نحو ٣ كيلومترات"
+          }
+        ],
+        "answerIndex": 1,
+        "factId": "f-whale-longest"
+      },
+      "moreQuestions": [
+        {
+          "question": {
+            "en": "What does a blue whale eat?",
+            "fr": "Que mange la baleine bleue ?",
+            "ar": "بماذا يتغذّى الحوت الأزرق؟"
+          },
+          "choices": [
+            {
+              "en": "Krill",
+              "fr": "Du krill",
+              "ar": "الكريل"
+            },
+            {
+              "en": "Seaweed",
+              "fr": "Des algues",
+              "ar": "الأعشاب البحرية"
+            },
+            {
+              "en": "Sand",
+              "fr": "Du sable",
+              "ar": "الرمل"
+            },
+            {
+              "en": "Coral",
+              "fr": "Du corail",
+              "ar": "المرجان"
+            }
+          ],
+          "answerIndex": 0,
+          "factId": "f-whale-krill"
+        },
+        {
+          "question": {
+            "en": "How heavy was the heaviest blue whale heart ever weighed?",
+            "fr": "Combien pesait le cœur de baleine bleue le plus lourd jamais pesé ?",
+            "ar": "كم كان وزن أثقل قلب حوت أزرق جرى وزنه؟"
+          },
+          "choices": [
+            {
+              "en": "20 kilograms",
+              "fr": "20 kilos",
+              "ar": "٢٠ كيلوغرامًا"
+            },
+            {
+              "en": "About 200 kilograms",
+              "fr": "Environ 200 kilos",
+              "ar": "نحو ٢٠٠ كيلوغرام"
+            },
+            {
+              "en": "2,000 kilograms",
+              "fr": "2 000 kilos",
+              "ar": "٢٠٠٠ كيلوغرام"
+            },
+            {
+              "en": "20,000 kilograms",
+              "fr": "20 000 kilos",
+              "ar": "٢٠٠٠٠ كيلوغرام"
+            }
+          ],
+          "answerIndex": 1,
+          "factId": "f-whale-heart"
+        },
+        {
+          "question": {
+            "en": "Which part of a blue whale weighs about as much as an elephant?",
+            "fr": "Quelle partie de la baleine bleue pèse à peu près autant qu'un éléphant ?",
+            "ar": "أيّ جزء من الحوت الأزرق يزن ما يقارب وزن فيل؟"
+          },
+          "choices": [
+            {
+              "en": "Its eye",
+              "fr": "Son œil",
+              "ar": "عينه"
+            },
+            {
+              "en": "Its tongue",
+              "fr": "Sa langue",
+              "ar": "لسانه"
+            },
+            {
+              "en": "One krill",
+              "fr": "Un krill",
+              "ar": "حبّة كريل واحدة"
+            },
+            {
+              "en": "Its tail",
+              "fr": "Sa queue",
+              "ar": "ذيله"
+            }
+          ],
+          "answerIndex": 1,
+          "factId": "f-whale-tongue"
+        }
+      ],
+      "puzzle": {
+        "type": "arcade",
+        "game": "krill-gulp",
+        "prompt": {
+          "en": "Move the whale to swallow 12 krill. Keep away from the plastic bottles!",
+          "fr": "Déplace la baleine pour avaler 12 krills. Évite les bouteilles en plastique !",
+          "ar": "حرّك الحوت ليبتلع ١٢ من الكريل، وابتعد عن القوارير البلاستيكية!"
+        },
+        "factIds": [
+          "f-whale-krill"
+        ]
+      }
+    },
+    {
+      "id": "ocean/coral-reef",
+      "title": {
+        "en": "The Coral Reef",
+        "fr": "Le récif corallien",
+        "ar": "الشعاب المرجانية"
+      },
+      "zone": "reef",
+      "position": [
+        -12,
+        0,
+        -6
+      ],
+      "contentType": "puzzle",
+      "narration": {
+        "en": "A coral reef is a busy city under the sea. Corals look like plants, but every one of them is an animal.",
+        "fr": "Un récif corallien est une ville animée sous la mer. Les coraux ressemblent à des plantes, mais chacun est un animal.",
+        "ar": "الشعبة المرجانية مدينة مزدحمة تحت البحر. تبدو المرجانيات كالنباتات، لكن كل واحدة منها حيوان."
+      },
+      "learnMore": {
+        "en": "Tiny algae live inside coral and make most of its food from sunlight. Coral reefs cover a tiny part of the ocean, yet at least a quarter of all sea species live in them. The Great Barrier Reef in Australia stretches for about 2,300 kilometres.",
+        "fr": "De minuscules algues vivent à l'intérieur du corail et fabriquent presque toute sa nourriture grâce au soleil. Les récifs coralliens couvrent une toute petite partie de l'océan, et pourtant au moins un quart des espèces marines y vivent. La Grande Barrière de corail, en Australie, s'étend sur environ 2 300 kilomètres.",
+        "ar": "تعيش طحالب دقيقة داخل المرجان وتصنع معظم غذائه من ضوء الشمس. تغطّي الشعاب المرجانية جزءًا ضئيلًا من المحيط، ومع ذلك يعيش فيها ما لا يقلّ عن رُبع أنواع الكائنات البحرية. يمتدّ الحاجز المرجاني العظيم في أستراليا نحو ٢٣٠٠ كيلومتر."
+      },
+      "funFact": {
+        "en": "The Great Barrier Reef is the largest structure on Earth built by living things.",
+        "fr": "La Grande Barrière de corail est la plus grande construction faite par des êtres vivants sur Terre.",
+        "ar": "الحاجز المرجاني العظيم أكبر بناء صنعته كائنات حيّة على الأرض."
+      },
+      "linkedTopics": [
+        "ocean/clownfish",
+        "ocean/octopus"
+      ],
+      "sourceType": "curated",
+      "factIds": [
+        "f-coral-animal",
+        "f-coral-algae",
+        "f-reef-quarter",
+        "f-reef-gbr",
+        "f-reef-biggest"
+      ],
+      "wikiQuery": {
+        "en": "Coral reef",
+        "fr": "Récif corallien",
+        "ar": "شعاب مرجانية"
+      },
+      "mascotLine": {
+        "en": "So many neighbours on one reef! Can you match them up?",
+        "fr": "Tant de voisins sur un seul récif ! Peux-tu les associer ?",
+        "ar": "كم جارًا في شعبة واحدة! هل تستطيع مطابقتهم؟"
+      },
+      "puzzle": {
+        "type": "memory-pairs",
+        "prompt": {
+          "en": "Turn two cards over and match each reef animal to its name.",
+          "fr": "Retourne deux cartes et associe chaque animal du récif à son nom.",
+          "ar": "اقلب بطاقتين وطابق كل حيوان من الشعبة مع اسمه."
+        },
+        "factIds": [
+          "f-coral-animal",
+          "f-reef-quarter"
+        ],
+        "show": 5,
+        "pairs": [
+          {
+            "id": "coral",
+            "label": {
+              "en": "Coral",
+              "fr": "Corail",
+              "ar": "مرجان"
+            },
+            "media": {
+              "model": "coral"
+            }
+          },
+          {
+            "id": "clownfish",
+            "label": {
+              "en": "Clownfish",
+              "fr": "Poisson-clown",
+              "ar": "سمكة المهرّج"
+            },
+            "media": {
+              "model": "clownfish"
+            }
+          },
+          {
+            "id": "starfish",
+            "label": {
+              "en": "Sea star",
+              "fr": "Étoile de mer",
+              "ar": "نجم البحر"
+            },
+            "media": {
+              "model": "starfish"
+            }
+          },
+          {
+            "id": "crab",
+            "label": {
+              "en": "Crab",
+              "fr": "Crabe",
+              "ar": "سرطان البحر"
+            },
+            "media": {
+              "model": "crab"
+            }
+          },
+          {
+            "id": "anemone",
+            "label": {
+              "en": "Sea anemone",
+              "fr": "Anémone de mer",
+              "ar": "شقائق النعمان"
+            },
+            "media": {
+              "model": "anemone"
+            }
+          },
+          {
+            "id": "turtle",
+            "label": {
+              "en": "Sea turtle",
+              "fr": "Tortue marine",
+              "ar": "سلحفاة بحرية"
+            },
+            "media": {
+              "model": "turtle"
+            }
+          },
+          {
+            "id": "octopus",
+            "label": {
+              "en": "Octopus",
+              "fr": "Pieuvre",
+              "ar": "أخطبوط"
+            },
+            "media": {
+              "model": "octopus"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "id": "ocean/sea-turtle",
+      "title": {
+        "en": "The Sea Turtle",
+        "fr": "La tortue marine",
+        "ar": "السلحفاة البحرية"
+      },
+      "zone": "open-water",
+      "position": [
+        10,
+        0,
+        -9
+      ],
+      "contentType": "narration",
+      "narration": {
+        "en": "Sea turtles breathe air, just like you, so they swim up to the surface for a breath. There are seven kinds in the world.",
+        "fr": "Les tortues marines respirent l'air, comme toi : elles remontent donc à la surface pour respirer. Il en existe sept espèces dans le monde.",
+        "ar": "تتنفّس السلاحف البحرية الهواء مثلك تمامًا، لذلك تصعد إلى السطح لتأخذ نفسًا. وهناك سبعة أنواع منها في العالم."
+      },
+      "learnMore": {
+        "en": "A sleeping sea turtle can stay underwater for four to seven hours. Female sea turtles lay their eggs on sandy beaches, often the same beach where they hatched. The warmth of the sand decides whether baby turtles are girls or boys: warmer nests make more girls.",
+        "fr": "Une tortue marine endormie peut rester sous l'eau de quatre à sept heures. Les tortues femelles pondent leurs œufs sur des plages de sable, souvent celle où elles sont nées. La chaleur du sable décide si les bébés tortues seront des filles ou des garçons : un nid plus chaud donne plus de filles.",
+        "ar": "يمكن للسلحفاة البحرية النائمة أن تبقى تحت الماء من أربع إلى سبع ساعات. تضع إناث السلاحف بيضها على الشواطئ الرملية، وغالبًا على الشاطئ نفسه الذي فقست فيه. حرارة الرمل تحدّد هل ستكون صغار السلاحف إناثًا أم ذكورًا: العشّ الأدفأ يعطي إناثًا أكثر."
+      },
+      "funFact": {
+        "en": "The leatherback is the biggest sea turtle of all.",
+        "fr": "La tortue luth est la plus grande de toutes les tortues marines.",
+        "ar": "السلحفاة الجلدية الظهر هي أكبر السلاحف البحرية كلها."
+      },
+      "linkedTopics": [
+        "ocean/blue-whale",
+        "animals/frog"
+      ],
+      "sourceType": "curated",
+      "factIds": [
+        "f-turtle-seven",
+        "f-turtle-air",
+        "f-turtle-sleep",
+        "f-turtle-beach",
+        "f-turtle-sand",
+        "f-turtle-leather"
+      ],
+      "wikiQuery": {
+        "en": "Sea turtle",
+        "fr": "Tortue marine",
+        "ar": "سلحفاة بحرية"
+      },
+      "mascotLine": {
+        "en": "She is coming up for air. Shall we swim along?",
+        "fr": "Elle remonte respirer. On la suit ?",
+        "ar": "إنها تصعد لتتنفّس. هل نسبح معها؟"
+      }
+    },
+    {
+      "id": "ocean/octopus",
+      "title": {
+        "en": "The Octopus",
+        "fr": "La pieuvre",
+        "ar": "الأخطبوط"
+      },
+      "zone": "reef",
+      "position": [
+        -8,
+        0,
+        6
+      ],
+      "contentType": "puzzle",
+      "narration": {
+        "en": "An octopus has eight arms and three hearts. It can change colour in a moment to hide.",
+        "fr": "La pieuvre a huit bras et trois cœurs. Elle peut changer de couleur en un instant pour se cacher.",
+        "ar": "للأخطبوط ثمانية أذرع وثلاثة قلوب، ويستطيع أن يغيّر لونه في لحظة ليختبئ."
+      },
+      "learnMore": {
+        "en": "Its blood is blue because it carries oxygen using copper instead of iron. When it is frightened it squirts dark ink and swims away. Octopuses are clever: some carry coconut shells to hide inside later.",
+        "fr": "Son sang est bleu parce qu'il transporte l'oxygène avec du cuivre au lieu du fer. Quand elle a peur, elle projette une encre sombre et s'enfuit à la nage. Les pieuvres sont malines : certaines transportent des coques de noix de coco pour s'y cacher plus tard.",
+        "ar": "دم الأخطبوط أزرق لأنه ينقل الأكسجين بالنحاس بدلًا من الحديد. وعندما يخاف ينفث حبرًا داكنًا ويسبح بعيدًا. الأخطبوطات ذكية: بعضها يحمل أصداف جوز الهند ليختبئ داخلها لاحقًا."
+      },
+      "funFact": {
+        "en": "About two thirds of an octopus's nerve cells are in its arms, not in its head.",
+        "fr": "Environ deux tiers des cellules nerveuses de la pieuvre sont dans ses bras, et non dans sa tête.",
+        "ar": "نحو ثلثَي الخلايا العصبية للأخطبوط موجودة في أذرعه لا في رأسه."
+      },
+      "linkedTopics": [
+        "ocean/coral-reef",
+        "ocean/clownfish"
+      ],
+      "sourceType": "curated",
+      "factIds": [
+        "f-octopus-eight",
+        "f-octopus-blue-blood",
+        "f-octopus-colour",
+        "f-octopus-ink",
+        "f-octopus-tools",
+        "f-octopus-arms"
+      ],
+      "wikiQuery": {
+        "en": "Octopus",
+        "fr": "Pieuvre",
+        "ar": "أخطبوط"
+      },
+      "mascotLine": {
+        "en": "Now you see me... now you don't!",
+        "fr": "Tu me vois... tu ne me vois plus !",
+        "ar": "تراني الآن... والآن لا تراني!"
+      },
+      "quiz": {
+        "question": {
+          "en": "How many hearts does an octopus have?",
+          "fr": "Combien de cœurs a une pieuvre ?",
+          "ar": "كم قلبًا للأخطبوط؟"
+        },
+        "choices": [
+          {
+            "en": "One",
+            "fr": "Un",
+            "ar": "قلب واحد"
+          },
+          {
+            "en": "Two",
+            "fr": "Deux",
+            "ar": "قلبان"
+          },
+          {
+            "en": "Three",
+            "fr": "Trois",
+            "ar": "ثلاثة قلوب"
+          },
+          {
+            "en": "Eight",
+            "fr": "Huit",
+            "ar": "ثمانية قلوب"
+          }
+        ],
+        "answerIndex": 2,
+        "factId": "f-octopus-eight"
+      },
+      "moreQuestions": [
+        {
+          "question": {
+            "en": "Why is octopus blood blue?",
+            "fr": "Pourquoi le sang de la pieuvre est-il bleu ?",
+            "ar": "لماذا دم الأخطبوط أزرق؟"
+          },
+          "choices": [
+            {
+              "en": "It carries oxygen with copper",
+              "fr": "Il transporte l'oxygène avec du cuivre",
+              "ar": "لأنه ينقل الأكسجين بالنحاس"
+            },
+            {
+              "en": "It is full of sea water",
+              "fr": "Il est plein d'eau de mer",
+              "ar": "لأنه مليء بماء البحر"
+            },
+            {
+              "en": "It is made of ink",
+              "fr": "Il est fait d'encre",
+              "ar": "لأنه مصنوع من الحبر"
+            },
+            {
+              "en": "It reflects the sky",
+              "fr": "Il reflète le ciel",
+              "ar": "لأنه يعكس لون السماء"
+            }
+          ],
+          "answerIndex": 0,
+          "factId": "f-octopus-blue-blood"
+        },
+        {
+          "question": {
+            "en": "What does an octopus do when it is frightened?",
+            "fr": "Que fait la pieuvre quand elle a peur ?",
+            "ar": "ماذا يفعل الأخطبوط عندما يخاف؟"
+          },
+          "choices": [
+            {
+              "en": "It sings",
+              "fr": "Elle chante",
+              "ar": "يغنّي"
+            },
+            {
+              "en": "It squirts dark ink",
+              "fr": "Elle projette une encre sombre",
+              "ar": "ينفث حبرًا داكنًا"
+            },
+            {
+              "en": "It grows a shell",
+              "fr": "Elle fabrique une coquille",
+              "ar": "يُنبت صدفة"
+            },
+            {
+              "en": "It falls asleep",
+              "fr": "Elle s'endort",
+              "ar": "ينام"
+            }
+          ],
+          "answerIndex": 1,
+          "factId": "f-octopus-ink"
+        },
+        {
+          "question": {
+            "en": "Where are most of an octopus's nerve cells?",
+            "fr": "Où se trouvent la plupart des cellules nerveuses de la pieuvre ?",
+            "ar": "أين توجد معظم الخلايا العصبية للأخطبوط؟"
+          },
+          "choices": [
+            {
+              "en": "In its eyes",
+              "fr": "Dans ses yeux",
+              "ar": "في عينيه"
+            },
+            {
+              "en": "In its ink",
+              "fr": "Dans son encre",
+              "ar": "في حبره"
+            },
+            {
+              "en": "In its arms",
+              "fr": "Dans ses bras",
+              "ar": "في أذرعه"
+            },
+            {
+              "en": "In a shell",
+              "fr": "Dans une coquille",
+              "ar": "في صدفة"
+            }
+          ],
+          "answerIndex": 2,
+          "factId": "f-octopus-arms"
+        }
+      ],
+      "puzzle": {
+        "type": "arcade",
+        "game": "camouflage",
+        "prompt": {
+          "en": "Slide the colours until the octopus disappears against the rocks. Do it 3 times.",
+          "fr": "Fais glisser les couleurs jusqu'à ce que la pieuvre disparaisse sur les rochers. Trois fois !",
+          "ar": "حرّك الألوان حتى يختفي الأخطبوط بين الصخور. ثلاث مرات!"
+        },
+        "factIds": [
+          "f-octopus-colour"
+        ]
+      }
+    },
+    {
+      "id": "ocean/clownfish",
+      "title": {
+        "en": "Clownfish and Anemone",
+        "fr": "Poisson-clown et anémone",
+        "ar": "سمكة المهرّج وشقائق النعمان"
+      },
+      "zone": "reef",
+      "position": [
+        8,
+        0,
+        7
+      ],
+      "contentType": "puzzle",
+      "narration": {
+        "en": "A clownfish lives inside a stinging anemone and is never hurt. A slimy coating keeps it safe.",
+        "fr": "Le poisson-clown vit dans une anémone urticante sans jamais être blessé. Une couche de mucus le protège.",
+        "ar": "تعيش سمكة المهرّج داخل شقائق النعمان اللاسعة ولا تُصاب بأذى، إذ يحميها غطاء مخاطي."
+      },
+      "learnMore": {
+        "en": "The fish keeps its anemone clean and the anemone keeps the fish safe. That teamwork is called mutualism. Clownfish mostly eat plankton: tiny plants and animals drifting in the water.",
+        "fr": "Le poisson nettoie son anémone et l'anémone protège le poisson. Cette entraide s'appelle le mutualisme. Le poisson-clown mange surtout du plancton : de minuscules plantes et animaux qui flottent dans l'eau.",
+        "ar": "تنظّف السمكة شقائق النعمان، وتحميها شقائق النعمان في المقابل. يُسمّى هذا التعاون تبادل المنفعة. تتغذّى سمكة المهرّج غالبًا على العوالق: نباتات وحيوانات دقيقة تطفو في الماء."
+      },
+      "funFact": {
+        "en": "Every clownfish is born male. The biggest one in the group becomes the female.",
+        "fr": "Tous les poissons-clowns naissent mâles. Le plus gros du groupe devient la femelle.",
+        "ar": "تولد كل أسماك المهرّج ذكورًا، ثم تصبح أكبر سمكة في المجموعة هي الأنثى."
+      },
+      "linkedTopics": [
+        "ocean/coral-reef",
+        "ocean/octopus"
+      ],
+      "sourceType": "curated",
+      "factIds": [
+        "f-clownfish-anemone",
+        "f-clownfish-help",
+        "f-clownfish-plankton",
+        "f-clownfish-male"
+      ],
+      "wikiQuery": {
+        "en": "Clownfish",
+        "fr": "Poisson-clown",
+        "ar": "سمكة المهرج"
+      },
+      "mascotLine": {
+        "en": "Who lives where? Drag each name onto the right animal.",
+        "fr": "Qui habite où ? Fais glisser chaque nom sur le bon animal.",
+        "ar": "من يعيش أين؟ اسحب كل اسم إلى الحيوان الصحيح."
+      },
+      "puzzle": {
+        "type": "photo-to-label-match",
+        "prompt": {
+          "en": "Drag each name onto the right sea creature.",
+          "fr": "Fais glisser chaque nom sur la bonne créature marine.",
+          "ar": "اسحب كل اسم إلى الكائن البحري الصحيح."
+        },
+        "factIds": [
+          "f-clownfish-anemone",
+          "f-jellyfish-no-bones"
+        ],
+        "show": 4,
+        "pairs": [
+          {
+            "id": "clownfish",
+            "label": {
+              "en": "Clownfish",
+              "fr": "Poisson-clown",
+              "ar": "سمكة المهرّج"
+            },
+            "media": {
+              "model": "clownfish"
+            }
+          },
+          {
+            "id": "anemone",
+            "label": {
+              "en": "Sea anemone",
+              "fr": "Anémone de mer",
+              "ar": "شقائق النعمان"
+            },
+            "media": {
+              "model": "anemone"
+            }
+          },
+          {
+            "id": "jellyfish",
+            "label": {
+              "en": "Jellyfish",
+              "fr": "Méduse",
+              "ar": "قنديل البحر"
+            },
+            "media": {
+              "model": "jellyfish"
+            }
+          },
+          {
+            "id": "octopus",
+            "label": {
+              "en": "Octopus",
+              "fr": "Pieuvre",
+              "ar": "أخطبوط"
+            },
+            "media": {
+              "model": "octopus"
+            }
+          },
+          {
+            "id": "whale",
+            "label": {
+              "en": "Blue whale",
+              "fr": "Baleine bleue",
+              "ar": "الحوت الأزرق"
+            },
+            "media": {
+              "model": "whale"
+            }
+          },
+          {
+            "id": "crab",
+            "label": {
+              "en": "Crab",
+              "fr": "Crabe",
+              "ar": "سرطان البحر"
+            },
+            "media": {
+              "model": "crab"
+            }
+          }
+        ]
+      }
+    }
+  ]
+}

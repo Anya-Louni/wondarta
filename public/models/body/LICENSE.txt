@@ -1,0 +1,6 @@
+Organ models in this folder are derived from BodyParts3D,
+(c) The Database Center for Life Science, licensed under
+Creative Commons Attribution-Share Alike 2.1 Japan (CC BY-SA 2.1 JP).
+https://creativecommons.org/licenses/by-sa/2.1/jp/deed.en
+Changes: organ meshes merged, simplified and quantized; skin cut to a head-and-trunk torso.
+These derived files are shared under the same licence.
