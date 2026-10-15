@@ -188,6 +188,62 @@
         "fr": "Continuer au même rythme sans s'arrêter.",
         "ar": "الاستمرار بالوتيرة نفسها دون توقّف."
       }
+    },
+    {
+      "terms": {
+        "en": [
+          "rebus"
+        ],
+        "fr": [
+          "rébus"
+        ],
+        "ar": [
+          "لغز الصور"
+        ]
+      },
+      "definition": {
+        "en": "A puzzle where pictures stand for words or sounds.",
+        "fr": "Une devinette où des images remplacent des mots ou des sons.",
+        "ar": "لغز تحلّ فيه الصور محلّ الكلمات أو الأصوات."
+      }
+    },
+    {
+      "terms": {
+        "en": [
+          "tortoise"
+        ],
+        "fr": [
+          "tortue"
+        ],
+        "ar": [
+          "السلحفاة",
+          "سلحفاة"
+        ]
+      },
+      "definition": {
+        "en": "A slow turtle that lives on land and carries its shell like a house.",
+        "fr": "Une tortue lente qui vit sur la terre et porte sa carapace comme une maison.",
+        "ar": "سلحفاة بطيئة تعيش على اليابسة وتحمل صدفتها مثل البيت."
+      }
+    },
+    {
+      "terms": {
+        "en": [
+          "hare"
+        ],
+        "fr": [
+          "lièvre"
+        ],
+        "ar": [
+          "الأرنب",
+          "أرنب"
+        ]
+      },
+      "definition": {
+        "en": "A fast animal like a big rabbit, with long ears and strong back legs.",
+        "fr": "Un animal rapide qui ressemble à un gros lapin, avec de longues oreilles et des pattes arrière puissantes.",
+        "ar": "حيوان سريع يشبه أرنبًا كبيرًا، له أذنان طويلتان ورجلان خلفيتان قويّتان."
+      }
     }
   ],
   "hotspots": [
@@ -237,9 +293,9 @@
         "ar": "الأرنب والسلحفاة"
       },
       "mascotLine": {
-        "en": "Story time! When it ends, we can jump inside.",
-        "fr": "C'est l'heure de l'histoire ! À la fin, on pourra sauter dedans.",
-        "ar": "حان وقت الحكاية! عندما تنتهي يمكننا أن نقفز داخلها."
+        "en": "Story time! And when it ends, we jump right inside it!",
+        "fr": "C’est l’heure de l’histoire ! Et à la fin, on saute dedans !",
+        "ar": "حان وقت الحكاية! وعندما تنتهي، نقفز إلى داخلها!"
       }
     },
     {
@@ -285,9 +341,9 @@
         "ar": "نجم البحر"
       },
       "mascotLine": {
-        "en": "A star... and the sea? What could that be?",
-        "fr": "Une étoile... et la mer ? Qu'est-ce que ça peut être ?",
-        "ar": "نجمة... وبحر؟ ماذا يمكن أن يكون؟"
+        "en": "A star... plus the sea? Hmm, what could that be?!",
+        "fr": "Une étoile... plus la mer ? Hmm, qu’est-ce que ça peut être ?!",
+        "ar": "نجمة... زائد بحر؟ همم، ماذا يمكن أن يكون؟!"
       },
       "puzzle": {
         "type": "rebus",
@@ -342,9 +398,9 @@
       ],
       "contentType": "puzzle",
       "narration": {
-        "en": "A fable is a short story that teaches a lesson, called a moral. 'The Tortoise and the Hare' is one of Aesop's fables.",
-        "fr": "Une fable est une courte histoire qui donne une leçon, appelée la morale. « Le Lièvre et la Tortue » est une fable d'Ésope.",
-        "ar": "الحكاية الرمزية قصة قصيرة تعلّم درسًا يُسمّى العبرة. و«السلحفاة والأرنب» من حكايات إيسوب."
+        "en": "A fable is a short story, often starring animals, that hides a lesson inside, called a moral. In \"The Tortoise and the Hare\", the lesson is: slow and steady wins the race!",
+        "fr": "Une fable est une courte histoire, souvent avec des animaux, qui cache une leçon appelée la morale. Dans « Le Lièvre et la Tortue », la leçon est : rien ne sert de courir, il faut partir à point !",
+        "ar": "الحكاية الخرافية قصة قصيرة، أبطالها غالبًا حيوانات، تخبّئ درسًا يُسمّى العبرة. وفي «الأرنب والسلحفاة» العبرة هي: البطء مع المثابرة يفوز بالسباق!"
       },
       "learnMore": {
         "en": "Nothing written by Aesop himself survives. His fables were passed on by storytellers.",
@@ -376,9 +432,9 @@
         "ar": "حكاية رمزية"
       },
       "mascotLine": {
-        "en": "The hare is fast. But watch what it does next.",
-        "fr": "Le lièvre est rapide. Mais regarde ce qu'il fait ensuite.",
-        "ar": "الأرنب سريع، لكن انظر ماذا سيفعل بعد قليل."
+        "en": "The hare is super fast. But watch what it does next!",
+        "fr": "Le lièvre est super rapide. Mais regarde ce qu’il fait ensuite !",
+        "ar": "الأرنب سريع جدًّا. لكن انظر ماذا يفعل بعد ذلك!"
       },
       "quiz": {
         "question": {

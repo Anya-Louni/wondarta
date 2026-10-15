@@ -6,7 +6,8 @@ import { lookupWord, tx } from '../content/loader';
 import { learnMoreFromWiki, type GroundedResult } from '../llm/grounded';
 import { useApp } from '../state/store';
 import { sfx } from '../audio/sfx';
-import { Search, X } from 'lucide-react';
+import { BookMarked, Check, Search, Volume2, X } from 'lucide-react';
+import { hasVoice, speak } from '../audio/tts';
 import { Citation, IconButton, SourceTag } from './Parts';
 
 interface Segment {
@@ -93,6 +94,11 @@ function WordTooltip({ tip, sceneId, onClose }: { tip: Tip; sceneId?: string; on
         <div className="slab-body">
           <div className="row" style={{ justifyContent: 'space-between', flexWrap: 'nowrap' }}>
             <strong>{tip.word}</strong>
+            {hasVoice(lang) && (
+              <IconButton small label={t('card2.listen')} onClick={() => speak(entry ? `${tip.word}. ${tx(entry.definition, lang)}` : tip.word, lang)}>
+                <Volume2 className="i" />
+              </IconButton>
+            )}
             <IconButton small label={t('tooltip.close')} onClick={onClose}>
               <X className="i" />
             </IconButton>
@@ -100,7 +106,7 @@ function WordTooltip({ tip, sceneId, onClose }: { tip: Tip; sceneId?: string; on
           {entry ? (
             <>
               <p style={{ margin: '4px 0 8px' }}>{tx(entry.definition, lang)}</p>
-              <SourceTag type="curated" />
+              <KeepWord word={tip.word} meaning={tx(entry.definition, lang)} />
             </>
           ) : lookup === null ? (
             <>
@@ -123,6 +129,7 @@ function WordTooltip({ tip, sceneId, onClose }: { tip: Tip; sceneId?: string; on
               <p style={{ margin: '4px 0 8px' }}>{lookup.text}</p>
               <SourceTag type={lookup.sourceType} />
               <Citation meta={lookup.sourceMeta} />
+              <KeepWord word={tip.word} meaning={lookup.text} />
             </>
           ) : (
             <p className="muted">{t(lookup.status === 'asleep' ? 'mascot.sleepLines.0' : lookup.status === 'offline' ? 'ask.offline' : 'ask.notFound')}</p>
@@ -131,5 +138,26 @@ function WordTooltip({ tip, sceneId, onClose }: { tip: Tip; sceneId?: string; on
       </div>
     </>,
     document.body,
+  );
+}
+
+/** "Keep this word": adds it to the explorer's journal. */
+function KeepWord({ word, meaning }: { word: string; meaning: string }) {
+  const { t } = useTranslation();
+  const lang = useApp((s) => s.lang);
+  const saved = useApp((s) => s.words.some((w) => w.lang === lang && w.word.toLowerCase() === word.toLowerCase()));
+  const saveWord = useApp((s) => s.saveWord);
+  return (
+    <button
+      type="button"
+      className={`btn keep-word${saved ? ' on' : ''}`}
+      disabled={saved}
+      onClick={() => {
+        sfx('pop');
+        saveWord({ word, meaning, lang });
+      }}
+    >
+      {saved ? <Check className="i" /> : <BookMarked className="i" />} {saved ? t('journal.saved') : t('journal.save')}
+    </button>
   );
 }

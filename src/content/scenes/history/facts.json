@@ -175,6 +175,86 @@
         "fr": "La très longue période avant que les humains n'écrivent.",
         "ar": "الزمن الطويل جدًّا قبل أن يبدأ البشر بالكتابة."
       }
+    },
+    {
+      "terms": {
+        "en": [
+          "dinosaurs",
+          "dinosaur"
+        ],
+        "fr": [
+          "dinosaures",
+          "dinosaure"
+        ],
+        "ar": [
+          "الديناصورات",
+          "ديناصورات",
+          "ديناصور"
+        ]
+      },
+      "definition": {
+        "en": "A huge group of reptiles that ruled the Earth for millions of years. Birds are their living relatives.",
+        "fr": "Un grand groupe de reptiles qui a régné sur la Terre pendant des millions d’années. Les oiseaux sont leurs descendants vivants.",
+        "ar": "مجموعة كبيرة من الزواحف سادت الأرض ملايين السنين، والطيور هي أقاربها الأحياء."
+      }
+    },
+    {
+      "terms": {
+        "en": [
+          "mammoth"
+        ],
+        "fr": [
+          "mammouth"
+        ],
+        "ar": [
+          "الماموث",
+          "ماموث"
+        ]
+      },
+      "definition": {
+        "en": "A big hairy relative of elephants that lived in cold places long ago.",
+        "fr": "Un grand cousin poilu de l’éléphant, qui vivait dans les régions froides il y a très longtemps.",
+        "ar": "قريب ضخم للفيل مكسوّ بالشعر، عاش في الأماكن الباردة منذ زمن بعيد."
+      }
+    },
+    {
+      "terms": {
+        "en": [
+          "mammal"
+        ],
+        "fr": [
+          "mammifère"
+        ],
+        "ar": [
+          "الثدييات",
+          "ثدييات"
+        ]
+      },
+      "definition": {
+        "en": "An animal with hair or fur that feeds its babies milk. You are one!",
+        "fr": "Un animal avec des poils, qui nourrit ses petits avec du lait. Tu en es un !",
+        "ar": "حيوان له شعر أو فرو ويرضع صغاره الحليب. وأنت واحد منها!"
+      }
+    },
+    {
+      "terms": {
+        "en": [
+          "million",
+          "millions"
+        ],
+        "fr": [
+          "millions",
+          "million"
+        ],
+        "ar": [
+          "مليون"
+        ]
+      },
+      "definition": {
+        "en": "A thousand thousands: 1,000,000. Counting to a million would take you weeks!",
+        "fr": "Mille fois mille : 1 000 000. Compter jusqu’à un million te prendrait des semaines !",
+        "ar": "ألف ألف: ١٠٠٠٠٠٠. لو عددت إلى مليون لاستغرقك ذلك أسابيع!"
+      }
     }
   ],
   "hotspots": [
@@ -192,9 +272,9 @@
       ],
       "contentType": "narration",
       "narration": {
-        "en": "Dinosaurs lived on Earth for more than 150 million years. All of them except birds died out about 66 million years ago.",
-        "fr": "Les dinosaures ont vécu sur Terre pendant plus de 150 millions d'années. Tous, sauf les oiseaux, ont disparu il y a environ 66 millions d'années.",
-        "ar": "عاشت الديناصورات على الأرض أكثر من 150 مليون سنة. وانقرضت كلها، ما عدا الطيور، قبل نحو 66 مليون سنة."
+        "en": "Dinosaurs ruled the Earth for more than 150 million years. Then, about 66 million years ago, they vanished, all except one group that is still flying around today: the birds!",
+        "fr": "Les dinosaures ont régné sur la Terre pendant plus de 150 millions d’années. Puis, il y a environ 66 millions d’années, ils ont disparu, tous sauf un groupe qui vole encore aujourd’hui : les oiseaux !",
+        "ar": "سادت الديناصورات الأرض أكثر من ١٥٠ مليون سنة. ثم اختفت قبل نحو ٦٦ مليون سنة، كلّها إلا مجموعة واحدة ما تزال تطير حولنا اليوم: الطيور!"
       },
       "learnMore": {
         "en": "No person ever saw a living T. rex: people appeared millions of years later.",
@@ -224,9 +304,9 @@
         "ar": "ديناصور"
       },
       "mascotLine": {
-        "en": "These bones are older than you can imagine!",
-        "fr": "Ces os sont plus vieux que tu ne l'imagines !",
-        "ar": "هذه العظام أقدم مما تتخيّل!"
+        "en": "These bones are older than you can imagine! Like, SUPER old!",
+        "fr": "Ces os sont plus vieux que tu ne peux l’imaginer ! Genre, SUPER vieux !",
+        "ar": "هذه العظام أقدم مما تتخيّل! قديمة جدًّا جدًّا!"
       }
     },
     {
@@ -243,9 +323,9 @@
       ],
       "contentType": "puzzle",
       "narration": {
-        "en": "Not every big prehistoric animal was a dinosaur. The woolly mammoth was a hairy relative of today's elephants.",
-        "fr": "Tous les grands animaux préhistoriques n'étaient pas des dinosaures. Le mammouth laineux était un cousin poilu des éléphants d'aujourd'hui.",
-        "ar": "لم يكن كل حيوان كبير في عصور ما قبل التاريخ ديناصورًا. كان الماموث الصوفي قريبًا مكسوًّا بالشعر لفيلة اليوم."
+        "en": "Not every giant from long ago was a dinosaur. The woolly mammoth, for example, was a hairy cousin of today’s elephants, a mammal like you!",
+        "fr": "Tous les géants d’autrefois n’étaient pas des dinosaures. Le mammouth laineux, par exemple, était un cousin poilu des éléphants d’aujourd’hui, un mammifère comme toi !",
+        "ar": "ليس كل عمالقة الزمن القديم ديناصورات. فالماموث الصوفي مثلًا كان قريبًا مكسوًّا بالشعر لفيلة اليوم، أي من الثدييات مثلك تمامًا!"
       },
       "learnMore": {
         "en": "The last woolly mammoths were still alive when the pyramids of Egypt were built.",
@@ -274,9 +354,9 @@
         "ar": "ماموث صوفي"
       },
       "mascotLine": {
-        "en": "One of these is not a dinosaur. Which one?",
-        "fr": "L'un d'eux n'est pas un dinosaure. Lequel ?",
-        "ar": "واحد من هؤلاء ليس ديناصورًا. أيّهم؟"
+        "en": "One of these is a sneaky impostor! Can you spot it?",
+        "fr": "L’un d’eux est un imposteur ! Sauras-tu le repérer ?",
+        "ar": "واحد منها محتال متخفٍّ! هل تكتشفه؟"
       },
       "puzzle": {
         "type": "odd-one-out",
@@ -360,9 +440,9 @@
       ],
       "contentType": "puzzle",
       "narration": {
-        "en": "Dinosaurs lived on Earth for more than 150 million years. We know about them from fossils kept in rock.",
-        "fr": "Les dinosaures ont vécu sur Terre pendant plus de 150 millions d'années. On les connaît grâce aux fossiles gardés dans la roche.",
-        "ar": "عاشت الديناصورات على الأرض أكثر من ١٥٠ مليون سنة، ونعرفها من الأحافير المحفوظة في الصخور."
+        "en": "How do we know dinosaurs existed if nobody ever saw one? Fossils! Bones turned to stone and kept in rock for millions of years. Scientists dig them up very gently, with brushes.",
+        "fr": "Comment sait-on que les dinosaures ont existé si personne n’en a jamais vu ? Grâce aux fossiles ! Des os devenus pierre, gardés dans la roche pendant des millions d’années. Les scientifiques les dégagent tout doucement, au pinceau.",
+        "ar": "كيف نعرف أن الديناصورات وُجدت مع أن أحدًا لم يرها؟ بفضل الأحافير! عظام تحوّلت إلى حجر وبقيت في الصخور ملايين السنين. ويستخرجها العلماء بلطف شديد بالفُرَش."
       },
       "learnMore": {
         "en": "Birds are living dinosaurs: they come from small meat-eating dinosaurs.",
@@ -394,9 +474,9 @@
         "ar": "ديناصور"
       },
       "mascotLine": {
-        "en": "Careful... there are old bones under here!",
-        "fr": "Doucement... il y a de vieux os là-dessous !",
-        "ar": "على مهل... تحت الصخر عظام قديمة!"
+        "en": "Careful, careful... there are ancient bones hiding under here!",
+        "fr": "Doucement, doucement... des os très anciens se cachent là-dessous !",
+        "ar": "على مهل، على مهل... عظام قديمة جدًّا مختبئة هنا!"
       },
       "quiz": {
         "question": {

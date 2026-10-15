@@ -11,6 +11,7 @@ import { MapFind } from './MapFind';
 import { SoundMatch } from './SoundMatch';
 import { BuildFlower } from './BuildFlower';
 import { Arcade } from './Arcade';
+import { ListenMap } from './ListenMap';
 
 // the 3D body game brings its own canvas; load it only when someone opens it
 const BodyBuild = lazy(() => import('./BodyBuild').then((m) => ({ default: m.BodyBuild })));
@@ -102,6 +103,8 @@ export function PuzzleRouter(props: PuzzleProps) {
       return <Construction {...as(p)} />;
     case 'command-route':
       return <CommandRoute {...as(p)} />;
+    case 'listen-map':
+      return <ListenMap {...as(p)} />;
     case 'arcade':
       return <Arcade {...as(p)} />;
     case 'logic-grid':

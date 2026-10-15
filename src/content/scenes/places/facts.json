@@ -184,6 +184,64 @@
         "fr": "Des signes écrits ; en chinois, chacun a son propre sens.",
         "ar": "علامات مكتوبة؛ في الصينية لكل رمز معنى خاص."
       }
+    },
+    {
+      "terms": {
+        "en": [
+          "languages",
+          "language"
+        ],
+        "fr": [
+          "langues",
+          "langue"
+        ],
+        "ar": [
+          "لغة",
+          "لغات",
+          "اللغات"
+        ]
+      },
+      "definition": {
+        "en": "A way people talk and write to share ideas. Arabic, French and English are languages.",
+        "fr": "Une façon de parler et d’écrire pour partager des idées. L’arabe, le français et l’anglais sont des langues.",
+        "ar": "طريقة يتكلّم بها الناس ويكتبون لتبادل الأفكار. العربية والفرنسية والإنجليزية لغات."
+      }
+    },
+    {
+      "terms": {
+        "en": [
+          "greeting"
+        ],
+        "fr": [
+          "salut"
+        ],
+        "ar": [
+          "تحية"
+        ]
+      },
+      "definition": {
+        "en": "A word you say when you meet someone, like hello.",
+        "fr": "Un mot que l’on dit quand on rencontre quelqu’un, comme bonjour.",
+        "ar": "كلمة تقولها عندما تلقى أحدًا، مثل مرحبًا."
+      }
+    },
+    {
+      "terms": {
+        "en": [
+          "script"
+        ],
+        "fr": [
+          "écriture"
+        ],
+        "ar": [
+          "كتابة"
+        ]
+      },
+      "definition": {
+        "en": "A set of signs used to write a language.",
+        "fr": "Un ensemble de signes utilisés pour écrire une langue.",
+        "ar": "مجموعة رموز تُستعمل لكتابة لغة."
+      }
     }
   ],
   "hotspots": [
@@ -201,9 +259,9 @@
       ],
       "contentType": "audio-match",
       "narration": {
-        "en": "People around the world speak more than 7,000 languages. Listen to each hello and guess the language.",
-        "fr": "Dans le monde, on parle plus de 7 000 langues. Écoute chaque salutation et devine la langue.",
-        "ar": "يتحدّث الناس حول العالم أكثر من 7000 لغة. استمع إلى كل تحية وخمّن اللغة."
+        "en": "People around the world speak more than 7,000 different languages, and each one has its own way to say hello. Listen to each greeting and guess the language!",
+        "fr": "Les gens du monde entier parlent plus de 7 000 langues différentes, et chacune a sa façon de dire bonjour. Écoute chaque salut et devine la langue !",
+        "ar": "يتحدّث الناس في العالم أكثر من ٧٠٠٠ لغة، ولكل لغة طريقتها في قول «مرحبًا». استمع إلى كل تحية وخمّن لغتها!"
       },
       "learnMore": {
         "en": "'Bonjour' means hello in French. 'Hola' means hello in Spanish. 'Marhaban' means hello in Arabic.",
@@ -234,9 +292,9 @@
         "ar": "لغة"
       },
       "mascotLine": {
-        "en": "Listen closely! Who is saying hello?",
-        "fr": "Écoute bien ! Qui dit bonjour ?",
-        "ar": "استمع جيدًا! من يلقي التحية؟"
+        "en": "Hello, bonjour, marhaban! Who’s saying hi? Let’s find out!",
+        "fr": "Hello, bonjour, marhaban ! Qui dit bonjour ? On cherche !",
+        "ar": "هالو، بونجور، مرحبًا! من يلقي التحية؟ هيا نكتشف!"
       },
       "audioMatch": {
         "prompt": {
@@ -308,9 +366,9 @@
       ],
       "contentType": "narration",
       "narration": {
-        "en": "Languages are written in different ways. Arabic is written from right to left, and Chinese is written with characters instead of an alphabet.",
-        "fr": "Les langues s'écrivent de façons différentes. L'arabe s'écrit de droite à gauche, et le chinois s'écrit avec des caractères plutôt qu'avec un alphabet.",
-        "ar": "تُكتب اللغات بطرق مختلفة. تُكتب العربية من اليمين إلى اليسار، وتُكتب الصينية بالرموز بدلًا من الأبجدية."
+        "en": "Writing comes in many styles! Arabic runs from right to left, French and English from left to right, and Chinese uses characters, little drawings that each stand for a word or an idea, instead of an alphabet.",
+        "fr": "L’écriture existe en plein de styles ! L’arabe va de droite à gauche, le français et l’anglais de gauche à droite, et le chinois utilise des caractères au lieu d’un alphabet.",
+        "ar": "للكتابة أشكال كثيرة! العربية تُكتب من اليمين إلى اليسار، والفرنسية والإنجليزية من اليسار إلى اليمين، أما الصينية فتُكتب برموز بدل الأبجدية."
       },
       "learnMore": {
         "en": "English and French use the Latin alphabet, which has 26 basic letters.",
@@ -340,9 +398,9 @@
         "ar": "نظام كتابة"
       },
       "mascotLine": {
-        "en": "Each stone shows a different way to write!",
-        "fr": "Chaque pierre montre une façon différente d'écrire !",
-        "ar": "كل حجر يُظهر طريقة مختلفة للكتابة!"
+        "en": "Each stone shows a different way to write. So cool!",
+        "fr": "Chaque pierre montre une façon d’écrire différente. Trop bien !",
+        "ar": "كل حجر يعرض طريقة مختلفة للكتابة. رائع جدًّا!"
       }
     },
     {
@@ -359,9 +417,9 @@
       ],
       "contentType": "puzzle",
       "narration": {
-        "en": "People around the world speak more than 7,000 languages, and they write them in different ways.",
-        "fr": "Dans le monde, on parle plus de 7 000 langues, et on les écrit de différentes façons.",
-        "ar": "يتحدّث الناس حول العالم أكثر من ٧٠٠٠ لغة، ويكتبونها بطرق مختلفة."
+        "en": "Every script has its own path for your pen. Some letters are drawn from left to right, others from right to left. Follow the dots and feel the difference with your own finger!",
+        "fr": "Chaque écriture a son propre chemin pour le crayon. Certaines lettres se tracent de gauche à droite, d’autres de droite à gauche. Suis les points et sens la différence avec ton doigt !",
+        "ar": "لكل كتابة طريقها الخاص للقلم. بعض الحروف تُرسم من اليسار إلى اليمين، وبعضها من اليمين إلى اليسار. اتبع النقاط واشعر بالفرق بإصبعك!"
       },
       "learnMore": {
         "en": "Papua New Guinea has about 840 languages, more than any other country.",
@@ -392,9 +450,9 @@
         "ar": "لغة"
       },
       "mascotLine": {
-        "en": "Arabic starts on the right. Ready?",
-        "fr": "L'arabe commence à droite. Prêt ?",
-        "ar": "العربية تبدأ من اليمين. هل أنت مستعد؟"
+        "en": "Arabic starts on the right! Ready to write like a pro?",
+        "fr": "L’arabe commence à droite ! Prêt à écrire comme un pro ?",
+        "ar": "العربية تبدأ من اليمين! هل أنت جاهز لتكتب كالمحترفين؟"
       },
       "quiz": {
         "question": {

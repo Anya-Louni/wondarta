@@ -1,0 +1,9 @@
+Instrument recordings for "Music of the World", trimmed to 12 seconds and level-matched for Wondarta.
+Each trimmed clip is shared under the same licence as its original.
+
+didgeridoo: "Didgeridoo sound.ogg" by Cassa342, Wikimedia Commons, CC BY-SA 4.0
+sitar: "Sitar clipping.ogg" by Sanath311, Wikimedia Commons, CC BY-SA 3.0
+koto: "Koto performance.ogg" by Torsodog, Wikimedia Commons, CC BY 3.0
+erhu: "江河水.ogg" (Erhu solo "River"), recorded by David290, Wikimedia Commons, CC BY-SA 4.0
+charango: "Charango - cuerdas al aire.ogg" by Ferbr1, Wikimedia Commons, public domain
+Details and links: CREDITS.md

@@ -447,6 +447,141 @@
         "fr": "Un animal marin mou, aux bras urticants, accroché aux rochers et au corail.",
         "ar": "حيوان بحري رخو له أذرع لاسعة يلتصق بالصخور والمرجان."
       }
+    },
+    {
+      "terms": {
+        "en": [
+          "coral",
+          "corals"
+        ],
+        "fr": [
+          "corail",
+          "coraux"
+        ],
+        "ar": [
+          "المرجان",
+          "مرجان"
+        ]
+      },
+      "definition": {
+        "en": "Tiny sea animals that live together and build hard homes, which slowly grow into reefs.",
+        "fr": "De minuscules animaux marins qui vivent ensemble et construisent des maisons dures, qui deviennent peu à peu des récifs.",
+        "ar": "حيوانات بحرية صغيرة تعيش معًا وتبني بيوتًا صلبة تتحوّل ببطء إلى شعاب."
+      }
+    },
+    {
+      "terms": {
+        "en": [
+          "algae"
+        ],
+        "fr": [
+          "algues"
+        ],
+        "ar": [
+          "الطحالب",
+          "طحالب"
+        ]
+      },
+      "definition": {
+        "en": "Simple water plant-like living things that make food from sunlight.",
+        "fr": "Des êtres vivants simples, proches des plantes, qui vivent dans l’eau et fabriquent leur nourriture avec le soleil.",
+        "ar": "كائنات حيّة بسيطة تشبه النباتات، تعيش في الماء وتصنع غذاءها من ضوء الشمس."
+      }
+    },
+    {
+      "terms": {
+        "en": [
+          "mutualism"
+        ],
+        "fr": [
+          "mutualisme"
+        ],
+        "ar": [
+          "تبادل المنفعة"
+        ]
+      },
+      "definition": {
+        "en": "When two different living things help each other, and both win.",
+        "fr": "Quand deux êtres vivants différents s’aident l’un l’autre, et que les deux y gagnent.",
+        "ar": "عندما يساعد كائنان مختلفان بعضهما، فيستفيد الاثنان."
+      }
+    },
+    {
+      "terms": {
+        "en": [
+          "species"
+        ],
+        "fr": [
+          "espèces",
+          "espèce"
+        ],
+        "ar": [
+          "الأنواع",
+          "نوع",
+          "أنواع"
+        ]
+      },
+      "definition": {
+        "en": "One kind of living thing. Lions are one species, tigers are another.",
+        "fr": "Une sorte d’être vivant. Les lions sont une espèce, les tigres en sont une autre.",
+        "ar": "صنف واحد من الكائنات الحيّة. الأسود نوع، والنمور نوع آخر."
+      }
+    },
+    {
+      "terms": {
+        "en": [
+          "lungs"
+        ],
+        "fr": [
+          "poumons"
+        ],
+        "ar": [
+          "رئتين",
+          "الرئتين",
+          "رئتان"
+        ]
+      },
+      "definition": {
+        "en": "Two soft bags in your chest that fill with air when you breathe in.",
+        "fr": "Deux poches souples dans ta poitrine, qui se remplissent d’air quand tu inspires.",
+        "ar": "كيسان طريّان في صدرك يمتلئان بالهواء عندما تتنفّس."
+      }
+    },
+    {
+      "terms": {
+        "en": [
+          "ninja"
+        ],
+        "fr": [
+          "ninja"
+        ],
+        "ar": [
+          "نينجا"
+        ]
+      },
+      "definition": {
+        "en": "A secret warrior from old Japan, famous for hiding and moving without being seen.",
+        "fr": "Un guerrier secret de l’ancien Japon, célèbre pour se cacher et bouger sans être vu.",
+        "ar": "محارب سرّي من اليابان القديمة، اشتهر بالاختباء والتحرّك دون أن يُرى."
+      }
+    },
+    {
+      "terms": {
+        "en": [
+          "surface"
+        ],
+        "fr": [
+          "surface"
+        ],
+        "ar": [
+          "سطح"
+        ]
+      },
+      "definition": {
+        "en": "The very top of the water, where it meets the air.",
+        "fr": "Le dessus de l’eau, là où elle touche l’air.",
+        "ar": "أعلى الماء، حيث يلتقي بالهواء."
+      }
     }
   ],
   "hotspots": [
@@ -465,9 +600,9 @@
       ],
       "contentType": "puzzle",
       "narration": {
-        "en": "The blue whale is the biggest animal that has ever lived. It is about as long as three school buses and it eats tiny krill.",
-        "fr": "La baleine bleue est le plus grand animal ayant jamais vécu. Elle est à peu près aussi longue que trois bus scolaires et se nourrit de minuscules krills.",
-        "ar": "الحوت الأزرق أكبر حيوان عاش على الإطلاق. طوله نحو ثلاث حافلات مدرسية، ويتغذّى على الكريل الصغير."
+        "en": "The blue whale is the biggest animal that has EVER lived, bigger than any dinosaur. It is about as long as three school buses, and yet it eats some of the tiniest animals in the sea: krill!",
+        "fr": "La baleine bleue est le plus grand animal ayant JAMAIS existé, plus grand que tous les dinosaures. Elle est à peu près aussi longue que trois bus scolaires, et pourtant elle mange parmi les plus petits animaux de la mer : le krill !",
+        "ar": "الحوت الأزرق أكبر حيوان عاش على الإطلاق، أكبر من أي ديناصور. طوله نحو ثلاث حافلات مدرسية، ومع ذلك يأكل من أصغر حيوانات البحر: الكريل!"
       },
       "learnMore": {
         "en": "The heaviest blue whale heart ever weighed was about 200 kilograms — heavier than two grown-ups.",
@@ -497,9 +632,9 @@
         "ar": "الحوت الأزرق"
       },
       "mascotLine": {
-        "en": "I'm hungry just watching. Gulp!",
-        "fr": "J'ai faim rien qu'en regardant. Gloups !",
-        "ar": "جعتُ من مجرّد المشاهدة. هيّا!"
+        "en": "I’m hungry just watching! GULP!",
+        "fr": "Rien qu’à regarder, j’ai faim ! GLOUPS !",
+        "ar": "جعتُ من مجرّد المشاهدة! هَمّ!"
       },
       "quiz": {
         "question": {
@@ -655,9 +790,9 @@
       ],
       "contentType": "puzzle",
       "narration": {
-        "en": "A coral reef is a busy city under the sea. Corals look like plants, but every one of them is an animal.",
-        "fr": "Un récif corallien est une ville animée sous la mer. Les coraux ressemblent à des plantes, mais chacun est un animal.",
-        "ar": "الشعبة المرجانية مدينة مزدحمة تحت البحر. تبدو المرجانيات كالنباتات، لكن كل واحدة منها حيوان."
+        "en": "A coral reef is a busy city under the sea. And here is a twist: corals look like plants, but every single one is an animal!",
+        "fr": "Un récif de corail, c’est une ville animée sous la mer. Et voici la surprise : les coraux ressemblent à des plantes, mais chacun d’eux est un animal !",
+        "ar": "الشعبة المرجانية مدينة مزدحمة تحت البحر. وإليك المفاجأة: المرجان يشبه النباتات، لكن كل واحد منه حيوان!"
       },
       "learnMore": {
         "en": "Tiny algae live inside coral and make most of its food from sunlight. Coral reefs cover a tiny part of the ocean, yet at least a quarter of all sea species live in them. The Great Barrier Reef in Australia stretches for about 2,300 kilometres.",
@@ -688,8 +823,8 @@
       },
       "mascotLine": {
         "en": "So many neighbours on one reef! Can you match them up?",
-        "fr": "Tant de voisins sur un seul récif ! Peux-tu les associer ?",
-        "ar": "كم جارًا في شعبة واحدة! هل تستطيع مطابقتهم؟"
+        "fr": "Que de voisins sur un seul récif ! Tu sais les associer ?",
+        "ar": "كم من الجيران في شعبة واحدة! هل تستطيع مطابقتها؟"
       },
       "puzzle": {
         "type": "memory-pairs",
@@ -799,9 +934,9 @@
       ],
       "contentType": "narration",
       "narration": {
-        "en": "Sea turtles breathe air, just like you, so they swim up to the surface for a breath. There are seven kinds in the world.",
-        "fr": "Les tortues marines respirent l'air, comme toi : elles remontent donc à la surface pour respirer. Il en existe sept espèces dans le monde.",
-        "ar": "تتنفّس السلاحف البحرية الهواء مثلك تمامًا، لذلك تصعد إلى السطح لتأخذ نفسًا. وهناك سبعة أنواع منها في العالم."
+        "en": "Sea turtles breathe air with lungs, just like you, so they must swim up to the surface to take a breath. There are seven kinds of sea turtle in the whole world.",
+        "fr": "Les tortues de mer respirent de l’air avec des poumons, comme toi : elles doivent donc remonter à la surface pour respirer. Il existe sept sortes de tortues marines dans le monde.",
+        "ar": "تتنفّس السلاحف البحرية الهواء برئتين مثلك تمامًا، لذلك تصعد إلى سطح الماء لتأخذ نفسًا. وفي العالم كلّه سبعة أنواع من السلاحف البحرية."
       },
       "learnMore": {
         "en": "A sleeping sea turtle can stay underwater for four to seven hours. Female sea turtles lay their eggs on sandy beaches, often the same beach where they hatched. The warmth of the sand decides whether baby turtles are girls or boys: warmer nests make more girls.",
@@ -832,9 +967,9 @@
         "ar": "سلحفاة بحرية"
       },
       "mascotLine": {
-        "en": "She is coming up for air. Shall we swim along?",
-        "fr": "Elle remonte respirer. On la suit ?",
-        "ar": "إنها تصعد لتتنفّس. هل نسبح معها؟"
+        "en": "She’s coming up for air! Shall we swim along with her?",
+        "fr": "Elle remonte respirer ! On nage avec elle ?",
+        "ar": "إنها تصعد لتتنفّس! هل نسبح معها؟"
       }
     },
     {
@@ -852,9 +987,9 @@
       ],
       "contentType": "puzzle",
       "narration": {
-        "en": "An octopus has eight arms and three hearts. It can change colour in a moment to hide.",
-        "fr": "La pieuvre a huit bras et trois cœurs. Elle peut changer de couleur en un instant pour se cacher.",
-        "ar": "للأخطبوط ثمانية أذرع وثلاثة قلوب، ويستطيع أن يغيّر لونه في لحظة ليختبئ."
+        "en": "Eight arms, three hearts and a superpower: an octopus can change colour in the blink of an eye to blend into the rocks. It is the ninja of the sea!",
+        "fr": "Huit bras, trois cœurs et un super-pouvoir : la pieuvre peut changer de couleur en un clin d’œil pour se fondre dans les rochers. C’est la ninja de la mer !",
+        "ar": "ثماني أذرع وثلاثة قلوب وقوّة خارقة: يستطيع الأخطبوط تغيير لونه في لمح البصر ليختفي بين الصخور. إنه نينجا البحر!"
       },
       "learnMore": {
         "en": "Its blood is blue because it carries oxygen using copper instead of iron. When it is frightened it squirts dark ink and swims away. Octopuses are clever: some carry coconut shells to hide inside later.",
@@ -885,9 +1020,9 @@
         "ar": "أخطبوط"
       },
       "mascotLine": {
-        "en": "Now you see me... now you don't!",
-        "fr": "Tu me vois... tu ne me vois plus !",
-        "ar": "تراني الآن... والآن لا تراني!"
+        "en": "Now you see me... now you DON’T! Ta-da!",
+        "fr": "Tu me vois... et maintenant tu ne me vois PLUS ! Tadaa !",
+        "ar": "تراني الآن... والآن لا تراني! تا-دا!"
       },
       "quiz": {
         "question": {
@@ -1043,9 +1178,9 @@
       ],
       "contentType": "puzzle",
       "narration": {
-        "en": "A clownfish lives inside a stinging anemone and is never hurt. A slimy coating keeps it safe.",
-        "fr": "Le poisson-clown vit dans une anémone urticante sans jamais être blessé. Une couche de mucus le protège.",
-        "ar": "تعيش سمكة المهرّج داخل شقائق النعمان اللاسعة ولا تُصاب بأذى، إذ يحميها غطاء مخاطي."
+        "en": "The clownfish has a very strange home: a sea anemone covered in stinging arms! A slimy coat protects it, so it can snuggle in where no enemy dares to follow.",
+        "fr": "Le poisson-clown a une maison très bizarre : une anémone couverte de bras qui piquent ! Une couche de mucus le protège, alors il peut s’y blottir là où aucun ennemi n’ose le suivre.",
+        "ar": "لسمكة المهرّج بيت غريب جدًّا: شقائق نعمان مغطّاة بأذرع لاسعة! تحميها طبقة لزجة، فتختبئ هناك حيث لا يجرؤ أي عدوّ على اللحاق بها."
       },
       "learnMore": {
         "en": "The fish keeps its anemone clean and the anemone keeps the fish safe. That teamwork is called mutualism. Clownfish mostly eat plankton: tiny plants and animals drifting in the water.",
@@ -1074,9 +1209,9 @@
         "ar": "سمكة المهرج"
       },
       "mascotLine": {
-        "en": "Who lives where? Drag each name onto the right animal.",
-        "fr": "Qui habite où ? Fais glisser chaque nom sur le bon animal.",
-        "ar": "من يعيش أين؟ اسحب كل اسم إلى الحيوان الصحيح."
+        "en": "Who lives where? Let’s match each animal to its home!",
+        "fr": "Qui habite où ? Associons chaque animal à sa maison !",
+        "ar": "من يسكن أين؟ هيا نطابق كل حيوان مع بيته!"
       },
       "puzzle": {
         "type": "photo-to-label-match",

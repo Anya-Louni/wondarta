@@ -133,6 +133,61 @@
       "sources": [
         "https://en.wikipedia.org/wiki/Mona_Lisa"
       ]
+    },
+    {
+      "id": "f-didgeridoo",
+      "text": {
+        "en": "The didgeridoo is a long wooden trumpet made by Aboriginal people of northern Australia. Players breathe in through the nose while they keep blowing, so the sound never stops!",
+        "fr": "Le didgeridoo est une longue trompe en bois fabriquée par les Aborigènes du nord de l'Australie. Le musicien inspire par le nez tout en continuant de souffler : le son ne s'arrête jamais !",
+        "ar": "الديجيريدو بوق خشبي طويل يصنعه السكان الأصليون في شمال أستراليا. يتنفّس العازف من أنفه وهو يواصل النفخ، فلا ينقطع الصوت أبدًا!"
+      },
+      "sources": [
+        "https://en.wikipedia.org/wiki/Didgeridoo"
+      ]
+    },
+    {
+      "id": "f-sitar",
+      "text": {
+        "en": "The sitar is a long-necked string instrument from India. Extra strings underneath ring along by themselves, which gives it that shimmering, buzzing sound.",
+        "fr": "Le sitar est un instrument à cordes au long manche, venu d'Inde. Des cordes cachées en dessous vibrent toutes seules, ce qui lui donne ce son scintillant.",
+        "ar": "السيتار آلة وترية طويلة العنق من الهند. وتحتها أوتار إضافية تهتزّ وحدها، فتعطيه ذلك الصوت المتلألئ."
+      },
+      "sources": [
+        "https://en.wikipedia.org/wiki/Sitar"
+      ]
+    },
+    {
+      "id": "f-koto",
+      "text": {
+        "en": "The koto is Japan's national instrument: a long wooden board with 13 strings, played with picks on three fingers.",
+        "fr": "Le koto est l'instrument national du Japon : une longue planche de bois à 13 cordes, que l'on pince avec des onglets sur trois doigts.",
+        "ar": "الكوتو هي الآلة الوطنية لليابان: لوح خشبي طويل عليه ١٣ وترًا، يُعزف بريشات توضع على ثلاثة أصابع."
+      },
+      "sources": [
+        "https://en.wikipedia.org/wiki/Koto_(instrument)"
+      ]
+    },
+    {
+      "id": "f-erhu",
+      "text": {
+        "en": "The erhu is a Chinese fiddle with just two strings, played with a bow. The \"er\" in its name means \"two\" in Chinese. It can sound almost like a singing voice.",
+        "fr": "L’erhu est un violon chinois à seulement deux cordes, joué avec un archet. Le « er » de son nom veut dire « deux » en chinois. Il peut sonner presque comme une voix qui chante.",
+        "ar": "الإرهو كمان صيني له وتران فقط ويُعزف بقوس، ومقطع «إر» في اسمه يعني «اثنان» بالصينية. وقد يشبه صوته صوت إنسان يغنّي."
+      },
+      "sources": [
+        "https://en.wikipedia.org/wiki/Erhu"
+      ]
+    },
+    {
+      "id": "f-charango",
+      "text": {
+        "en": "The charango is a small guitar from the Andes mountains of Bolivia and Peru. It usually has 10 strings, tuned in 5 pairs.",
+        "fr": "Le charango est une petite guitare des montagnes des Andes, en Bolivie et au Pérou. Il a souvent 10 cordes, accordées par paires.",
+        "ar": "الشارانغو غيتار صغير من جبال الأنديز في بوليفيا والبيرو، وله عادةً ١٠ أوتار مشدودة في ٥ أزواج."
+      },
+      "sources": [
+        "https://en.wikipedia.org/wiki/Charango"
+      ]
     }
   ],
   "glossary": [
@@ -171,6 +226,108 @@
         "fr": "Un bâtiment où l'on garde et montre des objets et des œuvres d'art importants.",
         "ar": "مبنى تُحفظ فيه الأشياء والأعمال الفنية المهمة وتُعرض."
       }
+    },
+    {
+      "terms": {
+        "en": [
+          "painting"
+        ],
+        "fr": [
+          "tableau",
+          "peinture"
+        ],
+        "ar": [
+          "لوحة",
+          "اللوحة"
+        ]
+      },
+      "definition": {
+        "en": "A picture made with paint and brushes.",
+        "fr": "Une image faite avec de la peinture et des pinceaux.",
+        "ar": "صورة مرسومة بالألوان والفُرَش."
+      }
+    },
+    {
+      "terms": {
+        "en": [
+          "instruments",
+          "instrument"
+        ],
+        "fr": [
+          "instruments",
+          "instrument"
+        ],
+        "ar": [
+          "آلات",
+          "آلاته",
+          "الآلات"
+        ]
+      },
+      "definition": {
+        "en": "Objects made to play music, like a guitar, a drum or a flute.",
+        "fr": "Des objets faits pour jouer de la musique, comme une guitare, un tambour ou une flûte.",
+        "ar": "أدوات تُصنع لعزف الموسيقى، مثل الغيتار والطبل والناي."
+      }
+    },
+    {
+      "terms": {
+        "en": [
+          "bow"
+        ],
+        "fr": [
+          "archet"
+        ],
+        "ar": [
+          "بقوس",
+          "قوس"
+        ]
+      },
+      "definition": {
+        "en": "A stick with tight hair along it, rubbed on strings to make them sing.",
+        "fr": "Une baguette avec des crins tendus, que l’on frotte sur les cordes pour les faire chanter.",
+        "ar": "عصا عليها شعر مشدود، تُحكّ بها الأوتار لتغنّي."
+      }
+    },
+    {
+      "terms": {
+        "en": [
+          "strings"
+        ],
+        "fr": [
+          "cordes"
+        ],
+        "ar": [
+          "أوتار",
+          "الأوتار"
+        ]
+      },
+      "definition": {
+        "en": "Tight threads on an instrument that make a sound when they shake.",
+        "fr": "Des fils tendus sur un instrument, qui font un son quand ils vibrent.",
+        "ar": "خيوط مشدودة على الآلة تصدر صوتًا عندما تهتزّ."
+      }
+    },
+    {
+      "terms": {
+        "en": [
+          "colours",
+          "colour"
+        ],
+        "fr": [
+          "couleurs",
+          "couleur"
+        ],
+        "ar": [
+          "الألوان",
+          "ألوان",
+          "لون"
+        ]
+      },
+      "definition": {
+        "en": "Red, blue, green... what your eyes see when light bounces off things.",
+        "fr": "Rouge, bleu, vert... ce que tes yeux voient quand la lumière rebondit sur les choses.",
+        "ar": "الأحمر والأزرق والأخضر... ما تراه عيناك عندما ينعكس الضوء عن الأشياء."
+      }
     }
   ],
   "hotspots": [
@@ -188,9 +345,9 @@
       ],
       "contentType": "puzzle",
       "narration": {
-        "en": "In painting, red, yellow and blue are called the primary colours. Mix two of them to make a brand-new colour!",
-        "fr": "En peinture, le rouge, le jaune et le bleu sont appelés les couleurs primaires. Mélanges-en deux pour créer une nouvelle couleur !",
-        "ar": "في الرسم، يُسمّى الأحمر والأصفر والأزرق الألوان الأساسية. امزج اثنين منها لتصنع لونًا جديدًا!"
+        "en": "Red, yellow and blue are the \"primary\" colours: the starting blocks of painting. Mix two of them and, like magic, a brand-new colour appears!",
+        "fr": "Le rouge, le jaune et le bleu sont les couleurs « primaires » : les briques de départ de la peinture. Mélanges-en deux et, comme par magie, une toute nouvelle couleur apparaît !",
+        "ar": "الأحمر والأصفر والأزرق هي الألوان «الأساسية»: حجارة البناء الأولى في الرسم. امزج لونين منها، فيظهر لون جديد كأنه سحر!"
       },
       "learnMore": {
         "en": "Mixing red and yellow paint makes orange. Mixing red and blue paint makes purple.",
@@ -220,9 +377,9 @@
         "ar": "لون أساسي"
       },
       "mascotLine": {
-        "en": "Grab a brush! Let's build some colours.",
-        "fr": "Prends un pinceau ! Fabriquons des couleurs.",
-        "ar": "أمسك الفرشاة! لنصنع بعض الألوان."
+        "en": "Grab a brush! Let’s invent some brand-new colours!",
+        "fr": "Prends un pinceau ! Inventons de toutes nouvelles couleurs !",
+        "ar": "أمسك فرشاة! هيا نخترع ألوانًا جديدة تمامًا!"
       },
       "puzzle": {
         "type": "construction",
@@ -322,9 +479,9 @@
       ],
       "contentType": "narration",
       "narration": {
-        "en": "The Mona Lisa was painted by Leonardo da Vinci. It hangs in the Louvre museum in Paris.",
-        "fr": "La Joconde a été peinte par Léonard de Vinci. Elle est exposée au musée du Louvre, à Paris.",
-        "ar": "رسم ليوناردو دافنشي لوحة الموناليزا. وهي تُعرض في متحف اللوفر في باريس."
+        "en": "Here she is, the most famous painting in the world: the Mona Lisa, by Leonardo da Vinci. Millions of people visit the Louvre museum in Paris every year, and many come just to see her smile.",
+        "fr": "La voici, le tableau le plus célèbre du monde : la Joconde, de Léonard de Vinci. Des millions de personnes visitent le musée du Louvre, à Paris, chaque année, et beaucoup viennent rien que pour voir son sourire.",
+        "ar": "ها هي أشهر لوحة في العالم: الموناليزا، بريشة ليوناردو دا فينشي. يزور الملايين متحف اللوفر في باريس كل عام، ويأتي كثيرون منهم فقط ليروا ابتسامتها."
       },
       "learnMore": {
         "en": "The Mona Lisa is painted on a wooden board, not on canvas. It is only 77 centimetres tall.",
@@ -353,9 +510,9 @@
         "ar": "الموناليزا"
       },
       "mascotLine": {
-        "en": "She's smiling at us! Or is she?",
-        "fr": "Elle nous sourit ! Ou pas ?",
-        "ar": "إنها تبتسم لنا! أم لا؟"
+        "en": "She is smiling at us! Or is she? Look closely!",
+        "fr": "Elle nous sourit ! Ou pas ? Regarde bien !",
+        "ar": "إنها تبتسم لنا! أم لا؟ انظر جيدًا!"
       }
     },
     {
@@ -372,9 +529,9 @@
       ],
       "contentType": "puzzle",
       "narration": {
-        "en": "Leonardo started painting the Mona Lisa around the year 1503.",
-        "fr": "Léonard a commencé à peindre la Joconde vers l'an 1503.",
-        "ar": "بدأ ليوناردو رسم الموناليزا نحو عام ١٥٠٣."
+        "en": "Leonardo started painting the Mona Lisa around the year 1503, more than 500 years ago. Now she is in pieces! Put them back so she can smile again.",
+        "fr": "Léonard a commencé à peindre la Joconde vers l’an 1503, il y a plus de 500 ans. Et la voilà en morceaux ! Remets-les en place pour qu’elle sourie de nouveau.",
+        "ar": "بدأ ليوناردو رسم الموناليزا نحو عام ١٥٠٣، أي قبل أكثر من ٥٠٠ سنة. والآن صارت قطعًا! أعدها إلى مكانها لتبتسم من جديد."
       },
       "learnMore": {
         "en": "In 1911 the Mona Lisa was stolen from the Louvre. It was found more than two years later.",
@@ -404,9 +561,9 @@
         "ar": "لون أساسي"
       },
       "mascotLine": {
-        "en": "Oh no, who shuffled the Mona Lisa?",
-        "fr": "Oh non, qui a mélangé la Joconde ?",
-        "ar": "يا إلهي، من بعثر الموناليزا؟"
+        "en": "Oh no! Somebody scrambled the Mona Lisa! Can you fix her?",
+        "fr": "Oh non ! Quelqu’un a mélangé la Joconde ! Tu peux la réparer ?",
+        "ar": "يا للهول! أحدهم بعثر الموناليزا! هل تستطيع إصلاحها؟"
       },
       "quiz": {
         "question": {
@@ -545,6 +702,195 @@
         "factIds": [
           "f-mona-lisa"
         ]
+      }
+    },
+    {
+      "id": "arts/world-music",
+      "title": {
+        "en": "Music of the World",
+        "fr": "Musiques du monde",
+        "ar": "موسيقى العالم"
+      },
+      "position": [
+        -6.2,
+        0,
+        0.5
+      ],
+      "contentType": "puzzle",
+      "narration": {
+        "en": "Every corner of the world has its own music, and its own instruments to play it. Some are blown, some are plucked, some are played with a bow. Close your eyes and listen: can you guess where each sound comes from?",
+        "fr": "Chaque coin du monde a sa musique, et ses instruments pour la jouer. Certains se soufflent, d’autres se pincent, d’autres se jouent avec un archet. Ferme les yeux et écoute : sauras-tu deviner d’où vient chaque son ?",
+        "ar": "لكل ركن من العالم موسيقاه وآلاته الخاصة. بعضها يُنفخ فيه، وبعضها تُنقر أوتاره، وبعضها يُعزف بقوس. أغمض عينيك واستمع: هل تعرف من أين يأتي كل صوت؟"
+      },
+      "learnMore": {
+        "en": "The didgeridoo is a long wooden trumpet made by Aboriginal people of northern Australia. Players breathe in through the nose while they keep blowing, so the sound never stops! The sitar is a long-necked string instrument from India. Extra strings underneath ring along by themselves, which gives it that shimmering, buzzing sound.",
+        "fr": "Le didgeridoo est une longue trompe en bois fabriquée par les Aborigènes du nord de l'Australie. Le musicien inspire par le nez tout en continuant de souffler : le son ne s'arrête jamais ! Le sitar est un instrument à cordes au long manche, venu d'Inde. Des cordes cachées en dessous vibrent toutes seules, ce qui lui donne ce son scintillant.",
+        "ar": "الديجيريدو بوق خشبي طويل يصنعه السكان الأصليون في شمال أستراليا. يتنفّس العازف من أنفه وهو يواصل النفخ، فلا ينقطع الصوت أبدًا! السيتار آلة وترية طويلة العنق من الهند. وتحتها أوتار إضافية تهتزّ وحدها، فتعطيه ذلك الصوت المتلألئ."
+      },
+      "funFact": {
+        "en": "The didgeridoo is a long wooden trumpet made by Aboriginal people of northern Australia. Players breathe in through the nose while they keep blowing, so the sound never stops!",
+        "fr": "Le didgeridoo est une longue trompe en bois fabriquée par les Aborigènes du nord de l'Australie. Le musicien inspire par le nez tout en continuant de souffler : le son ne s'arrête jamais !",
+        "ar": "الديجيريدو بوق خشبي طويل يصنعه السكان الأصليون في شمال أستراليا. يتنفّس العازف من أنفه وهو يواصل النفخ، فلا ينقطع الصوت أبدًا!"
+      },
+      "linkedTopics": [
+        "arts/mona-lisa",
+        "places/hello"
+      ],
+      "sourceType": "curated",
+      "factIds": [
+        "f-didgeridoo",
+        "f-sitar",
+        "f-koto",
+        "f-erhu",
+        "f-charango"
+      ],
+      "wikiQuery": {
+        "en": "Musical instrument",
+        "fr": "Instrument de musique",
+        "ar": "آلة موسيقية"
+      },
+      "mascotLine": {
+        "en": "Ooh, music from all over the planet! Ears ready? Let’s travel by sound!",
+        "fr": "Ooh, de la musique de toute la planète ! Tes oreilles sont prêtes ? On voyage avec les sons !",
+        "ar": "واو، موسيقى من كل أنحاء الكوكب! هل أذناك جاهزتان؟ هيا نسافر بالأصوات!"
+      },
+      "puzzle": {
+        "type": "listen-map",
+        "prompt": {
+          "en": "Listen to the instrument, then tap the country it comes from.",
+          "fr": "Écoute l’instrument, puis touche le pays d’où il vient.",
+          "ar": "استمع إلى الآلة، ثم المس البلد الذي جاءت منه."
+        },
+        "factIds": [
+          "f-didgeridoo",
+          "f-sitar",
+          "f-koto",
+          "f-erhu",
+          "f-charango"
+        ],
+        "rounds": [
+          {
+            "id": "australia",
+            "sound": "didgeridoo",
+            "instrument": {
+              "en": "Didgeridoo",
+              "fr": "Didgeridoo",
+              "ar": "الديجيريدو"
+            },
+            "country": {
+              "en": "Australia",
+              "fr": "Australie",
+              "ar": "أستراليا"
+            },
+            "pin": {
+              "lat": -14,
+              "lon": 133
+            },
+            "note": {
+              "en": "The didgeridoo is a long wooden trumpet made by Aboriginal people of northern Australia. Players breathe in through the nose while they keep blowing, so the sound never stops!",
+              "fr": "Le didgeridoo est une longue trompe en bois fabriquée par les Aborigènes du nord de l'Australie. Le musicien inspire par le nez tout en continuant de souffler : le son ne s'arrête jamais !",
+              "ar": "الديجيريدو بوق خشبي طويل يصنعه السكان الأصليون في شمال أستراليا. يتنفّس العازف من أنفه وهو يواصل النفخ، فلا ينقطع الصوت أبدًا!"
+            },
+            "factId": "f-didgeridoo"
+          },
+          {
+            "id": "india",
+            "sound": "sitar",
+            "instrument": {
+              "en": "Sitar",
+              "fr": "Sitar",
+              "ar": "السيتار"
+            },
+            "country": {
+              "en": "India",
+              "fr": "Inde",
+              "ar": "الهند"
+            },
+            "pin": {
+              "lat": 22,
+              "lon": 79
+            },
+            "note": {
+              "en": "The sitar is a long-necked string instrument from India. Extra strings underneath ring along by themselves, which gives it that shimmering, buzzing sound.",
+              "fr": "Le sitar est un instrument à cordes au long manche, venu d'Inde. Des cordes cachées en dessous vibrent toutes seules, ce qui lui donne ce son scintillant.",
+              "ar": "السيتار آلة وترية طويلة العنق من الهند. وتحتها أوتار إضافية تهتزّ وحدها، فتعطيه ذلك الصوت المتلألئ."
+            },
+            "factId": "f-sitar"
+          },
+          {
+            "id": "japan",
+            "sound": "koto",
+            "instrument": {
+              "en": "Koto",
+              "fr": "Koto",
+              "ar": "الكوتو"
+            },
+            "country": {
+              "en": "Japan",
+              "fr": "Japon",
+              "ar": "اليابان"
+            },
+            "pin": {
+              "lat": 36,
+              "lon": 138
+            },
+            "note": {
+              "en": "The koto is Japan's national instrument: a long wooden board with 13 strings, played with picks on three fingers.",
+              "fr": "Le koto est l'instrument national du Japon : une longue planche de bois à 13 cordes, que l'on pince avec des onglets sur trois doigts.",
+              "ar": "الكوتو هي الآلة الوطنية لليابان: لوح خشبي طويل عليه ١٣ وترًا، يُعزف بريشات توضع على ثلاثة أصابع."
+            },
+            "factId": "f-koto"
+          },
+          {
+            "id": "china",
+            "sound": "erhu",
+            "instrument": {
+              "en": "Erhu",
+              "fr": "Erhu",
+              "ar": "الإرهو"
+            },
+            "country": {
+              "en": "China",
+              "fr": "Chine",
+              "ar": "الصين"
+            },
+            "pin": {
+              "lat": 34,
+              "lon": 108
+            },
+            "note": {
+              "en": "The erhu is a Chinese fiddle with just two strings, played with a bow. The \"er\" in its name means \"two\" in Chinese. It can sound almost like a singing voice.",
+              "fr": "L’erhu est un violon chinois à seulement deux cordes, joué avec un archet. Le « er » de son nom veut dire « deux » en chinois. Il peut sonner presque comme une voix qui chante.",
+              "ar": "الإرهو كمان صيني له وتران فقط ويُعزف بقوس، ومقطع «إر» في اسمه يعني «اثنان» بالصينية. وقد يشبه صوته صوت إنسان يغنّي."
+            },
+            "factId": "f-erhu"
+          },
+          {
+            "id": "bolivia",
+            "sound": "charango",
+            "instrument": {
+              "en": "Charango",
+              "fr": "Charango",
+              "ar": "الشارانغو"
+            },
+            "country": {
+              "en": "Bolivia",
+              "fr": "Bolivie",
+              "ar": "بوليفيا"
+            },
+            "pin": {
+              "lat": -17,
+              "lon": -65
+            },
+            "note": {
+              "en": "The charango is a small guitar from the Andes mountains of Bolivia and Peru. It usually has 10 strings, tuned in 5 pairs.",
+              "fr": "Le charango est une petite guitare des montagnes des Andes, en Bolivie et au Pérou. Il a souvent 10 cordes, accordées par paires.",
+              "ar": "الشارانغو غيتار صغير من جبال الأنديز في بوليفيا والبيرو، وله عادةً ١٠ أوتار مشدودة في ٥ أزواج."
+            },
+            "factId": "f-charango"
+          }
+        ],
+        "show": 5
       }
     }
   ]

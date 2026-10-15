@@ -88,17 +88,21 @@
   "mascot": {
     "name": "Wondoo",
     "praise": [
-      "Yay, you did it!",
-      "Brilliant thinking!",
-      "Wow, you're a star explorer!",
-      "Yay, you did it, {{name}}!",
-      "Brilliant thinking, {{name}}!"
+      "YES! You did it!",
+      "Woohoo! Brilliant thinking!",
+      "Wow, you’re a real explorer!",
+      "High five! That was amazing!",
+      "Ta-da! Nailed it!",
+      "YES, {{name}}! You did it!",
+      "Brilliant thinking, {{name}}!",
+      "{{name}}, you’re on fire!"
     ],
     "encourage": [
-      "Almost! Give it another go.",
-      "Hmm, not that one. Try again!",
-      "Good try! Look again.",
-      "Almost, {{name}}! Give it another go."
+      "So close! Give it another go!",
+      "Ooh, not that one. Try again, you’ve got this!",
+      "Good try! Look again, I believe in you!",
+      "Hmm, tricky one! One more try?",
+      "Almost, {{name}}! Give it another go!"
     ],
     "sleepLines": [
       "I'm resting my brain, but everything here is still yours to explore!",
@@ -112,15 +116,18 @@
     "recallWrong": "Good try! The answer is: {{answer}}.",
     "chatUnsafe": "Let's talk about something else. If something is bothering you, tell a grown-up you trust.",
     "greet": [
-      "Hi! I missed you!",
-      "Welcome home, explorer!",
+      "Hiii! I missed you so much!",
       "Yay, you came to visit me!",
-      "Hi {{name}}! I missed you!"
+      "Welcome home, explorer!",
+      "Hi {{name}}! I missed you so much!",
+      "{{name}}! You’re back! Yay!"
     ],
     "hello": [
       "Welcome back, {{name}}! Where shall we go today?",
-      "Hi {{name}}! Pick a glowing doorway.",
-      "Welcome to the Great Hall! Pick a glowing doorway."
+      "Hi {{name}}! Pick a glowing doorway, any doorway!",
+      "Ooh, {{name}}! Look, the fish are jumping in the fountain!",
+      "Welcome to the Great Hall! Pick a glowing doorway!",
+      "Hello again, explorer! Ready for an adventure?"
     ]
   },
   "room": {
@@ -174,7 +181,9 @@
     "bodyDrag": "Drag to turn the body",
     "bodyDone": "You put the body back together!",
     "bodyDoneNote": "Every organ is now in its real place. Drag to look around.",
-    "bodyCredit": "Organs: BodyParts3D, built from real scans (CC BY-SA 2.1 JP)"
+    "bodyCredit": "Organs: BodyParts3D, built from real scans (CC BY-SA 2.1 JP)",
+    "listening": "Listening…",
+    "listenAgain": "Play it again"
   },
   "video": {
     "pictureShow": "Picture show",
@@ -346,23 +355,44 @@
     "light": "Light or dark"
   },
   "welcome": {
-    "hi": "Hi! I'm Wondoo, an octopus in a rabbit costume. I'll explore with you. Which language do you like?",
-    "askName": "What's your name?",
+    "hi": "Hiii! I'm Wondoo, an octopus in a rabbit costume, and I'm SO happy you're here! We're going to explore together. Which language do you like?",
+    "askName": "Ooh, I can't wait to know: what's your name?",
     "namePlaceholder": "Your first name",
     "nameNote": "Your name stays on this device.",
-    "walk": "Nice to meet you, {{name}}! Walk with the arrow keys or W A S D. On a tablet, tap the floor to walk there, and drag to look around.",
-    "walkNoName": "Nice to meet you! Walk with the arrow keys or W A S D. On a tablet, tap the floor to walk there, and drag to look around.",
+    "walk": "Nice to meet you, {{name}}! What a great name! You can walk with the arrow keys or W A S D. On a tablet, tap the floor to walk there, and drag to look around.",
+    "walkNoName": "Nice to meet you! You can walk with the arrow keys or W A S D. On a tablet, tap the floor to walk there, and drag to look around.",
     "doors": "Each glowing doorway in this hall leads to a world: animals, the ocean, the human body, art, history and more. Walk into one to go inside.",
     "cards": "Inside a world, walk up to anything that glows. A card opens. Read it, then press \"Let's play!\" for a game.",
     "stars": "Every game gives you up to 3 stars. Fewer slips, more stars! Your stars are counted up here.",
     "ask": "Curious about something else? Press the magnifying glass and ask me. I look it up on Wikipedia for you.",
-    "home": "From any world, the little house brings you back to this hall. Ready, {{name}}? Let's explore!",
-    "homeNoName": "From any world, the little house brings you back to this hall. Ready? Let's explore!",
+    "home": "From any world, the little house brings you back to this hall. Oh, and try catching the fish that jump out of the fountain! Ready, {{name}}? Let’s go explore!",
+    "homeNoName": "From any world, the little house brings you back to this hall. Oh, and try catching the fish that jump out of the fountain! Ready? Let’s go explore!",
     "next": "Next",
     "back": "Back",
     "skip": "Skip the tour",
     "go": "Let's go!",
     "again": "Tour again",
     "label": "Welcome tour"
+  },
+  "journal": {
+    "open": "My journal",
+    "title": "My journal",
+    "titleNamed": "{{name}}'s journal",
+    "words": "Words ({{count}})",
+    "fish": "Fish ({{found}}/{{total}})",
+    "remove": "Remove this word",
+    "noWords": "No words yet! Tap any word in a card to see what it means, then press \"Keep this word\".",
+    "fishHint": "Fish leap out of the fountain in the Great Hall. Tap one while it jumps to catch it! Some are much rarer than others.",
+    "save": "Keep this word",
+    "saved": "In your journal!",
+    "newFish": "New fish: {{fish}}!",
+    "againFish": "{{fish}} again!",
+    "intro": "Everything you collect while you explore goes in here: words you keep, and the fish you catch at the fountain.",
+    "wordsTitle": "My words",
+    "fishTitle": "Fish from the fountain",
+    "wordsTab": "Words",
+    "fishTab": "Fish",
+    "prev": "Previous page",
+    "next": "Next page"
   }
 }

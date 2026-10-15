@@ -32,11 +32,24 @@ export function GradientSky({ top = '#3fa9f5', horizon = '#dff6ff', bottom = '#b
 }
 
 /** Standard soft lighting: hemisphere sky/ground + a warm key light. No shadows (cheap). */
-export function SoftLights({ sky = '#e8f7ff', ground = '#9fd88a', keyLight = '#fff6e0', intensity = 1 }) {
+export function SoftLights({ sky = '#e8f7ff', ground = '#9fd88a', keyLight = '#fff6e0', intensity = 1, shadows = false }) {
   return (
     <>
       <hemisphereLight args={[sky, ground, 0.55 * intensity]} />
-      <directionalLight position={[8, 14, 6]} intensity={1.7 * intensity} color={keyLight} />
+      <directionalLight
+        position={shadows ? [14, 16, 9] : [8, 14, 6]}
+        intensity={1.7 * intensity}
+        color={keyLight}
+        castShadow={shadows}
+        shadow-mapSize={[2048, 2048]}
+        shadow-camera-left={-26}
+        shadow-camera-right={26}
+        shadow-camera-top={26}
+        shadow-camera-bottom={-26}
+        shadow-camera-far={70}
+        shadow-bias={-0.0004}
+        shadow-normalBias={0.03}
+      />
     </>
   );
 }

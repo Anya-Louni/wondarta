@@ -1138,6 +1138,207 @@
         "fr": "La partie d'une plante qui pousse sous la terre.",
         "ar": "جزء النبات الذي ينمو تحت الأرض."
       }
+    },
+    {
+      "terms": {
+        "en": [
+          "nectar"
+        ],
+        "fr": [
+          "nectar"
+        ],
+        "ar": [
+          "رحيق",
+          "الرحيق"
+        ]
+      },
+      "definition": {
+        "en": "A sweet juice made by flowers. Bees drink it and turn it into honey.",
+        "fr": "Un jus sucré fabriqué par les fleurs. Les abeilles le boivent et le transforment en miel.",
+        "ar": "عصير حلو تصنعه الأزهار، يشربه النحل ويحوّله إلى عسل."
+      }
+    },
+    {
+      "terms": {
+        "en": [
+          "pollen"
+        ],
+        "fr": [
+          "pollen"
+        ],
+        "ar": [
+          "اللقاح",
+          "لقاح"
+        ]
+      },
+      "definition": {
+        "en": "A fine yellow powder made by flowers. When it travels to another flower, the plant can make seeds.",
+        "fr": "Une fine poudre jaune fabriquée par les fleurs. Quand elle voyage jusqu’à une autre fleur, la plante peut faire des graines.",
+        "ar": "مسحوق أصفر ناعم تصنعه الأزهار. وعندما ينتقل إلى زهرة أخرى تستطيع النبتة صنع البذور."
+      }
+    },
+    {
+      "terms": {
+        "en": [
+          "pollination"
+        ],
+        "fr": [
+          "pollinisation"
+        ],
+        "ar": [
+          "التلقيح",
+          "تلقيح"
+        ]
+      },
+      "definition": {
+        "en": "When pollen is carried from one flower to another, so that seeds can grow.",
+        "fr": "Quand le pollen est transporté d’une fleur à une autre, pour que des graines puissent pousser.",
+        "ar": "انتقال حبوب اللقاح من زهرة إلى أخرى لكي تتكوّن البذور."
+      }
+    },
+    {
+      "terms": {
+        "en": [
+          "petals",
+          "petal"
+        ],
+        "fr": [
+          "pétales",
+          "pétale"
+        ],
+        "ar": [
+          "البتلات",
+          "بتلات",
+          "بتلة"
+        ]
+      },
+      "definition": {
+        "en": "The colourful parts of a flower. They help invite bees and butterflies.",
+        "fr": "Les parties colorées d’une fleur. Elles attirent les abeilles et les papillons.",
+        "ar": "الأجزاء الملوّنة من الزهرة، تجذب النحل والفراشات."
+      }
+    },
+    {
+      "terms": {
+        "en": [
+          "seeds",
+          "seed"
+        ],
+        "fr": [
+          "graines",
+          "graine"
+        ],
+        "ar": [
+          "البذور",
+          "بذور",
+          "بذرة"
+        ]
+      },
+      "definition": {
+        "en": "A tiny package with a baby plant and its food inside. Plant it, and a new plant can grow.",
+        "fr": "Un petit paquet qui contient un bébé plante et sa nourriture. Si on la plante, une nouvelle plante peut pousser.",
+        "ar": "علبة صغيرة فيها نبتة صغيرة وطعامها. ازرعها فتنمو نبتة جديدة."
+      }
+    },
+    {
+      "terms": {
+        "en": [
+          "feathers",
+          "feather"
+        ],
+        "fr": [
+          "plumes",
+          "plume"
+        ],
+        "ar": [
+          "الريش",
+          "ريش",
+          "ريشة"
+        ]
+      },
+      "definition": {
+        "en": "The light, soft covering of birds. Feathers keep birds warm and help them fly.",
+        "fr": "Ce qui couvre le corps des oiseaux, léger et doux. Les plumes les gardent au chaud et les aident à voler.",
+        "ar": "الغطاء الخفيف الناعم لجسم الطيور، يدفّئها ويساعدها على الطيران."
+      }
+    },
+    {
+      "terms": {
+        "en": [
+          "scales",
+          "scaly"
+        ],
+        "fr": [
+          "écailles"
+        ],
+        "ar": [
+          "الحراشف",
+          "حراشف"
+        ]
+      },
+      "definition": {
+        "en": "Small hard plates that cover the skin of fish and reptiles, like a suit of armour.",
+        "fr": "De petites plaques dures qui couvrent la peau des poissons et des reptiles, comme une armure.",
+        "ar": "صفائح صغيرة صلبة تغطّي جلد الأسماك والزواحف، مثل الدرع."
+      }
+    },
+    {
+      "terms": {
+        "en": [
+          "hive"
+        ],
+        "fr": [
+          "ruche"
+        ],
+        "ar": [
+          "الخلية",
+          "خلية"
+        ]
+      },
+      "definition": {
+        "en": "The home where a big family of honey bees lives and stores its honey.",
+        "fr": "La maison où vit une grande famille d’abeilles et où elles gardent leur miel.",
+        "ar": "البيت الذي تعيش فيه عائلة كبيرة من النحل وتخزّن عسلها."
+      }
+    },
+    {
+      "terms": {
+        "en": [
+          "zebra",
+          "zebras"
+        ],
+        "fr": [
+          "zèbre",
+          "zèbres"
+        ],
+        "ar": [
+          "الحمار الوحشي"
+        ]
+      },
+      "definition": {
+        "en": "A wild horse-like animal of Africa with black and white stripes.",
+        "fr": "Un animal sauvage d’Afrique qui ressemble au cheval, avec des rayures noires et blanches.",
+        "ar": "حيوان بريّ أفريقي يشبه الحصان، مخطّط بالأبيض والأسود."
+      }
+    },
+    {
+      "terms": {
+        "en": [
+          "fingerprints"
+        ],
+        "fr": [
+          "empreintes"
+        ],
+        "ar": [
+          "البصمات",
+          "بصمات"
+        ]
+      },
+      "definition": {
+        "en": "The swirly lines on your fingertips. Nobody else in the world has exactly the same ones.",
+        "fr": "Les lignes en tourbillon au bout de tes doigts. Personne d’autre au monde n’a exactement les mêmes.",
+        "ar": "الخطوط الملتفّة على أطراف أصابعك، ولا أحد في العالم له الخطوط نفسها تمامًا."
+      }
     }
   ],
   "hotspots": [
@@ -1156,9 +1357,9 @@
       ],
       "contentType": "narration",
       "narration": {
-        "en": "The African elephant is the largest land animal on Earth. It uses its trunk to breathe, smell, drink and grab things.",
-        "fr": "L'éléphant d'Afrique est le plus grand animal terrestre de la planète. Il se sert de sa trompe pour respirer, sentir, boire et attraper des choses.",
-        "ar": "الفيل الأفريقي هو أكبر حيوان يعيش على اليابسة. يستخدم خرطومه للتنفّس والشمّ والشرب والإمساك بالأشياء."
+        "en": "Meet the heavyweight champion of the land: the African elephant, the biggest animal that walks on Earth. Its trunk is a nose, a straw, a snorkel and a hand, all in one!",
+        "fr": "Voici le champion poids lourd de la terre ferme : l’éléphant d’Afrique, le plus grand animal qui marche sur Terre. Sa trompe est à la fois un nez, une paille, un tuba et une main !",
+        "ar": "إليك بطل الوزن الثقيل على اليابسة: الفيل الأفريقي، أضخم حيوان يمشي على الأرض. خرطومه أنف وشفّاطة وأنبوب تنفّس ويد، كلّها في واحد!"
       },
       "learnMore": {
         "en": "Elephants flap their big ears to help them cool down. Mammals have hair or fur and feed their babies milk. African elephants live in sub-Saharan Africa, in countries like Kenya, Tanzania, Botswana and Namibia.",
@@ -1189,9 +1390,9 @@
         "ar": "فيل أفريقي"
       },
       "mascotLine": {
-        "en": "Whoa, look how big! Let's meet the elephant.",
-        "fr": "Ouah, qu'il est grand ! Allons voir l'éléphant.",
-        "ar": "واو، انظر كم هو كبير! لنتعرّف على الفيل."
+        "en": "WOW, look at the size of it! Come say hi to the elephant!",
+        "fr": "WAOUH, regarde comme il est grand ! Viens dire bonjour à l’éléphant !",
+        "ar": "واو، انظر كم هو ضخم! تعال نسلّم على الفيل!"
       },
       "origin": {
         "continents": [
@@ -1239,9 +1440,9 @@
       ],
       "contentType": "puzzle",
       "narration": {
-        "en": "Every animal has a home somewhere on Earth. Some live on one mountain range only; others live nearly everywhere.",
-        "fr": "Chaque animal a une maison quelque part sur Terre. Certains ne vivent que dans une seule chaîne de montagnes, d'autres presque partout.",
-        "ar": "لكل حيوان بيت في مكان ما على الأرض. بعضها لا يعيش إلا في سلسلة جبال واحدة، وبعضها يعيش في كل مكان تقريبًا."
+        "en": "Every animal has a home address on our planet. Some live on just one mountain range, others are found almost everywhere. Let’s find out who lives where!",
+        "fr": "Chaque animal a son adresse sur notre planète. Certains vivent sur une seule chaîne de montagnes, d’autres presque partout. Découvrons qui habite où !",
+        "ar": "لكل حيوان عنوان على كوكبنا. بعضها يعيش في سلسلة جبال واحدة فقط، وبعضها يوجد في كل مكان تقريبًا. هيا نكتشف من يسكن أين!"
       },
       "learnMore": {
         "en": "Giant pandas live only in the mountains of China, in Sichuan, Shaanxi and Gansu. Almost everything a panda eats is bamboo — about 9 to 14 kilograms of it a day. Red kangaroos live in mainland Australia, mostly in the dry grasslands and deserts. A big male red kangaroo can cover 8 to 9 metres in a single hop.",
@@ -1276,9 +1477,9 @@
         "ar": "التوزيع الجغرافي للحيوانات"
       },
       "mascotLine": {
-        "en": "I brought the world map! Can you find where each animal lives?",
-        "fr": "J'ai apporté la carte du monde ! Peux-tu trouver où vit chaque animal ?",
-        "ar": "أحضرتُ خريطة العالم! هل تجد أين يعيش كل حيوان؟"
+        "en": "I brought the whole world with me! Ready to go exploring?",
+        "fr": "J’ai apporté le monde entier ! Prêt pour l’exploration ?",
+        "ar": "أحضرت لك العالم كلّه! هل أنت جاهز للاستكشاف؟"
       },
       "puzzle": {
         "type": "map-find",
@@ -1490,9 +1691,9 @@
       ],
       "contentType": "puzzle",
       "narration": {
-        "en": "Lions live in family groups. In a pride, the lionesses do most of the hunting.",
-        "fr": "Les lions vivent en groupes familiaux. Dans une troupe, ce sont les lionnes qui chassent le plus.",
-        "ar": "تعيش الأسود في مجموعات عائلية. في الزُّمْرة، تقوم اللبؤات بمعظم الصيد."
+        "en": "Lions are the team players of the cat world: they live together in families called prides. And guess who does most of the hunting? Not the big-maned dads, but the lionesses!",
+        "fr": "Les lions sont les champions du travail d’équipe chez les félins : ils vivent en familles appelées troupes. Et devine qui chasse le plus ? Pas les papas à crinière, mais les lionnes !",
+        "ar": "الأسود هي أبطال العمل الجماعي بين القطط الكبيرة: تعيش في عائلات تُسمّى الزُّمَر. وخمّن من يصطاد أكثر؟ ليس الآباء أصحاب اللبدة، بل اللبؤات!"
       },
       "learnMore": {
         "en": "A lion's roar can be heard up to about 8 kilometres away.",
@@ -1521,9 +1722,9 @@
         "ar": "أسد"
       },
       "mascotLine": {
-        "en": "The lionesses do most of the hunting. Today this lion gets a turn!",
-        "fr": "Ce sont surtout les lionnes qui chassent. Aujourd'hui, c'est le tour de ce lion !",
-        "ar": "اللبؤات يقمن بمعظم الصيد، واليوم جاء دور هذا الأسد!"
+        "en": "Shhh, sneaky mode ON! The lionesses usually hunt, but today this lion wants a turn!",
+        "fr": "Chut, mode discret activé ! D’habitude ce sont les lionnes qui chassent, mais aujourd’hui ce lion veut essayer !",
+        "ar": "صه، وضع التسلّل! اللبؤات هنّ من يصطدن عادةً، لكن الأسد يريد دوره اليوم!"
       },
       "quiz": {
         "question": {
@@ -1681,9 +1882,9 @@
       ],
       "contentType": "puzzle",
       "narration": {
-        "en": "Lots of big animals share the savanna. Every zebra has its own pattern of stripes.",
-        "fr": "Beaucoup de grands animaux partagent la savane. Chaque zèbre a son propre motif de rayures.",
-        "ar": "تتشارك حيوانات كبيرة كثيرة السافانا. لكل حمار وحشي نمط خطوط خاص به."
+        "en": "The savanna is like a giant outdoor zoo with no fences. And here is a secret: no two zebras have the same stripes, just like no two people have the same fingerprints!",
+        "fr": "La savane, c’est comme un immense zoo sans clôtures. Et voici un secret : il n’y a pas deux zèbres avec les mêmes rayures, comme il n’y a pas deux personnes avec les mêmes empreintes digitales !",
+        "ar": "السافانا مثل حديقة حيوان ضخمة بلا أسوار. وإليك سرًّا: لا يوجد حماران وحشيان بالخطوط نفسها، تمامًا كما لا يوجد شخصان ببصمات الأصابع نفسها!"
       },
       "learnMore": {
         "en": "The giraffe is the tallest animal in the world. Hippos spend most of the day in water to stay cool. A rhino's horn is made of keratin, the same material as your fingernails. Plains zebras and giraffes both live in the grasslands of eastern and southern Africa.",
@@ -1715,9 +1916,9 @@
         "ar": "سافانا"
       },
       "mascotLine": {
-        "en": "Can you match each animal to its name?",
-        "fr": "Peux-tu associer chaque animal à son nom ?",
-        "ar": "هل تستطيع أن تطابق كل حيوان مع اسمه؟"
+        "en": "The savanna is packed with giants! Can you name them all?",
+        "fr": "La savane est pleine de géants ! Sauras-tu tous les nommer ?",
+        "ar": "السافانا مليئة بالعمالقة! هل تعرف أسماءها كلّها؟"
       },
       "puzzle": {
         "type": "photo-to-label-match",
@@ -1856,9 +2057,9 @@
       ],
       "contentType": "video",
       "narration": {
-        "en": "Most owls hunt at night. Special soft feathers let owls fly almost silently.",
-        "fr": "La plupart des chouettes et des hiboux chassent la nuit. Des plumes spéciales et douces leur permettent de voler presque sans bruit.",
-        "ar": "تصطاد معظم أنواع البوم في الليل. يساعد الريش الناعم الخاص البومةَ على الطيران بصمت تقريبًا."
+        "en": "Most owls are night hunters. Their wing feathers are soft and fringed like a comb, so they glide through the dark almost without a sound. Sneaky!",
+        "fr": "La plupart des chouettes chassent la nuit. Les plumes de leurs ailes sont douces et frangées comme un peigne : elles glissent dans le noir presque sans bruit. Discrètes !",
+        "ar": "معظم البوم تصطاد ليلًا. ريش أجنحتها ناعم ومهدّب مثل المشط، فتنساب في الظلام بلا صوت تقريبًا. يا لها من متسلّلة!"
       },
       "learnMore": {
         "en": "Many owls can turn their heads about 270 degrees. Owls live on every continent except Antarctica.",
@@ -1889,9 +2090,9 @@
         "ar": "بومة"
       },
       "mascotLine": {
-        "en": "Shh, the owl is waking up. Let's watch!",
-        "fr": "Chut, la chouette se réveille. Regardons !",
-        "ar": "صه، البومة تستيقظ. لنشاهد!"
+        "en": "Psst! The night hunter is waking up. Let’s watch quietly!",
+        "fr": "Psst ! La chasseuse de la nuit se réveille. Regardons sans bruit !",
+        "ar": "بسّ! صيّادة الليل تستيقظ. لنشاهد بهدوء!"
       },
       "video": {
         "wikiArticle": "Owl",
@@ -1980,9 +2181,9 @@
       ],
       "contentType": "puzzle",
       "narration": {
-        "en": "Animals can be sorted by what covers their bodies. Mammals have hair or fur, and birds are the only animals alive today that have feathers.",
-        "fr": "On peut trier les animaux selon ce qui recouvre leur corps. Les mammifères ont des poils ou de la fourrure, et les oiseaux sont les seuls animaux vivants aujourd'hui à avoir des plumes.",
-        "ar": "يمكن تصنيف الحيوانات حسب ما يغطّي أجسامها. للثدييات شعر أو فرو، والطيور هي الحيوانات الوحيدة التي تعيش اليوم ولها ريش."
+        "en": "Scientists sort animals into groups, a bit like sorting your toys into boxes. One clue is what covers their body: mammals have hair or fur, and birds are the only animals alive today with feathers.",
+        "fr": "Les scientifiques rangent les animaux en groupes, un peu comme on range ses jouets dans des boîtes. Un indice : ce qui couvre leur corps. Les mammifères ont des poils, et les oiseaux sont les seuls animaux vivants avec des plumes.",
+        "ar": "يصنّف العلماء الحيوانات في مجموعات، تمامًا كما ترتّب ألعابك في صناديق. ومن الأدلّة ما يغطّي أجسامها: للثدييات شعر أو فرو، والطيور هي الحيوانات الوحيدة اليوم التي لها ريش."
       },
       "learnMore": {
         "en": "Reptiles, like snakes and turtles, have dry, scaly skin.",
@@ -2012,9 +2213,9 @@
         "ar": "حيوان"
       },
       "mascotLine": {
-        "en": "Sorting time! Fur, feathers or scales?",
-        "fr": "C'est l'heure de trier ! Poils, plumes ou écailles ?",
-        "ar": "حان وقت التصنيف! فرو أم ريش أم حراشف؟"
+        "en": "Fur, feathers or scales? Let’s sort them like real scientists!",
+        "fr": "Poils, plumes ou écailles ? Trions-les comme de vrais scientifiques !",
+        "ar": "فرو أم ريش أم حراشف؟ هيا نصنّفها مثل العلماء الحقيقيين!"
       },
       "puzzle": {
         "type": "sort-match",
@@ -2232,9 +2433,9 @@
       ],
       "contentType": "narration",
       "narration": {
-        "en": "Plants use sunlight, water and carbon dioxide to make their own food. This is called photosynthesis. An oak tree grows from a small nut called an acorn.",
-        "fr": "Les plantes utilisent la lumière du soleil, l'eau et le dioxyde de carbone pour fabriquer leur nourriture. C'est la photosynthèse. Un chêne pousse à partir d'un petit fruit appelé gland.",
-        "ar": "تستخدم النباتات ضوء الشمس والماء وثاني أكسيد الكربون لتصنع غذاءها. تُسمّى هذه العملية التمثيل الضوئي. تنمو شجرة البلوط من ثمرة صغيرة تُسمّى البلّوطة."
+        "en": "Plants are tiny chefs! They cook their own food from sunlight, water and air. This recipe is called photosynthesis. And this huge oak? It all started from one little acorn.",
+        "fr": "Les plantes sont de petits chefs cuisiniers ! Elles préparent leur nourriture avec du soleil, de l’eau et de l’air. Cette recette s’appelle la photosynthèse. Et ce grand chêne ? Tout a commencé avec un petit gland.",
+        "ar": "النباتات طهاة صغار! تطبخ طعامها من ضوء الشمس والماء والهواء، وتُسمّى هذه الوصفة التمثيل الضوئي. وشجرة البلوط الضخمة هذه؟ بدأت كلّها من بلّوطة صغيرة واحدة."
       },
       "learnMore": {
         "en": "When plants make food, they give off oxygen, which animals need to breathe. Oak trees grow across the northern half of the world, in Europe, Asia and North America.",
@@ -2265,9 +2466,9 @@
         "ar": "بلوط"
       },
       "mascotLine": {
-        "en": "Trees make food from sunshine. Isn't that amazing?",
-        "fr": "Les arbres fabriquent leur nourriture avec le soleil. Incroyable, non ?",
-        "ar": "الأشجار تصنع غذاءها من ضوء الشمس. أليس هذا مدهشًا؟"
+        "en": "This tree makes its own food out of sunshine. How cool is that?!",
+        "fr": "Cet arbre fabrique sa nourriture avec du soleil. Trop fort, non ?!",
+        "ar": "هذه الشجرة تصنع طعامها من ضوء الشمس. أليس هذا رائعًا؟!"
       },
       "origin": {
         "continents": [
@@ -2318,9 +2519,9 @@
       ],
       "contentType": "puzzle",
       "narration": {
-        "en": "Every part of a plant has a job. Roots hold a plant in the ground and take in water.",
-        "fr": "Chaque partie d'une plante a un rôle. Les racines tiennent la plante dans le sol et absorbent l'eau.",
-        "ar": "لكل جزء من النبات وظيفة. تثبّت الجذور النبات في التربة وتمتصّ الماء."
+        "en": "A plant works like a little factory where everyone has a job. The roots are the anchors and the water pumps: they hold the plant in the ground and drink.",
+        "fr": "Une plante, c’est comme une petite usine où chacun a son métier. Les racines sont les ancres et les pompes à eau : elles tiennent la plante dans le sol et boivent.",
+        "ar": "النبتة مثل مصنع صغير لكل عامل فيه وظيفة. الجذور هي المراسي ومضخّات الماء: تثبّت النبتة في الأرض وتشرب."
       },
       "learnMore": {
         "en": "Flowers make seeds so that new plants can grow.",
@@ -2350,9 +2551,9 @@
         "ar": "نبات"
       },
       "mascotLine": {
-        "en": "Help me put the labels on this plant!",
-        "fr": "Aide-moi à placer les étiquettes sur cette plante !",
-        "ar": "ساعدني في وضع الأسماء على هذا النبات!"
+        "en": "Every part of a plant has a job! Let’s label them together!",
+        "fr": "Chaque partie de la plante a un métier ! On les nomme ensemble ?",
+        "ar": "لكل جزء من النبات وظيفة! هيا نسمّيها معًا!"
       },
       "puzzle": {
         "type": "drag-to-label",
@@ -2447,9 +2648,9 @@
       ],
       "contentType": "puzzle",
       "narration": {
-        "en": "Frogs are amphibians. They usually start life in water and later live on land too.",
-        "fr": "Les grenouilles sont des amphibiens. Elles commencent souvent leur vie dans l'eau puis vivent aussi sur terre.",
-        "ar": "الضفادع من البرمائيات. تبدأ حياتها عادةً في الماء ثم تعيش على اليابسة أيضًا."
+        "en": "Frogs are amphibians, which means \"double life\": they start life in the water like little fish, then grow legs and hop onto land!",
+        "fr": "Les grenouilles sont des amphibiens, ce qui veut dire « double vie » : elles commencent leur vie dans l’eau comme de petits poissons, puis poussent des pattes et sautent sur la terre !",
+        "ar": "الضفادع برمائيات، أي «ذات حياتين»: تبدأ حياتها في الماء مثل أسماك صغيرة، ثم تنمو لها أرجل فتقفز إلى اليابسة!"
       },
       "learnMore": {
         "en": "A baby frog is called a tadpole, and it breathes with gills.",
@@ -2478,9 +2679,9 @@
         "ar": "ضفدع"
       },
       "mascotLine": {
-        "en": "Eat up, little tadpole. Legs are coming!",
-        "fr": "Mange bien, petit têtard. Tes pattes arrivent !",
-        "ar": "كُل جيدًا أيها الشُّرغوف الصغير، فأرجلك قادمة!"
+        "en": "Munch munch, little tadpole! Legs are on the way!",
+        "fr": "Miam miam, petit têtard ! Tes pattes arrivent !",
+        "ar": "هيا كُل أيها الشُّرغوف الصغير! أرجلك في الطريق!"
       },
       "quiz": {
         "question": {
@@ -2606,9 +2807,9 @@
       ],
       "contentType": "puzzle",
       "narration": {
-        "en": "A frog changes a lot as it grows. Its life cycle goes: egg, tadpole, froglet, frog.",
-        "fr": "Une grenouille change beaucoup en grandissant. Son cycle de vie : œuf, têtard, jeune grenouille, grenouille.",
-        "ar": "يتغيّر الضفدع كثيرًا وهو ينمو. دورة حياته: بيضة، ثم شُرغوف، ثم ضفدع صغير، ثم ضفدع بالغ."
+        "en": "A frog changes more than almost any animal as it grows. It is like a caterpillar becoming a butterfly: egg, tadpole, froglet, then frog!",
+        "fr": "La grenouille change plus que presque tous les animaux en grandissant. C’est comme une chenille qui devient papillon : œuf, têtard, jeune grenouille, puis grenouille !",
+        "ar": "يتغيّر الضفدع وهو يكبر أكثر من معظم الحيوانات، مثل يرقة تصير فراشة: بيضة، ثم شُرغوف، ثم ضفدع صغير، ثم ضفدع!"
       },
       "learnMore": {
         "en": "Frog eggs look like tiny balls of jelly. They are laid in ponds and streams.",
@@ -2638,9 +2839,9 @@
         "ar": "شرغوف"
       },
       "mascotLine": {
-        "en": "What comes next in the frog's life?",
-        "fr": "Qu'est-ce qui vient ensuite dans la vie de la grenouille ?",
-        "ar": "ماذا يأتي بعد ذلك في حياة الضفدع؟"
+        "en": "What comes next? Let’s watch a frog grow up!",
+        "fr": "Et après ? Regardons une grenouille grandir !",
+        "ar": "ماذا بعد؟ هيا نشاهد ضفدعًا يكبر!"
       },
       "puzzle": {
         "type": "pattern-series",
@@ -2748,9 +2949,9 @@
       ],
       "contentType": "puzzle",
       "narration": {
-        "en": "Bees visit flower after flower. They drink nectar and carry pollen, and that helps plants make seeds.",
-        "fr": "Les abeilles visitent fleur après fleur. Elles boivent le nectar et transportent le pollen, ce qui aide les plantes à faire des graines.",
-        "ar": "يزور النحل زهرة بعد زهرة، فيشرب الرحيق وينقل حبوب اللقاح، وهذا يساعد النباتات على صنع البذور."
+        "en": "Bees are the delivery drivers of the flower world! While they sip sweet nectar, they carry pollen from flower to flower, and that is how plants make seeds.",
+        "fr": "Les abeilles sont les livreuses du monde des fleurs ! En buvant le nectar sucré, elles transportent le pollen de fleur en fleur, et c’est ainsi que les plantes font des graines.",
+        "ar": "النحل هو عامل التوصيل في عالم الأزهار! وهو يرتشف الرحيق الحلو، ينقل حبوب اللقاح من زهرة إلى زهرة، وهكذا تصنع النباتات بذورها."
       },
       "learnMore": {
         "en": "Bees carry pollen home in little baskets on their back legs. A honey bee dances a \"waggle dance\" to tell the others where the flowers are. In summer, one healthy hive can hold about 50,000 bees. Nearly 9 out of 10 flowering plants need animals like bees, butterflies, birds or bats to carry their pollen.",
@@ -2782,9 +2983,9 @@
         "ar": "تلقيح (نبات)"
       },
       "mascotLine": {
-        "en": "Bzzz! Follow me to the flowers.",
-        "fr": "Bzzz ! Suis-moi jusqu'aux fleurs.",
-        "ar": "بزز! اتبعني إلى الأزهار."
+        "en": "Bzzz bzzz! Follow me, the flowers are waiting!",
+        "fr": "Bzzz bzzz ! Suis-moi, les fleurs nous attendent !",
+        "ar": "بززز! اتبعني، الأزهار تنتظرنا!"
       },
       "quiz": {
         "question": {
@@ -2941,9 +3142,9 @@
       ],
       "contentType": "puzzle",
       "narration": {
-        "en": "Every part of a flower has a job. Roots drink, the stem carries water up, and the flower makes seeds.",
-        "fr": "Chaque partie d'une fleur a un travail. Les racines boivent, la tige fait monter l'eau, et la fleur fabrique les graines.",
-        "ar": "لكل جزء من الزهرة عمل: الجذور تشرب، والساق ترفع الماء، والزهرة تصنع البذور."
+        "en": "A flower is not just pretty, it is a seed-making machine! Each part has a job: the petals are the welcome sign for bees, and the middle is where the seeds are made.",
+        "fr": "Une fleur n’est pas juste jolie, c’est une machine à graines ! Chaque partie a un rôle : les pétales sont le panneau « bienvenue » pour les abeilles, et le cœur est l’endroit où naissent les graines.",
+        "ar": "الزهرة ليست جميلة فقط، بل آلة لصنع البذور! لكل جزء دور: البتلات لافتة ترحيب بالنحل، وفي وسط الزهرة تتكوّن البذور."
       },
       "learnMore": {
         "en": "Sepals are small green leaves that protect the flower while it is still a bud. Bright petals and sweet smells invite bees and butterflies to visit a flower. Stamens make pollen, a fine yellow powder.",
@@ -2973,9 +3174,9 @@
         "ar": "زهرة"
       },
       "mascotLine": {
-        "en": "Let's grow a flower, part by part!",
-        "fr": "Faisons pousser une fleur, partie par partie !",
-        "ar": "لننمِّ زهرة، جزءًا بعد جزء!"
+        "en": "Let’s build a flower, piece by piece! I love this one!",
+        "fr": "Construisons une fleur, morceau par morceau ! J’adore ça !",
+        "ar": "هيا نبني زهرة قطعة قطعة! أحبّ هذه اللعبة!"
       },
       "puzzle": {
         "type": "build-flower",
@@ -3108,9 +3309,9 @@
       ],
       "contentType": "puzzle",
       "narration": {
-        "en": "A sunflower head is really hundreds of tiny flowers packed together. Young sunflowers turn to follow the sun across the sky.",
-        "fr": "La tête d'un tournesol, ce sont en fait des centaines de petites fleurs serrées. Les jeunes tournesols tournent pour suivre le soleil dans le ciel.",
-        "ar": "رأس زهرة الشمس هو في الحقيقة مئات الأزهار الصغيرة المتراصّة. وتدور زهور الشمس الصغيرة لتتبع الشمس في السماء."
+        "en": "Surprise: a sunflower is not one flower but hundreds of tiny ones squeezed together! When it is young, it turns its head to follow the sun across the sky, like a fan watching a ball.",
+        "fr": "Surprise : un tournesol n’est pas une fleur, mais des centaines de minuscules fleurs serrées ensemble ! Quand il est jeune, il tourne la tête pour suivre le soleil dans le ciel, comme un supporter qui suit le ballon.",
+        "ar": "مفاجأة: زهرة الشمس ليست زهرة واحدة، بل مئات الزهيرات الصغيرة المتلاصقة! وعندما تكون صغيرة، تدير رأسها لتتبع الشمس في السماء، مثل مشجّع يتابع الكرة."
       },
       "learnMore": {
         "en": "Tall kinds of sunflower can grow about 3 metres high. The record is almost 11 metres!",
@@ -3139,9 +3340,9 @@
         "ar": "دوار الشمس"
       },
       "mascotLine": {
-        "en": "Morning in the east, evening in the west. Follow it!",
-        "fr": "Le matin à l'est, le soir à l'ouest. Suis-le !",
-        "ar": "صباحًا في الشرق ومساءً في الغرب. اتبعها!"
+        "en": "Sun up in the east, down in the west. Let’s follow it!",
+        "fr": "Le soleil se lève à l’est et se couche à l’ouest. Suivons-le !",
+        "ar": "تشرق الشمس من الشرق وتغرب في الغرب. هيا نتبعها!"
       },
       "quiz": {
         "question": {
@@ -3265,9 +3466,9 @@
       ],
       "contentType": "puzzle",
       "narration": {
-        "en": "Animals talk with sounds. Listen closely: every sound here was recorded from a real animal.",
-        "fr": "Les animaux se parlent avec des sons. Écoute bien : chaque son ici a été enregistré sur un vrai animal.",
-        "ar": "تتكلّم الحيوانات بالأصوات. أنصت جيدًا: كل صوت هنا مسجّل من حيوان حقيقي."
+        "en": "Animals chat too, they just use sounds instead of words. Every sound here was recorded from a real animal. Close your eyes and listen like a wildlife detective!",
+        "fr": "Les animaux aussi discutent, avec des sons au lieu de mots. Chaque son ici a été enregistré auprès d’un vrai animal. Ferme les yeux et écoute comme un détective de la nature !",
+        "ar": "الحيوانات تتحدّث أيضًا، لكن بالأصوات بدل الكلمات. كل صوت هنا مسجّل من حيوان حقيقي. أغمض عينيك واستمع مثل محقّق في البرّية!"
       },
       "learnMore": {
         "en": "Elephants trumpet through their trunk when they are excited or upset. A zebra's call is a high bark or bray. Owls hoot to call to each other, mostly at night. Male frogs croak to call females. Each kind of frog has its own song.",
@@ -3298,9 +3499,9 @@
         "ar": "تواصل الحيوانات"
       },
       "mascotLine": {
-        "en": "Shh... listen! Who is making that sound?",
-        "fr": "Chut... écoute ! Qui fait ce bruit ?",
-        "ar": "صه... أنصت! من يصدر هذا الصوت؟"
+        "en": "Ears on! Who is making that noise? Let’s guess!",
+        "fr": "Ouvre grand tes oreilles ! Qui fait ce bruit ? Devine !",
+        "ar": "افتح أذنيك! من يصدر هذا الصوت؟ خمّن!"
       },
       "puzzle": {
         "type": "sound-match",

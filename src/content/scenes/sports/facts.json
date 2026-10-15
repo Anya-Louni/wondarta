@@ -214,6 +214,79 @@
         "fr": "Un objet léger en forme de cône qu'on se renvoie au badminton.",
         "ar": "جسم خفيف مخروطي الشكل يُضرب ذهابًا وإيابًا في كرة الريشة."
       }
+    },
+    {
+      "terms": {
+        "en": [
+          "athletes"
+        ],
+        "fr": [
+          "athlètes"
+        ],
+        "ar": [
+          "رياضيين",
+          "الرياضيين"
+        ]
+      },
+      "definition": {
+        "en": "People who train hard and compete in sports.",
+        "fr": "Des personnes qui s’entraînent dur et participent à des compétitions sportives.",
+        "ar": "أشخاص يتدرّبون بجدّ ويتنافسون في الرياضة."
+      }
+    },
+    {
+      "terms": {
+        "en": [
+          "badminton"
+        ],
+        "fr": [
+          "badminton"
+        ],
+        "ar": [
+          "الريشة"
+        ]
+      },
+      "definition": {
+        "en": "A racket sport where players hit a feathered shuttlecock over a high net.",
+        "fr": "Un sport de raquette où l’on frappe un volant à plumes par-dessus un filet haut.",
+        "ar": "رياضة بالمضرب تُضرب فيها ريشة فوق شبكة عالية."
+      }
+    },
+    {
+      "terms": {
+        "en": [
+          "curling"
+        ],
+        "fr": [
+          "curling"
+        ],
+        "ar": [
+          "الكيرلنغ"
+        ]
+      },
+      "definition": {
+        "en": "A sport on ice where players slide heavy stones towards a target.",
+        "fr": "Un sport sur glace où l’on fait glisser de lourdes pierres vers une cible.",
+        "ar": "رياضة على الجليد يزلق فيها اللاعبون حجارة ثقيلة نحو هدف."
+      }
+    },
+    {
+      "terms": {
+        "en": [
+          "parachute"
+        ],
+        "fr": [
+          "parachute"
+        ],
+        "ar": [
+          "مظلّة"
+        ]
+      },
+      "definition": {
+        "en": "A big cloth that catches the air to slow something down as it falls.",
+        "fr": "Une grande toile qui attrape l’air pour ralentir ce qui tombe.",
+        "ar": "قماش كبير يمسك الهواء ليبطئ سقوط الشيء."
+      }
     }
   ],
   "hotspots": [
@@ -231,9 +304,9 @@
       ],
       "contentType": "narration",
       "narration": {
-        "en": "The first modern Olympic Games were held in Athens, Greece, in 1896. The Olympic flag shows five rings joined together.",
-        "fr": "Les premiers Jeux olympiques modernes ont eu lieu à Athènes, en Grèce, en 1896. Le drapeau olympique montre cinq anneaux entrelacés.",
-        "ar": "أُقيمت أول ألعاب أولمبية حديثة في أثينا باليونان عام 1896. ويُظهر العلم الأولمبي خمس حلقات متشابكة."
+        "en": "The Olympic Games bring athletes from all over the world together. The first modern Games took place in Athens, Greece, in 1896, and the Olympic flag shows five rings linked together, like friends holding hands.",
+        "fr": "Les Jeux olympiques réunissent des athlètes du monde entier. Les premiers Jeux modernes ont eu lieu à Athènes, en Grèce, en 1896, et le drapeau olympique montre cinq anneaux entrelacés, comme des amis qui se tiennent la main.",
+        "ar": "تجمع الألعاب الأولمبية رياضيين من كل أنحاء العالم. أُقيمت أول ألعاب حديثة في أثينا باليونان عام ١٨٩٦، ويحمل العلم الأولمبي خمس حلقات متشابكة، مثل أصدقاء يمسكون أيدي بعضهم."
       },
       "learnMore": {
         "en": "The ancient Olympic Games began in Olympia, Greece, nearly 3,000 years ago. A marathon is 42.195 kilometres long.",
@@ -263,9 +336,9 @@
         "ar": "الألعاب الأولمبية"
       },
       "mascotLine": {
-        "en": "Five rings, lots of countries. Let's go!",
-        "fr": "Cinq anneaux, plein de pays. C'est parti !",
-        "ar": "خمس حلقات وبلدان كثيرة. هيّا بنا!"
+        "en": "Five rings, the whole world! Let’s go for gold!",
+        "fr": "Cinq anneaux, le monde entier ! En route pour l’or !",
+        "ar": "خمس حلقات والعالم كلّه! هيا نحو الذهب!"
       }
     },
     {
@@ -282,9 +355,9 @@
       ],
       "contentType": "puzzle",
       "narration": {
-        "en": "Each sport has its own gear. In curling, players slide heavy stones across the ice.",
-        "fr": "Chaque sport a son propre matériel. Au curling, les joueurs font glisser de lourdes pierres sur la glace.",
-        "ar": "لكل رياضة أدواتها الخاصة. في رياضة الكيرلنغ، يُزلق اللاعبون أحجارًا ثقيلة على الجليد."
+        "en": "Every sport has its own special gear, and it tells you a lot about the game. In curling, for example, players slide heavy stones across the ice and sweep in front of them!",
+        "fr": "Chaque sport a son équipement spécial, et il en dit beaucoup sur le jeu. Au curling, par exemple, les joueurs font glisser de lourdes pierres sur la glace !",
+        "ar": "لكل رياضة أدواتها الخاصة، وهي تخبرك الكثير عن اللعبة. ففي الكيرلنغ مثلًا يزلق اللاعبون حجارة ثقيلة على الجليد!"
       },
       "learnMore": {
         "en": "Cricket is played with a bat and ball by two teams of 11 players. A soccer team has 11 players on the field, including the goalkeeper. The fastest badminton hit ever measured sent the shuttlecock flying at 565 kilometres an hour.",
@@ -317,9 +390,9 @@
         "ar": "رياضة"
       },
       "mascotLine": {
-        "en": "Look at the gear. Which sport is it?",
-        "fr": "Regarde le matériel. Quel est ce sport ?",
-        "ar": "انظر إلى الأدوات. ما هذه الرياضة؟"
+        "en": "Look at the gear! Which sport is it? You’ve got this!",
+        "fr": "Regarde l’équipement ! C’est quel sport ? Tu vas trouver !",
+        "ar": "انظر إلى الأدوات! أيّ رياضة هذه؟ أنت قادر على معرفتها!"
       },
       "puzzle": {
         "type": "name-that-x",
@@ -474,9 +547,9 @@
       ],
       "contentType": "puzzle",
       "narration": {
-        "en": "Badminton is played with a shuttlecock instead of a ball. A feather shuttlecock has 16 feathers.",
-        "fr": "Le badminton se joue avec un volant au lieu d'une balle. Un volant en plumes compte 16 plumes.",
-        "ar": "تُلعب كرة الريشة بالريشة بدلًا من الكرة. في ريشة اللعب المصنوعة من الريش ١٦ ريشة."
+        "en": "Badminton is played with a shuttlecock, not a ball. A feather shuttlecock has 16 feathers, which act like a parachute: smash it hard and it still slows down in the air!",
+        "fr": "Le badminton se joue avec un volant, pas une balle. Un volant en plumes a 16 plumes qui font comme un parachute : même frappé très fort, il ralentit dans l’air !",
+        "ar": "تُلعب كرة الريشة بريشة لا بكرة. وفي الريشة المصنوعة من الريش ١٦ ريشة تعمل مثل مظلّة: حتى لو ضربتها بقوّة تتباطأ في الهواء!"
       },
       "learnMore": {
         "en": "The fastest badminton hit ever measured sent the shuttlecock flying at 565 kilometres an hour.",
@@ -505,9 +578,9 @@
         "ar": "الألعاب الأولمبية"
       },
       "mascotLine": {
-        "en": "Eyes on the shuttlecock!",
-        "fr": "Les yeux sur le volant !",
-        "ar": "عيناك على الريشة!"
+        "en": "Eyes on the shuttlecock! Don’t let it drop!",
+        "fr": "Les yeux sur le volant ! Ne le laisse pas tomber !",
+        "ar": "عيناك على الريشة! لا تدعها تسقط!"
       },
       "quiz": {
         "question": {

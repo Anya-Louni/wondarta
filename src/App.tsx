@@ -12,6 +12,7 @@ import { MiniScene } from './scenes/MiniScene';
 import { MascotRoom } from './scenes/MascotRoom';
 import { Hud } from './ui/Hud';
 import { Welcome } from './ui/Welcome';
+import { FishToast, JournalPanel } from './ui/Journal';
 import { InfoCard } from './ui/InfoCard';
 import { AskPanel } from './ui/AskPanel';
 import { MascotRoomUI } from './ui/MascotRoomUI';
@@ -88,6 +89,7 @@ export default function App() {
   const openHotspot = useApp((s) => s.openHotspot);
   const askOpen = useApp((s) => s.askOpen);
   const tourDone = useApp((s) => s.tourDone);
+  const journalOpen = useApp((s) => s.journalOpen);
   const recordVisit = useApp((s) => s.recordVisit);
   const dpr = useQuality((s) => s.dpr);
 
@@ -101,6 +103,7 @@ export default function App() {
     <>
       <GlBoundary fallback={<div className="toast">{t('app.glError')}</div>}>
         <Canvas
+          shadows="percentage"
           dpr={dpr}
           gl={{ antialias: ANTIALIAS, powerPreference: 'high-performance', toneMappingExposure: 1.05 }}
           camera={{ fov: 62, near: 0.1, far: 400, position: [0, 1.55, 6] }}
@@ -117,6 +120,8 @@ export default function App() {
       <Hud />
       {openHotspot && <InfoCard key={openHotspot} hotspotId={openHotspot} />}
       {askOpen && <AskPanel />}
+      {journalOpen && <JournalPanel />}
+      <FishToast />
       {scene === 'mascot-room' && !askOpen && <MascotRoomUI />}
       {scene === 'hub' && !askOpen && !openHotspot && !tourDone && <Welcome />}
       <div key={scene} className="fade-screen" aria-hidden />

@@ -176,6 +176,100 @@
         "fr": "Le cadre d'une carte qui explique ses symboles.",
         "ar": "الإطار في الخريطة الذي يشرح رموزها."
       }
+    },
+    {
+      "terms": {
+        "en": [
+          "map"
+        ],
+        "fr": [
+          "carte"
+        ],
+        "ar": [
+          "الخريطة",
+          "خريطة"
+        ]
+      },
+      "definition": {
+        "en": "A drawing of a place as if you saw it from high above.",
+        "fr": "Un dessin d’un endroit, comme si on le voyait de très haut.",
+        "ar": "رسم لمكان كأنك تراه من الأعلى."
+      }
+    },
+    {
+      "terms": {
+        "en": [
+          "symbol",
+          "symbols"
+        ],
+        "fr": [
+          "symbole",
+          "symboles"
+        ],
+        "ar": [
+          "الرموز",
+          "رمز"
+        ]
+      },
+      "definition": {
+        "en": "A small picture or sign that stands for something.",
+        "fr": "Un petit dessin ou signe qui représente quelque chose.",
+        "ar": "صورة صغيرة أو علامة تدلّ على شيء."
+      }
+    },
+    {
+      "terms": {
+        "en": [
+          "magnet"
+        ],
+        "fr": [
+          "aimant"
+        ],
+        "ar": [
+          "مغناطيس"
+        ]
+      },
+      "definition": {
+        "en": "An object that pulls iron towards it without touching.",
+        "fr": "Un objet qui attire le fer sans le toucher.",
+        "ar": "جسم يجذب الحديد إليه دون أن يلمسه."
+      }
+    },
+    {
+      "terms": {
+        "en": [
+          "north"
+        ],
+        "fr": [
+          "nord"
+        ],
+        "ar": [
+          "الشمال"
+        ]
+      },
+      "definition": {
+        "en": "One of the four main directions. A compass needle points that way.",
+        "fr": "L’une des quatre directions principales. L’aiguille d’une boussole pointe vers lui.",
+        "ar": "أحد الاتجاهات الأربعة الرئيسية، وتشير إليه إبرة البوصلة."
+      }
+    },
+    {
+      "terms": {
+        "en": [
+          "treasure"
+        ],
+        "fr": [
+          "trésor"
+        ],
+        "ar": [
+          "الكنز"
+        ]
+      },
+      "definition": {
+        "en": "A hidden collection of precious things, like gold or jewels.",
+        "fr": "Un ensemble caché de choses précieuses, comme de l’or ou des bijoux.",
+        "ar": "مجموعة مخبّأة من الأشياء الثمينة، مثل الذهب أو الجواهر."
+      }
     }
   ],
   "hotspots": [
@@ -193,9 +287,9 @@
       ],
       "contentType": "narration",
       "narration": {
-        "en": "A compass rose on a map shows the directions north, east, south and west. The Sun rises in the eastern part of the sky and sets in the western part.",
-        "fr": "La rose des vents d'une carte indique le nord, l'est, le sud et l'ouest. Le Soleil se lève dans la partie est du ciel et se couche dans la partie ouest.",
-        "ar": "تُظهر وردة الرياح على الخريطة الاتجاهات: الشمال والشرق والجنوب والغرب. تشرق الشمس من جهة الشرق في السماء وتغرب من جهة الغرب."
+        "en": "Explorers never get lost thanks to the compass rose: it shows north, east, south and west on a map. And here is a free trick: the Sun always rises in the east and sets in the west.",
+        "fr": "Les explorateurs ne se perdent jamais grâce à la rose des vents : elle montre le nord, l’est, le sud et l’ouest sur une carte. Et voici une astuce gratuite : le Soleil se lève toujours à l’est et se couche à l’ouest.",
+        "ar": "لا يضيع المستكشفون بفضل وردة الرياح: فهي تبيّن الشمال والشرق والجنوب والغرب على الخريطة. وإليك حيلة مجانية: تشرق الشمس دائمًا من الشرق وتغرب في الغرب."
       },
       "learnMore": {
         "en": "A compass works because the Earth itself acts like a giant magnet.",
@@ -226,9 +320,9 @@
         "ar": "وردة الرياح"
       },
       "mascotLine": {
-        "en": "Which way is north? Let's find out!",
-        "fr": "Où est le nord ? Découvrons-le !",
-        "ar": "أين الشمال؟ لنكتشف ذلك!"
+        "en": "Which way is north? Let’s find out, explorer!",
+        "fr": "Où est le nord ? Allons le découvrir, explorateur !",
+        "ar": "أين الشمال؟ هيا نكتشف أيها المستكشف!"
       }
     },
     {
@@ -245,9 +339,9 @@
       ],
       "contentType": "puzzle",
       "narration": {
-        "en": "Someone left a coded direction! In a shift cipher, every letter moves the same number of places along the alphabet.",
-        "fr": "Quelqu'un a laissé une direction codée ! Dans un chiffrement par décalage, chaque lettre avance du même nombre de places dans l'alphabet.",
-        "ar": "ترك أحدهم اتجاهًا مشفّرًا! في شيفرة الإزاحة، يتحرّك كل حرف العدد نفسه من المواضع في الأبجدية."
+        "en": "Someone left a coded message! In a shift cipher, every letter slides the same number of places along the alphabet. Slide them back, and the secret appears!",
+        "fr": "Quelqu’un a laissé un message codé ! Dans un code par décalage, chaque lettre glisse du même nombre de places dans l’alphabet. Fais-les glisser en arrière, et le secret apparaît !",
+        "ar": "ترك أحدهم رسالة مشفّرة! في شيفرة الإزاحة ينزلق كل حرف العدد نفسه من المواضع في الأبجدية. أرجعها إلى مكانها فيظهر السرّ!"
       },
       "learnMore": {
         "en": "Julius Caesar is said to have sent secret messages by shifting each letter 3 places.",
@@ -275,9 +369,9 @@
         "ar": "شيفرة قيصر"
       },
       "mascotLine": {
-        "en": "A secret code! Each letter moved one step forward.",
-        "fr": "Un code secret ! Chaque lettre a avancé d'un pas.",
-        "ar": "شيفرة سرّية! كل حرف تقدّم خطوة واحدة."
+        "en": "A secret code! Let’s crack it like real spies!",
+        "fr": "Un code secret ! Déchiffrons-le comme de vrais espions !",
+        "ar": "رمز سرّي! هيا نفكّه مثل الجواسيس الحقيقيين!"
       },
       "puzzle": {
         "type": "cipher",
@@ -333,9 +427,9 @@
       ],
       "contentType": "puzzle",
       "narration": {
-        "en": "Maps help us find our way. A compass rose shows the directions, and a map key explains the symbols.",
-        "fr": "Les cartes nous aident à trouver notre chemin. La rose des vents montre les directions, et la légende explique les symboles.",
-        "ar": "تساعدنا الخرائط على إيجاد الطريق. وردة الرياح تُظهر الاتجاهات، ومفتاح الخريطة يشرح الرموز."
+        "en": "A map is like a bird’s-eye view of a place. The compass rose tells you which way to go, and the map key explains what each little symbol means. Pirates loved them!",
+        "fr": "Une carte, c’est comme voir un endroit avec les yeux d’un oiseau. La rose des vents indique où aller, et la légende explique ce que veut dire chaque petit symbole. Les pirates adoraient ça !",
+        "ar": "الخريطة مثل رؤية المكان بعين طائر. تخبرك وردة الرياح بالاتجاه، ويشرح مفتاح الخريطة معنى كل رمز صغير. كان القراصنة يحبّونها!"
       },
       "learnMore": {
         "en": "The Sun rises in the eastern part of the sky and sets in the western part. Julius Caesar is said to have sent secret messages by shifting each letter 3 places.",
@@ -366,9 +460,9 @@
         "ar": "وردة الرياح"
       },
       "mascotLine": {
-        "en": "North, east, south, west. Count your steps!",
-        "fr": "Nord, est, sud, ouest. Compte tes pas !",
-        "ar": "شمال، شرق، جنوب، غرب. عُدَّ خطواتك!"
+        "en": "North, east, south, west! Count your steps and find the treasure!",
+        "fr": "Nord, est, sud, ouest ! Compte tes pas et trouve le trésor !",
+        "ar": "شمال، شرق، جنوب، غرب! عُدَّ خطواتك وجد الكنز!"
       },
       "quiz": {
         "question": {

@@ -184,6 +184,118 @@
         "fr": "La science de la lumière et de la vision.",
         "ar": "علم الضوء وكيف نرى."
       }
+    },
+    {
+      "terms": {
+        "en": [
+          "scientist"
+        ],
+        "fr": [
+          "scientifique"
+        ],
+        "ar": [
+          "عالمة"
+        ]
+      },
+      "definition": {
+        "en": "A person who asks questions about the world and tests the answers with experiments.",
+        "fr": "Une personne qui se pose des questions sur le monde et vérifie les réponses par des expériences.",
+        "ar": "شخص يطرح أسئلة عن العالم ويختبر الأجوبة بالتجارب."
+      }
+    },
+    {
+      "terms": {
+        "en": [
+          "experiments",
+          "experiment"
+        ],
+        "fr": [
+          "expériences",
+          "expérience"
+        ],
+        "ar": [
+          "تجارب",
+          "التجارب",
+          "تجربة"
+        ]
+      },
+      "definition": {
+        "en": "A careful test to find out if an idea is true.",
+        "fr": "Un test soigné pour savoir si une idée est vraie.",
+        "ar": "اختبار دقيق لمعرفة هل الفكرة صحيحة."
+      }
+    },
+    {
+      "terms": {
+        "en": [
+          "physics"
+        ],
+        "fr": [
+          "physique"
+        ],
+        "ar": [
+          "الفيزياء"
+        ]
+      },
+      "definition": {
+        "en": "The science of how things move, and of light, sound, heat and energy.",
+        "fr": "La science qui étudie le mouvement, la lumière, le son, la chaleur et l’énergie.",
+        "ar": "العلم الذي يدرس الحركة والضوء والصوت والحرارة والطاقة."
+      }
+    },
+    {
+      "terms": {
+        "en": [
+          "chemistry"
+        ],
+        "fr": [
+          "chimie"
+        ],
+        "ar": [
+          "الكيمياء"
+        ]
+      },
+      "definition": {
+        "en": "The science of what things are made of, and how they change when mixed.",
+        "fr": "La science qui étudie de quoi sont faites les choses, et comment elles changent quand on les mélange.",
+        "ar": "العلم الذي يدرس ممّ تتكوّن الأشياء وكيف تتغيّر عند مزجها."
+      }
+    },
+    {
+      "terms": {
+        "en": [
+          "camera"
+        ],
+        "fr": [
+          "appareil photo"
+        ],
+        "ar": [
+          "التصوير"
+        ]
+      },
+      "definition": {
+        "en": "A machine that catches light to make a picture.",
+        "fr": "Une machine qui capte la lumière pour faire une image.",
+        "ar": "آلة تلتقط الضوء لتصنع صورة."
+      }
+    },
+    {
+      "terms": {
+        "en": [
+          "detective"
+        ],
+        "fr": [
+          "détective"
+        ],
+        "ar": [
+          "محقّق"
+        ]
+      },
+      "definition": {
+        "en": "Someone who solves mysteries by looking for clues.",
+        "fr": "Quelqu’un qui résout des mystères en cherchant des indices.",
+        "ar": "شخص يحلّ الألغاز بالبحث عن الأدلّة."
+      }
     }
   ],
   "hotspots": [
@@ -201,9 +313,9 @@
       ],
       "contentType": "narration",
       "narration": {
-        "en": "Marie Curie was the first woman to win a Nobel Prize. With her husband Pierre, she discovered two elements: polonium and radium.",
-        "fr": "Marie Curie a été la première femme à recevoir un prix Nobel. Avec son mari Pierre, elle a découvert deux éléments : le polonium et le radium.",
-        "ar": "كانت ماري كوري أول امرأة تفوز بجائزة نوبل. واكتشفت مع زوجها بيار عنصرين هما البولونيوم والراديوم."
+        "en": "Marie Curie was a scientist who loved to ask \"why?\". She became the first woman to win a Nobel Prize, and with her husband Pierre she discovered two brand-new elements: polonium and radium.",
+        "fr": "Marie Curie était une scientifique qui adorait demander « pourquoi ? ». Elle a été la première femme à recevoir un prix Nobel, et avec son mari Pierre, elle a découvert deux éléments tout nouveaux : le polonium et le radium.",
+        "ar": "كانت ماري كوري عالمة تحبّ أن تسأل «لماذا؟». وصارت أول امرأة تفوز بجائزة نوبل، واكتشفت مع زوجها بيار عنصرين جديدين: البولونيوم والراديوم."
       },
       "learnMore": {
         "en": "Marie Curie is the only person to win Nobel Prizes in two different sciences: physics and chemistry. Marie Curie's notebooks are still radioactive today, so they are kept in boxes lined with lead.",
@@ -234,7 +346,7 @@
       },
       "mascotLine": {
         "en": "She never stopped asking questions. Just like you!",
-        "fr": "Elle n'a jamais arrêté de poser des questions. Comme toi !",
+        "fr": "Elle n’a jamais arrêté de poser des questions. Comme toi !",
         "ar": "لم تتوقّف أبدًا عن طرح الأسئلة. مثلك تمامًا!"
       }
     },
@@ -252,9 +364,9 @@
       ],
       "contentType": "puzzle",
       "narration": {
-        "en": "Long ago, a scientist in Cairo tested his ideas with careful experiments. Read the riddle and guess who he was.",
-        "fr": "Il y a longtemps, un savant du Caire vérifiait ses idées par des expériences soigneuses. Lis la devinette et trouve qui c'était.",
-        "ar": "قبل زمن طويل، كان عالم في القاهرة يختبر أفكاره بتجارب دقيقة. اقرأ اللغز وخمّن من هو."
+        "en": "About 1,000 years ago, a scientist in Cairo did not just believe what people said: he tested his ideas with careful experiments, like a true detective. Read the riddle and guess who he was!",
+        "fr": "Il y a environ 1 000 ans, un savant du Caire ne croyait pas tout ce qu’on lui disait : il testait ses idées avec des expériences soignées, comme un vrai détective. Lis la devinette et trouve qui c’était !",
+        "ar": "قبل نحو ١٠٠٠ سنة، لم يكن عالم في القاهرة يصدّق كل ما يُقال: كان يختبر أفكاره بتجارب دقيقة، مثل محقّق حقيقي. اقرأ اللغز وخمّن من هو!"
       },
       "learnMore": {
         "en": "Ibn al-Haytham wrote the Book of Optics, explaining that we see when light enters our eyes. Ibn al-Haytham showed that light passing through a tiny hole into a dark room makes an upside-down picture. Cameras work the same way.",
@@ -283,9 +395,9 @@
         "ar": "ابن الهيثم"
       },
       "mascotLine": {
-        "en": "Riddle time! Read the clues carefully.",
-        "fr": "C'est l'heure de la devinette ! Lis bien les indices.",
-        "ar": "حان وقت اللغز! اقرأ الأدلّة بعناية."
+        "en": "Riddle time! Put on your detective hat!",
+        "fr": "L’heure de la devinette ! Enfile ta casquette de détective !",
+        "ar": "وقت اللغز! البس قبّعة المحقّق!"
       },
       "puzzle": {
         "type": "riddle",
@@ -337,9 +449,9 @@
       ],
       "contentType": "puzzle",
       "narration": {
-        "en": "Ibn al-Haytham showed that light passing through a tiny hole into a dark room makes an upside-down picture. Cameras work the same way. Ibn al-Haytham wrote the Book of Optics, explaining that we see when light enters our eyes.",
-        "fr": "Ibn al-Haytham a montré que la lumière qui passe par un petit trou dans une pièce sombre forme une image à l'envers. Les appareils photo marchent de la même façon. Ibn al-Haytham a écrit le Livre de l'optique, où il explique que nous voyons quand la lumière entre dans nos yeux.",
-        "ar": "بيّن ابن الهيثم أن الضوء المارّ من ثقب صغير إلى غرفة مظلمة يرسم صورة مقلوبة، وهكذا تعمل آلات التصوير. ألّف ابن الهيثم «كتاب المناظر» وشرح فيه أننا نرى عندما يدخل الضوء إلى أعيننا."
+        "en": "Make a tiny hole in the wall of a dark room, and a picture of the outside world appears on the opposite wall, upside down! Ibn al-Haytham explained this trick, and every camera works the same way.",
+        "fr": "Fais un tout petit trou dans le mur d’une pièce sombre, et une image du dehors apparaît sur le mur d’en face, à l’envers ! Ibn al-Haytham a expliqué ce phénomène, et tous les appareils photo fonctionnent de la même façon.",
+        "ar": "اصنع ثقبًا صغيرًا في جدار غرفة مظلمة، فتظهر صورة العالم الخارجي على الجدار المقابل مقلوبة! شرح ابن الهيثم هذه الظاهرة، وكل آلات التصوير تعمل بالطريقة نفسها."
       },
       "learnMore": {
         "en": "Ibn al-Haytham lived about 1,000 years ago and worked in Cairo.",
@@ -368,9 +480,9 @@
         "ar": "ماري كوري"
       },
       "mascotLine": {
-        "en": "Ibn al-Haytham tried this in a dark room, 1,000 years ago.",
-        "fr": "Ibn al-Haytham a essayé ça dans une pièce sombre, il y a 1 000 ans.",
-        "ar": "جرّب ابن الهيثم هذا في غرفة مظلمة قبل ألف عام."
+        "en": "Ibn al-Haytham tried this in a dark room 1,000 years ago. Your turn!",
+        "fr": "Ibn al-Haytham a fait cette expérience dans une pièce sombre il y a 1 000 ans. À toi !",
+        "ar": "جرّب ابن الهيثم هذا في غرفة مظلمة قبل ألف عام. جاء دورك!"
       },
       "quiz": {
         "question": {

@@ -1,6 +1,6 @@
 import { useEffect, useState } from 'react';
 import { useTranslation } from 'react-i18next';
-import { Home, Search, Star, Volume2, VolumeX, X } from 'lucide-react';
+import { BookMarked, Home, Search, Star, Volume2, VolumeX, X } from 'lucide-react';
 import { starTally } from '../content/loader';
 import { useApp } from '../state/store';
 import { useLines } from '../i18n';
@@ -35,6 +35,8 @@ export function Hud() {
   // no AI keys on this deployment: the ask button would only show a sleeping Wondoo, so leave it out
   const canAsk = useApp((s) => s.providers.gemini !== 'unconfigured');
   const tally = starTally(stars);
+  const journalOpen = useApp((s) => s.journalOpen);
+  const setJournalOpen = useApp((s) => s.setJournalOpen);
 
   return (
     <nav className="hud" aria-label="Wondarta">
@@ -57,6 +59,9 @@ export function Hud() {
       </div>
       <div className="spacer" />
       <div className="cap">
+        <IconButton label={t('journal.open')} pressed={journalOpen} onClick={() => setJournalOpen(!journalOpen)}>
+          <BookMarked className="i" />
+        </IconButton>
         {canAsk && (
         <IconButton
           label={`${t('hud.ask')} (${Number.isFinite(asksLeft) ? t('hud.asksLeft', { count: asksLeft }) : t('hud.asksUnlimited')})`}

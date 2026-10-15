@@ -5,6 +5,14 @@ import { safeLocal, safeSession } from './safeStorage';
 
 export type ProviderState = 'ok' | 'unconfigured' | 'exhausted';
 
+/** A word the explorer kept, with the meaning they read, in the language they read it. */
+export interface SavedWord {
+  word: string;
+  meaning: string;
+  lang: Lang;
+  at: number;
+}
+
 export interface MascotSpeech {
   text: string;
   /** changes on every new line so the bubble re-animates */
@@ -30,6 +38,9 @@ interface State {
   /** The explorer's first name. Kept on this device only, never sent to an AI. */
   name: string;
   tourDone: boolean;
+  /** The explorer's own journal: saved words, and how many of each fountain fish were caught. */
+  words: SavedWord[];
+  fish: Record<string, number>;
 
   // --- session ---
   scene: SceneId;
@@ -44,6 +55,9 @@ interface State {
   providers: { groq: ProviderState; gemini: ProviderState };
   sceneFlags: Record<string, boolean>;
   roomMode: 'play' | 'chat';
+  journalOpen: boolean;
+  /** The fish just caught at the fountain, for the little announcement. */
+  caught: { id: string; isNew: boolean; key: number } | null;
 
   setLang: (l: Lang) => void;
   goTo: (scene: SceneId, focusHotspot?: string | null) => void;
@@ -66,6 +80,10 @@ interface State {
   setTourDone: (v: boolean) => void;
   /** Grown-up action: forget the name, stars and visited cards on this device. */
   resetProgress: () => void;
+  saveWord: (w: Omit<SavedWord, 'at'>) => void;
+  removeWord: (word: string, lang: Lang) => void;
+  catchFish: (id: string) => void;
+  setJournalOpen: (v: boolean) => void;
 }
 
 let speechKey = 0;
@@ -84,6 +102,10 @@ export const useApp = create<State>()(
       plan: 'free',
       name: '',
       tourDone: false,
+      words: [],
+      fish: {},
+      journalOpen: false,
+      caught: null,
 
       scene: 'hub',
       prevScene: null,
@@ -134,13 +156,23 @@ export const useApp = create<State>()(
       setRoomMode: (roomMode) => set({ roomMode }),
       setName: (name) => set({ name: cleanName(name) }),
       setTourDone: (tourDone) => set({ tourDone }),
-      resetProgress: () => set({ name: '', tourDone: false, explored: [], stars: {}, visitDays: [], scene: 'hub', openHotspot: null, mascotSpeech: null }),
+      saveWord: (w) => {
+        const same = (x: SavedWord) => x.lang === w.lang && x.word.toLowerCase() === w.word.toLowerCase();
+        if (!get().words.some(same)) set({ words: [{ ...w, at: Date.now() }, ...get().words].slice(0, 300) });
+      },
+      removeWord: (word, lang) => set({ words: get().words.filter((x) => !(x.lang === lang && x.word === word)) }),
+      catchFish: (id) => {
+        const n = get().fish[id] ?? 0;
+        set({ fish: { ...get().fish, [id]: n + 1 }, caught: { id, isNew: n === 0, key: Date.now() } });
+      },
+      setJournalOpen: (journalOpen) => set({ journalOpen, askOpen: false, openHotspot: journalOpen ? null : get().openHotspot }),
+      resetProgress: () => set({ words: [], fish: {}, name: '', tourDone: false, explored: [], stars: {}, visitDays: [], scene: 'hub', openHotspot: null, mascotSpeech: null }),
     }),
     {
       name: 'wondarta',
       version: 1,
       storage: createJSONStorage(() => safeLocal),
-      partialize: (s) => ({ lang: s.lang, explored: s.explored, stars: s.stars, visitDays: s.visitDays, sound: s.sound, plan: s.plan, name: s.name, tourDone: s.tourDone }),
+      partialize: (s) => ({ lang: s.lang, explored: s.explored, stars: s.stars, visitDays: s.visitDays, sound: s.sound, plan: s.plan, name: s.name, tourDone: s.tourDone, words: s.words, fish: s.fish }),
     },
   ),
 );

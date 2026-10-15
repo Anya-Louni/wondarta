@@ -16,6 +16,7 @@ import { placePlayer, walkTo, yawToward } from '../three/playerState';
 import { groundTexture, hallFloorTexture } from '../three/textures';
 import { Butterflies, DenGate, FountainLife, GardenRing, Planters } from './hubDecor';
 import { Atmosphere, Clouds, GroundShadows } from '../three/World';
+import { BakedShadows, FloorGlow, LeapingFish, rippleAt } from './hallLife';
 
 /** The tiling grain that keeps the polished floor from looking like plastic. */
 function floorGrain() {
@@ -98,9 +99,11 @@ export function Hub() {
   return (
     <>
       <GradientSky top="#2f9ff0" horizon="#e6f8ff" bottom="#cfeebd" />
-      <SoftLights />
+      <SoftLights shadows />
+      <BakedShadows />
       <Atmosphere />
-      <GroundShadows size={44} far={2} />
+      <GroundShadows size={44} far={4} opacity={0.5} />
+      <FloorGlow />
       <Clouds />
       <fog attach="fog" args={['#dff4ff', 30, 90]} />
       <Player bounds={hallBounds} />
@@ -108,8 +111,11 @@ export function Hub() {
       {/* glossy atrium floor (also the tap-to-walk surface) */}
       <mesh
         rotation-x={-Math.PI / 2}
+        receiveShadow
+        userData={{ floor: true }}
         onClick={(e) => {
           if (e.delta > 6) return;
+          rippleAt(e.point.x, e.point.z);
           walkTo(e.point.x, e.point.z);
         }}
       >
@@ -178,6 +184,7 @@ export function Hub() {
           <meshStandardMaterial color="#bfeaff" transparent opacity={0.6} roughness={0} envMapIntensity={1.5} />
         </mesh>
         <FountainLife />
+        <LeapingFish />
         <Glow color="#bff0ff" size={6} opacity={0.5} position={[0, 3.6, 0]} />
         <Label3D position={[0, 4.9, 0]} distanceFactor={14} zIndex={5}>
           <div className="plaque" style={{ fontSize: 24, color: '#0b6399', padding: '8px 18px' }}>

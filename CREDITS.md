@@ -115,6 +115,7 @@ pins from real coordinates. File: `public/images/map/world.png` (34 KB).
 ## Content sources
 
 - **Wikipedia** (text, [CC BY-SA 4.0](https://creativecommons.org/licenses/by-sa/4.0/)) is the only retrieval source for AI-grounded answers, and every answer links to its article.
+- **Instrument recordings** in Music of the World, from Wikimedia Commons, trimmed to 12 seconds (same licence as the original): didgeridoo, "Didgeridoo sound.ogg" by Cassa342 (CC BY-SA 4.0); sitar, "Sitar clipping.ogg" by Sanath311 (CC BY-SA 3.0); koto, "Koto performance.ogg" by Torsodog (CC BY 3.0); erhu, "江河水.ogg" recorded by David290 (CC BY-SA 4.0); charango, "Charango - cuerdas al aire.ogg" by Ferbr1 (public domain). Files: `public/audio/instruments/`.
 - **Mona Lisa** jigsaw image: Leonardo da Vinci, public domain. Photo by C2RMF, retouched, from Wikimedia Commons (<https://commons.wikimedia.org/wiki/File:Mona_Lisa,_by_Leonardo_da_Vinci,_from_C2RMF_retouched.jpg>). File: `public/images/art/mona-lisa.jpg` (117 KB).
 - **T. rex skeleton** in the fossil dig: drawing by William D. Matthew, 1905, public domain, from Wikimedia Commons (<https://commons.wikimedia.org/wiki/File:Tyrannosaurus_skeleton.jpg>). File: `public/images/art/trex-skeleton.jpg` (74 KB).
 - **Wikimedia Commons** photos and videos (the Mona Lisa, portraits, animal photos, the owl video) are loaded live and credited in the UI. Each file's author and license are on its Commons page.

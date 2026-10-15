@@ -178,6 +178,82 @@
         "fr": "Des ordres qui disent exactement quoi faire.",
         "ar": "أوامر تحدّد بالضبط ما يجب فعله."
       }
+    },
+    {
+      "terms": {
+        "en": [
+          "program",
+          "programs"
+        ],
+        "fr": [
+          "programme",
+          "programmes"
+        ],
+        "ar": [
+          "البرنامج",
+          "برنامج"
+        ]
+      },
+      "definition": {
+        "en": "A list of instructions written for a computer to follow.",
+        "fr": "Une liste d’instructions écrite pour qu’un ordinateur la suive.",
+        "ar": "قائمة تعليمات مكتوبة ليتبعها الحاسوب."
+      }
+    },
+    {
+      "terms": {
+        "en": [
+          "debugging"
+        ],
+        "fr": [
+          "déboguer"
+        ],
+        "ar": [
+          "تصحيح"
+        ]
+      },
+      "definition": {
+        "en": "Finding the mistakes in a program and fixing them.",
+        "fr": "Trouver les erreurs dans un programme et les corriger.",
+        "ar": "إيجاد الأخطاء في البرنامج وإصلاحها."
+      }
+    },
+    {
+      "terms": {
+        "en": [
+          "robot"
+        ],
+        "fr": [
+          "robot"
+        ],
+        "ar": [
+          "الروبوت",
+          "روبوت"
+        ]
+      },
+      "definition": {
+        "en": "A machine that can do jobs by following a program.",
+        "fr": "Une machine qui peut faire des tâches en suivant un programme.",
+        "ar": "آلة تستطيع أداء مهامّ باتّباع برنامج."
+      }
+    },
+    {
+      "terms": {
+        "en": [
+          "engineers"
+        ],
+        "fr": [
+          "ingénieurs"
+        ],
+        "ar": [
+          "مهندسون"
+        ]
+      },
+      "definition": {
+        "en": "People who design and build machines, bridges, computers and more.",
+        "fr": "Des personnes qui conçoivent et construisent des machines, des ponts, des ordinateurs…",
+        "ar": "أشخاص يصمّمون ويبنون الآلات والجسور والحواسيب وغيرها."
+      }
     }
   ],
   "hotspots": [
@@ -195,9 +271,9 @@
       ],
       "contentType": "narration",
       "narration": {
-        "en": "An algorithm is a list of steps, in order, that solves a problem. A computer program is a set of instructions that a computer follows.",
-        "fr": "Un algorithme est une liste d'étapes, dans l'ordre, qui résout un problème. Un programme informatique est un ensemble d'instructions que l'ordinateur suit.",
-        "ar": "الخوارزمية قائمة من الخطوات المرتّبة تحلّ مشكلة ما. والبرنامج الحاسوبي مجموعة من التعليمات التي يتّبعها الحاسوب."
+        "en": "An algorithm is a recipe: a list of steps, in the right order, to solve a problem. A program is that recipe written so a computer can follow it, step by step, without ever getting bored.",
+        "fr": "Un algorithme, c’est une recette : une liste d’étapes, dans le bon ordre, pour résoudre un problème. Un programme, c’est cette recette écrite pour qu’un ordinateur la suive, étape par étape, sans jamais s’ennuyer.",
+        "ar": "الخوارزمية وصفة: قائمة خطوات مرتّبة لحلّ مشكلة. والبرنامج هو هذه الوصفة مكتوبةً ليتبعها الحاسوب خطوةً خطوة، دون أن يملّ أبدًا."
       },
       "learnMore": {
         "en": "In 1843, Ada Lovelace published what is often called the first computer program. Ada Lovelace imagined that computers could one day work with music, not just numbers.",
@@ -227,9 +303,9 @@
         "ar": "خوارزمية"
       },
       "mascotLine": {
-        "en": "Robots need very clear steps. Let's learn how!",
-        "fr": "Les robots ont besoin d'étapes très claires. Apprenons comment !",
-        "ar": "تحتاج الروبوتات إلى خطوات واضحة جدًّا. لنتعلّم كيف!"
+        "en": "Robots need super clear steps. Let’s learn to talk robot!",
+        "fr": "Les robots ont besoin d’étapes super claires. Apprenons à parler robot !",
+        "ar": "الروبوتات تحتاج إلى خطوات واضحة جدًّا. هيا نتعلّم لغة الروبوت!"
       }
     },
     {
@@ -246,9 +322,9 @@
       ],
       "contentType": "puzzle",
       "narration": {
-        "en": "Write a program for the robot. If it bumps into a wall, that's a bug: find it and fix it!",
-        "fr": "Écris un programme pour le robot. S'il se cogne contre un mur, c'est un bug : trouve-le et corrige-le !",
-        "ar": "اكتب برنامجًا للروبوت. إذا اصطدم بجدار فهذه علّة: ابحث عنها وأصلحها!"
+        "en": "Time to program a robot! If it bumps into a wall, that is a bug. Every real programmer makes bugs, and the fun part is hunting them down.",
+        "fr": "C’est l’heure de programmer un robot ! S’il se cogne contre un mur, c’est un bug. Tous les vrais programmeurs font des bugs, et le plus drôle, c’est de les chasser.",
+        "ar": "حان وقت برمجة روبوت! إذا اصطدم بجدار فهذا «خطأ». كل المبرمجين الحقيقيين يرتكبون أخطاء، والمتعة في اصطيادها."
       },
       "learnMore": {
         "en": "Finding and fixing bugs is called debugging. An algorithm is a list of steps, in order, that solves a problem.",
@@ -277,9 +353,9 @@
         "ar": "برمجة"
       },
       "mascotLine": {
-        "en": "Beep boop! Tell the robot where to go.",
-        "fr": "Bip boup ! Dis au robot où aller.",
-        "ar": "بيب بوب! أخبر الروبوت إلى أين يذهب."
+        "en": "Beep boop! Tell the robot where to go, captain!",
+        "fr": "Bip boup ! Dis au robot où aller, capitaine !",
+        "ar": "بيب بوب! أخبر الروبوت إلى أين يذهب يا قائد!"
       },
       "puzzle": {
         "type": "command-route",
@@ -316,9 +392,9 @@
       ],
       "contentType": "puzzle",
       "narration": {
-        "en": "Finding and fixing bugs is called debugging. In 1947, engineers found a real moth stuck inside a computer. They taped it into their logbook as a 'bug'.",
-        "fr": "Trouver et corriger les bugs s'appelle le débogage. En 1947, des ingénieurs ont trouvé un vrai papillon de nuit coincé dans un ordinateur. Ils l'ont collé dans leur carnet et l'ont appelé « bug ».",
-        "ar": "يُسمّى البحث عن الأخطاء البرمجية وإصلاحها «تصحيح الأخطاء». في عام ١٩٤٧ وجد مهندسون عثّة حقيقية عالقة داخل حاسوب، فألصقوها في دفترهم وسمّوها «bug»، أي حشرة."
+        "en": "Why do we call mistakes in programs \"bugs\"? In 1947, engineers found a real moth stuck inside a giant computer! Finding and fixing bugs is called debugging.",
+        "fr": "Pourquoi appelle-t-on les erreurs des programmes des « bugs » (des insectes) ? En 1947, des ingénieurs ont trouvé un vrai papillon de nuit coincé dans un ordinateur géant ! Trouver et corriger les bugs, ça s’appelle déboguer.",
+        "ar": "لماذا نسمّي أخطاء البرامج «bugs» أي حشرات؟ في عام ١٩٤٧ وجد مهندسون عثّة حقيقية عالقة داخل حاسوب ضخم! والبحث عن الأخطاء وإصلاحها يُسمّى تصحيح الأخطاء."
       },
       "learnMore": {
         "en": "A mistake in a program is called a bug.",
@@ -347,9 +423,9 @@
         "ar": "خوارزمية"
       },
       "mascotLine": {
-        "en": "The very first computer bug was a real moth!",
-        "fr": "Le tout premier bug était un vrai papillon de nuit !",
-        "ar": "أول خطأ حاسوبي كان عثّة حقيقية!"
+        "en": "Bug alert! The very first computer bug was a real moth!",
+        "fr": "Alerte au bug ! Le tout premier bug d’ordinateur était un vrai papillon de nuit !",
+        "ar": "إنذار حشرات! أول خطأ حاسوبي كان عثّة حقيقية!"
       },
       "quiz": {
         "question": {

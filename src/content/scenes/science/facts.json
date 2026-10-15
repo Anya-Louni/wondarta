@@ -269,6 +269,123 @@
         "fr": "Un gaz de l'air dont les humains et les animaux ont besoin pour respirer.",
         "ar": "غاز في الهواء يحتاجه الإنسان والحيوان للتنفّس."
       }
+    },
+    {
+      "terms": {
+        "en": [
+          "organs",
+          "organ"
+        ],
+        "fr": [
+          "organes",
+          "organe"
+        ],
+        "ar": [
+          "أعضاؤك",
+          "الأعضاء",
+          "أعضاء",
+          "عضو"
+        ]
+      },
+      "definition": {
+        "en": "Body parts that each do a big job, like the heart, the lungs or the brain.",
+        "fr": "Des parties du corps qui ont chacune une grande mission, comme le cœur, les poumons ou le cerveau.",
+        "ar": "أجزاء من الجسم لكل منها مهمّة كبيرة، مثل القلب والرئتين والدماغ."
+      }
+    },
+    {
+      "terms": {
+        "en": [
+          "brain"
+        ],
+        "fr": [
+          "cerveau"
+        ],
+        "ar": [
+          "دماغك",
+          "الدماغ",
+          "دماغ"
+        ]
+      },
+      "definition": {
+        "en": "The control centre in your head. It thinks, remembers, and tells your body what to do.",
+        "fr": "Le centre de contrôle dans ta tête. Il pense, se souvient et dit à ton corps quoi faire.",
+        "ar": "مركز التحكّم في رأسك: يفكّر ويتذكّر ويخبر جسمك بما يفعل."
+      }
+    },
+    {
+      "terms": {
+        "en": [
+          "blood"
+        ],
+        "fr": [
+          "sang"
+        ],
+        "ar": [
+          "الدم",
+          "دم"
+        ]
+      },
+      "definition": {
+        "en": "The red liquid that travels around your body, carrying oxygen and food to every part.",
+        "fr": "Le liquide rouge qui voyage dans ton corps et apporte de l’oxygène et de la nourriture partout.",
+        "ar": "السائل الأحمر الذي يجري في جسمك، يحمل الأكسجين والغذاء إلى كل جزء."
+      }
+    },
+    {
+      "terms": {
+        "en": [
+          "x-rays",
+          "x-ray"
+        ],
+        "fr": [
+          "rayons"
+        ],
+        "ar": [
+          "الأشعّة",
+          "أشعّة"
+        ]
+      },
+      "definition": {
+        "en": "Invisible light that goes through skin but not through bones, so doctors can see inside you.",
+        "fr": "Une lumière invisible qui traverse la peau mais pas les os : les médecins peuvent ainsi voir à l’intérieur de toi.",
+        "ar": "ضوء غير مرئي يخترق الجلد لكن لا يخترق العظام، فيرى الأطبّاء داخل جسمك."
+      }
+    },
+    {
+      "terms": {
+        "en": [
+          "scans",
+          "scan"
+        ],
+        "fr": [],
+        "ar": []
+      },
+      "definition": {
+        "en": "Special pictures of the inside of the body, taken by hospital machines.",
+        "fr": "Des images spéciales de l’intérieur du corps, prises par des machines d’hôpital.",
+        "ar": "صور خاصّة لداخل الجسم تلتقطها أجهزة المستشفى."
+      }
+    },
+    {
+      "terms": {
+        "en": [
+          "kidneys"
+        ],
+        "fr": [
+          "reins"
+        ],
+        "ar": [
+          "الكليتين",
+          "كليتاك",
+          "كليتين"
+        ]
+      },
+      "definition": {
+        "en": "Two bean-shaped organs that clean your blood and make urine.",
+        "fr": "Deux organes en forme de haricot qui nettoient ton sang et fabriquent l’urine.",
+        "ar": "عضوان على شكل حبّة فول، ينظّفان دمك ويصنعان البول."
+      }
     }
   ],
   "hotspots": [
@@ -286,9 +403,9 @@
       ],
       "contentType": "narration",
       "narration": {
-        "en": "Your heart is a muscle that pumps blood around your body. It is about the size of your fist.",
-        "fr": "Ton cœur est un muscle qui pompe le sang dans tout ton corps. Il a à peu près la taille de ton poing.",
-        "ar": "قلبك عضلة تضخّ الدم إلى كل أنحاء جسمك. وحجمه يقارب حجم قبضة يدك."
+        "en": "Make a fist: that is about the size of your heart! It is a muscle that never takes a day off, pumping blood all around your body, from your head to your toes.",
+        "fr": "Serre le poing : c’est à peu près la taille de ton cœur ! C’est un muscle qui ne prend jamais de vacances : il pompe le sang dans tout ton corps, de la tête aux orteils.",
+        "ar": "اقبض يدك: هذا تقريبًا حجم قلبك! إنه عضلة لا تأخذ عطلة أبدًا، تضخّ الدم في جسمك كلّه، من رأسك حتى أصابع قدميك."
       },
       "learnMore": {
         "en": "An adult's heart beats about 100,000 times a day.",
@@ -317,9 +434,9 @@
         "ar": "قلب"
       },
       "mascotLine": {
-        "en": "Listen... thump, thump! That's the heart.",
-        "fr": "Écoute... boum, boum ! C'est le cœur.",
-        "ar": "استمع... دُم، دُم! هذا هو القلب."
+        "en": "Listen... thump thump! That’s your heart working hard!",
+        "fr": "Écoute... boum boum ! C’est ton cœur qui travaille dur !",
+        "ar": "استمع... دُم دُم! هذا قلبك يعمل بجدّ!"
       }
     },
     {
@@ -336,9 +453,9 @@
       ],
       "contentType": "puzzle",
       "narration": {
-        "en": "Your organs work as a team. Your brain controls your body and helps you think.",
-        "fr": "Tes organes travaillent en équipe. Ton cerveau commande ton corps et t'aide à réfléchir.",
-        "ar": "تعمل أعضاؤك كفريق واحد. يتحكّم دماغك في جسمك ويساعدك على التفكير."
+        "en": "Your organs are a team that works day and night. The captain is your brain: it controls your whole body and does all your thinking.",
+        "fr": "Tes organes forment une équipe qui travaille jour et nuit. Le capitaine, c’est ton cerveau : il contrôle tout ton corps et fait toutes tes réflexions.",
+        "ar": "أعضاؤك فريق يعمل ليلًا ونهارًا، وقائده دماغك: يتحكّم في جسمك كلّه ويقوم بكل تفكيرك."
       },
       "learnMore": {
         "en": "Your lungs take in oxygen from the air you breathe. Your stomach helps break down the food you eat. Your small intestine takes in most of the goodness from your food. In a grown-up it is 3 to 5 metres long.",
@@ -369,9 +486,9 @@
         "ar": "جسم الإنسان"
       },
       "mascotLine": {
-        "en": "Can you find where each organ lives?",
-        "fr": "Sais-tu où se trouve chaque organe ?",
-        "ar": "هل تعرف أين يوجد كل عضو؟"
+        "en": "Organ team, assemble! Where does each one live?",
+        "fr": "L’équipe des organes, rassemblement ! Où habite chacun ?",
+        "ar": "فريق الأعضاء، تجمّعوا! أين يسكن كل واحد؟"
       },
       "puzzle": {
         "type": "drag-to-label",
@@ -481,9 +598,9 @@
       ],
       "contentType": "puzzle",
       "narration": {
-        "en": "Your organs are a team. Each one has one big job, and they all work at the same time, day and night.",
-        "fr": "Tes organes forment une équipe. Chacun a un grand travail, et ils travaillent tous en même temps, jour et nuit.",
-        "ar": "أعضاؤك فريق واحد. لكل عضو عمل كبير، وكلها تعمل في الوقت نفسه، ليلًا ونهارًا."
+        "en": "Doctors use X-rays to see inside the body without opening it. Each organ has one big job, and they all work at the same time, even while you sleep.",
+        "fr": "Les médecins utilisent les rayons X pour voir à l’intérieur du corps sans l’ouvrir. Chaque organe a une grande mission, et ils travaillent tous en même temps, même quand tu dors.",
+        "ar": "يستخدم الأطبّاء الأشعّة السينية ليروا داخل الجسم دون فتحه. لكل عضو مهمّة كبيرة، وكلّها تعمل في الوقت نفسه، حتى وأنت نائم."
       },
       "learnMore": {
         "en": "Your liver is your heaviest organ inside the body. In a grown-up it weighs about 1.5 kilograms. The liver can grow back: even a quarter of a liver can grow into a whole one. You have two bean-shaped kidneys. They clean your blood and make urine. It is called \"large\" because it is wider, not longer: the small intestine is longer.",
@@ -519,9 +636,9 @@
         "ar": "جسم الإنسان"
       },
       "mascotLine": {
-        "en": "Let's peek inside. No tickling!",
-        "fr": "Regardons à l'intérieur. Sans chatouilles !",
-        "ar": "هيا ننظر إلى الداخل. بلا دغدغة!"
+        "en": "X-ray vision ON! Let’s peek inside. No tickling!",
+        "fr": "Vision rayons X activée ! On regarde à l’intérieur. Pas de chatouilles !",
+        "ar": "تشغيل رؤية الأشعّة السينية! هيا ننظر إلى الداخل. بلا دغدغة!"
       },
       "quiz": {
         "question": {
@@ -772,9 +889,9 @@
       ],
       "contentType": "puzzle",
       "narration": {
-        "en": "These organs were made from scans of a real person, so each one has its true shape and size. Can you put them back in place?",
-        "fr": "Ces organes viennent des scanners d'une vraie personne : chacun a sa vraie forme et sa vraie taille. Sauras-tu les remettre à leur place ?",
-        "ar": "صُنعت هذه الأعضاء من صور مسح لشخص حقيقي، فلكل عضو شكله وحجمه الحقيقيّان. هل تستطيع إعادتها إلى أماكنها؟"
+        "en": "These organs were made from scans of a real person, so each one has its true shape and size. Can you put every piece back in its place, like a 3D puzzle?",
+        "fr": "Ces organes ont été fabriqués à partir des images d’une vraie personne : chacun a sa vraie forme et sa vraie taille. Sauras-tu remettre chaque pièce à sa place, comme un puzzle en 3D ?",
+        "ar": "صُنعت هذه الأعضاء من صور شخص حقيقي، فلكل منها شكله وحجمه الحقيقيان. هل تستطيع إعادة كل قطعة إلى مكانها، مثل أحجية ثلاثية الأبعاد؟"
       },
       "learnMore": {
         "en": "Your large intestine takes water back from food waste. It is about 1.5 metres long.",
@@ -808,9 +925,9 @@
         "ar": "عضو (تشريح)"
       },
       "mascotLine": {
-        "en": "Oh no, the body is empty! Help me put it back together.",
-        "fr": "Oh non, le corps est vide ! Aide-moi à le reconstruire.",
-        "ar": "يا إلهي، الجسم فارغ! ساعدني في إعادة بنائه."
+        "en": "Uh-oh, this body is empty! Quick, help me put it back together!",
+        "fr": "Oh oh, ce corps est vide ! Vite, aide-moi à le remettre en ordre !",
+        "ar": "أوه، هذا الجسم فارغ! بسرعة، ساعدني في إعادة تركيبه!"
       },
       "puzzle": {
         "type": "body-build",

@@ -56,7 +56,9 @@ export type PuzzleType =
   /** Lightbot-style route commands (Games & Fun Stuff coding mini-scene). */
   | 'command-route'
   /** hands-on mini-games: move, brush, tap in rhythm, slide */
-  | 'arcade';
+  | 'arcade'
+  /** listen to an instrument, then find its country on the map */
+  | 'listen-map';
 
 import type { ModelId } from '../models';
 import type { ContinentId } from '../content/geo';
@@ -130,6 +132,13 @@ export interface SoundMatchPuzzle extends PuzzleBase {
   /** Rounds per play; each round offers `choices` pictures. */
   show: number;
   choices: number;
+}
+
+export interface ListenMapPuzzle extends PuzzleBase {
+  type: 'listen-map';
+  /** Each instrument: a recording in public/audio/instruments/<sound>.mp3 and its home country. */
+  rounds: { id: string; sound: string; instrument: LText; country: LText; pin: { lat: number; lon: number }; note: LText; factId: string }[];
+  show: number;
 }
 
 export type ArcadeGame = 'krill-gulp' | 'pollinate' | 'fossil-dig' | 'steady-race' | 'keep-up' | 'camouflage' | 'treasure' | 'pinhole' | 'jigsaw' | 'stalk' | 'tadpole' | 'sun-track' | 'xray' | 'bug-hunt' | 'dots';
@@ -257,7 +266,8 @@ export type Puzzle =
   | ConstructionPuzzle
   | CommandRoutePuzzle
   | LogicGridPuzzle
-  | ArcadePuzzle;
+  | ArcadePuzzle
+  | ListenMapPuzzle;
 
 export interface AudioMatch {
   prompt: LText;
