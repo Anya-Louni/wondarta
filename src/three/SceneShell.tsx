@@ -11,6 +11,7 @@ import { Mascot } from './Mascot';
 import { GradientSky, SoftLights } from './Environment';
 import { Atmosphere, Clouds, GroundShadows } from './World';
 import { placePlayer, walkTo } from './playerState';
+import type { Vector3 } from 'three';
 
 export interface ShellProps {
   hotspots: HotspotData[];
@@ -24,6 +25,8 @@ export interface ShellProps {
   /** contact-shadow area (metres) */
   shadowSize?: number;
   clouds?: boolean;
+  /** where Wondoo should fly instead of following (Wonder tours) */
+  mascotChase?: { current: Vector3 | null };
   children: ReactNode;
 }
 
@@ -33,7 +36,7 @@ export interface ShellProps {
  * hotspots, exit portal and tap-to-walk all come from here, so a fix lands
  * everywhere at once.
  */
-export function SceneShell({ hotspots, start, bounds, exit, sky, fog, lights, hotspotColor, shadowSize = 24, clouds = true, children }: ShellProps) {
+export function SceneShell({ hotspots, start, bounds, exit, sky, fog, lights, hotspotColor, shadowSize = 24, clouds = true, mascotChase, children }: ShellProps) {
   const { t } = useTranslation();
   const lang = useApp((s) => s.lang);
   const explored = useApp((s) => s.explored);
@@ -101,7 +104,7 @@ export function SceneShell({ hotspots, start, bounds, exit, sky, fog, lights, ho
           goTo('hub');
         }}
       />
-      <Mascot mode="follow" />
+      <Mascot mode="follow" chase={mascotChase} />
     </>
   );
 }

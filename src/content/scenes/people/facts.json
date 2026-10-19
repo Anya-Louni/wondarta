@@ -127,6 +127,28 @@
       "sources": [
         "https://en.wikipedia.org/wiki/Ibn_al-Haytham"
       ]
+    },
+    {
+      "id": "f-armstrong",
+      "text": {
+        "en": "On 20 July 1969, Neil Armstrong became the first person to walk on the Moon.",
+        "fr": "Le 20 juillet 1969, Neil Armstrong est devenu le premier humain à marcher sur la Lune.",
+        "ar": "في ٢٠ يوليو ١٩٦٩ أصبح نيل آرمسترونغ أول إنسان يمشي على القمر."
+      },
+      "sources": [
+        "https://en.wikipedia.org/wiki/Apollo_11"
+      ]
+    },
+    {
+      "id": "f-moon-gravity",
+      "text": {
+        "en": "Gravity on the Moon is about one sixth as strong as on Earth, so you could jump much higher there.",
+        "fr": "Sur la Lune, la gravité est environ six fois plus faible que sur Terre : tu pourrais y sauter bien plus haut.",
+        "ar": "الجاذبية على القمر أضعف بنحو ست مرات منها على الأرض، فتستطيع أن تقفز هناك أعلى بكثير."
+      },
+      "sources": [
+        "https://en.wikipedia.org/wiki/Gravitation_of_the_Moon"
+      ]
     }
   ],
   "glossary": [
@@ -621,6 +643,67 @@
         "factIds": [
           "f-haytham-camera",
           "f-haytham-experiments"
+        ]
+      }
+    },
+    {
+      "id": "people/moon-landing",
+      "title": {
+        "en": "Moon Landing",
+        "fr": "Alunissage",
+        "ar": "الهبوط على القمر"
+      },
+      "position": [
+        6.2,
+        0,
+        0.5
+      ],
+      "contentType": "puzzle",
+      "narration": {
+        "en": "In 1969, astronauts landed a small spaceship on the Moon. They had to slow it down very gently with its rocket, so it would not crash.",
+        "fr": "En 1969, des astronautes ont posé un petit vaisseau sur la Lune. Ils devaient le freiner tout doucement avec sa fusée pour ne pas s’écraser.",
+        "ar": "في عام ١٩٦٩ هبط روّاد فضاء بمركبة صغيرة على القمر. كان عليهم إبطاؤها بلطف شديد بمحرّكها الصاروخي حتى لا تتحطّم."
+      },
+      "learnMore": {
+        "en": "On 20 July 1969, Neil Armstrong became the first person to walk on the Moon. Gravity on the Moon is about one sixth as strong as on Earth, so you could jump much higher there.",
+        "fr": "Le 20 juillet 1969, Neil Armstrong est devenu le premier humain à marcher sur la Lune. Sur la Lune, la gravité est environ six fois plus faible que sur Terre : tu pourrais y sauter bien plus haut.",
+        "ar": "في ٢٠ يوليو ١٩٦٩ أصبح نيل آرمسترونغ أول إنسان يمشي على القمر. الجاذبية على القمر أضعف بنحو ست مرات منها على الأرض، فتستطيع أن تقفز هناك أعلى بكثير."
+      },
+      "funFact": {
+        "en": "On 20 July 1969, Neil Armstrong became the first person to walk on the Moon.",
+        "fr": "Le 20 juillet 1969, Neil Armstrong est devenu le premier humain à marcher sur la Lune.",
+        "ar": "في ٢٠ يوليو ١٩٦٩ أصبح نيل آرمسترونغ أول إنسان يمشي على القمر."
+      },
+      "linkedTopics": [
+        "people/curie",
+        "people/minds-quiz"
+      ],
+      "sourceType": "curated",
+      "factIds": [
+        "f-armstrong",
+        "f-moon-gravity"
+      ],
+      "wikiQuery": {
+        "en": "Moon Landing",
+        "fr": "Alunissage",
+        "ar": "الهبوط على القمر"
+      },
+      "mascotLine": {
+        "en": "Gently, gently... touchdown time!",
+        "fr": "Doucement, doucement... on se pose !",
+        "ar": "بهدوء، بهدوء... حان وقت الهبوط!"
+      },
+      "puzzle": {
+        "type": "arcade",
+        "game": "lander",
+        "prompt": {
+          "en": "Hold to fire the rocket and slide to steer. Land softly on the yellow pad 3 times!",
+          "fr": "Maintiens pour allumer la fusée et glisse pour diriger. Pose-toi doucement sur la piste jaune 3 fois !",
+          "ar": "اضغط باستمرار لتشغيل الصاروخ وحرّك لتوجّه. اهبط بلطف على المنصّة الصفراء ٣ مرات!"
+        },
+        "factIds": [
+          "f-armstrong",
+          "f-moon-gravity"
         ]
       }
     }

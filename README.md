@@ -82,16 +82,29 @@ Reading and playing are separate: a hotspot card shows what there is to read, th
 Puzzle types live in `src/types/content.ts` and are rendered by
 `src/activities/puzzles/PuzzleRouter.tsx`.
 
-Every card ends in a hands-on game, not a question list. The 15 `arcade` games
-(`src/activities/puzzles/Arcade.tsx`) each act out a fact from their card: steer a
-blue whale through krill, carry pollen as a bee, brush a T. rex out of rock, creep up
-on a zebra as a lion, grow a tadpole into a frog, keep a sunflower facing the sun,
-find organs with an X-ray, swap the pieces of the Mona Lisa, follow compass clues to
-treasure, flip a candle's image through a pinhole as Ibn al-Haytham did, write
-山, ب and A stroke by stroke, and more. Their pictures are photographed from the same
-3D models the worlds use (`src/activities/puzzles/sprites.ts`); the X-ray game uses
-the BodyParts3D scans. The old questions stay as an optional "Bonus questions" round.
+Every card ends in a hands-on game, not a question list. The 27 `arcade` games
+(`src/activities/puzzles/Arcade.tsx`) each act out a fact from their card, and many
+reuse a game kids already know with a new theme: Snake as a hungry caterpillar,
+Breakout with a white blood cell, Flappy Bird with a pterosaur, Simon with colours,
+a penalty shoot-out, a Moon lander, a pyramid stacker, a letter catcher, a recycling
+sorter, a robot maze and a dinosaur runner. Others steer a blue whale through krill,
+carry pollen as a bee, creep up on a zebra as a lion or flip a candle's image through
+a pinhole as Ibn al-Haytham did. Most boards are small lit 3D worlds with grass,
+water, shadows and the same models the worlds use (`src/activities/puzzles/Board3D.tsx`).
+Five stay flat on purpose: the fossil dig, the Mona Lisa jigsaw, the X-ray (BodyParts3D
+scans), stroke-order writing and the instrument map.
+The old questions stay as an optional "Bonus questions" round.
 Fewer slips earn more stars (up to 3 per card).
+
+### Voices and listening, built in
+
+Wondarta does not depend on the voices or languages installed on a computer.
+
+- **Reading aloud** uses neural Piper voices that run inside the app, in a background thread (`src/audio/voice.worker.ts`): English (public domain), French (CC BY 4.0) and Modern Standard Arabic. Each voice (about 63 MB) downloads the first time a card is opened, stays loaded in memory, and is cached in the browser for next time. After warm-up the first word comes in about a second.
+- **Talking to Wondoo**: the mic button records the child, and Whisper base (MIT) turns speech into text on the device (`src/audio/listen.worker.ts`). Audio never leaves the computer. The model (about 120 MB) downloads on the first tap, with progress shown.
+- **Say Hello** plays real people recorded for Lingua Libre instead of synthetic voices.
+- The site sends COOP/COEP headers so Chrome and Edge can run the engines on several CPU threads.
+- Known gap: the Arabic voice's dataset licence is not stated by its author (see CREDITS.md), and Arabic speech recognition with Whisper base is noticeably weaker than English or French.
 
 ### Wondoo's welcome
 
@@ -266,4 +279,4 @@ The app already uses relative asset paths (`base: './'`) and hash-free in-memory
 - A `logic-grid` puzzle component exists, but no scene uses it yet.
 - Mini-scenes mix procedural models with Kenney set dressing. TripoSR / Shap-E generation for on-demand topics is still future work.
 - A plain static host has no LLM relay, so Wondoo sleeps for AI features there. On Vercel the relay in `api/` turns them on once the two keys are set (see Deploy).
-- Game graphics use the worlds' low-poly models; only the X-ray (scanned organs) and the fossil dig (a 1905 museum drawing) are true to life. The lion game shows a maned lion because no free lioness model exists yet.
+- Game boards use the worlds' low-poly models; only the X-ray (scanned organs) and the fossil dig (a 1905 museum drawing) are true to life. The lion game shows a maned lion because no free lioness model exists yet.

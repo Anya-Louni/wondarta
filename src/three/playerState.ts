@@ -33,7 +33,7 @@ export function yawToward(fx: number, fz: number, tx: number, tz: number) {
 
 // ---------------- mascot reactions ----------------
 
-export type MascotReaction = 'happy' | 'sad' | 'squish' | 'wave';
+export type MascotReaction = 'happy' | 'sad' | 'squish' | 'wave' | 'think' | 'surprised';
 type Listener = (r: MascotReaction) => void;
 const listeners = new Set<Listener>();
 

@@ -33,7 +33,8 @@ export function Hud() {
   const asksLeft = useApp((s) => s.asksLeft());
   const stars = useApp((s) => s.stars);
   // no AI keys on this deployment: the ask button would only show a sleeping Wondoo, so leave it out
-  const canAsk = useApp((s) => s.providers.gemini !== 'unconfigured');
+  // asking always works: without AI keys Wondoo still builds a world from Wikipedia
+  const canAsk = true;
   const tally = starTally(stars);
   const journalOpen = useApp((s) => s.journalOpen);
   const setJournalOpen = useApp((s) => s.setJournalOpen);

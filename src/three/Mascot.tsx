@@ -1,7 +1,7 @@
 import { useEffect, useRef } from 'react';
 import { useFrame } from '@react-three/fiber';
 import { Html } from '@react-three/drei';
-import { CatmullRomCurve3, DoubleSide, Group, TubeGeometry, Vector3 } from 'three';
+import { CatmullRomCurve3, DoubleSide, Group, MeshBasicMaterial, TubeGeometry, Vector3 } from 'three';
 import { useApp } from '../state/store';
 import { mascotBus, player, type MascotReaction } from './playerState';
 import { Glow } from './Environment';
@@ -37,6 +37,12 @@ export function Mascot({ mode, home = [0, 1.2, 0], chase, sleeping: sleepProp, o
   const root = useRef<Group>(null);
   const body = useRef<Group>(null);
   const eyes = useRef<Group>(null);
+  // the face: open eyes, happy ^^ arcs, eyebrows and cheeks, mixed per expression (no mouth)
+  const open = useRef<Group[]>([]);
+  const arcs = useRef<Group[]>([]);
+  const brows = useRef<Group[]>([]);
+  const cheeks = useRef<MeshBasicMaterial[]>([]);
+  const look = useRef({ x: 0, y: 0, tx: 0, ty: 0, next: 1 });
   const arms = useRef<Group>(null);
   const earL = useRef<Group>(null);
   const earR = useRef<Group>(null);
@@ -94,7 +100,7 @@ export function Mascot({ mode, home = [0, 1.2, 0], chase, sleeping: sleepProp, o
       } else if (rc.r === 'wave') {
         body.current.rotation.z = Math.sin(k * 14) * 0.2 * Math.max(0, 1 - k);
       }
-      if (k > 1.3) {
+      if (k > (rc.r === 'think' ? 6 : 1.3)) {
         reaction.current = null;
         body.current.rotation.set(0, 0, 0);
       }
@@ -110,7 +116,53 @@ export function Mascot({ mode, home = [0, 1.2, 0], chase, sleeping: sleepProp, o
     // blink or sleep
     blink.current -= dt;
     if (blink.current < -0.12) blink.current = 2 + Math.random() * 3;
-    eyes.current.scale.y = sleeping ? 0.12 : blink.current < 0 ? 0.15 : 1;
+    // which face to make
+    const r = reaction.current?.r;
+    const face: 'sleep' | 'happy' | 'sad' | 'surprised' | 'think' | 'talk' | 'idle' = sleeping
+      ? 'sleep'
+      : r === 'happy' || r === 'wave'
+        ? 'happy'
+        : r === 'sad'
+          ? 'sad'
+          : r === 'squish' || r === 'surprised'
+            ? 'surprised'
+            : r === 'think'
+              ? 'think'
+              : speech && !panelOpen
+                ? 'talk'
+                : 'idle';
+    // little glances around, like a curious kid; looking up and aside while thinking
+    const lk = look.current;
+    lk.next -= dt;
+    if (lk.next < 0) {
+      lk.next = 1.5 + Math.random() * 2.5;
+      lk.tx = (Math.random() - 0.5) * 0.05;
+      lk.ty = (Math.random() - 0.5) * 0.03;
+    }
+    if (face === 'think') {
+      lk.tx = 0.04;
+      lk.ty = 0.045;
+    }
+    lk.x += (lk.tx - lk.x) * Math.min(1, dt * 8);
+    lk.y += (lk.ty - lk.y) * Math.min(1, dt * 8);
+    eyes.current.position.set(lk.x, lk.y, 0.385);
+    const openY = face === 'sleep' ? 0.12 : blink.current < 0 ? 0.15 : face === 'surprised' ? 1.3 : face === 'sad' ? 0.72 : face === 'talk' ? 1.05 + Math.sin(t * 9) * 0.05 : 1;
+    const openS = face === 'surprised' ? 1.18 : 1;
+    open.current.forEach((o) => {
+      o.visible = face !== 'happy';
+      o.scale.set(openS, openY, 1);
+    });
+    arcs.current.forEach((a) => (a.visible = face === 'happy'));
+    brows.current.forEach((b, i) => {
+      const side = i === 0 ? -1 : 1;
+      const lift = face === 'surprised' ? 0.05 : face === 'think' && i === 1 ? 0.05 : face === 'happy' ? 0.02 : 0;
+      const tilt = face === 'sad' ? side * 0.45 : face === 'think' && i === 0 ? -side * 0.2 : face === 'sleep' ? 0 : side * -0.08;
+      b.position.y += (0.115 + lift - b.position.y) * Math.min(1, dt * 10);
+      b.rotation.z += (tilt - b.rotation.z) * Math.min(1, dt * 10);
+      b.visible = face !== 'sleep';
+    });
+    const blush = face === 'happy' ? 1 : face === 'surprised' ? 0.9 : 0.75;
+    cheeks.current.forEach((m) => (m.opacity += (blush - m.opacity) * Math.min(1, dt * 6)));
   });
 
   return (
@@ -181,16 +233,32 @@ export function Mascot({ mode, home = [0, 1.2, 0], chase, sleeping: sleepProp, o
         </mesh>
         {/* eyes */}
         <group ref={eyes} position={[0, 0.0, 0.385]}>
-          {[-0.13, 0.13].map((x) => (
+          {[-0.13, 0.13].map((x, i) => (
             <group key={x} position={[x, 0, 0]}>
-              <mesh scale={[0.8, 1.2, 0.5]}>
-                <sphereGeometry args={[0.065, 12, 10]} />
-                <meshBasicMaterial color="#10283c" />
-              </mesh>
-              <mesh position={[0.02, 0.03, 0.03]}>
-                <sphereGeometry args={[0.018, 8, 6]} />
-                <meshBasicMaterial color="#ffffff" />
-              </mesh>
+              <group ref={(g) => void (g && (open.current[i] = g))}>
+                <mesh scale={[0.8, 1.2, 0.5]}>
+                  <sphereGeometry args={[0.065, 12, 10]} />
+                  <meshBasicMaterial color="#10283c" />
+                </mesh>
+                <mesh position={[0.02, 0.03, 0.03]}>
+                  <sphereGeometry args={[0.018, 8, 6]} />
+                  <meshBasicMaterial color="#ffffff" />
+                </mesh>
+              </group>
+              {/* happy eyes: little upside-down U arcs, like ^^ */}
+              <group ref={(g) => void (g && (arcs.current[i] = g))} visible={false} position={[0, -0.01, 0.01]}>
+                <mesh rotation-z={0}>
+                  <torusGeometry args={[0.045, 0.014, 6, 16, Math.PI]} />
+                  <meshBasicMaterial color="#10283c" />
+                </mesh>
+              </group>
+              {/* eyebrow */}
+              <group ref={(g) => void (g && (brows.current[i] = g))} position={[0, 0.115, 0.02]}>
+                <mesh rotation-z={Math.PI / 2}>
+                  <capsuleGeometry args={[0.011, 0.05, 4, 8]} />
+                  <meshBasicMaterial color="#1b4d7a" />
+                </mesh>
+              </group>
             </group>
           ))}
         </group>
@@ -198,7 +266,7 @@ export function Mascot({ mode, home = [0, 1.2, 0], chase, sleeping: sleepProp, o
         {[-0.24, 0.24].map((x) => (
           <mesh key={x} position={[x, -0.07, 0.31]} scale={[1, 0.6, 0.3]}>
             <sphereGeometry args={[0.06, 10, 8]} />
-            <meshBasicMaterial color="#ff9fb8" transparent opacity={0.8} />
+            <meshBasicMaterial ref={(m) => void (m && (cheeks.current[x < 0 ? 0 : 1] = m))} color="#ff9fb8" transparent opacity={0.8} />
           </mesh>
         ))}
         <Glow color="#bfeaff" size={2.2} opacity={0.35} />

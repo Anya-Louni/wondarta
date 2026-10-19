@@ -1,6 +1,9 @@
 import { postJson } from './transport';
 
-const MODEL = import.meta.env.VITE_GEMINI_MODEL || 'gemini-2.5-flash';
+/** House rule: no emojis on screen or in speech. */
+export const noEmoji = (s: string) => s.replace(/[\p{Extended_Pictographic}\u{FE0F}\u{200D}]/gu, '').replace(/ {2,}/g, ' ').trim();
+
+const MODEL = import.meta.env.VITE_GEMINI_MODEL || 'gemini-3.5-flash-lite';
 
 const SAFETY = [
   'HARM_CATEGORY_HARASSMENT',
@@ -21,13 +24,11 @@ export async function geminiGenerate(system: string, user: string, opts: { json?
     generationConfig: {
       temperature: 0.4,
       maxOutputTokens: opts.maxTokens ?? 300,
-      // keep "thinking" off: we want short, cheap, fast answers on the free tier
-      thinkingConfig: { thinkingBudget: 0 },
       ...(opts.json ? { responseMimeType: 'application/json' } : {}),
     },
   });
   if (data.promptFeedback?.blockReason) return 'UNSUITABLE';
   const c = data.candidates?.[0];
   if (!c || c.finishReason === 'SAFETY') return 'UNSUITABLE';
-  return (c.content?.parts ?? []).map((p) => p.text ?? '').join('').trim();
+  return noEmoji((c.content?.parts ?? []).map((p) => p.text ?? '').join(''));
 }

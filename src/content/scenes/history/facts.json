@@ -133,6 +133,39 @@
       "sources": [
         "https://www.nhm.ac.uk/discover/why-are-birds-the-only-surviving-dinosaurs.html"
       ]
+    },
+    {
+      "id": "f-pterosaur-not-dino",
+      "text": {
+        "en": "Pterosaurs were flying reptiles that lived at the same time as the dinosaurs, but they were not dinosaurs.",
+        "fr": "Les ptérosaures étaient des reptiles volants qui vivaient à la même époque que les dinosaures, mais ce n’étaient pas des dinosaures.",
+        "ar": "كانت التيروصورات زواحف طائرة عاشت في زمن الديناصورات، لكنها لم تكن ديناصورات."
+      },
+      "sources": [
+        "https://en.wikipedia.org/wiki/Pterosaur"
+      ]
+    },
+    {
+      "id": "f-pterosaur-first",
+      "text": {
+        "en": "Pterosaurs were the first animals with a backbone to fly by flapping their wings.",
+        "fr": "Les ptérosaures ont été les premiers animaux à colonne vertébrale à voler en battant des ailes.",
+        "ar": "كانت التيروصورات أول حيوانات ذات عمود فقري تطير برفرفة أجنحتها."
+      },
+      "sources": [
+        "https://en.wikipedia.org/wiki/Pterosaur"
+      ]
+    },
+    {
+      "id": "f-compy",
+      "text": {
+        "en": "Compsognathus was a dinosaur only about 1 metre long, and lighter than a pet cat.",
+        "fr": "Le compsognathus était un dinosaure d’environ 1 mètre de long seulement, plus léger qu’un chat.",
+        "ar": "كان الكومبسوغناثوس ديناصورًا طوله نحو متر واحد فقط، وأخفّ من قطّ منزلي."
+      },
+      "sources": [
+        "https://en.wikipedia.org/wiki/Compsognathus"
+      ]
     }
   ],
   "glossary": [
@@ -614,6 +647,128 @@
         },
         "factIds": [
           "f-fossil"
+        ]
+      }
+    },
+    {
+      "id": "history/pterosaur",
+      "title": {
+        "en": "Flappy Pterosaur",
+        "fr": "Le ptérosaure volant",
+        "ar": "التيروصور الطائر"
+      },
+      "position": [
+        6.2,
+        0,
+        0.5
+      ],
+      "contentType": "puzzle",
+      "narration": {
+        "en": "Long ago, giant reptiles soared above the dinosaurs. They were pterosaurs, and here is a surprise: they were not dinosaurs at all!",
+        "fr": "Il y a très longtemps, des reptiles géants planaient au-dessus des dinosaures. C’étaient les ptérosaures, et surprise : ce n’étaient pas du tout des dinosaures !",
+        "ar": "منذ زمن بعيد كانت زواحف عملاقة تحلّق فوق الديناصورات. إنها التيروصورات، والمفاجأة: لم تكن ديناصورات أبدًا!"
+      },
+      "learnMore": {
+        "en": "Pterosaurs were flying reptiles that lived at the same time as the dinosaurs, but they were not dinosaurs. Pterosaurs were the first animals with a backbone to fly by flapping their wings.",
+        "fr": "Les ptérosaures étaient des reptiles volants qui vivaient à la même époque que les dinosaures, mais ce n’étaient pas des dinosaures. Les ptérosaures ont été les premiers animaux à colonne vertébrale à voler en battant des ailes.",
+        "ar": "كانت التيروصورات زواحف طائرة عاشت في زمن الديناصورات، لكنها لم تكن ديناصورات. كانت التيروصورات أول حيوانات ذات عمود فقري تطير برفرفة أجنحتها."
+      },
+      "funFact": {
+        "en": "Pterosaurs were the first animals with a backbone to fly by flapping their wings.",
+        "fr": "Les ptérosaures ont été les premiers animaux à colonne vertébrale à voler en battant des ailes.",
+        "ar": "كانت التيروصورات أول حيوانات ذات عمود فقري تطير برفرفة أجنحتها."
+      },
+      "linkedTopics": [
+        "history/dinosaurs",
+        "history/odd-dino"
+      ],
+      "sourceType": "curated",
+      "factIds": [
+        "f-pterosaur-not-dino",
+        "f-pterosaur-first"
+      ],
+      "wikiQuery": {
+        "en": "Flappy Pterosaur",
+        "fr": "Le ptérosaure volant",
+        "ar": "التيروصور الطائر"
+      },
+      "mascotLine": {
+        "en": "Flap flap! Up, up and away!",
+        "fr": "Flap flap ! Haut dans le ciel !",
+        "ar": "رفرف رفرف! إلى الأعلى!"
+      },
+      "puzzle": {
+        "type": "arcade",
+        "game": "flappy",
+        "prompt": {
+          "en": "Tap (or press Space) to flap. Fly through 8 gaps between the rocks!",
+          "fr": "Touche l’écran (ou la barre Espace) pour battre des ailes. Passe 8 trous entre les rochers !",
+          "ar": "المس الشاشة (أو اضغط المسافة) لترفرف. حلّق عبر ٨ فتحات بين الصخور!"
+        },
+        "factIds": [
+          "f-pterosaur-not-dino",
+          "f-pterosaur-first"
+        ]
+      }
+    },
+    {
+      "id": "history/dino-run",
+      "title": {
+        "en": "Dino Dash",
+        "fr": "La course du dino",
+        "ar": "ركض الديناصور"
+      },
+      "position": [
+        -6.2,
+        0,
+        0.5
+      ],
+      "contentType": "puzzle",
+      "narration": {
+        "en": "Not every dinosaur was a giant. Some were small, quick hunters that raced through the ferns on two legs!",
+        "fr": "Tous les dinosaures n’étaient pas des géants. Certains étaient de petits chasseurs rapides qui couraient entre les fougères sur deux pattes !",
+        "ar": "لم تكن كل الديناصورات عملاقة. بعضها صيّادون صغار سريعون يركضون بين السراخس على قدمين!"
+      },
+      "learnMore": {
+        "en": "Compsognathus was a dinosaur only about 1 metre long, and lighter than a pet cat. Birds are living dinosaurs: they come from small meat-eating dinosaurs.",
+        "fr": "Le compsognathus était un dinosaure d’environ 1 mètre de long seulement, plus léger qu’un chat. Les oiseaux sont des dinosaures vivants : ils descendent de petits dinosaures carnivores.",
+        "ar": "كان الكومبسوغناثوس ديناصورًا طوله نحو متر واحد فقط، وأخفّ من قطّ منزلي. الطيور ديناصورات حيّة: فهي تنحدر من ديناصورات صغيرة آكلة للحوم."
+      },
+      "funFact": {
+        "en": "Compsognathus was a dinosaur only about 1 metre long, and lighter than a pet cat.",
+        "fr": "Le compsognathus était un dinosaure d’environ 1 mètre de long seulement, plus léger qu’un chat.",
+        "ar": "كان الكومبسوغناثوس ديناصورًا طوله نحو متر واحد فقط، وأخفّ من قطّ منزلي."
+      },
+      "linkedTopics": [
+        "history/dinosaurs",
+        "history/pterosaur"
+      ],
+      "sourceType": "curated",
+      "factIds": [
+        "f-compy",
+        "f-dino-birds"
+      ],
+      "wikiQuery": {
+        "en": "Dino Dash",
+        "fr": "La course du dino",
+        "ar": "ركض الديناصور"
+      },
+      "mascotLine": {
+        "en": "Run, run, JUMP! Speedy dino!",
+        "fr": "Cours, cours, SAUTE ! Dino rapide !",
+        "ar": "اركض، اركض، اقفز! يا لك من ديناصور سريع!"
+      },
+      "puzzle": {
+        "type": "arcade",
+        "game": "dino-run",
+        "prompt": {
+          "en": "Tap (or press Space) to jump over the rocks and ferns. Clear 10!",
+          "fr": "Touche l’écran (ou la barre Espace) pour sauter par-dessus les rochers et les fougères. Passe-en 10 !",
+          "ar": "المس الشاشة (أو اضغط المسافة) لتقفز فوق الصخور والسراخس. اقفز فوق ١٠!"
+        },
+        "factIds": [
+          "f-compy",
+          "f-dino-birds"
         ]
       }
     }

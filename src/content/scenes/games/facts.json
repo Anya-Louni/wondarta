@@ -116,6 +116,28 @@
       "sources": [
         "https://education.nationalgeographic.org/resource/worlds-first-computer-bug/"
       ]
+    },
+    {
+      "id": "f-ttt-draw",
+      "text": {
+        "en": "If both players never make a mistake, every game of noughts and crosses ends in a draw.",
+        "fr": "Si les deux joueurs ne font jamais d’erreur, chaque partie de morpion se termine par un match nul.",
+        "ar": "إذا لم يخطئ اللاعبان أبدًا، تنتهي كل جولة إكس-أو بالتعادل."
+      },
+      "sources": [
+        "https://en.wikipedia.org/wiki/Tic-tac-toe"
+      ]
+    },
+    {
+      "id": "f-wall-follower",
+      "text": {
+        "en": "In a maze where all the walls are joined together, keeping one hand on the wall always leads you out.",
+        "fr": "Dans un labyrinthe dont tous les murs se touchent, garder une main sur le mur te mène toujours à la sortie.",
+        "ar": "في متاهة جدرانها كلها متّصلة، يقودك إبقاء يدك على الجدار دائمًا إلى المخرج."
+      },
+      "sources": [
+        "https://en.wikipedia.org/wiki/Maze-solving_algorithm"
+      ]
     }
   ],
   "glossary": [
@@ -564,6 +586,126 @@
         "factIds": [
           "f-debug",
           "f-moth-bug"
+        ]
+      }
+    },
+    {
+      "id": "games/tictactoe",
+      "title": {
+        "en": "Beat the Robot",
+        "fr": "Bats le robot",
+        "ar": "اهزم الروبوت"
+      },
+      "position": [
+        6.2,
+        0,
+        0.5
+      ],
+      "contentType": "puzzle",
+      "narration": {
+        "en": "This robot plays noughts and crosses by following an algorithm, a list of rules in order: first try to win, then block, then take the middle, then a corner.",
+        "fr": "Ce robot joue au morpion en suivant un algorithme, une liste de règles dans l’ordre : d’abord essayer de gagner, puis bloquer, puis prendre le milieu, puis un coin.",
+        "ar": "يلعب هذا الروبوت لعبة إكس-أو باتّباع خوارزمية، أي قائمة قواعد مرتّبة: يحاول الفوز أولًا، ثم يسدّ الطريق، ثم يأخذ الوسط، ثم الزاوية."
+      },
+      "learnMore": {
+        "en": "If both players never make a mistake, every game of noughts and crosses ends in a draw.",
+        "fr": "Si les deux joueurs ne font jamais d’erreur, chaque partie de morpion se termine par un match nul.",
+        "ar": "إذا لم يخطئ اللاعبان أبدًا، تنتهي كل جولة إكس-أو بالتعادل."
+      },
+      "funFact": {
+        "en": "If both players never make a mistake, every game of noughts and crosses ends in a draw.",
+        "fr": "Si les deux joueurs ne font jamais d’erreur, chaque partie de morpion se termine par un match nul.",
+        "ar": "إذا لم يخطئ اللاعبان أبدًا، تنتهي كل جولة إكس-أو بالتعادل."
+      },
+      "linkedTopics": [
+        "games/algorithms",
+        "games/robot"
+      ],
+      "sourceType": "curated",
+      "factIds": [
+        "f-ttt-draw"
+      ],
+      "wikiQuery": {
+        "en": "Beat the Robot",
+        "fr": "Bats le robot",
+        "ar": "اهزم الروبوت"
+      },
+      "mascotLine": {
+        "en": "Can you outsmart the robot? I believe in you!",
+        "fr": "Sauras-tu être plus malin que le robot ? Je crois en toi !",
+        "ar": "هل تستطيع التغلّب على ذكاء الروبوت؟ أنا واثق بك!"
+      },
+      "puzzle": {
+        "type": "arcade",
+        "game": "tictactoe",
+        "prompt": {
+          "en": "Play noughts and crosses against the robot. Don’t lose 3 games and you win!",
+          "fr": "Joue au morpion contre le robot. Ne perds pas 3 parties et tu gagnes !",
+          "ar": "العب إكس-أو ضد الروبوت. لا تخسر ٣ جولات لتفوز!"
+        },
+        "factIds": [
+          "f-ttt-draw"
+        ]
+      }
+    },
+    {
+      "id": "games/maze",
+      "title": {
+        "en": "Robot Maze",
+        "fr": "Le labyrinthe du robot",
+        "ar": "متاهة الروبوت"
+      },
+      "position": [
+        -6.2,
+        0,
+        0.5
+      ],
+      "contentType": "puzzle",
+      "narration": {
+        "en": "Here is a clever algorithm for mazes: put one hand on the wall and never let go. In a maze like this one, it always takes you to the end!",
+        "fr": "Voici un algorithme malin pour les labyrinthes : pose une main sur le mur et ne la lâche jamais. Dans un labyrinthe comme celui-ci, tu arrives toujours au bout !",
+        "ar": "إليك خوارزمية ذكية للمتاهات: ضع يدك على الجدار ولا ترفعها أبدًا. في متاهة كهذه تصل دائمًا إلى النهاية!"
+      },
+      "learnMore": {
+        "en": "In a maze where all the walls are joined together, keeping one hand on the wall always leads you out. An algorithm is a list of steps, in order, that solves a problem.",
+        "fr": "Dans un labyrinthe dont tous les murs se touchent, garder une main sur le mur te mène toujours à la sortie. Un algorithme est une liste d'étapes, dans l'ordre, qui résout un problème.",
+        "ar": "في متاهة جدرانها كلها متّصلة، يقودك إبقاء يدك على الجدار دائمًا إلى المخرج. الخوارزمية قائمة من الخطوات المرتّبة تحلّ مشكلة ما."
+      },
+      "funFact": {
+        "en": "In a maze where all the walls are joined together, keeping one hand on the wall always leads you out.",
+        "fr": "Dans un labyrinthe dont tous les murs se touchent, garder une main sur le mur te mène toujours à la sortie.",
+        "ar": "في متاهة جدرانها كلها متّصلة، يقودك إبقاء يدك على الجدار دائمًا إلى المخرج."
+      },
+      "linkedTopics": [
+        "games/algorithms",
+        "games/robot"
+      ],
+      "sourceType": "curated",
+      "factIds": [
+        "f-wall-follower",
+        "f-algorithm"
+      ],
+      "wikiQuery": {
+        "en": "Robot Maze",
+        "fr": "Le labyrinthe du robot",
+        "ar": "متاهة الروبوت"
+      },
+      "mascotLine": {
+        "en": "Left, right, think it through! You can do it!",
+        "fr": "Gauche, droite, réfléchis bien ! Tu peux le faire !",
+        "ar": "يسار، يمين، فكّر جيدًا! تستطيع ذلك!"
+      },
+      "puzzle": {
+        "type": "arcade",
+        "game": "maze",
+        "prompt": {
+          "en": "Use the arrows to lead the robot to its green battery. Solve 3 mazes!",
+          "fr": "Utilise les flèches pour mener le robot à sa pile verte. Résous 3 labyrinthes !",
+          "ar": "استخدم الأسهم لتقود الروبوت إلى بطاريته الخضراء. حلّ ٣ متاهات!"
+        },
+        "factIds": [
+          "f-wall-follower",
+          "f-algorithm"
         ]
       }
     }

@@ -51,18 +51,18 @@ export function JournalPanel() {
   const per = narrow ? 1 : 2;
   const last = Math.ceil(pages.length / per) - 1;
   const [spread, setSpread] = useState(0);
-  const [turn, setTurn] = useState<null | 'next' | 'prev'>(null);
+  const [turn, setTurn] = useState<null | { dir: 'next' | 'prev'; to: number }>(null);
   const at = Math.min(spread, last);
   const fishStart = Math.floor(pages.findIndex((p) => p.kind === 'fish') / per);
 
   const go = (to: number) => {
     if (to === at || to < 0 || to > last || turn) return;
     sfx('click');
-    setTurn(to > at ? 'next' : 'prev');
+    setTurn({ dir: to > at ? 'next' : 'prev', to });
     window.setTimeout(() => {
       setSpread(to);
       setTurn(null);
-    }, 520);
+    }, 700);
   };
 
   useEffect(() => {
@@ -147,9 +147,21 @@ export function JournalPanel() {
     );
   };
 
-  const shown = pages.slice(at * per, at * per + per);
-  // the sheet that swings over during a turn shows the page being turned
-  const turning = turn === 'next' ? pages[at * per + per - 1] : turn === 'prev' ? pages[at * per] : undefined;
+  // A turn is a two-sided sheet. Under it the book already shows where it is going:
+  // turning forward, the new right page waits underneath while the old left page stays put;
+  // the sheet's front is the old right page and its back is the new left page.
+  const to = turn?.to ?? at;
+  const fwd = turn?.dir === 'next';
+  const base =
+    per === 1
+      ? [pages[to]]
+      : turn
+        ? fwd
+          ? [pages[at * 2], pages[to * 2 + 1]]
+          : [pages[to * 2], pages[at * 2 + 1]]
+        : [pages[at * 2], pages[at * 2 + 1]];
+  const baseNo = per === 1 ? [to] : turn ? (fwd ? [at * 2, to * 2 + 1] : [to * 2, at * 2 + 1]) : [at * 2, at * 2 + 1];
+  const sheet = turn && (per === 1 ? { front: at, back: -1 } : fwd ? { front: at * 2 + 1, back: to * 2 } : { front: at * 2, back: to * 2 + 1 });
 
   return (
     <div className="book-wrap" onClick={(e) => e.target === e.currentTarget && setOpen(false)}>
@@ -164,12 +176,17 @@ export function JournalPanel() {
         </div>
         <div className="book-cover">
           <div className="book-pages">
-            {shown.map((p, i) => (
-              <article key={at * per + i} className={`page ${per === 1 ? 'only' : i === 0 ? 'left' : 'right'}`}>
-                {render(p, at * per + i)}
+            {base.map((p, i) => (
+              <article key={baseNo[i]} className={`page ${per === 1 ? 'only' : i === 0 ? 'left' : 'right'}`}>
+                {render(p, baseNo[i])}
               </article>
             ))}
-            {turning && <article className={`page turning ${turn} ${per === 1 ? 'only' : ''}`}>{render(turning, 0)}</article>}
+            {sheet && turn && (
+              <div className={`sheet ${turn.dir}${per === 1 ? ' only' : ''}`}>
+                <article className={`page face front ${per === 1 ? 'only' : fwd ? 'right' : 'left'}`}>{render(pages[sheet.front], sheet.front)}</article>
+                {sheet.back >= 0 && <article className={`page face back ${fwd ? 'left' : 'right'}`}>{render(pages[sheet.back], sheet.back)}</article>}
+              </div>
+            )}
           </div>
         </div>
         <div className="book-nav">

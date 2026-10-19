@@ -141,7 +141,7 @@ export interface ListenMapPuzzle extends PuzzleBase {
   show: number;
 }
 
-export type ArcadeGame = 'krill-gulp' | 'pollinate' | 'fossil-dig' | 'steady-race' | 'keep-up' | 'camouflage' | 'treasure' | 'pinhole' | 'jigsaw' | 'stalk' | 'tadpole' | 'sun-track' | 'xray' | 'bug-hunt' | 'dots';
+export type ArcadeGame = 'krill-gulp' | 'pollinate' | 'fossil-dig' | 'steady-race' | 'keep-up' | 'camouflage' | 'treasure' | 'pinhole' | 'jigsaw' | 'stalk' | 'tadpole' | 'sun-track' | 'xray' | 'bug-hunt' | 'dots' | 'caterpillar' | 'breakout' | 'flappy' | 'tictactoe' | 'echo' | 'penalty' | 'lander' | 'stacker' | 'letters' | 'recycle' | 'maze' | 'dino-run';
 
 /** A game played with the hands, not answered. The prompt is the only text it needs. */
 export interface ArcadePuzzle extends PuzzleBase {
@@ -352,7 +352,7 @@ export const CATEGORY_IDS = [
 ] as const;
 export type CategoryId = (typeof CATEGORY_IDS)[number];
 
-export type SceneId = 'hub' | 'mascot-room' | CategoryId;
+export type SceneId = 'hub' | 'mascot-room' | 'wonder' | CategoryId;
 
 /** Any piece of content shown in a card, with its provenance. */
 export interface SourcedText {

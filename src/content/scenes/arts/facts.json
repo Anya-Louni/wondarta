@@ -892,6 +892,67 @@
         ],
         "show": 5
       }
+    },
+    {
+      "id": "arts/colour-echo",
+      "title": {
+        "en": "Colour Echo",
+        "fr": "L’écho des couleurs",
+        "ar": "صدى الألوان"
+      },
+      "position": [
+        6.2,
+        0,
+        0.5
+      ],
+      "contentType": "puzzle",
+      "narration": {
+        "en": "Artists train their eyes and musicians train their ears. Here you train both: watch the colours light up, listen to their notes, then play them back!",
+        "fr": "Les artistes entraînent leurs yeux et les musiciens leurs oreilles. Ici, tu entraînes les deux : regarde les couleurs s’allumer, écoute leurs notes, puis rejoue-les !",
+        "ar": "يدرّب الفنّانون أعينهم والموسيقيّون آذانهم. وهنا تدرّب الاثنين: شاهد الألوان تضيء، واستمع إلى أنغامها، ثم أعد عزفها!"
+      },
+      "learnMore": {
+        "en": "In painting, red, yellow and blue are called the primary colours. By mixing the three primary colours in different amounts, painters can make a huge range of colours.",
+        "fr": "En peinture, le rouge, le jaune et le bleu sont appelés les couleurs primaires. En mélangeant les trois couleurs primaires en quantités différentes, les peintres obtiennent une immense variété de couleurs.",
+        "ar": "في الرسم، يُسمّى الأحمر والأصفر والأزرق الألوان الأساسية. بمزج الألوان الأساسية الثلاثة بمقادير مختلفة يحصل الرسّامون على تشكيلة واسعة جدًّا من الألوان."
+      },
+      "funFact": {
+        "en": "By mixing the three primary colours in different amounts, painters can make a huge range of colours.",
+        "fr": "En mélangeant les trois couleurs primaires en quantités différentes, les peintres obtiennent une immense variété de couleurs.",
+        "ar": "بمزج الألوان الأساسية الثلاثة بمقادير مختلفة يحصل الرسّامون على تشكيلة واسعة جدًّا من الألوان."
+      },
+      "linkedTopics": [
+        "arts/color-mix",
+        "arts/world-music"
+      ],
+      "sourceType": "curated",
+      "factIds": [
+        "f-primary",
+        "f-mix-range"
+      ],
+      "wikiQuery": {
+        "en": "Colour Echo",
+        "fr": "L’écho des couleurs",
+        "ar": "صدى الألوان"
+      },
+      "mascotLine": {
+        "en": "Eyes open, ears ready! Echo time!",
+        "fr": "Les yeux ouverts, les oreilles prêtes ! C’est parti !",
+        "ar": "افتح عينيك وجهّز أذنيك! حان وقت الصدى!"
+      },
+      "puzzle": {
+        "type": "arcade",
+        "game": "echo",
+        "prompt": {
+          "en": "Watch and listen, then tap the colours in the same order. Reach 6 in a row!",
+          "fr": "Regarde et écoute, puis touche les couleurs dans le même ordre. Arrive à 6 de suite !",
+          "ar": "شاهد واستمع، ثم المس الألوان بالترتيب نفسه. صل إلى ٦ متتالية!"
+        },
+        "factIds": [
+          "f-primary",
+          "f-mix-range"
+        ]
+      }
     }
   ]
 }

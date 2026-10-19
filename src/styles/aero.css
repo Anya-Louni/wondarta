@@ -611,7 +611,7 @@ html[lang='ar'] .section-title { letter-spacing: 0; }
 @keyframes fade-out { to { opacity: 0; } }
 
 @media (prefers-reduced-motion: reduce) {
-  *, *::before, *::after { animation-duration: 0.01ms !important; transition-duration: 0.01ms !important; }
+  *:not(.sheet), *::before, *:not(.sheet)::after { animation-duration: 0.01ms !important; transition-duration: 0.01ms !important; }
 }
 
 /* ---------------------------------------------------------------- settings (grown-up corner) */
@@ -869,6 +869,22 @@ html[lang='ar'] .play-kind { letter-spacing: 0; }
 .arcade { display: grid; gap: 10px; justify-items: center; inline-size: 100%; }
 .arcade-score { margin: 0; font-weight: 800; font-size: var(--fs-lg, 20px); color: var(--sky-700); }
 .arcade-board { inline-size: min(100%, 92vh); block-size: auto; max-block-size: 56vh; border-radius: var(--r-md); box-shadow: 0 0 0 1px rgba(0, 60, 120, 0.15), 0 8px 24px rgba(0, 60, 120, 0.12); touch-action: none; cursor: pointer; user-select: none; }
+.arcade-board.three { position: relative; aspect-ratio: 5 / 3; inline-size: min(100%, 93vh); max-block-size: none; overflow: hidden; }
+.arcade-board.three canvas { display: block; }
+.arcade-board.sky { background: linear-gradient(#9fd4f7, #dff2ff 70%); }
+.arcade-board.night { background: linear-gradient(#141d3a, #33457a); transition: background 0.6s; }
+.arcade-board.day { background: linear-gradient(#8fcdf5, #e6f6ff); transition: background 0.6s; }
+.arcade-board.dark { background: linear-gradient(90deg, #fdf3d6 50%, #161c2a 50%); }
+.arcade-board.space { background: radial-gradient(circle at 70% 20%, #1c2a52, #070b18 70%); }
+.arcade-speed { margin: 0; font-weight: 800; color: #2d8a3e; }
+.arcade-speed.fast { color: #d23f2a; }
+.arcade-word { margin: 0; display: flex; gap: 10px; font: 800 26px/1 var(--font, inherit); letter-spacing: 0.04em; color: var(--ink-300, #8a97a8); }
+.arcade-word .got { color: #2f7fd0; }
+.arcade-letter { font: 900 26px/1 var(--font, inherit); color: #fff; text-shadow: 0 1px 2px rgba(0,0,0,0.45); cursor: pointer; user-select: none; }
+.arcade-tag.bin { font-size: 12px; background: rgba(255,255,255,0.85); padding: 3px 7px; border-radius: 999px; }
+.arcade-tag { font: 800 15px/1 var(--font, inherit); color: #5a3a12; pointer-events: none; user-select: none; white-space: nowrap; }
+.arcade-tag.alert { font-size: 34px; color: #f5b700; text-shadow: 0 2px 0 #fff; }
+.arcade-tag.alert.look { color: #e5533d; }
 .arcade-board.sea { background: linear-gradient(#bfe6fb, #4aa3df 60%, #2a6fb5); }
 .arcade-board.meadow { background: linear-gradient(#d9f2ff, #c8ecb0 45%, #9bd67a); }
 .arcade-board.court { background: linear-gradient(#e6f4ff, #bfe0c8); }
@@ -933,7 +949,8 @@ body[data-tour='ask'] .hud .cap:last-child > :first-child { box-shadow: 0 0 0 3p
 
 /* children with motion sensitivity: keep things still */
 @media (prefers-reduced-motion: reduce) {
-  *, *::before, *::after { animation-duration: 0.01ms !important; animation-iteration-count: 1 !important; transition-duration: 0.01ms !important; }
+  /* stop what loops or flashes on its own; keep short moves the child starts, like turning a page */
+  .arcade-glow, .listen-btn.on, .tour-pulse, body[data-tour] .hud *, .shake, .flower-part { animation: none !important; }
 }
 
 /* ---------- journal ---------- */
@@ -1014,3 +1031,53 @@ html[dir='rtl'] .book-pages { direction: rtl; }
 .book-nav .muted { color: #f3e3c0; }
 .book-close { position: absolute; inset-inline-end: 0; }
 @media (max-width: 700px) { .page { padding: 20px 18px 30px; } .book-cover { padding: 10px; transform: none; } .book-ribbons { inset-inline-end: 20px; } }
+
+/* page turn: a two-sided sheet hinged on the spine */
+.sheet { position: absolute; inset-block: 0; inline-size: 50%; inset-inline-end: 0; transform-style: preserve-3d; transform-origin: left center; z-index: 4; animation: sheet-next 0.7s cubic-bezier(0.45, 0.05, 0.3, 1) forwards; }
+.sheet.prev { inset-inline-end: auto; inset-inline-start: 0; transform-origin: right center; animation-name: sheet-prev; }
+.sheet.only { inline-size: 100%; animation-name: sheet-away; }
+.sheet .face { position: absolute; inset: 0; backface-visibility: hidden; -webkit-backface-visibility: hidden; }
+.sheet .face.back { transform: rotateY(180deg); }
+.sheet::after { content: ''; position: absolute; inset: 0; pointer-events: none; background: linear-gradient(to right, rgba(0,0,0,0.18), transparent 40%); animation: sheet-shade 0.7s ease-in-out forwards; }
+@keyframes sheet-next { 0% { transform: rotateY(0deg); } 50% { transform: rotateY(-90deg) translateZ(8px); } 100% { transform: rotateY(-180deg); } }
+@keyframes sheet-prev { 0% { transform: rotateY(0deg); } 50% { transform: rotateY(90deg) translateZ(8px); } 100% { transform: rotateY(180deg); } }
+@keyframes sheet-away { 0% { transform: rotateY(0deg); opacity: 1; } 100% { transform: rotateY(-100deg); opacity: 0; } }
+@keyframes sheet-shade { 50% { opacity: 1; } 100% { opacity: 0; } }
+html[dir='rtl'] .sheet { transform-origin: right center; animation-name: sheet-prev; }
+html[dir='rtl'] .sheet.prev { transform-origin: left center; animation-name: sheet-next; }
+html[dir='rtl'] .sheet.only { animation-name: sheet-away; }
+.book-pages .page { overflow: hidden; }
+
+/* ---------- talking to Wondoo ---------- */
+.mic-btn { display: inline-flex; align-items: center; gap: 6px; flex: none; min-block-size: 36px; padding: 0 10px; border: 0; border-radius: 999px; cursor: pointer; color: #fff; background: linear-gradient(#ff8a6b, #e5533d); box-shadow: 0 2px 6px rgba(229, 83, 61, 0.35); font: 700 12px var(--font); }
+.mic-btn:disabled { opacity: 0.7; cursor: default; }
+.mic-btn.recording { animation: mic-pulse 0.9s ease-in-out infinite alternate; }
+.mic-btn.loading, .mic-btn.thinking { background: linear-gradient(#7fc4ef, #2f8fe0); }
+@keyframes mic-pulse { to { box-shadow: 0 0 0 8px rgba(229, 83, 61, 0.25); } }
+.spin { animation: spin 0.9s linear infinite; }
+@keyframes spin { to { transform: rotate(360deg); } }
+.voice-warm { position: fixed; z-index: 41; inset-block-end: 18px; inset-inline-start: 18px; padding: 8px 14px; font-size: var(--fs-sm); font-weight: 700; display: flex; gap: 8px; align-items: center; }
+.voice-warm progress { inline-size: 90px; }
+
+/* ---------- wonder worlds ---------- */
+.wonder-tour { position: fixed; z-index: 30; inset-block-end: 18px; inset-inline-start: 50%; translate: -50% 0; inline-size: min(560px, calc(100vw - 24px)); padding: 14px 16px; display: grid; gap: 8px; animation: welcome-in 0.35s ease-out; }
+html[dir='rtl'] .wonder-tour { translate: 50% 0; }
+.wonder-head { display: flex; align-items: center; gap: 10px; }
+.wonder-head svg { inline-size: 44px; block-size: 44px; flex: none; }
+.wonder-head .who { font-size: var(--fs-xs); font-weight: 700; color: var(--sky-700); }
+.wonder-head strong { font-size: var(--fs-lg); }
+.wonder-count { margin-inline-start: auto; }
+.wonder-text { margin: 0; font-size: var(--fs-md, 16px); line-height: 1.5; }
+.wonder-end video { inline-size: 100%; max-block-size: 38vh; border-radius: var(--r-md); background: #000; }
+.wonder-end figcaption { font-size: 11px; color: var(--ink-500); margin-block-start: 4px; }
+.wonder-actions { display: flex; flex-wrap: wrap; gap: 8px; justify-content: flex-end; }
+.wonder-cta { margin-block-start: 8px; inline-size: 100%; justify-content: center; font-size: var(--fs-md, 16px); padding-block: 10px; }
+
+.arcade-board.blood { background: radial-gradient(circle at 50% 40%, #ffb3b3, #e86a6a 70%, #c94a4a); }
+.ttt { display: grid; grid-template-columns: repeat(3, 84px); gap: 6px; }
+.ttt-cell { inline-size: 84px; block-size: 84px; border: 0; border-radius: 12px; background: #eef6ff; box-shadow: inset 0 0 0 2px #bcd7f0; cursor: pointer; display: grid; place-items: center; }
+.ttt-cell svg { inline-size: 64px; block-size: 64px; }
+.ttt-x { font-size: 44px; font-weight: 800; color: #e5533d; }
+.echo { display: grid; grid-template-columns: repeat(2, 110px); gap: 12px; }
+.echo-pad { inline-size: 110px; block-size: 110px; border: 0; border-radius: 22px; cursor: pointer; opacity: 0.55; box-shadow: inset 0 -6px 0 rgba(0,0,0,0.18); transition: opacity 0.1s, transform 0.1s; }
+.echo-pad.lit { opacity: 1; transform: scale(1.05); box-shadow: 0 0 24px currentColor, inset 0 -6px 0 rgba(0,0,0,0.18); }

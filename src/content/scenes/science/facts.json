@@ -211,6 +211,28 @@
       "sources": [
         "https://www.brainfacts.org/in-the-lab/meet-the-researcher/2018/how-many-neurons-are-in-the-brain-120418"
       ]
+    },
+    {
+      "id": "f-white-cells",
+      "text": {
+        "en": "White blood cells are your body’s defenders. They travel in your blood and destroy germs.",
+        "fr": "Les globules blancs sont les défenseurs de ton corps. Ils voyagent dans ton sang et détruisent les microbes.",
+        "ar": "خلايا الدم البيضاء هي حُماة جسمك، تسافر في دمك وتقضي على الجراثيم."
+      },
+      "sources": [
+        "https://en.wikipedia.org/wiki/White_blood_cell"
+      ]
+    },
+    {
+      "id": "f-germs-tiny",
+      "text": {
+        "en": "Germs, like bacteria and viruses, are far too small to see without a microscope.",
+        "fr": "Les microbes, comme les bactéries et les virus, sont bien trop petits pour être vus sans microscope.",
+        "ar": "الجراثيم مثل البكتيريا والفيروسات أصغر بكثير من أن تُرى دون مجهر."
+      },
+      "sources": [
+        "https://en.wikipedia.org/wiki/Microorganism"
+      ]
     }
   ],
   "glossary": [
@@ -1059,6 +1081,67 @@
             },
             "factId": "f-large-intestine"
           }
+        ]
+      }
+    },
+    {
+      "id": "science/germs",
+      "title": {
+        "en": "Germ Defenders",
+        "fr": "Les défenseurs contre les microbes",
+        "ar": "حُماة الجسم"
+      },
+      "position": [
+        6.8,
+        0,
+        -1.8
+      ],
+      "contentType": "puzzle",
+      "narration": {
+        "en": "Your body has its own army! White blood cells patrol your blood, and when they find germs, they attack them to keep you healthy.",
+        "fr": "Ton corps a sa propre armée ! Les globules blancs patrouillent dans ton sang, et quand ils trouvent des microbes, ils les attaquent pour te garder en bonne santé.",
+        "ar": "لجسمك جيشه الخاص! تجوب خلايا الدم البيضاء دمك، وعندما تجد الجراثيم تهاجمها لتبقيك بصحّة جيدة."
+      },
+      "learnMore": {
+        "en": "White blood cells are your body’s defenders. They travel in your blood and destroy germs. Germs, like bacteria and viruses, are far too small to see without a microscope.",
+        "fr": "Les globules blancs sont les défenseurs de ton corps. Ils voyagent dans ton sang et détruisent les microbes. Les microbes, comme les bactéries et les virus, sont bien trop petits pour être vus sans microscope.",
+        "ar": "خلايا الدم البيضاء هي حُماة جسمك، تسافر في دمك وتقضي على الجراثيم. الجراثيم مثل البكتيريا والفيروسات أصغر بكثير من أن تُرى دون مجهر."
+      },
+      "funFact": {
+        "en": "Germs, like bacteria and viruses, are far too small to see without a microscope.",
+        "fr": "Les microbes, comme les bactéries et les virus, sont bien trop petits pour être vus sans microscope.",
+        "ar": "الجراثيم مثل البكتيريا والفيروسات أصغر بكثير من أن تُرى دون مجهر."
+      },
+      "linkedTopics": [
+        "science/heart",
+        "science/body-quiz"
+      ],
+      "sourceType": "curated",
+      "factIds": [
+        "f-white-cells",
+        "f-germs-tiny"
+      ],
+      "wikiQuery": {
+        "en": "Germ Defenders",
+        "fr": "Les défenseurs contre les microbes",
+        "ar": "حُماة الجسم"
+      },
+      "mascotLine": {
+        "en": "Germ alert! Defenders, go go go!",
+        "fr": "Alerte aux microbes ! Défenseurs, en avant !",
+        "ar": "إنذار جراثيم! هيا أيها الحُماة!"
+      },
+      "puzzle": {
+        "type": "arcade",
+        "game": "breakout",
+        "prompt": {
+          "en": "Move the white blood cell to bounce the ball and knock out all the germs!",
+          "fr": "Déplace le globule blanc pour faire rebondir la balle et éliminer tous les microbes !",
+          "ar": "حرّك خلية الدم البيضاء لتردّ الكرة وتقضي على كل الجراثيم!"
+        },
+        "factIds": [
+          "f-white-cells",
+          "f-germs-tiny"
         ]
       }
     }

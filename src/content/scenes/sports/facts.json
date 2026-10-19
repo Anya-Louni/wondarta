@@ -171,6 +171,17 @@
       "sources": [
         "https://www.sortiraparis.com/en/what-to-visit-in-paris/history-heritage/articles/343881-paris-marathon-why-this-42-195-kilometer-distance"
       ]
+    },
+    {
+      "id": "f-penalty-11m",
+      "text": {
+        "en": "A penalty kick is taken from a spot 11 metres in front of the goal.",
+        "fr": "Un penalty se tire depuis un point situé à 11 mètres du but.",
+        "ar": "تُسدَّد ركلة الجزاء من نقطة تبعد ١١ مترًا عن المرمى."
+      },
+      "sources": [
+        "https://en.wikipedia.org/wiki/Penalty_area"
+      ]
     }
   ],
   "glossary": [
@@ -718,6 +729,67 @@
         },
         "factIds": [
           "f-badminton"
+        ]
+      }
+    },
+    {
+      "id": "sports/penalty",
+      "title": {
+        "en": "Penalty Kick",
+        "fr": "Le penalty",
+        "ar": "ركلة الجزاء"
+      },
+      "position": [
+        6.2,
+        0,
+        0.5
+      ],
+      "contentType": "puzzle",
+      "narration": {
+        "en": "A penalty kick is one player against one goalkeeper. The trick is to watch the keeper and shoot where they are not!",
+        "fr": "Un penalty, c’est un joueur contre un gardien. L’astuce : regarde le gardien et tire là où il n’est pas !",
+        "ar": "ركلة الجزاء لاعب واحد ضد حارس مرمى واحد. السرّ: راقب الحارس وسدّد حيث لا يكون!"
+      },
+      "learnMore": {
+        "en": "A penalty kick is taken from a spot 11 metres in front of the goal. A soccer team has 11 players on the field, including the goalkeeper.",
+        "fr": "Un penalty se tire depuis un point situé à 11 mètres du but. Une équipe de football a 11 joueurs sur le terrain, gardien compris.",
+        "ar": "تُسدَّد ركلة الجزاء من نقطة تبعد ١١ مترًا عن المرمى. لفريق كرة القدم 11 لاعبًا في الملعب، بمن فيهم حارس المرمى."
+      },
+      "funFact": {
+        "en": "A penalty kick is taken from a spot 11 metres in front of the goal.",
+        "fr": "Un penalty se tire depuis un point situé à 11 mètres du but.",
+        "ar": "تُسدَّد ركلة الجزاء من نقطة تبعد ١١ مترًا عن المرمى."
+      },
+      "linkedTopics": [
+        "sports/olympics",
+        "sports/name-sport"
+      ],
+      "sourceType": "curated",
+      "factIds": [
+        "f-penalty-11m",
+        "f-soccer-11"
+      ],
+      "wikiQuery": {
+        "en": "Penalty Kick",
+        "fr": "Le penalty",
+        "ar": "ركلة الجزاء"
+      },
+      "mascotLine": {
+        "en": "Eyes on the keeper... and SHOOT!",
+        "fr": "Regarde le gardien... et TIRE !",
+        "ar": "عينك على الحارس... وسدّد!"
+      },
+      "puzzle": {
+        "type": "arcade",
+        "game": "penalty",
+        "prompt": {
+          "en": "Tap inside the goal to shoot. Score 5 goals past the goalkeeper!",
+          "fr": "Touche l’intérieur du but pour tirer. Marque 5 buts au gardien !",
+          "ar": "المس داخل المرمى لتسدّد. سجّل ٥ أهداف على الحارس!"
+        },
+        "factIds": [
+          "f-penalty-11m",
+          "f-soccer-11"
         ]
       }
     }

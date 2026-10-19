@@ -11,6 +11,7 @@ import { sfx } from '../audio/sfx';
 import { speak, stopSpeaking } from '../audio/tts';
 import { mascotBus } from '../three/playerState';
 import { IconButton, WondooAvatar, WondooLine, SourceTag } from './Parts';
+import { MicButton } from './MicButton';
 import { SleepLine } from './Hud';
 
 interface Msg {
@@ -68,8 +69,8 @@ function Chat() {
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [lang]);
 
-  const send = async () => {
-    const text = input.trim();
+  const send = async (said?: string) => {
+    const text = (said ?? input).trim();
     if (!text || busy) return;
     setInput('');
     sfx('click');
@@ -130,6 +131,7 @@ function Chat() {
       >
         <div className="field">
           <input autoFocus value={input} maxLength={200} onChange={(e) => setInput(e.target.value)} placeholder={t('room.chatPlaceholder')} aria-label={t('room.chatPlaceholder')} />
+          <MicButton lang={lang} disabled={busy} onText={(said) => void send(said)} />
           <IconButton small type="submit" label={t('room.send')} disabled={busy || !input.trim()}>
             <ArrowRight className="i flip" />
           </IconButton>

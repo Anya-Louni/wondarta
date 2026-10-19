@@ -1,5 +1,6 @@
 import { Component, Suspense, useEffect, useState, type ReactNode } from 'react';
 import { Canvas, useThree } from '@react-three/fiber';
+import { useGameOn } from './activities/puzzles/Board3D';
 import { PerformanceMonitor } from '@react-three/drei';
 import { useTranslation } from 'react-i18next';
 import { useApp } from './state/store';
@@ -13,6 +14,9 @@ import { MascotRoom } from './scenes/MascotRoom';
 import { Hud } from './ui/Hud';
 import { Welcome } from './ui/Welcome';
 import { FishToast, JournalPanel } from './ui/Journal';
+import { VoiceWarm } from './ui/VoiceWarm';
+import { WonderTour } from './ui/WonderTour';
+import { WonderWorld } from './scenes/Wonder';
 import { InfoCard } from './ui/InfoCard';
 import { AskPanel } from './ui/AskPanel';
 import { MascotRoomUI } from './ui/MascotRoomUI';
@@ -78,8 +82,10 @@ function SceneSwitch() {
       return <LivingWorld />;
     case 'ocean':
       return <Aquarium />;
+    case 'wonder':
+      return <WonderWorld />;
     default:
-      return <MiniScene key={scene} sceneId={scene as Exclude<typeof scene, 'animals' | 'ocean'>} />;
+      return <MiniScene key={scene} sceneId={scene as Exclude<typeof scene, 'animals' | 'ocean' | 'wonder'>} />;
   }
 }
 
@@ -87,9 +93,11 @@ export default function App() {
   const { t } = useTranslation();
   const scene = useApp((s) => s.scene);
   const openHotspot = useApp((s) => s.openHotspot);
+  const gameOn = useGameOn() > 0;
   const askOpen = useApp((s) => s.askOpen);
   const tourDone = useApp((s) => s.tourDone);
   const journalOpen = useApp((s) => s.journalOpen);
+  const wonder = useApp((s) => s.wonder);
   const recordVisit = useApp((s) => s.recordVisit);
   const dpr = useQuality((s) => s.dpr);
 
@@ -103,6 +111,7 @@ export default function App() {
     <>
       <GlBoundary fallback={<div className="toast">{t('app.glError')}</div>}>
         <Canvas
+          frameloop={gameOn ? 'never' : 'always'}
           shadows="percentage"
           dpr={dpr}
           gl={{ antialias: ANTIALIAS, powerPreference: 'high-performance', toneMappingExposure: 1.05 }}
@@ -122,7 +131,9 @@ export default function App() {
       {askOpen && <AskPanel />}
       {journalOpen && <JournalPanel />}
       <FishToast />
+      <VoiceWarm />
       {scene === 'mascot-room' && !askOpen && <MascotRoomUI />}
+      {scene === 'wonder' && !askOpen && <WonderTour key={JSON.stringify(wonder)} />}
       {scene === 'hub' && !askOpen && !openHotspot && !tourDone && <Welcome />}
       <div key={scene} className="fade-screen" aria-hidden />
     </>

@@ -15,7 +15,7 @@ import { CATEGORY_STYLE } from "../content/categories";
 import { llmAwake, useApp } from "../state/store";
 import { useLines } from "../i18n";
 import { sfx } from "../audio/sfx";
-import { hasVoice, speak, stopSpeaking } from "../audio/tts";
+import { hasVoice, speak, stopSpeaking, warmVoice } from "../audio/tts";
 import { learnMoreFromWiki, type GroundedResult } from "../llm/grounded";
 import { mascotBus } from "../three/playerState";
 import { PlayStage } from "./PlayStage";
@@ -56,6 +56,8 @@ export function InfoCard({ hotspotId }: { hotspotId: string }) {
   const [speaking, setSpeaking] = useState(false);
   const [tab, setTab] = useState<"learn" | "where" | "play">("learn");
 
+  // get the reading voice ready in the background, so "listen" starts quickly
+  useEffect(() => warmVoice(lang), [lang]);
   useEffect(() => {
     if (!h) return;
     markExplored(h.id);

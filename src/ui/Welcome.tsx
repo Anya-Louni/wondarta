@@ -20,8 +20,7 @@ export function Welcome() {
   const setName = useApp((s) => s.setName);
   const setTourDone = useApp((s) => s.setTourDone);
   // the ask step only makes sense when this deployment has the AI turned on
-  const canAsk = useApp((s) => s.providers.gemini !== 'unconfigured');
-  const STEPS = canAsk ? ALL : ALL.filter((s) => s !== 'ask');
+  const STEPS = ALL;
   const [i, setI] = useState(0);
   const [draft, setDraft] = useState(name);
   const step: Step = STEPS[i];

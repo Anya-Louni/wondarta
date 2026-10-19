@@ -70,6 +70,11 @@ function goodMatch(query: string, r: Retrieved, lang: Lang): boolean {
 }
 
 async function tryEdition(e: Edition, query: string, matchLang: Lang): Promise<Retrieved | null> {
+  // a short topic like "rainbow" is usually an article title: try it directly before searching
+  if (query.trim().split(/\s+/).length <= 3) {
+    const direct = await intro(e, query.trim().charAt(0).toUpperCase() + query.trim().slice(1));
+    if (direct && goodMatch(query, direct, matchLang)) return direct;
+  }
   for (const title of (await search(e, query)).slice(0, 2)) {
     const r = await intro(e, title);
     if (r && goodMatch(query, r, matchLang)) return r;
@@ -129,4 +134,17 @@ export async function wikiVideo(title: string): Promise<{ src: string; file: str
   if (!vi) return null;
   const small = vi.derivatives?.find((d) => /webm/.test(d.type) && /480|360/.test(d.src));
   return { src: small?.src ?? vi.url, file: file.replace(/^File:/, ''), page: vi.descriptionurl };
+}
+
+/** A Commons video by file name (or, with `isArticle`, the first video on that English article). */
+export async function commonsVideo(name: string, isArticle = false): Promise<{ src: string; file: string; page: string } | null> {
+  if (isArticle) return wikiVideo(name);
+  const file = name.startsWith('File:') ? name : `File:${name}`;
+  const info = await getJson<VideoInfoResp>(
+    `https://commons.wikimedia.org/w/api.php?action=query&titles=${encodeURIComponent(file)}&prop=videoinfo&viprop=url|derivatives&format=json&origin=*`,
+  );
+  const vi = info?.query?.pages && Object.values(info.query.pages)[0]?.videoinfo?.[0];
+  if (!vi) return null;
+  const small = vi.derivatives?.find((d) => /webm/.test(d.type) && /480|360/.test(d.src));
+  return { src: small?.src ?? vi.url, file: file.replace(/^File:/, '').replace(/_/g, ' '), page: vi.descriptionurl };
 }

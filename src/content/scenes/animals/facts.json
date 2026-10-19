@@ -851,6 +851,28 @@
       "sources": [
         "https://earthhow.com/frog-lifecycle/"
       ]
+    },
+    {
+      "id": "f-butterfly-cycle",
+      "text": {
+        "en": "A butterfly’s life has four stages: egg, caterpillar, chrysalis, then butterfly.",
+        "fr": "La vie d’un papillon a quatre étapes : l’œuf, la chenille, la chrysalide, puis le papillon.",
+        "ar": "لحياة الفراشة أربع مراحل: البيضة، ثم اليرقة، ثم الشرنقة، ثم الفراشة."
+      },
+      "sources": [
+        "https://en.wikipedia.org/wiki/Butterfly"
+      ]
+    },
+    {
+      "id": "f-caterpillar-skin",
+      "text": {
+        "en": "A caterpillar grows so fast that it gets too big for its skin, so it sheds it several times.",
+        "fr": "Une chenille grandit si vite qu’elle devient trop grande pour sa peau : elle en change plusieurs fois.",
+        "ar": "تكبر اليرقة بسرعة حتى يضيق عليها جلدها، فتخلعه عدّة مرات."
+      },
+      "sources": [
+        "https://en.wikipedia.org/wiki/Caterpillar"
+      ]
     }
   ],
   "glossary": [
@@ -3629,6 +3651,67 @@
             },
             "factId": "f-sound-cricket"
           }
+        ]
+      }
+    },
+    {
+      "id": "animals/caterpillar",
+      "title": {
+        "en": "Hungry Caterpillar",
+        "fr": "La chenille affamée",
+        "ar": "اليرقة الجائعة"
+      },
+      "position": [
+        -8,
+        0,
+        12
+      ],
+      "contentType": "puzzle",
+      "narration": {
+        "en": "A caterpillar is a baby butterfly, and its one big job is eating! It munches leaves all day, then wraps itself up and changes completely.",
+        "fr": "Une chenille est un bébé papillon, et sa grande mission, c’est de manger ! Elle grignote des feuilles toute la journée, puis s’enveloppe et se transforme complètement.",
+        "ar": "اليرقة صغيرة الفراشة، ومهمّتها الكبرى الأكل! تقضم الأوراق طوال اليوم، ثم تلفّ نفسها وتتحوّل تمامًا."
+      },
+      "learnMore": {
+        "en": "A butterfly’s life has four stages: egg, caterpillar, chrysalis, then butterfly. A caterpillar grows so fast that it gets too big for its skin, so it sheds it several times.",
+        "fr": "La vie d’un papillon a quatre étapes : l’œuf, la chenille, la chrysalide, puis le papillon. Une chenille grandit si vite qu’elle devient trop grande pour sa peau : elle en change plusieurs fois.",
+        "ar": "لحياة الفراشة أربع مراحل: البيضة، ثم اليرقة، ثم الشرنقة، ثم الفراشة. تكبر اليرقة بسرعة حتى يضيق عليها جلدها، فتخلعه عدّة مرات."
+      },
+      "funFact": {
+        "en": "A caterpillar grows so fast that it gets too big for its skin, so it sheds it several times.",
+        "fr": "Une chenille grandit si vite qu’elle devient trop grande pour sa peau : elle en change plusieurs fois.",
+        "ar": "تكبر اليرقة بسرعة حتى يضيق عليها جلدها، فتخلعه عدّة مرات."
+      },
+      "linkedTopics": [
+        "animals/frog-lifecycle",
+        "animals/busy-bees"
+      ],
+      "sourceType": "curated",
+      "factIds": [
+        "f-butterfly-cycle",
+        "f-caterpillar-skin"
+      ],
+      "wikiQuery": {
+        "en": "Hungry Caterpillar",
+        "fr": "La chenille affamée",
+        "ar": "اليرقة الجائعة"
+      },
+      "mascotLine": {
+        "en": "Munch munch! Let’s grow some wings!",
+        "fr": "Miam miam ! On va se faire pousser des ailes !",
+        "ar": "هَمّ هَمّ! هيا ننمّي أجنحة!"
+      },
+      "puzzle": {
+        "type": "arcade",
+        "game": "caterpillar",
+        "prompt": {
+          "en": "Steer the caterpillar to the leaves with the arrows. Eat 8 to turn into a butterfly! Don’t bump into yourself.",
+          "fr": "Guide la chenille vers les feuilles avec les flèches. Mange-en 8 pour devenir un papillon ! Ne te cogne pas à toi-même.",
+          "ar": "وجّه اليرقة نحو الأوراق بالأسهم. كُل ٨ أوراق لتتحوّل إلى فراشة! لا تصطدم بنفسك."
+        },
+        "factIds": [
+          "f-butterfly-cycle",
+          "f-caterpillar-skin"
         ]
       }
     }

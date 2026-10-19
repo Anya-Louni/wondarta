@@ -120,6 +120,28 @@
       "sources": [
         "https://simonsingh.com/The_Black_Chamber/caesar.html"
       ]
+    },
+    {
+      "id": "f-glass-again",
+      "text": {
+        "en": "Glass can be melted and recycled again and again without wearing out.",
+        "fr": "Le verre peut être fondu et recyclé encore et encore sans s’user.",
+        "ar": "يمكن صهر الزجاج وإعادة تدويره مرّة بعد مرّة دون أن يبلى."
+      },
+      "sources": [
+        "https://en.wikipedia.org/wiki/Glass_recycling"
+      ]
+    },
+    {
+      "id": "f-can-energy",
+      "text": {
+        "en": "Making a can from recycled aluminium uses about 95% less energy than making it from new metal.",
+        "fr": "Fabriquer une canette en aluminium recyclé demande environ 95 % d’énergie en moins qu’avec du métal neuf.",
+        "ar": "صنع علبة من الألومنيوم المُعاد تدويره يستهلك طاقة أقل بنحو ٩٥٪ من صنعها من معدن جديد."
+      },
+      "sources": [
+        "https://en.wikipedia.org/wiki/Aluminium_recycling"
+      ]
     }
   ],
   "glossary": [
@@ -600,6 +622,67 @@
         },
         "factIds": [
           "f-compass-rose"
+        ]
+      }
+    },
+    {
+      "id": "social/recycle",
+      "title": {
+        "en": "Recycling Rush",
+        "fr": "Le tri express",
+        "ar": "سباق إعادة التدوير"
+      },
+      "position": [
+        6.2,
+        0,
+        0.5
+      ],
+      "contentType": "puzzle",
+      "narration": {
+        "en": "When we sort our rubbish, old things can be made into new ones. A town works best when everyone helps!",
+        "fr": "Quand on trie nos déchets, les vieux objets peuvent devenir des neufs. Une ville marche mieux quand tout le monde aide !",
+        "ar": "عندما نفرز نفاياتنا يمكن أن تصبح الأشياء القديمة أشياء جديدة. تعمل المدينة أفضل حين يساعد الجميع!"
+      },
+      "learnMore": {
+        "en": "Glass can be melted and recycled again and again without wearing out. Making a can from recycled aluminium uses about 95% less energy than making it from new metal.",
+        "fr": "Le verre peut être fondu et recyclé encore et encore sans s’user. Fabriquer une canette en aluminium recyclé demande environ 95 % d’énergie en moins qu’avec du métal neuf.",
+        "ar": "يمكن صهر الزجاج وإعادة تدويره مرّة بعد مرّة دون أن يبلى. صنع علبة من الألومنيوم المُعاد تدويره يستهلك طاقة أقل بنحو ٩٥٪ من صنعها من معدن جديد."
+      },
+      "funFact": {
+        "en": "Glass can be melted and recycled again and again without wearing out.",
+        "fr": "Le verre peut être fondu et recyclé encore et encore sans s’user.",
+        "ar": "يمكن صهر الزجاج وإعادة تدويره مرّة بعد مرّة دون أن يبلى."
+      },
+      "linkedTopics": [
+        "social/compass",
+        "social/map-quiz"
+      ],
+      "sourceType": "curated",
+      "factIds": [
+        "f-glass-again",
+        "f-can-energy"
+      ],
+      "wikiQuery": {
+        "en": "Recycling Rush",
+        "fr": "Le tri express",
+        "ar": "سباق إعادة التدوير"
+      },
+      "mascotLine": {
+        "en": "Sort it, save it! Go go go!",
+        "fr": "Trie, sauve ! Vas-y !",
+        "ar": "افرز وأنقذ! هيا هيا!"
+      },
+      "puzzle": {
+        "type": "arcade",
+        "game": "recycle",
+        "prompt": {
+          "en": "Tap the right bin for each thing on the belt before it falls off. Sort 12!",
+          "fr": "Touche la bonne poubelle pour chaque objet avant qu’il ne tombe du tapis. Trie-en 12 !",
+          "ar": "المس الحاوية الصحيحة لكل شيء على الحزام قبل أن يسقط. افرز ١٢!"
+        },
+        "factIds": [
+          "f-glass-again",
+          "f-can-energy"
         ]
       }
     }

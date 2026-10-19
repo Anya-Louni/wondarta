@@ -143,6 +143,39 @@
       "sources": [
         "https://en.wikipedia.org/wiki/Arabic_alphabet"
       ]
+    },
+    {
+      "id": "f-giza-age",
+      "text": {
+        "en": "The Great Pyramid of Giza in Egypt was built about 4,500 years ago.",
+        "fr": "La Grande Pyramide de Gizeh, en Égypte, a été construite il y a environ 4 500 ans.",
+        "ar": "بُني الهرم الأكبر في الجيزة بمصر قبل نحو ٤٥٠٠ عام."
+      },
+      "sources": [
+        "https://en.wikipedia.org/wiki/Great_Pyramid_of_Giza"
+      ]
+    },
+    {
+      "id": "f-giza-blocks",
+      "text": {
+        "en": "It is made of about 2.3 million stone blocks.",
+        "fr": "Elle est faite d’environ 2,3 millions de blocs de pierre.",
+        "ar": "وهو مبنيّ من نحو ٢٫٣ مليون حجر."
+      },
+      "sources": [
+        "https://en.wikipedia.org/wiki/Great_Pyramid_of_Giza"
+      ]
+    },
+    {
+      "id": "f-giza-tallest",
+      "text": {
+        "en": "For more than 3,800 years, it was the tallest building people had ever made.",
+        "fr": "Pendant plus de 3 800 ans, ce fut le plus haut bâtiment jamais construit par l’homme.",
+        "ar": "ظلّ أكثر من ٣٨٠٠ عام أعلى بناء صنعه الإنسان."
+      },
+      "sources": [
+        "https://en.wikipedia.org/wiki/Great_Pyramid_of_Giza"
+      ]
     }
   ],
   "glossary": [
@@ -591,6 +624,69 @@
         "factIds": [
           "f-arabic-rtl",
           "f-chinese-chars"
+        ]
+      }
+    },
+    {
+      "id": "places/pyramid",
+      "title": {
+        "en": "Pyramid Builder",
+        "fr": "Bâtis la pyramide",
+        "ar": "ابنِ الهرم"
+      },
+      "position": [
+        6.2,
+        0,
+        0.5
+      ],
+      "contentType": "puzzle",
+      "narration": {
+        "en": "The Great Pyramid in Egypt is a giant pile of stone blocks, each layer a little smaller than the one below. It took thousands of workers many years to build!",
+        "fr": "La Grande Pyramide d’Égypte est une énorme pile de blocs de pierre, chaque étage un peu plus petit que celui du dessous. Des milliers d’ouvriers ont travaillé des années pour la bâtir !",
+        "ar": "الهرم الأكبر في مصر كومة عملاقة من الحجارة، كل طبقة أصغر قليلًا من التي تحتها. احتاج آلاف العمّال سنوات طويلة لبنائه!"
+      },
+      "learnMore": {
+        "en": "The Great Pyramid of Giza in Egypt was built about 4,500 years ago. It is made of about 2.3 million stone blocks. For more than 3,800 years, it was the tallest building people had ever made.",
+        "fr": "La Grande Pyramide de Gizeh, en Égypte, a été construite il y a environ 4 500 ans. Elle est faite d’environ 2,3 millions de blocs de pierre. Pendant plus de 3 800 ans, ce fut le plus haut bâtiment jamais construit par l’homme.",
+        "ar": "بُني الهرم الأكبر في الجيزة بمصر قبل نحو ٤٥٠٠ عام. وهو مبنيّ من نحو ٢٫٣ مليون حجر. ظلّ أكثر من ٣٨٠٠ عام أعلى بناء صنعه الإنسان."
+      },
+      "funFact": {
+        "en": "The Great Pyramid of Giza in Egypt was built about 4,500 years ago.",
+        "fr": "La Grande Pyramide de Gizeh, en Égypte, a été construite il y a environ 4 500 ans.",
+        "ar": "بُني الهرم الأكبر في الجيزة بمصر قبل نحو ٤٥٠٠ عام."
+      },
+      "linkedTopics": [
+        "places/scripts",
+        "places/hello"
+      ],
+      "sourceType": "curated",
+      "factIds": [
+        "f-giza-age",
+        "f-giza-blocks",
+        "f-giza-tallest"
+      ],
+      "wikiQuery": {
+        "en": "Pyramid Builder",
+        "fr": "Bâtis la pyramide",
+        "ar": "ابنِ الهرم"
+      },
+      "mascotLine": {
+        "en": "Steady hands, builder! Up we go!",
+        "fr": "Mains bien sûres, bâtisseur ! On monte !",
+        "ar": "يدان ثابتتان أيها البنّاء! إلى الأعلى!"
+      },
+      "puzzle": {
+        "type": "arcade",
+        "game": "stacker",
+        "prompt": {
+          "en": "Tap to drop each stone right on top of the last one. Stack 8 layers!",
+          "fr": "Touche pour poser chaque pierre bien au-dessus de la précédente. Empile 8 étages !",
+          "ar": "المس لتضع كل حجر فوق الذي قبله تمامًا. كدّس ٨ طبقات!"
+        },
+        "factIds": [
+          "f-giza-age",
+          "f-giza-blocks",
+          "f-giza-tallest"
         ]
       }
     }

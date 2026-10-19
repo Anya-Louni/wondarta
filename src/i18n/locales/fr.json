@@ -352,7 +352,16 @@
   },
   "arcade": {
     "colour": "Couleur",
-    "light": "Clair ou foncé"
+    "light": "Clair ou foncé",
+    "yourTurn": "À toi : tu joues les croix rouges.",
+    "robotWins": "Le robot a gagné cette fois. Réessaie !",
+    "youWin": "Tu as battu le robot !",
+    "draw": "Match nul ! Personne ne peut battre un joueur parfait.",
+    "again": "Rejouer",
+    "watch": "Regarde et écoute...",
+    "yourGo": "À toi ! Touche les mêmes couleurs.",
+    "slow": "Assez lent pour se poser",
+    "fast": "Trop vite ! Maintiens pour freiner"
   },
   "welcome": {
     "hi": "Coucouuu ! Je suis Wondoo, une pieuvre déguisée en lapin, et je suis TROP content que tu sois là ! On va explorer ensemble. Quelle langue préfères-tu ?",
@@ -364,7 +373,7 @@
     "doors": "Chaque porte lumineuse de ce hall mène à un monde : les animaux, l'océan, le corps humain, l'art, l'histoire et plus encore. Entre dans une porte pour y aller.",
     "cards": "Dans un monde, approche-toi de tout ce qui brille. Une carte s'ouvre. Lis-la, puis appuie sur « On joue ! » pour un jeu.",
     "stars": "Chaque jeu te donne jusqu'à 3 étoiles. Moins d'erreurs, plus d'étoiles ! Tes étoiles sont comptées ici, en haut.",
-    "ask": "Tu te poses une autre question ? Appuie sur la loupe et demande-moi. Je cherche la réponse sur Wikipédia pour toi.",
+    "ask": "Tu te poses une question ? Appuie sur la loupe et demande-moi, par exemple « comment marche un volcan ? ». Je te construirai un petit monde en 3D !",
     "home": "Depuis n’importe quel monde, la petite maison te ramène dans ce hall. Et essaie d’attraper les poissons qui sautent de la fontaine ! Alors {{name}}, on y va ?",
     "homeNoName": "Depuis n’importe quel monde, la petite maison te ramène dans ce hall. Et essaie d’attraper les poissons qui sautent de la fontaine ! Alors, on y va ?",
     "next": "Suivant",
@@ -394,5 +403,27 @@
     "fishTab": "Poissons",
     "prev": "Page précédente",
     "next": "Page suivante"
+  },
+  "mic": {
+    "talk": "Touche et parle à Wondoo",
+    "stop": "J’écoute... touche pour arrêter",
+    "loading": "Je prépare mes oreilles... {{pct}} %",
+    "thinking": "Je réfléchis à ce que tu as dit...",
+    "error": "Je ne t’entends pas. Le micro est-il autorisé ?"
+  },
+  "voice": {
+    "warming": "Wondoo échauffe sa voix... {{pct}} %"
+  },
+  "wonder": {
+    "followMe": "Suis-moi ! Allons le voir en 3D !",
+    "introWiki": "Ooh, {{topic}} ! Suis-moi, je t’ai construit un petit monde là-dessus !",
+    "follow": "Suis-moi !",
+    "go": "C’est parti !",
+    "end": "Waouh, on a réussi ! Tu as appris quelque chose de génial aujourd’hui.",
+    "endTitle": "Maintenant, regarde en vrai !",
+    "videoCredit": "Vidéo de Wikimedia Commons :",
+    "fromWiki": "D’après Wikipédia :",
+    "checked": "Vérifié avec :",
+    "askAgain": "Pose-moi une autre question"
   }
 }

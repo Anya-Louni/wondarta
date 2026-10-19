@@ -7,7 +7,7 @@ import { frameQuiz } from '../llm/mascot';
 import { moreQuiz } from '../llm/variants';
 import { useApp } from '../state/store';
 import { useLines } from '../i18n';
-import { speak, hasVoice } from '../audio/tts';
+import { speak, hasVoice, playClip } from '../audio/tts';
 import { wikiVideo } from '../wiki/wikipedia';
 import { modelThumb } from '../models';
 import { WondooLine, SourceTag, StarRow } from '../ui/Parts';
@@ -308,7 +308,8 @@ export function AudioMatchActivity({ spec, lang, round, onSolved, onWrong }: { s
   const clip = clips[i];
 
   const play = () => {
-    const ok = speak(clip.text, clip.speakLang, { rate: 0.85 });
+    // real people saying hello, recorded for Lingua Libre (public/audio/hello)
+    const ok = playClip(`./audio/hello/${clip.id}.mp3`);
     setPlayed(true);
     setNoVoice(!ok);
   };

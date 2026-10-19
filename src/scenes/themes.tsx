@@ -574,7 +574,7 @@ function SocialDecor() {
       <Talker id="scroll" scene="social" fact="f-caesar" move="sway" position={[-1.5, 0, -8]} fit={1.36} />
       <Talker id="scroll" scene="social" fact="f-earth-magnet" move="sway" position={[4, 0, -7]} fit={1.27} />
       <Talker id="lock" scene="social" fact="f-shift-cipher" move="breathe" position={[5.8, 0, -6.4]} fit={0.94} />
-      <RoundTree position={[7, 0, 2]} scale={0.9} />
+      <RoundTree position={[8, 0, 3.6]} scale={0.9} />
       <RoundTree position={[-7.2, 0, 2.5]} scale={0.8} color="#6fd35a" />
     </>
   );

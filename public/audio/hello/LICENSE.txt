@@ -1,0 +1,8 @@
+Greetings recorded by real people for Lingua Libre (Wikimedia Commons), trimmed for Wondarta.
+Each clip is shared under the same licence as its original.
+
+fr: "LL-Q150 (fra)-LoquaxFR-bonjour.wav", speaker LoquaxFR, CC BY-SA 4.0
+es: "LL-Q1321 (spa)-CaroEspinoza-HOLA.wav", speaker CaroEspinoza, CC0
+ar: "LL-Q13955 (ara)-Zinou2go-مَرْحَبًا.wav", speaker Zinou2go, CC BY-SA 3.0
+ja: "LL-Q5287 (jpn)-Fukujinzuke-こんにちは.wav", speaker Fukujinzuke, CC BY 4.0
+Details and links: CREDITS.md

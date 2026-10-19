@@ -16,7 +16,12 @@ export default defineConfig(({ mode }) => {
   return {
     base: './', // relative asset paths: works from file:// and inside Tauri's webview
     plugins: [react()],
+    // the voice and listening engines run in workers; declare them so the dev server does not rebuild mid-session
+    optimizeDeps: { include: ['onnxruntime-web'], exclude: ['@huggingface/transformers'] },
+    worker: { format: 'es' },
     server: {
+      // lets the voice engine use several CPU threads (SharedArrayBuffer); credentialless keeps Wikipedia images working
+      headers: { 'Cross-Origin-Opener-Policy': 'same-origin', 'Cross-Origin-Embedder-Policy': 'credentialless' },
       proxy: {
         '/api/groq': {
           target: 'https://api.groq.com',

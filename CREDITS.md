@@ -144,3 +144,13 @@ accurate art.
 ## Original work
 
 The procedural "toy" models in `src/models/` (animals, dinosaurs, sports gear, organs, portal emblems), Wondoo the mascot, and all curated facts were made for Wondarta.
+
+## Voices and listening (run inside the app)
+
+- **Reading voices** (Piper text-to-speech, MIT engine by the Rhasspy project, voices from `rhasspy/piper-voices`, served through the `diffusionstudio/piper-voices` mirror on Hugging Face):
+  - English, `en_US-kristin-medium`: trained on a LibriVox public-domain reading.
+  - French, `fr_FR-siwis-medium`: SIWIS French Speech Synthesis Database, CC BY 4.0.
+  - Arabic, `ar_JO-kareem-medium`: trained on the `arabicttstrain` dataset; its licence is not stated by its author. **Must be confirmed or replaced before commercial use.**
+- **Phonemizer:** piper-phonemize (MIT) with espeak-ng data (GPL-3.0), loaded at runtime from `@diffusionstudio/piper-wasm`. `src/vendor/piper-phonemize.js` is the loader from `@diffusionstudio/vits-web` (MIT).
+- **Speech recognition:** OpenAI Whisper base (MIT), ONNX build `onnx-community/whisper-base`, run with Transformers.js (Apache-2.0) and ONNX Runtime Web (MIT). Audio is processed on the device and never uploaded.
+- **Greetings in Say Hello:** Lingua Libre recordings on Wikimedia Commons: LoquaxFR "bonjour" (CC BY-SA 4.0), CaroEspinoza "hola" (CC0), Zinou2go "مَرْحَبًا" (CC BY-SA 3.0), Fukujinzuke "こんにちは" (CC BY 4.0). Files: `public/audio/hello/`.

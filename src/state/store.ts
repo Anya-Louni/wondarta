@@ -13,6 +13,11 @@ export interface SavedWord {
   at: number;
 }
 
+/** The little world Wondoo builds for a question: a hand-made one, or one made from Wikipedia. */
+export type WonderVisit =
+  | { kind: 'built'; id: string }
+  | { kind: 'wiki'; title: string; parts: string[]; url: string; videoTitle?: string };
+
 export interface MascotSpeech {
   text: string;
   /** changes on every new line so the bubble re-animates */
@@ -56,6 +61,7 @@ interface State {
   sceneFlags: Record<string, boolean>;
   roomMode: 'play' | 'chat';
   journalOpen: boolean;
+  wonder: WonderVisit | null;
   /** The fish just caught at the fountain, for the little announcement. */
   caught: { id: string; isNew: boolean; key: number } | null;
 
@@ -84,6 +90,8 @@ interface State {
   removeWord: (word: string, lang: Lang) => void;
   catchFish: (id: string) => void;
   setJournalOpen: (v: boolean) => void;
+  /** Wondoo: "Follow me!" */
+  visitWonder: (v: WonderVisit) => void;
 }
 
 let speechKey = 0;
@@ -105,6 +113,7 @@ export const useApp = create<State>()(
       words: [],
       fish: {},
       journalOpen: false,
+      wonder: null,
       caught: null,
 
       scene: 'hub',
@@ -165,6 +174,7 @@ export const useApp = create<State>()(
         const n = get().fish[id] ?? 0;
         set({ fish: { ...get().fish, [id]: n + 1 }, caught: { id, isNew: n === 0, key: Date.now() } });
       },
+      visitWonder: (wonder) => set({ wonder, scene: 'wonder', prevScene: get().scene, askOpen: false, openHotspot: null, journalOpen: false, mascotSpeech: null }),
       setJournalOpen: (journalOpen) => set({ journalOpen, askOpen: false, openHotspot: journalOpen ? null : get().openHotspot }),
       resetProgress: () => set({ words: [], fish: {}, name: '', tourDone: false, explored: [], stars: {}, visitDays: [], scene: 'hub', openHotspot: null, mascotSpeech: null }),
     }),

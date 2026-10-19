@@ -4,7 +4,38 @@ import { ArrowDown, ArrowLeft, ArrowRight, ArrowUp, Footprints, Shovel } from 'l
 import type { ArcadePuzzle, Lang } from '../../types/content';
 import { sfx } from '../../audio/sfx';
 import { seeded, type PuzzleProps } from './types';
-import { BODY_PARTS, useBodyShots, useSprite, type BodyPart, type Face } from './sprites';
+import { Html, Line, Stars } from '@react-three/drei';
+import { DoubleSide } from 'three';
+import { AcaciaTree, PineTree, Rock } from '../../three/props';
+import { BODY_PARTS, useBodyShots, type BodyPart } from './sprites';
+import {
+  Blades,
+  Board3D,
+  Candle,
+  Chest,
+  Chrysalis,
+  Floor,
+  Germ,
+  GroundStrip,
+  Hive,
+  Leaf,
+  Meadow,
+  Pin,
+  PondFloor,
+  Pterosaur,
+  Racket,
+  RedCell,
+  River,
+  RockColumn,
+  SeaFloor,
+  Thing,
+  Tint,
+  Moth,
+  WhiteCell,
+  m,
+  side,
+  top,
+} from './Board3D';
 
 /**
  * Games you play with your hands instead of answering a question. Each one
@@ -33,7 +64,10 @@ function useLoop(step: (dt: number) => void, on: boolean) {
 /** Pointer position in the 400x240 drawing, whatever size it is on screen. */
 const at = (e: RPointerEvent<Element>, w = W, h = H) => {
   const r = e.currentTarget.getBoundingClientRect();
-  return { x: ((e.clientX - r.left) / r.width) * w, y: ((e.clientY - r.top) / r.height) * h };
+  return {
+    x: ((e.clientX - r.left) / r.width) * w,
+    y: ((e.clientY - r.top) / r.height) * h,
+  };
 };
 const clamp = (v: number, a: number, b: number) => Math.max(a, Math.min(b, v));
 const Score = ({ n, of }: { n: number; of: number }) => (
@@ -42,18 +76,63 @@ const Score = ({ n, of }: { n: number; of: number }) => (
   </p>
 );
 
-/** A picture of one of the world's 3D models, centred on (0, 0). */
-function Sprite({ id, size, face = 'right', flip, ...rest }: { id: string; size: number; face?: Face; flip?: boolean } & React.SVGProps<SVGImageElement>) {
-  const href = useSprite(id, face);
-  return href ? <image href={href} x={-size / 2} y={-size / 2} width={size} height={size} transform={flip ? 'scale(-1 1)' : undefined} {...rest} /> : null;
+/** Dev builds only: lets the automated play tests read a game's state. */
+const devState = (st: object) => {
+  if (import.meta.env.DEV) (window as unknown as { __game?: object }).__game = st;
+};
+
+/** Keys 1 to n press the matching cell or pad, for players without a mouse. */
+function useNumberKeys(n: number, act: (i: number) => void) {
+  useEffect(() => {
+    const key = (e: KeyboardEvent) => {
+      const k = Number(e.key);
+      if (k >= 1 && k <= n) act(k - 1);
+    };
+    window.addEventListener('keydown', key);
+    return () => window.removeEventListener('keydown', key);
+  });
 }
 
 // ---------- swim and eat: the whale and the tadpole share this ----------
-function Swim({ onSolved, onWrong, cls, hero, good, bad, mouth = 26 }: P & { mouth?: number; cls: string; hero: (got: number) => ReactNode; good: ReactNode; bad: ReactNode }) {
+function Swim({
+  onSolved,
+  onWrong,
+  cls,
+  hero,
+  good,
+  bad,
+  scenery,
+  mouth = 26,
+}: P & {
+  mouth?: number;
+  cls: string;
+  hero: (got: number) => ReactNode;
+  good: ReactNode;
+  bad: ReactNode;
+  scenery: ReactNode;
+}) {
   const GOAL = 12;
-  const g = useRef({ x: 90, y: 120, tx: 90, ty: 120, items: [] as { x: number; y: number; v: number; bad: boolean; id: number }[], next: 0, n: 0, got: 0, ouch: 0, won: false });
+  const g = useRef({
+    x: 90,
+    y: 120,
+    tx: 90,
+    ty: 120,
+    items: [] as {
+      x: number;
+      y: number;
+      v: number;
+      bad: boolean;
+      id: number;
+    }[],
+    next: 0,
+    n: 0,
+    got: 0,
+    ouch: 0,
+    won: false,
+  });
   const [, draw] = useState(0);
   const s = g.current;
+  devState(s);
   useLoop((dt) => {
     s.x += (s.tx - s.x) * Math.min(1, dt * 6);
     s.y += (s.ty - s.y) * Math.min(1, dt * 6);
@@ -61,7 +140,13 @@ function Swim({ onSolved, onWrong, cls, hero, good, bad, mouth = 26 }: P & { mou
     s.next -= dt;
     if (s.next <= 0) {
       s.next = 0.42;
-      s.items.push({ x: W + 10, y: 22 + Math.random() * (H - 44), v: 60 + Math.random() * 50, bad: Math.random() < 0.2, id: s.n++ });
+      s.items.push({
+        x: W + 10,
+        y: 22 + Math.random() * (H - 44),
+        v: 60 + Math.random() * 50,
+        bad: Math.random() < 0.2,
+        id: s.n++,
+      });
     }
     s.items = s.items.filter((it) => {
       it.x -= it.v * dt;
@@ -84,19 +169,21 @@ function Swim({ onSolved, onWrong, cls, hero, good, bad, mouth = 26 }: P & { mou
     }
     draw((n) => n + 1);
   }, !s.won);
+  const t = performance.now() / 1000;
   return (
     <div className="arcade">
       <Score n={s.got} of={GOAL} />
-      <svg viewBox={`0 0 ${W} ${H}`} className={`arcade-board ${cls}`} onPointerMove={(e) => Object.assign(s, { tx: at(e).x - mouth, ty: at(e).y })} onPointerDown={(e) => Object.assign(s, { tx: at(e).x - mouth, ty: at(e).y })}>
+      <Board3D view="side" className={cls} onPoint={(p) => Object.assign(s, { tx: p.x - mouth, ty: p.y })}>
+        {scenery}
         {s.items.map((it) => (
-          <g key={it.id} transform={`translate(${it.x} ${it.y})`}>
+          <group key={it.id} position={side(it.x, it.y)} rotation={[0, 0, Math.sin(t * 3 + it.id) * 0.3]}>
             {it.bad ? bad : good}
-          </g>
+          </group>
         ))}
-        <g transform={`translate(${s.x} ${s.y})`} opacity={s.ouch ? 0.5 : 1}>
+        <group position={side(s.x, s.y)} rotation={[0, Math.PI / 2, s.ouch ? Math.sin(t * 40) * 0.15 : Math.sin(t * 2) * 0.05]}>
           {hero(s.got)}
-        </g>
-      </svg>
+        </group>
+      </Board3D>
     </div>
   );
 }
@@ -106,19 +193,36 @@ const KrillGulp = (p: P) => (
     {...p}
     cls="sea"
     mouth={50}
+    scenery={<SeaFloor />}
     good={
-      <>
-        <ellipse rx="5" ry="2.2" fill="#ff9d8a" />
-        <path d="M4 0 L8 -2 M4 0 L8 2" stroke="#ff9d8a" strokeWidth="1" />
-      </>
+      <group rotation={[0, 0, 0.3]} scale={2}>
+        <mesh rotation={[0, 0, Math.PI / 2]}>
+          <capsuleGeometry args={[0.1, 0.36, 4, 8]} />
+          <meshStandardMaterial color="#ff8a70" roughness={0.4} transparent opacity={0.9} />
+        </mesh>
+        <mesh position={[0.3, 0, 0]} rotation={[0, 0, -Math.PI / 2]}>
+          <coneGeometry args={[0.1, 0.22, 6]} />
+          <meshStandardMaterial color="#ff6f55" />
+        </mesh>
+      </group>
     }
     bad={
-      <g transform="rotate(20)">
-        <rect x="-4" y="-8" width="8" height="16" rx="2" fill="#dfe7ea" stroke="#78909c" />
-        <rect x="-2" y="-11" width="4" height="3" fill="#e5533d" />
-      </g>
+      <group rotation={[0, 0, 0.4]}>
+        <mesh>
+          <cylinderGeometry args={[0.22, 0.22, 0.75, 14]} />
+          <meshStandardMaterial color="#d8eef2" transparent opacity={0.6} roughness={0.1} />
+        </mesh>
+        <mesh position={[0, 0.46, 0]}>
+          <cylinderGeometry args={[0.1, 0.12, 0.18, 10]} />
+          <meshStandardMaterial color="#e5533d" />
+        </mesh>
+      </group>
     }
-    hero={() => <Sprite id="whale" size={136} style={{ filter: "saturate(1.6) brightness(0.85)" }} />}
+    hero={() => (
+      <group position={[0, -0.9, 0]}>
+        <Thing id="whale" fit={6.6} />
+      </group>
+    )}
   />
 );
 
@@ -128,16 +232,23 @@ const Tadpole = (p: P) => (
     {...p}
     cls="pond"
     mouth={18}
+    scenery={<PondFloor />}
     good={
       <>
-        <circle r="4" fill="#5fae3d" />
-        <circle cx="4" cy="-3" r="2.5" fill="#7cc653" />
+        <mesh>
+          <icosahedronGeometry args={[0.2, 1]} />
+          <meshStandardMaterial color="#5fae3d" roughness={0.8} />
+        </mesh>
+        <mesh position={[0.18, 0.12, 0]}>
+          <icosahedronGeometry args={[0.13, 1]} />
+          <meshStandardMaterial color="#7cc653" roughness={0.8} />
+        </mesh>
       </>
     }
-    bad={<Sprite id="fish" size={40} face="left" />}
+    bad={<Thing id="fish" fit={1.7} rotation={[0, Math.PI / 2, 0]} position={[0, -0.4, 0]} />}
     hero={(got) => {
       const stage = Math.min(4, Math.floor(got / 3));
-      return <Sprite id={stage < 2 ? 'tadpole' : stage < 4 ? 'froglet' : 'frog'} size={46 + stage * 6} />;
+      return <Thing id={stage < 2 ? 'tadpole' : stage < 4 ? 'froglet' : 'frog'} fit={2.2 + stage * 0.3} position={[0, -0.5, 0]} />;
     }}
   />
 );
@@ -152,16 +263,27 @@ const FLOWERS = [
   { x: 76, y: 190, id: 'tulip' },
 ];
 const HIVE = { x: 356, y: 200 };
+const BEE_H = 2.8;
 function Pollinate({ onSolved }: P) {
-  const g = useRef({ x: 200, y: 120, tx: 200, ty: 120, last: -1, carrying: false, fruit: FLOWERS.map(() => false), won: false });
+  const g = useRef({
+    x: 200,
+    y: 120,
+    tx: 200,
+    ty: 120,
+    last: -1,
+    carrying: false,
+    fruit: FLOWERS.map(() => false),
+    won: false,
+  });
   const [, draw] = useState(0);
   const s = g.current;
+  devState(s);
   const all = s.fruit.every(Boolean);
   useLoop((dt) => {
     s.x += (s.tx - s.x) * Math.min(1, dt * 5);
     s.y += (s.ty - s.y) * Math.min(1, dt * 5);
     FLOWERS.forEach((f, i) => {
-      if (i === s.last || Math.hypot(f.x - s.x, f.y - 18 - s.y) > 16) return;
+      if (i === s.last || Math.hypot(f.x - s.x, f.y - s.y) > 20) return;
       // pollen from the flower before lands here, and this flower's pollen comes along
       if (s.carrying && !s.fruit[i]) {
         s.fruit[i] = true;
@@ -170,34 +292,40 @@ function Pollinate({ onSolved }: P) {
       s.carrying = true;
       s.last = i;
     });
-    if (s.fruit.every(Boolean) && !s.won && Math.hypot(HIVE.x - s.x, HIVE.y - 14 - s.y) < 18) {
+    if (s.fruit.every(Boolean) && !s.won && Math.hypot(HIVE.x - s.x, HIVE.y - s.y) < 24) {
       s.won = true;
       onSolved();
     }
     draw((n) => n + 1);
   }, !s.won);
+  const t = performance.now() / 1000;
   return (
     <div className="arcade">
       <Score n={s.fruit.filter(Boolean).length} of={FLOWERS.length} />
-      <svg viewBox={`0 0 ${W} ${H}`} className="arcade-board meadow" onPointerMove={(e) => Object.assign(s, { tx: at(e).x, ty: at(e).y })} onPointerDown={(e) => Object.assign(s, { tx: at(e).x, ty: at(e).y })}>
-        <g className={all ? 'arcade-glow' : ''}>
-          <path d={`M${HIVE.x - 16} ${HIVE.y} a16 22 0 0 1 32 0 Z`} fill="#e9a93b" stroke="#b67a1c" />
-          <path d={`M${HIVE.x - 14} ${HIVE.y - 8} h28 M${HIVE.x - 10} ${HIVE.y - 15} h20`} stroke="#b67a1c" />
-          <circle cx={HIVE.x} cy={HIVE.y - 4} r="3.5" fill="#5a3a12" />
-        </g>
+      <Board3D className="sky" lift={BEE_H} onPoint={(p) => Object.assign(s, { tx: p.x, ty: p.y })}>
+        <Meadow grass={700} />
+        <Hive position={top(HIVE.x, HIVE.y)} glow={all} />
         {FLOWERS.map((f, i) => (
-          <g key={i}>
-            <g transform={`translate(${f.x} ${f.y + 4})`}>
-              <Sprite id={f.id} size={100} face="front" />
-            </g>
-            {s.fruit[i] && <circle cx={f.x + 12} cy={f.y + 6} r="6" fill="#e5533d" stroke="#b8392a" className="flower-part" />}
-          </g>
+          <group key={i}>
+            <Thing id={f.id} fit={3.2} position={top(f.x, f.y)} />
+            {s.fruit[i] && (
+              <mesh position={top(f.x + 16, f.y + 10, 0.35)}>
+                <sphereGeometry args={[0.34, 18, 14]} />
+                <meshStandardMaterial color="#e5533d" roughness={0.3} />
+              </mesh>
+            )}
+          </group>
         ))}
-        <g transform={`translate(${s.x} ${s.y})`}>
-          <Sprite id="bee" size={52} flip={s.tx < s.x} />
-          {s.carrying && <circle cx="-2" cy="8" r="2.6" fill="#f5b700" stroke="#c98a00" />}
-        </g>
-      </svg>
+        <group position={top(s.x, s.y, BEE_H + Math.sin(t * 7) * 0.08)} rotation={[0, Math.atan2(s.tx - s.x, s.ty - s.y || 0.001), 0]}>
+          <Thing id="bee" fit={1.6} />
+          {s.carrying && (
+            <mesh position={[0, 0.05, 0]}>
+              <sphereGeometry args={[0.14, 10, 8]} />
+              <meshStandardMaterial color="#f5b700" />
+            </mesh>
+          )}
+        </group>
+      </Board3D>
     </div>
   );
 }
@@ -246,6 +374,7 @@ function FossilDig({ onSolved }: P) {
 }
 
 // ---------- tortoise and hare: steady taps win ----------
+const offTrack = (_x: number, z: number) => Math.abs(z - top(0, 96)[2]) > 1.4 && Math.abs(z - top(0, 164)[2]) > 1.4;
 function SteadyRace({ puzzle, lang, onSolved, onWrong }: P) {
   const STEPS = 14;
   const [steps, setSteps] = useState(0);
@@ -285,26 +414,31 @@ function SteadyRace({ puzzle, lang, onSolved, onWrong }: P) {
   return (
     <div className="arcade">
       <Score n={steps} of={STEPS} />
-      <svg viewBox="0 0 400 200" className="arcade-board meadow">
-        <path d="M20 112 H380 M20 178 H380" stroke="#fff" strokeWidth="2" strokeDasharray="8 8" opacity="0.7" />
-        <path d="M352 60 V186" stroke="#3a2a10" strokeWidth="3" />
-        <path d="M352 60 h26 v16 h-26 Z" fill="#e5533d" />
-        <g transform={`translate(${hare} 96) ${napping ? 'rotate(-12)' : ''}`}>
-          <g transform="translate(0 -8)">
-            <Sprite id="rabbit" size={84} />
-          </g>
-          {napping && (
-            <text x="24" y="-22" fontSize="13" fill="#3a2a10" fontWeight="700">
-              z z z
-            </text>
-          )}
-        </g>
-        <g transform={`translate(${tort} 164) ${trip ? 'rotate(14)' : ''}`}>
-          <g transform="translate(0 -8)">
-            <Sprite id="tortoise" size={84} />
-          </g>
-        </g>
-      </svg>
+      <Board3D className="sky" onDown={tap}>
+        <Meadow grass={500} keep={offTrack} />
+        {[96, 164].map((y) => (
+          <mesh key={y} position={top(200, y, 0.01)} rotation={[-Math.PI / 2, 0, 0]} receiveShadow userData={{ ground: true }}>
+            <planeGeometry args={[22, 2.6]} />
+            <meshStandardMaterial color="#c9a46a" roughness={1} />
+          </mesh>
+        ))}
+        <mesh position={top(352, 130, 0.02)} rotation={[-Math.PI / 2, 0, 0]} userData={{ ground: true }}>
+          <planeGeometry args={[0.3, 6.6]} />
+          <meshStandardMaterial color="#ffffff" />
+        </mesh>
+        <Thing id="finish-flag" fit={2.6} position={top(366, 60)} />
+        <group position={top(hare, 96)} rotation={[napping ? 1.35 : 0, Math.PI / 2, 0]}>
+          <Thing id="rabbit" fit={1.9} />
+        </group>
+        {napping && (
+          <Html position={top(hare + 16, 80, 2.4)} center>
+            <span className="arcade-tag">z z z</span>
+          </Html>
+        )}
+        <group position={top(tort, 164)} rotation={[trip ? 0.35 : 0, Math.PI / 2, 0]}>
+          <Thing id="tortoise" fit={1.9} />
+        </group>
+      </Board3D>
       <button type="button" className={`btn go arcade-tap${trip ? ' shake' : ''}`} onClick={tap} aria-label={puzzle.prompt[lang as Lang]} disabled={done}>
         <Footprints className="i" />
       </button>
@@ -315,9 +449,18 @@ function SteadyRace({ puzzle, lang, onSolved, onWrong }: P) {
 // ---------- badminton: keep the shuttlecock up ----------
 function KeepUp({ onSolved, onWrong }: P) {
   const GOAL = 10;
-  const g = useRef({ x: 200, y: 30, vx: 30, vy: 0, rx: 200, hits: 0, won: false });
+  const g = useRef({
+    x: 200,
+    y: 30,
+    vx: 30,
+    vy: 0,
+    rx: 200,
+    hits: 0,
+    won: false,
+  });
   const [, draw] = useState(0);
   const s = g.current;
+  devState(s);
   useLoop((dt) => {
     s.vy = Math.min(170, s.vy + 300 * dt); // feathers slow the fall
     s.x += s.vx * dt;
@@ -344,17 +487,25 @@ function KeepUp({ onSolved, onWrong }: P) {
   return (
     <div className="arcade">
       <Score n={s.hits} of={GOAL} />
-      <svg viewBox={`0 0 ${W} ${H}`} className="arcade-board court" onPointerMove={(e) => (s.rx = clamp(at(e).x, 30, W - 30))} onPointerDown={(e) => (s.rx = clamp(at(e).x, 30, W - 30))}>
-        <path d={`M200 ${H} V150`} stroke="#fff" strokeWidth="2" opacity="0.6" />
-        <g transform={`translate(${s.x} ${s.y}) rotate(${(Math.atan2(s.vy, s.vx) * 180) / Math.PI - 90})`}>
-          <Sprite id="shuttlecock" size={36} face="front" />
-        </g>
-        <g transform={`translate(${s.rx} 206)`}>
-          <ellipse rx="32" ry="7" fill="none" stroke="#e5533d" strokeWidth="3" />
-          <path d="M-22 0 H22 M-12 -6 V6 M0 -7 V7 M12 -6 V6" stroke="#e5533d" opacity="0.5" />
-          <path d="M32 2 L52 14" stroke="#3a2a10" strokeWidth="4" strokeLinecap="round" />
-        </g>
-      </svg>
+      <Board3D view="side" className="court" onPoint={(p) => (s.rx = clamp(p.x, 30, W - 30))}>
+        <GroundStrip y={-6.3} color="#4f9a64" depth={10} />
+        <mesh position={[0, -6.28, 1]} rotation={[-Math.PI / 2, 0, 0]}>
+          <planeGeometry args={[30, 0.12]} />
+          <meshStandardMaterial color="#ffffff" />
+        </mesh>
+        <mesh position={[0, -4.6, -1.5]}>
+          <boxGeometry args={[0.12, 3.4, 0.12]} />
+          <meshStandardMaterial color="#e8edf5" />
+        </mesh>
+        <mesh position={[0, -4.3, -1.5]} rotation={[0, Math.PI / 2, 0]}>
+          <planeGeometry args={[6, 1.6, 12, 4]} />
+          <meshStandardMaterial color="#ffffff" wireframe transparent opacity={0.6} />
+        </mesh>
+        <group position={side(s.x, s.y)} rotation={[0, 0, Math.atan2(-s.vy, s.vx) + Math.PI / 2]}>
+          <Thing id="shuttlecock" fit={1.3} position={[0, -0.6, 0]} />
+        </group>
+        <Racket position={side(s.rx, 210)} />
+      </Board3D>
     </div>
   );
 }
@@ -366,6 +517,15 @@ const ROCKS = [
   { h: 150, l: 38 },
   { h: 275, l: 45 },
   { h: 205, l: 30 },
+];
+const STONES: [number, number, number][] = [
+  [40, 40, 1.6],
+  [120, 205, 2],
+  [330, 40, 1.8],
+  [365, 190, 2.2],
+  [70, 150, 1.2],
+  [290, 215, 1.3],
+  [25, 222, 1.5],
 ];
 function Camouflage({ seed, onSolved }: P) {
   const { t } = useTranslation();
@@ -386,27 +546,20 @@ function Camouflage({ seed, onSolved }: P) {
     return () => window.clearTimeout(id);
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [hidden, round]);
-  const skin = `hsl(${h} 45% ${l}%)`;
+  const skin = `hsl(${h}, 45%, ${l}%)`;
+  const ground = `hsl(${target.h}, 45%, ${target.l}%)`;
   return (
     <div className="arcade">
       <Score n={round} of={3} />
-      <svg viewBox={`0 0 ${W} ${H}`} className="arcade-board">
-        <rect width={W} height={H} fill={`hsl(${target.h} 45% ${target.l}%)`} />
-        {[40, 120, 215, 300, 360, 80, 260].map((x, i) => (
-          <ellipse key={x} cx={x} cy={30 + ((i * 67) % 190)} rx={22 + (i % 3) * 8} ry={12 + (i % 2) * 6} fill={`hsl(${target.h} 40% ${target.l + (i % 2 ? 5 : -5)}%)`} />
+      <Board3D>
+        <Floor color={ground} />
+        {STONES.map(([x, y, k], i) => (
+          <Rock key={i} position={top(x, y, 0.3 * k)} scale={k} color={`hsl(${target.h}, 40%, ${target.l + (i % 2 ? 6 : -6)}%)`} />
         ))}
-        <defs>
-          <mask id="octo-shape">
-            <g transform="translate(200 128)" style={{ filter: 'brightness(0) invert(1)' }}>
-              <Sprite id="octopus" size={170} face="front" />
-            </g>
-          </mask>
-        </defs>
-        <rect width={W} height={H} fill={skin} mask="url(#octo-shape)" style={{ transition: 'fill 0.15s' }} />
-        <g transform="translate(200 128)" style={{ mixBlendMode: 'multiply', filter: 'grayscale(1) brightness(1.5)', transition: 'opacity 0.5s' }} opacity={hidden ? 0.3 : 1}>
-          <Sprite id="octopus" size={170} face="front" />
-        </g>
-      </svg>
+        <Tint color={skin}>
+          <Thing id="octopus" fit={6} position={top(200, 120)} />
+        </Tint>
+      </Board3D>
       <div className="arcade-sliders" dir="ltr">
         <input type="range" className="hue" min={0} max={359} value={h} onChange={(e) => setH(+e.target.value)} aria-label={t('arcade.colour')} />
         <input type="range" className="light" min={15} max={85} value={l} onChange={(e) => setL(+e.target.value)} aria-label={t('arcade.light')} />
@@ -422,14 +575,35 @@ const LETTER: Record<Lang, Record<Dir, string>> = {
   fr: { N: 'N', E: 'E', S: 'S', W: 'O' },
   ar: { N: 'ش', E: 'ق', S: 'ج', W: 'غ' },
 };
-const MOVE: Record<Dir, [number, number]> = { N: [0, -1], E: [1, 0], S: [0, 1], W: [-1, 0] };
+const MOVE: Record<Dir, [number, number]> = {
+  N: [0, -1],
+  E: [1, 0],
+  S: [0, 1],
+  W: [-1, 0],
+};
 const ICON = { N: ArrowUp, E: ArrowRight, S: ArrowDown, W: ArrowLeft };
 const START: [number, number] = [4, 2];
 const ROUTES: [Dir, number][][] = [
-  [['N', 2], ['E', 3], ['S', 1]],
-  [['W', 3], ['S', 2], ['E', 1]],
-  [['E', 2], ['N', 1], ['W', 4]],
-  [['S', 2], ['W', 2], ['N', 3]],
+  [
+    ['N', 2],
+    ['E', 3],
+    ['S', 1],
+  ],
+  [
+    ['W', 3],
+    ['S', 2],
+    ['E', 1],
+  ],
+  [
+    ['E', 2],
+    ['N', 1],
+    ['W', 4],
+  ],
+  [
+    ['S', 2],
+    ['W', 2],
+    ['N', 3],
+  ],
 ];
 function Treasure({ lang, seed, onSolved, onWrong }: P) {
   const { t } = useTranslation();
@@ -456,7 +630,14 @@ function Treasure({ lang, seed, onSolved, onWrong }: P) {
   };
   useEffect(() => {
     const key = (e: KeyboardEvent) => {
-      const d = ({ ArrowUp: 'N', ArrowRight: 'E', ArrowDown: 'S', ArrowLeft: 'W' } as Record<string, Dir>)[e.key];
+      const d = (
+        {
+          ArrowUp: 'N',
+          ArrowRight: 'E',
+          ArrowDown: 'S',
+          ArrowLeft: 'W',
+        } as Record<string, Dir>
+      )[e.key];
       if (!d) return;
       e.preventDefault();
       go(d);
@@ -476,33 +657,47 @@ function Treasure({ lang, seed, onSolved, onWrong }: P) {
           );
         })}
       </ol>
-      <svg viewBox={`0 0 ${W} ${H}`} className="arcade-board map">
+      <Board3D className="sky">
+        <Floor color="#e6d29c" />
         {Array.from({ length: 45 }, (_, i) => (
-          <circle key={i} cx={40 + (i % 9) * 40} cy={40 + Math.floor(i / 9) * 40} r="3" fill="#b89b6a" />
+          <mesh key={i} position={top(40 + (i % 9) * 40, 40 + Math.floor(i / 9) * 40, 0.04)} scale={[1, 0.4, 1]}>
+            <sphereGeometry args={[0.13, 8, 6]} />
+            <meshStandardMaterial color="#a88a58" />
+          </mesh>
         ))}
-        <path d="M60 150 q20 -30 40 0 q20 30 40 0" stroke="#7fb6d9" strokeWidth="6" fill="none" opacity="0.6" />
-        <path d="M290 60 l10 -22 l10 22 Z M306 66 l10 -22 l10 22 Z" fill="#6fae4e" opacity="0.7" />
-        <g transform="translate(366 30)">
-          <path d="M0 -16 L4 0 L0 16 L-4 0 Z" fill="#e5533d" />
-          <text y="-19" textAnchor="middle" fontSize="11" fontWeight="700" fill="#5a3a12">
-            {LETTER[lang].N}
-          </text>
-        </g>
+        <River />
+        <PineTree position={top(296, 52)} scale={0.55} />
+        <PineTree position={top(318, 66)} scale={0.45} />
+        <Rock position={top(40, 210, 0.2)} scale={0.7} color="#a39880" />
+        <Thing id="compass" fit={1.5} position={top(366, 26, 0.1)} />
+        <Html position={top(366, 6, 0.4)} center>
+          <span className="arcade-tag">{LETTER[lang].N}</span>
+        </Html>
         {holes.map((h, i) => (
-          <ellipse key={i} cx={px(h)[0]} cy={px(h)[1]} rx="9" ry="5" fill="#8a6a3c" />
+          <group key={i} position={top(px(h)[0], px(h)[1], 0.02)}>
+            <mesh rotation={[-Math.PI / 2, 0, 0]}>
+              <circleGeometry args={[0.5, 20]} />
+              <meshStandardMaterial color="#5a4022" />
+            </mesh>
+            <mesh position={[0.55, 0.08, 0.2]} scale={[1, 0.4, 0.8]}>
+              <sphereGeometry args={[0.32, 12, 8]} />
+              <meshStandardMaterial color="#9a7a48" />
+            </mesh>
+          </group>
         ))}
-        <polyline points={path.map((p) => px(p).join(',')).join(' ')} fill="none" stroke="#e5533d" strokeWidth="3" strokeDasharray="5 5" />
-        <path d={`M${px(START)[0]} ${px(START)[1]} v-18 h12 v8 h-12`} stroke="#e5533d" strokeWidth="2" fill="#e5533d" />
-        {found ? (
-          <g transform={`translate(${px(goal)[0]} ${px(goal)[1]})`} className="flower-part">
-            <rect x="-13" y="-8" width="26" height="17" rx="3" fill="#b6782c" stroke="#5a3a12" />
-            <path d="M-13 -2 H13" stroke="#5a3a12" />
-            <circle r="3" fill="#ffd24a" />
-          </g>
-        ) : (
-          <circle cx={px(here)[0]} cy={px(here)[1]} r="8" fill="#2f7fd0" stroke="#fff" strokeWidth="2" />
-        )}
-      </svg>
+        <Line points={path.map((p) => top(px(p)[0], px(p)[1], 0.06))} color="#e5533d" lineWidth={4} dashed dashSize={0.25} gapSize={0.2} />
+        <group position={top(px(START)[0], px(START)[1])}>
+          <mesh position={[-0.35, 0.6, 0]}>
+            <cylinderGeometry args={[0.04, 0.04, 1.2, 6]} />
+            <meshStandardMaterial color="#5a3a12" />
+          </mesh>
+          <mesh position={[-0.05, 1.0, 0]}>
+            <boxGeometry args={[0.6, 0.36, 0.04]} />
+            <meshStandardMaterial color="#e5533d" />
+          </mesh>
+        </group>
+        {found ? <Chest position={top(px(goal)[0], px(goal)[1])} /> : <Pin position={top(px(here)[0], px(here)[1])} />}
+      </Board3D>
       <div className="arcade-pad" dir="ltr">
         {(['N', 'W', 'E', 'S'] as Dir[]).map((d) => {
           const I = ICON[d];
@@ -521,16 +716,6 @@ function Treasure({ lang, seed, onSolved, onWrong }: P) {
 }
 
 // ---------- dark room: light through a tiny hole flips the picture ----------
-function Candle({ dashed }: { dashed?: boolean }) {
-  return dashed ? (
-    <path d="M-6 25 V-10 H6 V25 Z M0 -10 C-7 -18 0 -22 0 -28 C0 -22 7 -18 0 -10" fill="none" stroke="#fff" strokeDasharray="3 3" />
-  ) : (
-    <>
-      <rect x="-6" y="-10" width="12" height="35" rx="2" fill="#f6efe0" stroke="#c9b98e" />
-      <path d="M0 -10 C-7 -18 0 -22 0 -28 C0 -22 7 -18 0 -10" fill="#ffb300" />
-    </>
-  );
-}
 function Pinhole({ seed, onSolved }: P) {
   const targets = useMemo(() => seeded([66, 172, 94, 150], seed).slice(0, 3), [seed]);
   const [round, setRound] = useState(0);
@@ -548,26 +733,33 @@ function Pinhole({ seed, onSolved }: P) {
     return () => window.clearTimeout(id);
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [on, round]);
-  const move = (e: RPointerEvent<SVGSVGElement>) => setY(clamp(at(e).y, 42, 198));
   return (
     <div className="arcade">
       <Score n={round} of={3} />
-      <svg viewBox={`0 0 ${W} ${H}`} className="arcade-board" onPointerMove={move} onPointerDown={move}>
-        <rect width="200" height={H} fill="#fdf3d6" />
-        <rect x="200" width="200" height={H} fill="#1d2433" />
-        <path d={`M200 0 V116 M200 124 V${H}`} stroke="#5a4a3a" strokeWidth="6" />
-        <path d={`M330 12 V${H - 12}`} stroke="#e8edf5" strokeWidth="4" />
-        <path d={`M70 ${y - 28} L330 ${240 - (y - 28)} M70 ${y + 25} L330 ${240 - (y + 25)}`} stroke="#ffb300" strokeWidth="1.5" opacity="0.8" />
-        <g transform={`translate(70 ${y})`}>
-          <Candle />
-        </g>
-        <g transform={`translate(330 ${target}) scale(1 -1)`}>
-          <Candle dashed />
-        </g>
-        <g transform={`translate(330 ${img}) scale(1 -1)`} opacity={on ? 1 : 0.75}>
-          <Candle />
-        </g>
-      </svg>
+      <Board3D view="side" className="dark" onPoint={(p) => setY(clamp(p.y, 42, 198))}>
+        <mesh position={side(200, 58)}>
+          <boxGeometry args={[0.35, 5.8, 3]} />
+          <meshStandardMaterial color="#5a4a3a" roughness={0.9} />
+        </mesh>
+        <mesh position={side(200, 182)}>
+          <boxGeometry args={[0.35, 5.8, 3]} />
+          <meshStandardMaterial color="#5a4a3a" roughness={0.9} />
+        </mesh>
+        <mesh position={side(330, 120, -0.6)}>
+          <boxGeometry args={[2.8, 11.4, 0.1]} />
+          <meshStandardMaterial color="#5d6678" roughness={0.8} />
+        </mesh>
+        <Line points={[side(70, y - 28, 0.3), side(330, 240 - (y - 28), 0.3)]} color="#ffb300" lineWidth={2} transparent opacity={0.85} />
+        <Line points={[side(70, y + 25, 0.3), side(330, 240 - (y + 25), 0.3)]} color="#ffb300" lineWidth={2} transparent opacity={0.85} />
+        <Candle position={side(70, y)} />
+        <pointLight position={side(70, y - 26, 0.6)} color="#ffc23a" intensity={6} distance={7} />
+        <mesh position={side(200, 120, 0.3)}>
+          <sphereGeometry args={[0.12, 10, 8]} />
+          <meshBasicMaterial color="#ffe9a8" toneMapped={false} />
+        </mesh>
+        <Candle position={side(330, target, 0.1)} flip ghost />
+        <Candle position={side(330, img, 0.15)} flip dim={!on} />
+      </Board3D>
     </div>
   );
 }
@@ -605,7 +797,9 @@ function Jigsaw({ seed, onSolved }: P) {
             className={pick === i ? 'on' : ''}
             aria-label={`${i + 1}`}
             onClick={() => tap(i)}
-            style={{ backgroundPosition: `${((piece % COLS) / (COLS - 1)) * 100}% ${(Math.floor(piece / COLS) / (ROWS - 1)) * 100}%` }}
+            style={{
+              backgroundPosition: `${((piece % COLS) / (COLS - 1)) * 100}% ${(Math.floor(piece / COLS) / (ROWS - 1)) * 100}%`,
+            }}
           />
         ))}
       </div>
@@ -614,10 +808,18 @@ function Jigsaw({ seed, onSolved }: P) {
 }
 
 // ---------- lioness: creep while the zebra grazes, freeze when it looks ----------
+const tallGrass = (i: number): [number, number] => [((i * 0.6180339) % 1) * 26 - 13, 1.6 + ((i * 0.7548776) % 1) * 2.4];
 function Stalk({ onSolved, onWrong }: P) {
-  const g = useRef({ x: 30, hold: false, phase: 'graze' as 'graze' | 'warn' | 'look', left: 2.2, won: false });
+  const g = useRef({
+    x: 30,
+    hold: false,
+    phase: 'graze' as 'graze' | 'warn' | 'look',
+    left: 2.2,
+    won: false,
+  });
   const [, draw] = useState(0);
   const s = g.current;
+  devState(s);
   useLoop((dt) => {
     s.left -= dt;
     if (s.left <= 0) {
@@ -652,30 +854,29 @@ function Stalk({ onSolved, onWrong }: P) {
       window.removeEventListener('keyup', key);
     };
   }, [s]);
+  const step = s.hold && s.phase !== 'look' ? Math.sin(performance.now() / 90) * 0.06 : 0;
   return (
     <div className="arcade">
       <progress className="arcade-bar" value={(s.x - 30) / 255} max={1} />
-      <svg viewBox={`0 0 ${W} ${H}`} className="arcade-board savanna" onPointerDown={() => (s.hold = true)} onPointerUp={() => (s.hold = false)} onPointerLeave={() => (s.hold = false)}>
-        <rect y="170" width={W} height="70" fill="#c9a94f" />
-        <g transform="translate(335 150)">
-          <g transform="translate(0 -16)">
-            <Sprite id="zebra" size={124} flip={s.phase === 'look'} />
-          </g>
-          {s.phase !== 'graze' && (
-            <text x="-40" y="-70" fontSize="26" fontWeight="800" fill={s.phase === 'look' ? '#e5533d' : '#f5b700'}>
-              !
-            </text>
-          )}
-        </g>
-        <g transform={`translate(${s.x} 176)`}>
-          <g transform="translate(0 -16)">
-            <Sprite id="lion" size={112} />
-          </g>
-        </g>
-        {Array.from({ length: 34 }, (_, i) => (
-          <path key={i} d={`M${i * 12 + 4} 240 q${(i % 3) * 3 - 3} -30 ${(i % 5) - 2} -${46 + (i % 4) * 9}`} stroke="#8fae3c" strokeWidth="4" fill="none" strokeLinecap="round" opacity="0.85" />
-        ))}
-      </svg>
+      <Board3D view="side" className="savanna" onDown={() => (s.hold = true)} onUp={() => (s.hold = false)}>
+        <GroundStrip y={-2.5} color="#c9a94f" depth={14} />
+        <AcaciaTree position={[-7, -2.5, -5]} scale={1.3} />
+        <AcaciaTree position={[9.5, -2.5, -6]} scale={1} />
+        <group position={side(335, 170, -1)} rotation={[0, s.phase === 'look' ? -Math.PI / 2 : Math.PI / 2 - 0.3, 0]}>
+          <Thing id="zebra" fit={4.2} />
+        </group>
+        {s.phase !== 'graze' && (
+          <Html position={side(335, 40)} center>
+            <span className={`arcade-tag alert${s.phase === 'look' ? ' look' : ''}`}>!</span>
+          </Html>
+        )}
+        <group position={side(s.x, 170, 1)} rotation={[0, Math.PI / 2, step]}>
+          <Thing id="lion" fit={3.9} />
+        </group>
+        <group position={[0, -2.5, 0]}>
+          <Blades count={420} height={1.5} color="#b8b04a" area={tallGrass} />
+        </group>
+      </Board3D>
     </div>
   );
 }
@@ -686,6 +887,7 @@ function SunTrack({ lang, onSolved }: P) {
   const g = useRef({ t: 0, px: 320, grown: 0, won: false });
   const [, draw] = useState(0);
   const s = g.current;
+  devState(s);
   const DAY = 8;
   const day = s.t % (DAY + 2);
   const night = day > DAY;
@@ -705,23 +907,33 @@ function SunTrack({ lang, onSolved }: P) {
   }, !s.won);
   const tall = 60 + (Math.min(s.grown, NEED) / NEED) * 120;
   const lean = clamp((s.px - 200) / 160, -1, 1);
-  const move = (e: RPointerEvent<SVGSVGElement>) => !s.won && (s.px = at(e).x);
   return (
     <div className="arcade">
       <progress className="arcade-bar" value={s.grown / NEED} max={1} />
-      <svg viewBox={`0 0 ${W} ${H}`} className="arcade-board" onPointerMove={move} onPointerDown={move} style={{ background: night ? '#27365a' : 'linear-gradient(#bfe6fb, #e9f7ff)', transition: 'background 0.6s' }}>
-        {!night && <circle cx={sun.x} cy={sun.y} r="17" fill="#ffd24a" stroke="#f5b700" strokeWidth="3" />}
-        <rect y="196" width={W} height="44" fill="#9bd67a" />
-        <text x="384" y="190" textAnchor="end" fontSize="13" fontWeight="700" fill="#5a3a12">
-          {LETTER[lang].E}
-        </text>
-        <text x="16" y="190" fontSize="13" fontWeight="700" fill="#5a3a12">
-          {LETTER[lang].W}
-        </text>
-        <g transform={`translate(200 202) rotate(${lean * 16}) translate(0 ${-tall / 2})`} opacity={facing || s.won ? 1 : 0.75}>
-          <Sprite id="sunflower" size={tall} face="front" />
-        </g>
-      </svg>
+      <Board3D view="side" className={night ? 'night' : 'day'} onPoint={(p) => !s.won && (s.px = p.x)}>
+        <GroundStrip y={-4.1} color="#7cc455" depth={10} />
+        <group position={[0, -4.1, 0]}>
+          <Blades count={260} height={0.6} area={(i) => [((i * 0.618) % 1) * 26 - 13, ((i * 0.7549) % 1) * 4 - 1]} />
+        </group>
+        {!night && (
+          <group position={side(sun.x, sun.y, -2)}>
+            <mesh>
+              <sphereGeometry args={[0.95, 24, 16]} />
+              <meshBasicMaterial color="#ffd24a" toneMapped={false} />
+            </mesh>
+            <pointLight intensity={30} distance={30} color="#fff1c2" />
+          </group>
+        )}
+        <Html position={side(384, 196, 1)} center>
+          <span className="arcade-tag">{LETTER[lang].E}</span>
+        </Html>
+        <Html position={side(16, 196, 1)} center>
+          <span className="arcade-tag">{LETTER[lang].W}</span>
+        </Html>
+        <group position={side(200, 202)} rotation={[0, lean * 0.9, -lean * 0.25]}>
+          <Thing id="sunflower" fit={m(tall)} />
+        </group>
+      </Board3D>
     </div>
   );
 }
@@ -775,12 +987,98 @@ function Xray({ seed, onSolved, onWrong }: P) {
 }
 
 // ---------- debugging: tap the bugs crawling over the computer ----------
+const TRACES: Pt[][] = [
+  [
+    [0, 40],
+    [120, 40],
+    [120, 110],
+    [260, 110],
+    [260, 60],
+    [400, 60],
+  ],
+  [
+    [60, 240],
+    [60, 170],
+    [200, 170],
+    [200, 200],
+    [330, 200],
+    [330, 130],
+    [400, 130],
+  ],
+  [
+    [140, 0],
+    [140, 70],
+  ],
+  [
+    [300, 240],
+    [300, 190],
+  ],
+];
+const PADS3D: Pt[] = [
+  [120, 110],
+  [260, 60],
+  [200, 170],
+  [330, 130],
+  [140, 70],
+  [60, 170],
+];
+function Circuit() {
+  return (
+    <>
+      <Floor color="#1f6b4a" roughness={0.5} />
+      {TRACES.flatMap((line, li) =>
+        line.slice(1).map(([x, y], i) => {
+          const [px, py] = line[i];
+          const len = m(Math.hypot(x - px, y - py)) + 0.15;
+          return (
+            <mesh key={`${li}-${i}`} position={top((x + px) / 2, (y + py) / 2, 0.02)} rotation={[0, x === px ? 0 : Math.PI / 2, 0]}>
+              <boxGeometry args={[0.16, 0.04, len]} />
+              <meshStandardMaterial color="#d39a45" metalness={0.7} roughness={0.35} />
+            </mesh>
+          );
+        }),
+      )}
+      {PADS3D.map(([x, y]) => (
+        <mesh key={`${x}-${y}`} position={top(x, y, 0.04)}>
+          <cylinderGeometry args={[0.26, 0.26, 0.06, 16]} />
+          <meshStandardMaterial color="#e2c25a" metalness={0.85} roughness={0.25} />
+        </mesh>
+      ))}
+      {[
+        [195, 111, 3.5, 2.3],
+        [303, 162, 1.7, 1.2],
+      ].map(([x, y, w, d]) => (
+        <group key={x} position={top(x, y)}>
+          <mesh position={[0, 0.2, 0]}>
+            <boxGeometry args={[w, 0.36, d]} />
+            <meshStandardMaterial color="#20262e" roughness={0.45} />
+          </mesh>
+          {Array.from({ length: Math.round(w * 3) }, (_, i) =>
+            [-1, 1].map((sgn) => (
+              <mesh key={`${i}${sgn}`} position={[-w / 2 + 0.17 + i / 3, 0.08, sgn * (d / 2 + 0.08)]}>
+                <boxGeometry args={[0.08, 0.06, 0.18]} />
+                <meshStandardMaterial color="#c9ccd1" metalness={0.9} roughness={0.3} />
+              </mesh>
+            )),
+          )}
+        </group>
+      ))}
+    </>
+  );
+}
 function BugHunt({ onSolved }: P) {
   const GOAL = 10;
-  const mk = (id: number) => ({ id, x: 30 + Math.random() * 340, y: 30 + Math.random() * 180, a: Math.random() * 6.28, v: 45 + Math.random() * 40 });
+  const mk = (id: number) => ({
+    id,
+    x: 30 + Math.random() * 340,
+    y: 30 + Math.random() * 180,
+    a: Math.random() * 6.28,
+    v: 45 + Math.random() * 40,
+  });
   const g = useRef({ bugs: [0, 1, 2, 3].map(mk), n: 4, got: 0, won: false });
   const [, draw] = useState(0);
   const s = g.current;
+  devState(s);
   useLoop((dt) => {
     for (const b of s.bugs) {
       b.a += (Math.random() - 0.5) * dt * 5;
@@ -793,9 +1091,8 @@ function BugHunt({ onSolved }: P) {
     }
     draw((n) => n + 1);
   }, !s.won);
-  const tap = (e: RPointerEvent<SVGSVGElement>) => {
-    const p = at(e);
-    const hit = s.bugs.find((b) => Math.hypot(b.x - p.x, b.y - p.y) < 22);
+  const tap = (p: { x: number; y: number }) => {
+    const hit = s.bugs.find((b) => Math.hypot(b.x - p.x, b.y - p.y) < 26);
     if (!hit || s.won) return;
     sfx('pop');
     s.got++;
@@ -807,23 +1104,21 @@ function BugHunt({ onSolved }: P) {
     } else if (s.got + s.bugs.length < GOAL) s.bugs.push(mk(s.n++));
     draw((n) => n + 1);
   };
+  const t = performance.now() / 1000;
   return (
     <div className="arcade">
       <Score n={s.got} of={GOAL} />
-      <svg viewBox={`0 0 ${W} ${H}`} className="arcade-board" onPointerDown={tap}>
-        <rect width={W} height={H} fill="#1f6b4a" />
-        <path d="M0 40 H120 V110 H260 V60 H400 M60 240 V170 H200 V200 H330 V130 H400 M140 0 V70 M300 240 V190" stroke="#3fa877" strokeWidth="3" fill="none" />
-        {[[120, 110], [260, 60], [200, 170], [330, 130], [140, 70], [60, 170]].map(([x, y]) => (
-          <circle key={`${x}-${y}`} cx={x} cy={y} r="5" fill="#d9c86a" />
-        ))}
-        <rect x="160" y="88" width="70" height="46" rx="4" fill="#22303c" stroke="#8aa0b0" />
-        <rect x="286" y="150" width="34" height="24" rx="3" fill="#22303c" stroke="#8aa0b0" />
+      <Board3D lift={0.5} onDown={tap}>
+        <Circuit />
+        {/* the first computer "bug" really was a moth, so these are moth-brown */}
         {s.bugs.map((b) => (
-          <g key={b.id} transform={`translate(${b.x} ${b.y}) rotate(${(b.a * 180) / Math.PI + 90})`}>
-            <Sprite id="monarch" size={44} face="top" style={{ filter: 'grayscale(0.8) sepia(0.6) brightness(0.95)' }} />
-          </g>
+          <group key={b.id} position={top(b.x, b.y, 0.45 + Math.sin(t * 6 + b.id) * 0.08)} rotation={[0, Math.atan2(Math.cos(b.a), Math.sin(b.a)), Math.sin(t * 18 + b.id) * 0.2]}>
+            <group scale={1.8}>
+              <Moth flap={Math.sin(t * 22 + b.id) * 0.35} />
+            </group>
+          </group>
         ))}
-      </svg>
+      </Board3D>
     </div>
   );
 }
@@ -832,11 +1127,45 @@ function BugHunt({ onSolved }: P) {
 type Pt = [number, number];
 const GLYPHS: Pt[][][] = [
   // the Chinese character for mountain: middle stroke first
-  [[[200, 40], [200, 180]], [[130, 100], [130, 180], [270, 180]], [[270, 100], [270, 180]]],
+  [
+    [
+      [200, 40],
+      [200, 180],
+    ],
+    [
+      [130, 100],
+      [130, 180],
+      [270, 180],
+    ],
+    [
+      [270, 100],
+      [270, 180],
+    ],
+  ],
   // the Arabic letter ba: the bowl is drawn from right to left, then the dot underneath
-  [[[300, 80], [296, 130], [250, 150], [150, 150], [104, 130], [100, 80]], [[200, 200]]],
+  [
+    [
+      [300, 80],
+      [296, 130],
+      [250, 150],
+      [150, 150],
+      [104, 130],
+      [100, 80],
+    ],
+    [[200, 200]],
+  ],
   // the Latin letter A: left to right
-  [[[130, 200], [200, 40], [270, 200]], [[160, 140], [240, 140]]],
+  [
+    [
+      [130, 200],
+      [200, 40],
+      [270, 200],
+    ],
+    [
+      [160, 140],
+      [240, 140],
+    ],
+  ],
 ];
 function Dots({ onSolved }: P) {
   const [round, setRound] = useState(0);
@@ -873,12 +1202,28 @@ function Dots({ onSolved }: P) {
           const drawn = stroke.slice(0, Math.max(0, n - first));
           return (
             <g key={`${round}-${si}`}>
-              <polyline points={drawn.map((p) => p.join(',')).join(' ')} fill="none" stroke="#1d2433" strokeWidth={done ? 14 : 8} strokeLinecap="round" strokeLinejoin="round" style={{ transition: 'stroke-width 0.3s' }} />
+              <polyline
+                points={drawn.map((p) => p.join(',')).join(' ')}
+                fill="none"
+                stroke="#1d2433"
+                strokeWidth={done ? 14 : 8}
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                style={{ transition: 'stroke-width 0.3s' }}
+              />
               {stroke.length === 1 && n > first && <circle cx={stroke[0][0]} cy={stroke[0][1]} r={done ? 9 : 6} fill="#1d2433" />}
               {!done &&
                 stroke.map((p, k) => (
                   <g key={k} opacity={first + k < n ? 0.25 : 1}>
-                    <circle cx={p[0]} cy={p[1]} r={first + k === n ? 13 : 10} fill={first + k === n ? '#ffd24a' : '#fff'} stroke="#2f7fd0" strokeWidth="2" className={first + k === n ? 'arcade-glow' : ''} />
+                    <circle
+                      cx={p[0]}
+                      cy={p[1]}
+                      r={first + k === n ? 13 : 10}
+                      fill={first + k === n ? '#ffd24a' : '#fff'}
+                      stroke="#2f7fd0"
+                      strokeWidth="2"
+                      className={first + k === n ? 'arcade-glow' : ''}
+                    />
                     <text x={p[0]} y={p[1] + 4} textAnchor="middle" fontSize="11" fontWeight="700" fill="#12283d">
                       {first + k + 1}
                     </text>
@@ -892,7 +1237,1365 @@ function Dots({ onSolved }: P) {
   );
 }
 
+// ---------- Snake, as a hungry caterpillar that becomes a butterfly ----------
+type Cell = [number, number];
+const GX = 20;
+const GY = 12;
+function Caterpillar({ onSolved, onWrong }: P) {
+  const GOAL = 8;
+  const g = useRef({
+    body: [
+      [6, 6],
+      [5, 6],
+      [4, 6],
+    ] as Cell[],
+    prev: [] as Cell[],
+    dir: [1, 0] as Cell,
+    next: [1, 0] as Cell,
+    leaf: [12, 4] as Cell,
+    eaten: 0,
+    acc: 0,
+    won: false,
+    fly: 0,
+  });
+  const [, draw] = useState(0);
+  const s = g.current;
+  devState(s);
+  const turn = (d: Cell) => {
+    if (d[0] === -s.dir[0] && d[1] === -s.dir[1]) return; // no turning back on yourself
+    s.next = d;
+  };
+  useLoop((dt) => {
+    if (s.won) {
+      s.fly += dt;
+      draw((n) => n + 1);
+      return;
+    }
+    s.acc += dt;
+    if (s.acc < 0.16) return draw((n) => n + 1);
+    s.acc = 0;
+    s.dir = s.next;
+    s.prev = s.body.map((b) => [...b] as Cell);
+    const head: Cell = [(s.body[0][0] + s.dir[0] + GX) % GX, (s.body[0][1] + s.dir[1] + GY) % GY];
+    if (s.body.some(([x, y]) => x === head[0] && y === head[1])) {
+      // bumped into itself: a little slip, and it shrinks back
+      sfx('wrong');
+      onWrong();
+      s.body = s.body.slice(0, 3);
+      draw((n) => n + 1);
+      return;
+    }
+    s.body.unshift(head);
+    if (head[0] === s.leaf[0] && head[1] === s.leaf[1]) {
+      sfx('pop');
+      s.eaten++;
+      do s.leaf = [Math.floor(Math.random() * GX), Math.floor(Math.random() * GY)];
+      while (s.body.some(([x, y]) => x === s.leaf[0] && y === s.leaf[1]));
+      if (s.eaten >= GOAL) {
+        s.won = true;
+        onSolved();
+      }
+    } else s.body.pop();
+    draw((n) => n + 1);
+  }, true);
+  useEffect(() => {
+    const key = (e: KeyboardEvent) => {
+      const d = (
+        {
+          ArrowUp: [0, -1],
+          ArrowDown: [0, 1],
+          ArrowLeft: [-1, 0],
+          ArrowRight: [1, 0],
+        } as Record<string, Cell>
+      )[e.key];
+      if (!d) return;
+      e.preventDefault();
+      turn(d);
+    };
+    window.addEventListener('keydown', key);
+    return () => window.removeEventListener('keydown', key);
+  });
+  const c = (v: number) => v * 20 + 10;
+  const [hx, hy] = s.body[0];
+  // glide each segment from where it was to where it is, unless it wrapped round the edge
+  const k = Math.min(1, s.acc / 0.16);
+  const seg = (i: number): [number, number] => {
+    const [x, y] = s.body[i];
+    const [px, py] = s.prev[i] ?? s.body[i];
+    return Math.abs(px - x) + Math.abs(py - y) > 1 ? [c(x), c(y)] : [c(px + (x - px) * k), c(py + (y - py) * k)];
+  };
+  const t = performance.now() / 1000;
+  const [sx, sy] = seg(0);
+  const yaw = Math.atan2(s.dir[0], s.dir[1]);
+  return (
+    <div className="arcade">
+      <Score n={s.eaten} of={GOAL} />
+      <Board3D
+        className="sky"
+        onDown={(p) => {
+          // tap on a side of the caterpillar to steer that way
+          const dx = p.x - c(hx);
+          const dy = p.y - c(hy);
+          turn(Math.abs(dx) > Math.abs(dy) ? [Math.sign(dx), 0] : [0, Math.sign(dy)]);
+        }}
+      >
+        <Meadow />
+        {!s.won && <Leaf position={top(c(s.leaf[0]), c(s.leaf[1]), Math.sin(t * 3) * 0.05)} spin={t * 0.6} />}
+        {s.won ? (
+          <>
+            <Chrysalis position={top(sx, sy)} scale={Math.max(0.001, 1 - s.fly * 0.6)} />
+            <Thing
+              id="monarch"
+              fit={2.2}
+              position={top(sx + (200 - sx) * Math.min(1, s.fly / 2), sy + (110 - sy) * Math.min(1, s.fly / 2), 0.8 + Math.min(1, s.fly / 2) * 2 + Math.sin(t * 3) * 0.2)}
+              rotation={[0, t * 0.8, Math.sin(t * 14) * 0.25]}
+            />
+          </>
+        ) : (
+          <>
+            {s.body.map((_, i) => {
+              if (i === 0) return null;
+              const [x, y] = seg(i);
+              // monarch caterpillars are banded yellow, black and white
+              const col = ['#f4f2ea', '#f2cf2a', '#1e1e1e'][i % 3];
+              return (
+                <mesh key={i} position={top(x, y, 0.42 + Math.sin(t * 9 - i * 0.9) * 0.06)} scale={[1, 0.9, 1]}>
+                  <sphereGeometry args={[0.52, 20, 14]} />
+                  <meshStandardMaterial color={col} roughness={0.45} />
+                </mesh>
+              );
+            })}
+            <group position={top(sx, sy, 0.5)} rotation={[0, yaw, 0]}>
+              <mesh>
+                <sphereGeometry args={[0.52, 22, 16]} />
+                <meshStandardMaterial color="#1e1e1e" roughness={0.4} />
+              </mesh>
+              {[-0.2, 0.2].map((ex) => (
+                <group key={ex}>
+                  <mesh position={[ex, 0.16, 0.42]}>
+                    <sphereGeometry args={[0.13, 12, 10]} />
+                    <meshStandardMaterial color="#ffffff" />
+                  </mesh>
+                  <mesh position={[ex, 0.17, 0.53]}>
+                    <sphereGeometry args={[0.065, 10, 8]} />
+                    <meshStandardMaterial color="#12283d" />
+                  </mesh>
+                  <mesh position={[ex * 1.4, 0.62, 0.1]} rotation={[0.5, 0, -ex]}>
+                    <cylinderGeometry args={[0.025, 0.035, 0.6, 6]} />
+                    <meshStandardMaterial color="#1e1e1e" />
+                  </mesh>
+                </group>
+              ))}
+            </group>
+          </>
+        )}
+      </Board3D>
+      <div className="arcade-pad" dir="ltr">
+        {(['N', 'W', 'E', 'S'] as Dir[]).map((d) => {
+          const I = ICON[d];
+          return (
+            <button key={d} type="button" className={`ibtn pad-${d}`} onClick={() => turn(MOVE[d] as Cell)} aria-label={d}>
+              <I className="i" />
+            </button>
+          );
+        })}
+      </div>
+    </div>
+  );
+}
+
+// ---------- Breakout, with a white blood cell knocking out germs ----------
+function GermBreakout({ onSolved, onWrong }: P) {
+  const COLS = 8;
+  const ROWS = 3;
+  const mk = () =>
+    Array.from({ length: COLS * ROWS }, (_, i) => ({
+      x: 40 + (i % COLS) * 46,
+      y: 34 + Math.floor(i / COLS) * 30,
+      alive: true,
+      hue: (i * 47) % 360,
+    }));
+  const g = useRef({
+    germs: mk(),
+    bx: 200,
+    by: 190,
+    vx: 120,
+    vy: -170,
+    px: 200,
+    won: false,
+  });
+  const [, draw] = useState(0);
+  const s = g.current;
+  devState(s);
+  useLoop((dt) => {
+    s.bx += s.vx * dt;
+    s.by += s.vy * dt;
+    if (s.bx < 8 || s.bx > W - 8) s.vx = -s.vx;
+    if (s.by < 8) s.vy = Math.abs(s.vy);
+    s.bx = clamp(s.bx, 8, W - 8);
+    if (s.vy > 0 && s.by > 204 && s.by < 220 && Math.abs(s.bx - s.px) < 40) {
+      s.vy = -Math.abs(s.vy);
+      s.vx = (s.bx - s.px) * 5;
+      sfx('click');
+    }
+    for (const gm of s.germs) {
+      if (gm.alive && Math.abs(s.bx - gm.x) < 20 && Math.abs(s.by - gm.y) < 14) {
+        gm.alive = false;
+        s.vy = -s.vy;
+        sfx('pop');
+        break;
+      }
+    }
+    if (s.by > H + 10) {
+      Object.assign(s, { bx: s.px, by: 190, vx: 100, vy: -170 });
+      sfx('wrong');
+      onWrong();
+    }
+    if (!s.won && s.germs.every((gm) => !gm.alive)) {
+      s.won = true;
+      onSolved();
+    }
+    draw((n) => n + 1);
+  }, !s.won);
+  const left = s.germs.filter((gm) => gm.alive).length;
+  return (
+    <div className="arcade">
+      <Score n={COLS * ROWS - left} of={COLS * ROWS} />
+      <Board3D lift={0.5} onPoint={(p) => (s.px = clamp(p.x, 40, W - 40))}>
+        <Floor color="#c84848" roughness={0.6} />
+        {[
+          [20, 120],
+          [385, 100],
+          [60, 230],
+          [345, 228],
+          [200, 236],
+          [12, 30],
+          [392, 20],
+        ].map(([x, y], i) => (
+          <RedCell key={i} position={top(x, y, 0.25)} rot={i * 0.7} />
+        ))}
+        {s.germs.map((gm, i) => gm.alive && <Germ key={i} position={top(gm.x, gm.y, 0.5)} hue={gm.hue} />)}
+        <mesh position={top(s.bx, s.by, 0.5)}>
+          <sphereGeometry args={[0.3, 18, 14]} />
+          <meshStandardMaterial color="#ffe27a" emissive="#d8a800" emissiveIntensity={0.5} roughness={0.3} />
+        </mesh>
+        <WhiteCell position={top(s.px, 214, 0.5)} />
+      </Board3D>
+    </div>
+  );
+}
+
+// ---------- Flappy Bird, with a pterosaur ----------
+function FlappyPterosaur({ onSolved, onWrong }: P) {
+  const GOAL = 8;
+  const g = useRef({
+    y: 120,
+    vy: 0,
+    cols: [
+      { x: 420, gap: 110 },
+      { x: 600, gap: 80 },
+    ],
+    passed: 0,
+    hurt: 0,
+    won: false,
+    started: false,
+  });
+  const [, draw] = useState(0);
+  const s = g.current;
+  devState(s);
+  const flap = () => {
+    s.started = true;
+    s.vy = -150;
+    sfx('click');
+  };
+  useLoop((dt) => {
+    if (!s.started) return draw((n) => n + 1);
+    s.hurt = Math.max(0, s.hurt - dt);
+    s.vy = Math.min(220, s.vy + 420 * dt);
+    s.y = clamp(s.y + s.vy * dt, 10, H - 10);
+    for (const c of s.cols) {
+      c.x -= 95 * dt;
+      if (c.x < -30) {
+        c.x += 360;
+        c.gap = 60 + Math.random() * 120;
+      }
+      if (!s.hurt && Math.abs(c.x - 90) < 22 && Math.abs(s.y - c.gap) > 42) {
+        // bumped a rock: a slip, then a moment to recover
+        s.hurt = 1.2;
+        sfx('wrong');
+        onWrong();
+      }
+      if (c.x < 90 && c.x + 95 * dt >= 90 && !s.hurt) {
+        s.passed++;
+        sfx('pop');
+      }
+    }
+    if (!s.won && s.passed >= GOAL) {
+      s.won = true;
+      onSolved();
+    }
+    draw((n) => n + 1);
+  }, !s.won);
+  useEffect(() => {
+    const key = (e: KeyboardEvent) => {
+      if (e.code !== 'Space' && e.key !== 'ArrowUp') return;
+      e.preventDefault();
+      flap();
+    };
+    window.addEventListener('keydown', key);
+    return () => window.removeEventListener('keydown', key);
+  });
+  return (
+    <div className="arcade">
+      <Score n={s.passed} of={GOAL} />
+      <Board3D view="side" className="sky" onDown={flap}>
+        <GroundStrip y={-6.4} color="#9b7a55" depth={12} />
+        {[-11, -4, 3, 10].map((x, i) => (
+          <mesh key={x} position={[x, -6.4 + 2.2 + (i % 2), -9]}>
+            <coneGeometry args={[4 + (i % 2), 5 + (i % 2) * 2, 5]} />
+            <meshStandardMaterial color="#8fa6c4" flatShading roughness={1} />
+          </mesh>
+        ))}
+        {s.cols.map((c, i) => (
+          <group key={i}>
+            <RockColumn x={m(c.x - W / 2)} y0={m(H / 2 - (c.gap - 42))} y1={7.5} />
+            <RockColumn x={m(c.x - W / 2)} y0={-6.4} y1={m(H / 2 - (c.gap + 42))} />
+          </group>
+        ))}
+        <group position={side(90, s.y, 1)} rotation={[0.75, 0, -((clamp(s.vy / 6, -25, 35) * Math.PI) / 180)]} scale={1.6}>
+          <group visible={!s.hurt || Math.floor(performance.now() / 120) % 2 === 0}>
+            <Pterosaur flap={Math.sin(performance.now() / 70) * 0.6} />
+          </group>
+        </group>
+      </Board3D>
+    </div>
+  );
+}
+
+// ---------- Tic-tac-toe against a robot that follows written rules ----------
+const LINES = [
+  [0, 1, 2],
+  [3, 4, 5],
+  [6, 7, 8],
+  [0, 3, 6],
+  [1, 4, 7],
+  [2, 5, 8],
+  [0, 4, 8],
+  [2, 4, 6],
+];
+const winner = (b: string[]) =>
+  LINES.find(([a, c, d]) => b[a] && b[a] === b[c] && b[a] === b[d]) ? b[LINES.find(([a, c, d]) => b[a] && b[a] === b[c] && b[a] === b[d])![0]] : b.every(Boolean) ? 'draw' : '';
+/** The robot's algorithm, step by step: 1 win if you can, 2 block, 3 take the middle, 4 take a corner, 5 anything. */
+function robotMove(b: string[]): number {
+  const open = b.map((v, i) => (v ? -1 : i)).filter((i) => i >= 0);
+  for (const who of ['O', 'X'])
+    for (const i of open) {
+      const t = [...b];
+      t[i] = who;
+      if (winner(t) === who) return i;
+    }
+  if (!b[4]) return 4;
+  const corner = [0, 2, 6, 8].filter((i) => !b[i]);
+  if (corner.length) return corner[Math.floor(Math.random() * corner.length)];
+  return open[0];
+}
+function BeatTheRobot({ onSolved, onWrong }: P) {
+  const { t } = useTranslation();
+  const GOAL = 3;
+  const [board, setBoard] = useState<string[]>(Array(9).fill(''));
+  const [ok, setOk] = useState(0);
+  const [msg, setMsg] = useState('');
+  const result = winner(board);
+  const play = (i: number) => {
+    if (board[i] || result) return;
+    sfx('click');
+    const b = [...board];
+    b[i] = 'X';
+    if (!winner(b)) b[robotMove(b)] = 'O';
+    setBoard(b);
+    const r = winner(b);
+    if (!r) return;
+    if (r === 'O') {
+      setMsg(t('arcade.robotWins'));
+      sfx('wrong');
+      onWrong();
+    } else {
+      setMsg(r === 'X' ? t('arcade.youWin') : t('arcade.draw'));
+      sfx('pop');
+      if (ok + 1 >= GOAL) onSolved();
+      setOk(ok + 1);
+    }
+  };
+  useNumberKeys(9, play);
+  return (
+    <div className="arcade">
+      <Score n={ok} of={GOAL} />
+      <Board3D>
+        <Floor color="#cfa86e" roughness={0.75} />
+        <group scale={1.35} position={[0, 0, -0.3]}>
+          <mesh position={[0, 0.15, 0.6]} receiveShadow userData={{ ground: true }}>
+            <boxGeometry args={[7.4, 0.3, 7.4]} />
+            <meshStandardMaterial color="#6b4a2a" roughness={0.6} />
+          </mesh>
+          {board.map((v, i) => (
+            <group key={i} position={[((i % 3) - 1) * 2.35, 0.3, (Math.floor(i / 3) - 1) * 2.35 + 0.6]}>
+              <mesh
+                position={[0, 0.1, 0]}
+                receiveShadow
+                userData={{ ground: true }}
+                onPointerDown={(e) => {
+                  e.stopPropagation();
+                  play(i);
+                }}
+              >
+                <boxGeometry args={[2.15, 0.2, 2.15]} />
+                <meshStandardMaterial color={(i + Math.floor(i / 3)) % 2 ? '#f3e6c8' : '#e6d3a8'} roughness={0.7} />
+              </mesh>
+              {v === 'X' &&
+                [Math.PI / 4, -Math.PI / 4].map((r) => (
+                  <mesh key={r} position={[0, 0.42, 0]} rotation={[0, r, 0]}>
+                    <boxGeometry args={[1.6, 0.36, 0.36]} />
+                    <meshStandardMaterial color="#e5533d" roughness={0.35} />
+                  </mesh>
+                ))}
+              {v === 'O' && <Thing id="robot" fit={1.9} position={[0, 0.2, 0]} />}
+            </group>
+          ))}
+        </group>
+      </Board3D>
+      <p className="muted">{result ? msg : t('arcade.yourTurn')}</p>
+      {result && ok < GOAL && (
+        <button type="button" className="btn go" onClick={() => setBoard(Array(9).fill(''))}>
+          {t('arcade.again')}
+        </button>
+      )}
+    </div>
+  );
+}
+
+// ---------- Simon, with colours (and the primary colours lead the way) ----------
+const PADS = [
+  { c: '#e5533d', f: 330 },
+  { c: '#f5c518', f: 392 },
+  { c: '#2f7fd0', f: 494 },
+  { c: '#3fb950', f: 587 },
+];
+function tone(f: number) {
+  try {
+    const ctx = new AudioContext();
+    const o = ctx.createOscillator();
+    const v = ctx.createGain();
+    o.frequency.value = f;
+    v.gain.setValueAtTime(0.15, ctx.currentTime);
+    v.gain.exponentialRampToValueAtTime(0.001, ctx.currentTime + 0.35);
+    o.connect(v).connect(ctx.destination);
+    o.start();
+    o.stop(ctx.currentTime + 0.36);
+    o.onended = () => void ctx.close();
+  } catch {
+    /* no sound */
+  }
+}
+function ColourEcho({ onSolved, onWrong }: P) {
+  const { t } = useTranslation();
+  const GOAL = 6;
+  const [seq, setSeq] = useState<number[]>(() => [Math.floor(Math.random() * 4)]);
+  const [lit, setLit] = useState(-1);
+  const [pos, setPos] = useState(0);
+  const [showing, setShowing] = useState(true);
+  useEffect(() => {
+    if (!showing) return;
+    let k = 0;
+    const id = window.setInterval(() => {
+      if (k >= seq.length) {
+        window.clearInterval(id);
+        setLit(-1);
+        setShowing(false);
+        setPos(0);
+        return;
+      }
+      setLit(seq[k]);
+      tone(PADS[seq[k]].f);
+      window.setTimeout(() => setLit(-1), 380);
+      k++;
+    }, 650);
+    return () => window.clearInterval(id);
+  }, [showing, seq]);
+  const press = (i: number) => {
+    if (showing) return;
+    tone(PADS[i].f);
+    setLit(i);
+    window.setTimeout(() => setLit(-1), 200);
+    if (seq[pos] !== i) {
+      sfx('wrong');
+      onWrong();
+      setShowing(true);
+      return;
+    }
+    if (pos + 1 < seq.length) return setPos(pos + 1);
+    if (seq.length >= GOAL) return onSolved();
+    sfx('pop');
+    window.setTimeout(() => {
+      setSeq([...seq, Math.floor(Math.random() * 4)]);
+      setShowing(true);
+    }, 600);
+  };
+  useNumberKeys(4, press);
+  return (
+    <div className="arcade">
+      <Score n={seq.length - (showing ? 1 : 0)} of={GOAL} />
+      <Board3D className="night">
+        <Floor color="#26304d" roughness={0.6} />
+        <group scale={1.3}>
+          <mesh position={[0, 0.15, 0.6]} receiveShadow userData={{ ground: true }}>
+            <cylinderGeometry args={[4.6, 4.8, 0.3, 48]} />
+            <meshStandardMaterial color="#1a2036" roughness={0.4} />
+          </mesh>
+          {PADS.map((p, i) => (
+            <group key={i} position={[(i % 2 ? 1 : -1) * 1.9, 0.3, (i < 2 ? -1 : 1) * 1.9 + 0.6]}>
+              <mesh
+                position={[0, lit === i ? 0.12 : 0.25, 0]}
+                onPointerDown={(e) => {
+                  e.stopPropagation();
+                  press(i);
+                }}
+              >
+                <cylinderGeometry args={[1.55, 1.6, 0.4, 40]} />
+                <meshStandardMaterial color={p.c} emissive={p.c} emissiveIntensity={lit === i ? 1.4 : 0.08} roughness={0.35} toneMapped={lit !== i} />
+              </mesh>
+              {lit === i && <pointLight position={[0, 1.2, 0]} color={p.c} intensity={8} distance={6} />}
+            </group>
+          ))}
+        </group>
+      </Board3D>
+      <p className="muted">{showing ? t('arcade.watch') : t('arcade.yourGo')}</p>
+    </div>
+  );
+}
+
+// ---------- Penalty kick: aim where the goalkeeper isn't ----------
+function Penalty({ onSolved, onWrong }: P) {
+  const GOAL = 5;
+  const g = useRef({ kx: 200, kv: 80, ball: null as null | { tx: number; t: number; saved?: boolean }, goals: 0, won: false });
+  const [, draw] = useState(0);
+  const s = g.current;
+  devState(s);
+  useLoop((dt) => {
+    s.kx += s.kv * dt;
+    if (s.kx < 140 || s.kx > 260) s.kv = -s.kv;
+    s.kx = clamp(s.kx, 140, 260);
+    const b = s.ball;
+    if (b) {
+      const was = b.t;
+      b.t += dt / 0.7;
+      if (was < 1 && b.t >= 1) {
+        b.saved = Math.abs(s.kx - b.tx) < 30;
+        if (b.saved) {
+          sfx('wrong');
+          onWrong();
+        } else {
+          s.goals++;
+          sfx('pop');
+          s.kv = Math.sign(s.kv) * (80 + s.goals * 18);
+          if (s.goals >= GOAL && !s.won) {
+            s.won = true;
+            onSolved();
+          }
+        }
+      }
+      if (b.t > 1.9) s.ball = null;
+    }
+    draw((n) => n + 1);
+  }, !s.won || !!s.ball);
+  const shoot = (p: { x: number; y: number }) => {
+    if (s.ball || s.won) return;
+    sfx('click');
+    s.ball = { tx: clamp(p.x, 128, 272), t: 0 };
+  };
+  const b = s.ball;
+  const k = b ? Math.min(1, b.t) : 0;
+  const bx = b ? 200 + (b.tx - 200) * k : 200;
+  const by = b ? 205 - 163 * k + (b.saved && b.t > 1 ? (b.t - 1) * 60 : 0) : 205;
+  const bh = b ? 0.35 + Math.sin(Math.PI * k) * 1.4 + (b.t > 1 ? 0.6 : k * 0.6) : 0.35;
+  return (
+    <div className="arcade">
+      <Score n={s.goals} of={GOAL} />
+      <Board3D className="sky" onDown={shoot}>
+        <Floor color="#4f9a4a" roughness={0.95} />
+        {[-6, -2, 2, 6].map((z) => (
+          <mesh key={z} position={[0, 0.003, z]} rotation={[-Math.PI / 2, 0, 0]} userData={{ ground: true }} receiveShadow>
+            <planeGeometry args={[40, 2]} />
+            <meshStandardMaterial color="#59a653" roughness={1} />
+          </mesh>
+        ))}
+        <mesh position={top(200, 40, 0.01)} rotation={[-Math.PI / 2, 0, 0]} userData={{ ground: true }}>
+          <planeGeometry args={[30, 0.12]} />
+          <meshStandardMaterial color="#ffffff" />
+        </mesh>
+        <mesh position={top(200, 205, 0.01)} rotation={[-Math.PI / 2, 0, 0]} userData={{ ground: true }}>
+          <circleGeometry args={[0.22, 16]} />
+          <meshStandardMaterial color="#ffffff" />
+        </mesh>
+        {[120, 280].map((x) => (
+          <mesh key={x} position={top(x, 38, 1.2)}>
+            <cylinderGeometry args={[0.1, 0.1, 2.4, 10]} />
+            <meshStandardMaterial color="#ffffff" />
+          </mesh>
+        ))}
+        <mesh position={top(200, 38, 2.4)} rotation={[0, 0, Math.PI / 2]}>
+          <cylinderGeometry args={[0.1, 0.1, 8.2, 10]} />
+          <meshStandardMaterial color="#ffffff" />
+        </mesh>
+        <mesh position={top(200, 18, 1.2)}>
+          <planeGeometry args={[8, 2.4, 16, 6]} />
+          <meshStandardMaterial color="#ffffff" wireframe transparent opacity={0.5} />
+        </mesh>
+        <group position={top(s.kx, 46)}>
+          <mesh position={[0, 1.05, 0]}>
+            <capsuleGeometry args={[0.38, 0.9, 4, 12]} />
+            <meshStandardMaterial color="#f08a24" roughness={0.6} />
+          </mesh>
+          <mesh position={[0, 2.05, 0]}>
+            <sphereGeometry args={[0.3, 16, 12]} />
+            <meshStandardMaterial color="#c68b5e" />
+          </mesh>
+          {[-1, 1].map((sg) => (
+            <mesh key={sg} position={[sg * 0.75, 1.6, 0.1]}>
+              <sphereGeometry args={[0.2, 12, 10]} />
+              <meshStandardMaterial color="#ffffff" />
+            </mesh>
+          ))}
+          {[-1, 1].map((sg) => (
+            <mesh key={sg} position={[sg * 0.2, 0.3, 0]}>
+              <capsuleGeometry args={[0.13, 0.45, 4, 8]} />
+              <meshStandardMaterial color="#1f2a44" />
+            </mesh>
+          ))}
+        </group>
+        <Thing id="soccer-ball" fit={0.7} position={top(bx, by, bh - 0.35)} />
+      </Board3D>
+    </div>
+  );
+}
+
+// ---------- Lunar lander: touch down gently on the Moon ----------
+const PAD = 280;
+function Lander({ onSolved, onWrong }: P) {
+  const { t } = useTranslation();
+  const GOAL = 3;
+  const g = useRef({ x: 80, y: 30, vy: 0, tx: 80, thrust: false, landed: 0, rest: 0, crash: false, won: false });
+  const [, draw] = useState(0);
+  const s = g.current;
+  devState(s);
+  useLoop((dt) => {
+    if (s.rest > 0) {
+      s.rest -= dt;
+      if (s.rest <= 0 && !s.won) Object.assign(s, { x: 50 + Math.random() * 120, tx: 80, y: 30, vy: 0, crash: false });
+    } else {
+      // the Moon pulls about one sixth as hard as the Earth, so the fall is gentle
+      s.vy = clamp(s.vy + 30 * dt - (s.thrust ? 78 * dt : 0), -70, 120);
+      s.x += (s.tx - s.x) * Math.min(1, dt * 1.4);
+      s.y += s.vy * dt;
+      if (s.y < 10) Object.assign(s, { y: 10, vy: 0 });
+      if (s.y >= 196) {
+        s.y = 196;
+        const ok = Math.abs(s.x - PAD) < 38 && s.vy < 40;
+        if (ok) {
+          s.landed++;
+          sfx('pop');
+          if (s.landed >= GOAL && !s.won) {
+            s.won = true;
+            onSolved();
+          }
+        } else {
+          s.crash = true;
+          sfx('wrong');
+          onWrong();
+        }
+        s.vy = 0;
+        s.rest = 1.3;
+      }
+    }
+    draw((n) => n + 1);
+  }, !s.won);
+  useEffect(() => {
+    const key = (e: KeyboardEvent) => {
+      if (e.code === 'Space' || e.key === 'ArrowUp') {
+        e.preventDefault();
+        s.thrust = e.type === 'keydown';
+      } else if (e.type === 'keydown' && (e.key === 'ArrowLeft' || e.key === 'ArrowRight')) s.tx = clamp(s.tx + (e.key === 'ArrowLeft' ? -30 : 30), 20, 380);
+    };
+    window.addEventListener('keydown', key);
+    window.addEventListener('keyup', key);
+    return () => {
+      window.removeEventListener('keydown', key);
+      window.removeEventListener('keyup', key);
+    };
+  }, [s]);
+  const slow = s.vy < 40;
+  const flame = s.thrust && s.rest <= 0;
+  return (
+    <div className="arcade">
+      <Score n={s.landed} of={GOAL} />
+      <Board3D view="side" className="space" onPoint={(p) => (s.tx = clamp(p.x, 20, 380))} onDown={() => (s.thrust = true)} onUp={() => (s.thrust = false)}>
+        <Stars radius={40} depth={10} count={700} factor={2.5} fade speed={0.3} />
+        <group position={side(340, 46, -8)}>
+          <mesh>
+            <sphereGeometry args={[1.6, 32, 24]} />
+            <meshStandardMaterial color="#2f7fd0" roughness={0.5} />
+          </mesh>
+          <mesh position={[0.3, 0.4, 1.2]} scale={[0.9, 0.6, 0.5]}>
+            <sphereGeometry args={[0.6, 12, 10]} />
+            <meshStandardMaterial color="#5fae3d" />
+          </mesh>
+        </group>
+        <GroundStrip y={-4.3} color="#a7a9ad" depth={14} />
+        {[60, 150, 370].map((x, i) => (
+          <mesh key={x} position={side(x, 206, 1 - i)} rotation={[Math.PI / 2, 0, 0]} scale={[1, 1, 0.35]}>
+            <torusGeometry args={[0.8 + i * 0.2, 0.22, 8, 20]} />
+            <meshStandardMaterial color="#8d8f94" roughness={1} />
+          </mesh>
+        ))}
+        <mesh position={side(PAD, 214, 0.5)}>
+          <boxGeometry args={[m(76), 0.12, 2.4]} />
+          <meshStandardMaterial color="#ffd24a" emissive="#c99a00" emissiveIntensity={0.5} />
+        </mesh>
+        <group position={side(s.x, s.y)} rotation={[0, 0.5, s.crash ? 0.6 : 0]}>
+          <mesh position={[0, -0.55, 0]}>
+            <boxGeometry args={[1.3, 0.8, 1.3]} />
+            <meshStandardMaterial color="#d8a93a" metalness={0.7} roughness={0.35} />
+          </mesh>
+          <mesh position={[0, 0.2, 0]}>
+            <boxGeometry args={[0.95, 0.7, 0.95]} />
+            <meshStandardMaterial color="#c9ccd1" metalness={0.4} roughness={0.4} />
+          </mesh>
+          <mesh position={[0, 0.25, 0.49]}>
+            <circleGeometry args={[0.16, 12]} />
+            <meshStandardMaterial color="#1d2433" />
+          </mesh>
+          {[0, 1, 2, 3].map((i) => (
+            <mesh key={i} position={[Math.cos(i * 1.57 + 0.78) * 0.85, -0.95, Math.sin(i * 1.57 + 0.78) * 0.85]} rotation={[Math.sin(i * 1.57 + 0.78) * 0.5, 0, -Math.cos(i * 1.57 + 0.78) * 0.5]}>
+              <cylinderGeometry args={[0.04, 0.04, 0.8, 6]} />
+              <meshStandardMaterial color="#9aa0a8" />
+            </mesh>
+          ))}
+          {flame && (
+            <mesh position={[0, -1.35, 0]} rotation={[Math.PI, 0, 0]} scale={[1, 0.8 + Math.random() * 0.4, 1]}>
+              <coneGeometry args={[0.28, 0.9, 12]} />
+              <meshBasicMaterial color="#ffb347" toneMapped={false} transparent opacity={0.9} />
+            </mesh>
+          )}
+        </group>
+      </Board3D>
+      <p className={`arcade-speed${slow ? '' : ' fast'}`}>{slow ? t('arcade.slow') : t('arcade.fast')}</p>
+    </div>
+  );
+}
+
+// ---------- Stacker: build a pyramid one layer at a time ----------
+function Stacker({ onSolved, onWrong }: P) {
+  const LAYERS = 8;
+  const BH = 22;
+  const g = useRef({ layers: [{ x: 200, w: 210 }], x: 60, w: 196, v: 130, falling: [] as { x: number; w: number; y: number; vy: number }[], won: false });
+  const [, draw] = useState(0);
+  const s = g.current;
+  devState(s);
+  const row = (i: number) => 210 - i * BH;
+  useLoop(
+    (dt) => {
+      if (!s.won) {
+        s.x += s.v * dt;
+        if (s.x < s.w / 2 + 6 || s.x > W - s.w / 2 - 6) s.v = -s.v;
+        s.x = clamp(s.x, s.w / 2 + 6, W - s.w / 2 - 6);
+      }
+      s.falling = s.falling.filter((f) => {
+        f.vy += 500 * dt;
+        f.y += f.vy * dt;
+        return f.y < H + 60;
+      });
+      draw((n) => n + 1);
+    },
+    !s.won || s.falling.length > 0,
+  );
+  const drop = () => {
+    if (s.won) return;
+    const prev = s.layers[s.layers.length - 1];
+    if (Math.abs(s.x - prev.x) < 5) s.x = prev.x; // nearly perfect snaps into place
+    const l = Math.max(s.x - s.w / 2, prev.x - prev.w / 2);
+    const r = Math.min(s.x + s.w / 2, prev.x + prev.w / 2);
+    if (r - l < 10) {
+      sfx('wrong');
+      onWrong();
+      s.falling.push({ x: s.x, w: s.w, y: row(s.layers.length), vy: 0 });
+      s.x = 60;
+      return;
+    }
+    // each layer is a little narrower than the one below, like the steps of a pyramid
+    const w = Math.min(r - l, prev.w - 16);
+    const cx = (l + r) / 2;
+    if (s.x - s.w / 2 < l) s.falling.push({ x: (s.x - s.w / 2 + l) / 2, w: l - (s.x - s.w / 2), y: row(s.layers.length), vy: 0 });
+    if (s.x + s.w / 2 > r) s.falling.push({ x: (r + s.x + s.w / 2) / 2, w: s.x + s.w / 2 - r, y: row(s.layers.length), vy: 0 });
+    s.layers.push({ x: cx, w });
+    sfx('pop');
+    s.w = w - 16;
+    s.v = Math.sign(s.v || 1) * (130 + s.layers.length * 14);
+    s.x = s.v > 0 ? s.w / 2 + 8 : W - s.w / 2 - 8;
+    if (s.layers.length - 1 >= LAYERS) {
+      s.won = true;
+      onSolved();
+    }
+  };
+  useEffect(() => {
+    const key = (e: KeyboardEvent) => {
+      if (e.code !== 'Space' || e.repeat) return;
+      e.preventDefault();
+      drop();
+    };
+    window.addEventListener('keydown', key);
+    return () => window.removeEventListener('keydown', key);
+  });
+  const stone = (i: number) => (i % 2 ? '#d9b77a' : '#cfa96a');
+  const topRow = s.layers[s.layers.length - 1];
+  return (
+    <div className="arcade">
+      <Score n={s.layers.length - 1} of={LAYERS} />
+      <Board3D view="side" className="savanna" onDown={drop}>
+        <GroundStrip y={-5.05} color="#e3c48a" depth={14} />
+        {[-10, 9].map((x, i) => (
+          <mesh key={x} position={[x, -5.05 + 2.2 - i * 0.5, -10]} rotation={[0, Math.PI / 4, 0]}>
+            <coneGeometry args={[4 - i, 4.4 - i, 4]} />
+            <meshStandardMaterial color="#e2c18c" flatShading roughness={1} />
+          </mesh>
+        ))}
+        <mesh position={[8, 4.5, -12]}>
+          <sphereGeometry args={[1.1, 20, 14]} />
+          <meshBasicMaterial color="#ffd24a" toneMapped={false} />
+        </mesh>
+        {s.layers.map((b, i) => (
+          <mesh key={i} position={side(b.x, row(i))}>
+            <boxGeometry args={[m(b.w), m(BH) - 0.04, 3.2]} />
+            <meshStandardMaterial color={stone(i)} roughness={0.95} />
+          </mesh>
+        ))}
+        {!s.won && (
+          <mesh position={side(s.x, row(s.layers.length))}>
+            <boxGeometry args={[m(s.w), m(BH) - 0.04, 3.2]} />
+            <meshStandardMaterial color="#e8c88c" roughness={0.9} emissive="#7a5a20" emissiveIntensity={0.15} />
+          </mesh>
+        )}
+        {s.falling.map((f, i) => (
+          <mesh key={i} position={side(f.x, f.y)} rotation={[0, 0, f.vy * 0.002]}>
+            <boxGeometry args={[m(f.w), m(BH) - 0.04, 3.2]} />
+            <meshStandardMaterial color="#cfa96a" roughness={0.95} />
+          </mesh>
+        ))}
+        {s.won && (
+          <mesh position={side(topRow.x, row(s.layers.length) - 3)} rotation={[0, Math.PI / 4, 0]}>
+            <coneGeometry args={[m(topRow.w) * 0.7, 1.4, 4]} />
+            <meshStandardMaterial color="#e9c46a" metalness={0.5} roughness={0.35} />
+          </mesh>
+        )}
+      </Board3D>
+    </div>
+  );
+}
+
+// ---------- Whack-a-letter: tap the letters of the word as they pop up ----------
+const WORDS: Record<Lang, string[]> = { en: ['CAT', 'BOOK', 'STORY'], fr: ['CHAT', 'LIVRE', 'CONTE'], ar: ['قط', 'كتاب', 'قصة'] };
+const ABC: Record<Lang, string> = { en: 'ABCDEFGHIJKLMNOPQRSTUVWXYZ', fr: 'ABCDEFGHIJKLMNOPQRSTUVWXYZ', ar: 'ابتثجحخدذرزسشصضطظعغفقكلمنهوي' };
+const LETTER_COLOURS = ['#e5533d', '#2f7fd0', '#3fb950', '#f5b700', '#b46cff', '#ff8a3d'];
+const HOLES: Pt[] = [
+  [90, 85],
+  [200, 85],
+  [310, 85],
+  [90, 175],
+  [200, 175],
+  [310, 175],
+];
+function LetterMoles({ lang, onSolved, onWrong }: P) {
+  const words = WORDS[lang];
+  const g = useRef({ word: 0, pos: 0, moles: HOLES.map(() => ({ ch: '', up: 0, life: 0, id: 0 })), next: 0.6, n: 1, won: false });
+  const [, draw] = useState(0);
+  const s = g.current;
+  devState(s);
+  useLoop((dt) => {
+    const want = words[Math.min(s.word, words.length - 1)][s.pos];
+    s.next -= dt;
+    const free = s.moles.map((mo, i) => (mo.life <= 0 && mo.up <= 0.01 ? i : -1)).filter((i) => i >= 0);
+    const showing = s.moles.filter((mo) => mo.life > 0);
+    if (s.next <= 0 && free.length && showing.length < 3) {
+      s.next = 0.55 + Math.random() * 0.5;
+      const i = free[Math.floor(Math.random() * free.length)];
+      // the letter you need comes up often, but never twice at the same time
+      const need = !showing.some((mo) => mo.ch === want) && Math.random() < 0.55;
+      const pool = [...ABC[lang]].filter((c) => c !== want);
+      s.moles[i] = { ch: need ? want : pool[Math.floor(Math.random() * pool.length)], up: 0, life: 2.3, id: s.n++ };
+    }
+    for (const mo of s.moles) {
+      mo.life -= dt;
+      mo.up += ((mo.life > 0 ? 1 : 0) - mo.up) * Math.min(1, dt * 9);
+    }
+    draw((n) => n + 1);
+  }, !s.won);
+  const whack = (i: number) => {
+    const mo = s.moles[i];
+    if (s.won || mo.life <= 0 || mo.up < 0.4) return;
+    mo.life = 0;
+    if (mo.ch !== words[s.word][s.pos]) {
+      sfx('wrong');
+      return onWrong();
+    }
+    sfx('pop');
+    s.pos++;
+    if (s.pos >= words[s.word].length) {
+      s.word++;
+      s.pos = 0;
+      sfx('correct');
+      if (s.word >= words.length) {
+        s.won = true;
+        onSolved();
+      }
+    }
+  };
+  useNumberKeys(6, whack);
+  const word = words[Math.min(s.word, words.length - 1)];
+  const t = performance.now() / 1000;
+  return (
+    <div className="arcade">
+      <p className="arcade-word" dir={lang === 'ar' ? 'rtl' : 'ltr'}>
+        {[...word].map((c, i) => (
+          <span key={i} className={s.won || i < s.pos ? 'got' : ''}>
+            {s.won || i < s.pos ? c : '_'}
+          </span>
+        ))}
+      </p>
+      <Board3D className="sky">
+        <Meadow grass={600} keep={(x, z) => HOLES.every(([hx, hy]) => Math.hypot(x - top(hx, hy)[0], z - top(hx, hy)[2]) > 1.5)} />
+        {HOLES.map(([x, y], i) => {
+          const mo = s.moles[i];
+          return (
+            <group key={i} position={top(x, y)}>
+              <mesh position={[0, 0.02, 0]} rotation={[-Math.PI / 2, 0, 0]} userData={{ ground: true }}>
+                <circleGeometry args={[1.05, 28]} />
+                <meshStandardMaterial color="#3a2a16" />
+              </mesh>
+              <mesh position={[0, 0.06, 0]} rotation={[Math.PI / 2, 0, 0]} userData={{ ground: true }}>
+                <torusGeometry args={[1.08, 0.18, 8, 28]} />
+                <meshStandardMaterial color="#8a6a3c" roughness={1} />
+              </mesh>
+              {mo.up > 0.02 && (
+                <group position={[0, -1.1 + mo.up * 2, 0]} rotation={[0, Math.sin(t * 3 + mo.id) * 0.15, 0]}>
+                  <mesh
+                    onPointerDown={(e) => {
+                      e.stopPropagation();
+                      whack(i);
+                    }}
+                  >
+                    <boxGeometry args={[1.6, 1.6, 1.6]} />
+                    <meshStandardMaterial color={LETTER_COLOURS[mo.id % LETTER_COLOURS.length]} roughness={0.45} />
+                  </mesh>
+                  {mo.up > 0.55 && (
+                    <Html center position={[0, 0.82, 0.3]} zIndexRange={[5, 0]}>
+                      <span className="arcade-letter" onPointerDown={() => whack(i)}>
+                        {mo.ch}
+                      </span>
+                    </Html>
+                  )}
+                </group>
+              )}
+            </group>
+          );
+        })}
+      </Board3D>
+    </div>
+  );
+}
+
+// ---------- Recycling: send each thing on the belt to the right bin ----------
+type Waste = 'paper' | 'plastic' | 'glass' | 'metal';
+const BINS: { id: Waste; colour: string; x: number; label: Record<Lang, string> }[] = [
+  { id: 'paper', colour: '#2f7fd0', x: 80, label: { en: 'Paper', fr: 'Papier', ar: 'ورق' } },
+  { id: 'plastic', colour: '#f5c518', x: 160, label: { en: 'Plastic', fr: 'Plastique', ar: 'بلاستيك' } },
+  { id: 'glass', colour: '#3fb950', x: 240, label: { en: 'Glass', fr: 'Verre', ar: 'زجاج' } },
+  { id: 'metal', colour: '#8f99a5', x: 320, label: { en: 'Metal', fr: 'Métal', ar: 'معدن' } },
+];
+function WasteItem({ kind }: { kind: Waste }) {
+  if (kind === 'paper')
+    return (
+      <mesh position={[0, 0.15, 0]} rotation={[0, 0.4, 0]}>
+        <boxGeometry args={[1.1, 0.3, 0.8]} />
+        <meshStandardMaterial color="#f2efe6" roughness={0.9} />
+      </mesh>
+    );
+  if (kind === 'metal')
+    return (
+      <mesh position={[0, 0.45, 0]}>
+        <cylinderGeometry args={[0.32, 0.32, 0.9, 18]} />
+        <meshStandardMaterial color="#c3c9d1" metalness={0.9} roughness={0.25} />
+      </mesh>
+    );
+  const glass = kind === 'glass';
+  return (
+    <group>
+      <mesh position={[0, 0.5, 0]}>
+        <cylinderGeometry args={[glass ? 0.38 : 0.3, glass ? 0.38 : 0.3, 1, 18]} />
+        <meshStandardMaterial color={glass ? '#4fbf6a' : '#9fd6f5'} transparent opacity={0.6} roughness={0.1} />
+      </mesh>
+      <mesh position={[0, 1.08, 0]}>
+        <cylinderGeometry args={[0.14, 0.18, 0.18, 12]} />
+        <meshStandardMaterial color={glass ? '#8a6a3a' : '#e5533d'} />
+      </mesh>
+    </group>
+  );
+}
+function Recycle({ lang, onSolved, onWrong }: P) {
+  const GOAL = 12;
+  const kinds: Waste[] = ['paper', 'plastic', 'glass', 'metal'];
+  const fresh = () => kinds[Math.floor(Math.random() * 4)];
+  const g = useRef({ kind: fresh(), x: 20, fly: null as null | { from: number; to: number; t: number; kind: Waste }, sorted: 0, won: false });
+  const [, draw] = useState(0);
+  const s = g.current;
+  devState(s);
+  useLoop((dt) => {
+    s.x += (55 + s.sorted * 5) * dt;
+    if (s.x > 390) {
+      sfx('wrong');
+      onWrong();
+      Object.assign(s, { x: 20, kind: fresh() });
+    }
+    if (s.fly) {
+      s.fly.t += dt * 2.2;
+      if (s.fly.t >= 1) s.fly = null;
+    }
+    draw((n) => n + 1);
+  }, !s.won || !!s.fly);
+  const pick = (i: number) => {
+    if (s.won) return;
+    const bin = BINS[i];
+    if (bin.id !== s.kind) {
+      sfx('wrong');
+      onWrong();
+      return;
+    }
+    sfx('pop');
+    s.fly = { from: s.x, to: bin.x, t: 0, kind: s.kind };
+    s.sorted++;
+    Object.assign(s, { x: 20, kind: fresh() });
+    if (s.sorted >= GOAL) {
+      s.won = true;
+      onSolved();
+    }
+  };
+  useNumberKeys(4, pick);
+  const f = s.fly;
+  return (
+    <div className="arcade">
+      <Score n={s.sorted} of={GOAL} />
+      <Board3D
+        onDown={(p) => {
+          const i = BINS.findIndex((b) => Math.abs(b.x - p.x) < 36 && p.y > 150);
+          if (i >= 0) pick(i);
+        }}
+      >
+        <Floor color="#cfd6dc" roughness={0.8} />
+        <mesh position={top(200, 92, 0.3)} receiveShadow userData={{ ground: true }}>
+          <boxGeometry args={[21, 0.6, 2.4]} />
+          <meshStandardMaterial color="#2c3440" roughness={0.6} />
+        </mesh>
+        {Array.from({ length: 11 }, (_, i) => (
+          <mesh key={i} position={top(10 + i * 38, 92, 0.62)} rotation={[Math.PI / 2, 0, 0]}>
+            <cylinderGeometry args={[0.08, 0.08, 2.3, 8]} />
+            <meshStandardMaterial color="#8a95a3" metalness={0.8} roughness={0.3} />
+          </mesh>
+        ))}
+        <group position={top(s.x, 92, 0.62)} scale={1.6}>
+          <WasteItem kind={s.kind} />
+        </group>
+        {f && (
+          <group position={top(f.from + (f.to - f.from) * f.t, 92 + 98 * f.t, 0.62 + Math.sin(Math.PI * f.t) * 2)} scale={1.6 - f.t * 0.6}>
+            <WasteItem kind={f.kind} />
+          </group>
+        )}
+        {BINS.map((b, i) => (
+          <group key={b.id} position={top(b.x, 196)}>
+            <mesh
+              position={[0, 0.7, 0]}
+              onPointerDown={(e) => {
+                e.stopPropagation();
+                pick(i);
+              }}
+            >
+              <cylinderGeometry args={[1.2, 1.0, 1.4, 24, 1, true]} />
+              <meshStandardMaterial color={b.colour} roughness={0.5} side={DoubleSide} />
+            </mesh>
+            <mesh position={[0, 0.05, 0]} rotation={[-Math.PI / 2, 0, 0]}>
+              <circleGeometry args={[1.0, 24]} />
+              <meshStandardMaterial color="#20262e" />
+            </mesh>
+            <Html center position={[0, 0, 1.6]}>
+              <span className="arcade-tag bin">
+                {i + 1}. {b.label[lang]}
+              </span>
+            </Html>
+          </group>
+        ))}
+      </Board3D>
+    </div>
+  );
+}
+
+// ---------- Maze: lead the robot to its battery ----------
+const MW = 9;
+const MH = 5;
+/** A perfect maze (every cell reachable, no loops), carved by a seeded random walk. */
+function carve(seed: number) {
+  let a = seed * 9973 + 17;
+  const rnd = () => (a = (a * 16807) % 2147483647) / 2147483647;
+  const right = Array.from({ length: MH }, () => Array(MW).fill(true));
+  const down = Array.from({ length: MH }, () => Array(MW).fill(true));
+  const seen = Array.from({ length: MH }, () => Array(MW).fill(false));
+  const stack: Cell[] = [[0, 0]];
+  seen[0][0] = true;
+  while (stack.length) {
+    const [x, y] = stack[stack.length - 1];
+    const next = (
+      [
+        [1, 0],
+        [-1, 0],
+        [0, 1],
+        [0, -1],
+      ] as Cell[]
+    )
+      .map(([dx, dy]) => [x + dx, y + dy] as Cell)
+      .filter(([nx, ny]) => nx >= 0 && ny >= 0 && nx < MW && ny < MH && !seen[ny][nx]);
+    if (!next.length) {
+      stack.pop();
+      continue;
+    }
+    const [nx, ny] = next[Math.floor(rnd() * next.length)];
+    if (nx > x) right[y][x] = false;
+    if (nx < x) right[y][nx] = false;
+    if (ny > y) down[y][x] = false;
+    if (ny < y) down[ny][x] = false;
+    seen[ny][nx] = true;
+    stack.push([nx, ny]);
+  }
+  return { right, down };
+}
+function Maze({ seed, onSolved }: P) {
+  const LEVELS = 3;
+  const [level, setLevel] = useState(0);
+  const maze = useMemo(() => carve(seed + level * 31 + 1), [seed, level]);
+  const [at, setAt] = useState<Cell>([0, 0]);
+  const done = level >= LEVELS;
+  devState({ maze, at, level });
+  const cx = (x: number) => 40 + x * 40;
+  const cy = (y: number) => 40 + y * 40;
+  const go = (d: Dir) => {
+    if (done) return;
+    const [x, y] = at;
+    const [dx, dy] = MOVE[d];
+    const nx = x + dx;
+    const ny = y + dy;
+    if (nx < 0 || ny < 0 || nx >= MW || ny >= MH) return;
+    const wall = dx > 0 ? maze.right[y][x] : dx < 0 ? maze.right[y][nx] : dy > 0 ? maze.down[y][x] : maze.down[ny][x];
+    if (wall) return sfx('click');
+    setAt([nx, ny]);
+    if (nx === MW - 1 && ny === MH - 1) {
+      sfx('pop');
+      window.setTimeout(() => {
+        if (level + 1 >= LEVELS) onSolved();
+        setLevel(level + 1);
+        setAt([0, 0]);
+      }, 500);
+    }
+  };
+  useEffect(() => {
+    const key = (e: KeyboardEvent) => {
+      const d = ({ ArrowUp: 'N', ArrowRight: 'E', ArrowDown: 'S', ArrowLeft: 'W' } as Record<string, Dir>)[e.key];
+      if (!d) return;
+      e.preventDefault();
+      go(d);
+    };
+    window.addEventListener('keydown', key);
+    return () => window.removeEventListener('keydown', key);
+  });
+  const pos = useRef<[number, number]>([cx(0), cy(0)]);
+  const [rx, ry] = pos.current;
+  pos.current = [rx + (cx(at[0]) - rx) * 0.35, ry + (cy(at[1]) - ry) * 0.35];
+  const [, draw] = useState(0);
+  useLoop(() => draw((n) => n + 1), !done);
+  const walls: [number, number, number, number][] = [];
+  for (let y = 0; y < MH; y++)
+    for (let x = 0; x < MW; x++) {
+      if (maze.right[y][x] && x < MW - 1) walls.push([cx(x) + 20, cy(y), 0.18, 2.18]);
+      if (maze.down[y][x] && y < MH - 1) walls.push([cx(x), cy(y) + 20, 2.18, 0.18]);
+    }
+  walls.push([200, 20, 18.2, 0.2], [200, 220, 18.2, 0.2], [20, 120, 0.2, 10.2], [380, 120, 0.2, 10.2]);
+  return (
+    <div className="arcade">
+      <Score n={Math.min(level, LEVELS)} of={LEVELS} />
+      <Board3D>
+        <Floor color="#dfe6ef" roughness={0.7} />
+        {walls.map(([x, y, w, d], i) => (
+          <mesh key={`${level}-${i}`} position={top(x, y, 0.45)}>
+            <boxGeometry args={[w, 0.9, d]} />
+            <meshStandardMaterial color="#5b6fa6" roughness={0.5} />
+          </mesh>
+        ))}
+        <group position={top(cx(MW - 1), cy(MH - 1))}>
+          <mesh position={[0, 0.45, 0]}>
+            <cylinderGeometry args={[0.35, 0.35, 0.9, 18]} />
+            <meshStandardMaterial color="#3fb950" emissive="#1f8a3a" emissiveIntensity={0.5} />
+          </mesh>
+          <mesh position={[0, 0.98, 0]}>
+            <cylinderGeometry args={[0.15, 0.15, 0.16, 12]} />
+            <meshStandardMaterial color="#c9ccd1" metalness={0.8} />
+          </mesh>
+        </group>
+        <Thing id="robot" fit={2} position={top(pos.current[0], pos.current[1])} />
+      </Board3D>
+      <div className="arcade-pad" dir="ltr">
+        {(['N', 'W', 'E', 'S'] as Dir[]).map((d) => {
+          const I = ICON[d];
+          return (
+            <button key={d} type="button" className={`ibtn pad-${d}`} onClick={() => go(d)} aria-label={d}>
+              <I className="i" />
+            </button>
+          );
+        })}
+      </div>
+    </div>
+  );
+}
+
+// ---------- Dino run: jump over the rocks and ferns ----------
+function DinoRun({ onSolved, onWrong }: P) {
+  const GOAL = 10;
+  const g = useRef({
+    y: 0,
+    vy: 0,
+    obs: [
+      { x: 460, fern: true },
+      { x: 700, fern: false },
+    ],
+    passed: 0,
+    hurt: 0,
+    speed: 150,
+    won: false,
+    started: false,
+    run: 0,
+  });
+  const [, draw] = useState(0);
+  const s = g.current;
+  devState(s);
+  const jump = () => {
+    s.started = true;
+    if (s.y === 0) {
+      s.vy = 340;
+      sfx('click');
+    }
+  };
+  useLoop((dt) => {
+    if (!s.started) return draw((n) => n + 1);
+    s.run += dt;
+    s.hurt = Math.max(0, s.hurt - dt);
+    s.vy -= 950 * dt;
+    s.y = Math.max(0, s.y + s.vy * dt);
+    if (s.y === 0) s.vy = 0;
+    s.speed = 150 + s.passed * 8;
+    for (const o of s.obs) {
+      const was = o.x;
+      o.x -= s.speed * dt;
+      if (!s.hurt && Math.abs(o.x - 80) < 16 && s.y < 24) {
+        s.hurt = 1;
+        sfx('wrong');
+        onWrong();
+      }
+      if (was >= 80 && o.x < 80 && !s.hurt) {
+        s.passed++;
+        sfx('pop');
+      }
+      if (o.x < -30) {
+        o.x = Math.max(...s.obs.map((q) => q.x)) + 190 + Math.random() * 140;
+        o.fern = Math.random() < 0.5;
+      }
+    }
+    if (s.passed >= GOAL && !s.won) {
+      s.won = true;
+      onSolved();
+    }
+    draw((n) => n + 1);
+  }, !s.won);
+  useEffect(() => {
+    const key = (e: KeyboardEvent) => {
+      if (e.code !== 'Space' && e.key !== 'ArrowUp') return;
+      e.preventDefault();
+      jump();
+    };
+    window.addEventListener('keydown', key);
+    return () => window.removeEventListener('keydown', key);
+  });
+  const scroll = (s.run * s.speed) / 20;
+  return (
+    <div className="arcade">
+      <Score n={s.passed} of={GOAL} />
+      <Board3D view="side" className="sky" onDown={jump}>
+        <GroundStrip y={-4} color="#b89a62" depth={12} />
+        <mesh position={[-6, -4 + 2.5, -12]}>
+          <coneGeometry args={[5, 5, 7]} />
+          <meshStandardMaterial color="#8a6a58" flatShading roughness={1} />
+        </mesh>
+        {Array.from({ length: 9 }, (_, i) => {
+          const x = ((((i * 4.3 - scroll * 0.4) % 36) + 36) % 36) - 18;
+          return <PineTree key={i} position={[x, -4, -5 - (i % 3)]} scale={0.6 + (i % 3) * 0.15} />;
+        })}
+        {Array.from({ length: 14 }, (_, i) => {
+          const x = ((((i * 2.9 - scroll) % 30) + 30) % 30) - 15;
+          return (
+            <mesh key={i} position={[x, -3.98, 1.5 + (i % 3) * 0.6]} scale={[1, 0.4, 1]}>
+              <sphereGeometry args={[0.12 + (i % 2) * 0.08, 6, 5]} />
+              <meshStandardMaterial color="#8d7650" />
+            </mesh>
+          );
+        })}
+        {s.obs.map((o, i) =>
+          o.fern ? (
+            <group key={i} position={side(o.x, 200)}>
+              {[-0.5, 0, 0.5].map((dx, k) => (
+                <mesh key={k} position={[dx * 0.6, 0.5, 0]} rotation={[0, 0, dx]}>
+                  <coneGeometry args={[0.3, 1.2, 6]} />
+                  <meshStandardMaterial color="#3f8f3a" roughness={0.8} />
+                </mesh>
+              ))}
+            </group>
+          ) : (
+            <Rock key={i} position={side(o.x, 192)} scale={0.9} color="#8f8a80" />
+          ),
+        )}
+        <group position={side(80, 200 - s.y)} rotation={[0, Math.PI / 2, 0]}>
+          <group visible={!s.hurt || Math.floor(performance.now() / 120) % 2 === 0} position={[0, s.y === 0 ? Math.abs(Math.sin(s.run * 14)) * 0.12 : 0, 0]}>
+            <Thing id="trex" fit={3} />
+          </group>
+        </group>
+      </Board3D>
+    </div>
+  );
+}
+
 const GAMES = {
+  penalty: Penalty,
+  lander: Lander,
+  stacker: Stacker,
+  letters: LetterMoles,
+  recycle: Recycle,
+  maze: Maze,
+  'dino-run': DinoRun,
+  caterpillar: Caterpillar,
+  breakout: GermBreakout,
+  flappy: FlappyPterosaur,
+  tictactoe: BeatTheRobot,
+  echo: ColourEcho,
   stalk: Stalk,
   tadpole: Tadpole,
   'sun-track': SunTrack,

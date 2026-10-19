@@ -352,7 +352,16 @@
   },
   "arcade": {
     "colour": "Colour",
-    "light": "Light or dark"
+    "light": "Light or dark",
+    "yourTurn": "Your turn: you play the red crosses.",
+    "robotWins": "The robot won this one. Try again!",
+    "youWin": "You beat the robot!",
+    "draw": "A draw! Nobody can beat a perfect player.",
+    "again": "Play again",
+    "watch": "Watch and listen...",
+    "yourGo": "Your go! Tap the same colours.",
+    "slow": "Slow enough to land",
+    "fast": "Too fast! Hold to slow down"
   },
   "welcome": {
     "hi": "Hiii! I'm Wondoo, an octopus in a rabbit costume, and I'm SO happy you're here! We're going to explore together. Which language do you like?",
@@ -364,7 +373,7 @@
     "doors": "Each glowing doorway in this hall leads to a world: animals, the ocean, the human body, art, history and more. Walk into one to go inside.",
     "cards": "Inside a world, walk up to anything that glows. A card opens. Read it, then press \"Let's play!\" for a game.",
     "stars": "Every game gives you up to 3 stars. Fewer slips, more stars! Your stars are counted up here.",
-    "ask": "Curious about something else? Press the magnifying glass and ask me. I look it up on Wikipedia for you.",
+    "ask": "Curious about anything? Press the magnifying glass and ask me, like \"how do volcanoes work?\". I will build you a little 3D world about it!",
     "home": "From any world, the little house brings you back to this hall. Oh, and try catching the fish that jump out of the fountain! Ready, {{name}}? Let’s go explore!",
     "homeNoName": "From any world, the little house brings you back to this hall. Oh, and try catching the fish that jump out of the fountain! Ready? Let’s go explore!",
     "next": "Next",
@@ -394,5 +403,27 @@
     "fishTab": "Fish",
     "prev": "Previous page",
     "next": "Next page"
+  },
+  "mic": {
+    "talk": "Tap and talk to Wondoo",
+    "stop": "Listening... tap to stop",
+    "loading": "Getting my ears ready... {{pct}}%",
+    "thinking": "Thinking about what you said...",
+    "error": "I couldn’t hear you. Is the microphone allowed?"
+  },
+  "voice": {
+    "warming": "Wondoo is warming up its voice... {{pct}}%"
+  },
+  "wonder": {
+    "followMe": "Follow me! Let's go see it in 3D!",
+    "introWiki": "Ooh, {{topic}}! Follow me, I built a little world about it!",
+    "follow": "Follow me!",
+    "go": "Let's go!",
+    "end": "Wow, we did it! You learned something amazing today.",
+    "endTitle": "Now watch a real one!",
+    "videoCredit": "Video from Wikimedia Commons:",
+    "fromWiki": "From Wikipedia:",
+    "checked": "Checked with:",
+    "askAgain": "Ask me something else"
   }
 }

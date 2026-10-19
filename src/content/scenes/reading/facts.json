@@ -127,6 +127,28 @@
       "sources": [
         "https://www.visitsealife.com/brighton/information/news/7-amazing-starfish-facts/"
       ]
+    },
+    {
+      "id": "f-letter-e",
+      "text": {
+        "en": "In both English and French, the letter used most often is E.",
+        "fr": "En anglais comme en français, la lettre la plus utilisée est le E.",
+        "ar": "في الإنجليزية والفرنسية، أكثر حرف استعمالًا هو E."
+      },
+      "sources": [
+        "https://en.wikipedia.org/wiki/Letter_frequency"
+      ]
+    },
+    {
+      "id": "f-letter-alif",
+      "text": {
+        "en": "In Arabic, the letter used most often is alif (ا).",
+        "fr": "En arabe, la lettre la plus utilisée est l’alif (ا).",
+        "ar": "في العربية، أكثر حرف استعمالًا هو الألف (ا)."
+      },
+      "sources": [
+        "https://en.wikipedia.org/wiki/Arabic_letter_frequency"
+      ]
     }
   ],
   "glossary": [
@@ -572,6 +594,67 @@
         },
         "factIds": [
           "f-moral"
+        ]
+      }
+    },
+    {
+      "id": "reading/letters",
+      "title": {
+        "en": "Whack-a-Letter",
+        "fr": "Tape la lettre",
+        "ar": "اضرب الحرف"
+      },
+      "position": [
+        6.2,
+        0,
+        0.5
+      ],
+      "contentType": "puzzle",
+      "narration": {
+        "en": "Every word is built from letters, in the right order. Some letters turn up far more often than others!",
+        "fr": "Chaque mot est fait de lettres, dans le bon ordre. Certaines lettres reviennent bien plus souvent que d’autres !",
+        "ar": "كل كلمة مبنيّة من حروف بالترتيب الصحيح. وبعض الحروف تتكرّر أكثر بكثير من غيرها!"
+      },
+      "learnMore": {
+        "en": "In both English and French, the letter used most often is E. In Arabic, the letter used most often is alif (ا).",
+        "fr": "En anglais comme en français, la lettre la plus utilisée est le E. En arabe, la lettre la plus utilisée est l’alif (ا).",
+        "ar": "في الإنجليزية والفرنسية، أكثر حرف استعمالًا هو E. في العربية، أكثر حرف استعمالًا هو الألف (ا)."
+      },
+      "funFact": {
+        "en": "In both English and French, the letter used most often is E.",
+        "fr": "En anglais comme en français, la lettre la plus utilisée est le E.",
+        "ar": "في الإنجليزية والفرنسية، أكثر حرف استعمالًا هو E."
+      },
+      "linkedTopics": [
+        "reading/story",
+        "reading/rebus"
+      ],
+      "sourceType": "curated",
+      "factIds": [
+        "f-letter-e",
+        "f-letter-alif"
+      ],
+      "wikiQuery": {
+        "en": "Whack-a-Letter",
+        "fr": "Tape la lettre",
+        "ar": "اضرب الحرف"
+      },
+      "mascotLine": {
+        "en": "Quick, tap the right one! Word wizard time!",
+        "fr": "Vite, touche la bonne ! À toi, magicien des mots !",
+        "ar": "بسرعة، المس الحرف الصحيح! حان وقت ساحر الكلمات!"
+      },
+      "puzzle": {
+        "type": "arcade",
+        "game": "letters",
+        "prompt": {
+          "en": "Letters pop out of the holes. Tap the letters of the word, in order. Spell 3 words!",
+          "fr": "Des lettres sortent des trous. Touche les lettres du mot, dans l’ordre. Écris 3 mots !",
+          "ar": "تخرج الحروف من الحُفر. المس حروف الكلمة بالترتيب. اكتب ٣ كلمات!"
+        },
+        "factIds": [
+          "f-letter-e",
+          "f-letter-alif"
         ]
       }
     }
