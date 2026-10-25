@@ -3,13 +3,9 @@ import { useApp } from '../state/store';
 /**
  * Interaction sounds.
  *
- * Preferred source: Kenney's CC0 "Interface Sounds" / "UI Audio" packs
- * (https://kenney.nl/assets). Drop the .ogg files into public/audio/kenney/ and
- * list them in public/audio/manifest.json, e.g.
- *   { "files": { "click": "kenney/click_002.ogg", "correct": "kenney/confirmation_001.ogg",
- *                "wrong": "kenney/error_004.ogg", "portal": "kenney/maximize_006.ogg" } }
- * Until then, every sound is synthesized with WebAudio so nothing 404s and
- * the app ships with zero audio bytes.
+ * Kenney's CC0 "Interface Sounds" and "UI Audio" packs (https://kenney.nl/assets),
+ * mapped in public/audio/manifest.json. If a file fails to load, the sound is
+ * synthesized with WebAudio instead.
  */
 
 export type Sfx = 'click' | 'correct' | 'wrong' | 'portal' | 'pop' | 'giggle' | 'open';

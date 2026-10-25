@@ -1,8 +1,9 @@
-import { relay } from './_relay.js';
+import { relay } from '../relay.mjs';
 
 /** Wondoo's voice: Groq chat completions, small replies only. */
-export default function handler(req, res) {
-  return relay(req, res, {
+export default (req, context) =>
+  relay(req, context, {
+    prefix: '/api/groq',
     key: process.env.GROQ_API_KEY,
     target: 'https://api.groq.com/openai/v1',
     pathOk: /^\/chat\/completions$/,
@@ -12,4 +13,5 @@ export default function handler(req, res) {
       body.stream = false;
     },
   });
-}
+
+export const config = { path: '/api/groq/*' };

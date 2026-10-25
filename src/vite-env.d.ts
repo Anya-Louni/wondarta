@@ -9,6 +9,6 @@ interface ImportMetaEnv {
 }
 
 interface Window {
-  /** Production/Tauri: base URL of a proxy that serves /groq and /gemini with keys attached. */
+  /** Optional: base URL of a proxy that serves /groq and /gemini with keys attached. */
   __WONDARTA_API_BASE__?: string;
 }

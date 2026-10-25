@@ -5,9 +5,9 @@ import { useApp } from '../state/store';
  *
  * - Dev: requests go to the Vite proxy (/api/groq, /api/gemini), which attaches
  *   keys server-side. Keys never reach the browser bundle.
- * - Deployed (Vercel): the serverless relay in /api attaches the keys, which
+ * - Deployed (Netlify): the functions in netlify/functions attach the keys, which
  *   are set as environment variables on the host and never shipped.
- * - Tauri / elsewhere: set window.__WONDARTA_API_BASE__ to your own relay.
+ * - Elsewhere: set window.__WONDARTA_API_BASE__ to your own relay.
  *   Without one, providers stay "unconfigured" and the mascot sleeps for LLM
  *   features. Scenes are unaffected.
  *
@@ -30,7 +30,7 @@ function apiBase(): string | null {
   if (import.meta.env.DEV) return '/api';
   if (window.__WONDARTA_API_BASE__) return window.__WONDARTA_API_BASE__;
   // Deployed on the web with keys set at build time: the serverless relay in
-  // /api holds them. From file:// (or Tauri without a relay) there is none.
+  // /api holds them. From file:// there is none.
   return location.protocol.startsWith('http') && (__HAS_GROQ__ || __HAS_GEMINI__) ? '/api' : null;
 }
 

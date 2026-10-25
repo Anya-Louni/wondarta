@@ -38,7 +38,6 @@ export type PuzzleType =
   | 'drag-to-label'
   | 'riddle'
   | 'rebus'
-  | 'logic-grid'
   | 'odd-one-out'
   | 'pattern-series'
   | 'cipher'
@@ -240,14 +239,6 @@ export interface CommandRoutePuzzle extends PuzzleBase {
   maxCommands: number;
 }
 
-export interface LogicGridPuzzle extends PuzzleBase {
-  type: 'logic-grid';
-  rows: LText[];
-  cols: LText[];
-  clues: LText[];
-  solution: Record<number, number>;
-}
-
 export type Puzzle =
   | SortMatchPuzzle
   | PhotoToLabelPuzzle
@@ -265,7 +256,6 @@ export type Puzzle =
   | CipherPuzzle
   | ConstructionPuzzle
   | CommandRoutePuzzle
-  | LogicGridPuzzle
   | ArcadePuzzle
   | ListenMapPuzzle;
 

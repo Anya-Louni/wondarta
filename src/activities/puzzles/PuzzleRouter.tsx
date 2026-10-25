@@ -1,8 +1,5 @@
-import { lazy, Suspense, useState } from 'react';
-import { useTranslation } from 'react-i18next';
-import { Check } from 'lucide-react';
-import type { LogicGridPuzzle, Puzzle } from '../../types/content';
-import { tx } from '../../content/loader';
+import { lazy, Suspense } from 'react';
+import type { Puzzle } from '../../types/content';
 import { Construction, DragToLabel, PhotoToLabel, SortMatch } from './Matching';
 import { Cipher, NameThatX, OddOneOut, PatternSeries, Rebus, Riddle } from './Choices';
 import { CommandRoute } from './CommandRoute';
@@ -16,51 +13,6 @@ import { ListenMap } from './ListenMap';
 // the 3D body game brings its own canvas; load it only when someone opens it
 const BodyBuild = lazy(() => import('./BodyBuild').then((m) => ({ default: m.BodyBuild })));
 import type { PuzzleProps } from './types';
-
-/** Braingle-style logic grid: mark one match per row, then check. */
-function LogicGrid({ puzzle, lang, onSolved, onWrong }: PuzzleProps<LogicGridPuzzle>) {
-  const { t } = useTranslation();
-  const [pick, setPick] = useState<Record<number, number>>({});
-  return (
-    <div>
-      <ul>
-        {puzzle.clues.map((c, i) => (
-          <li key={i}>{tx(c, lang)}</li>
-        ))}
-      </ul>
-      <table style={{ borderCollapse: 'separate', borderSpacing: 4 }}>
-        <thead>
-          <tr>
-            <th />
-            {puzzle.cols.map((c, i) => (
-              <th key={i}>{tx(c, lang)}</th>
-            ))}
-          </tr>
-        </thead>
-        <tbody>
-          {puzzle.rows.map((r, ri) => (
-            <tr key={ri}>
-              <th>{tx(r, lang)}</th>
-              {puzzle.cols.map((_, ci) => (
-                <td key={ci}>
-                  <button className={`ibtn sm${pick[ri] === ci ? ' on' : ''}`} onClick={() => setPick((p) => ({ ...p, [ri]: ci }))}>
-                    {pick[ri] === ci ? <Check className="i" /> : null}
-                  </button>
-                </td>
-              ))}
-            </tr>
-          ))}
-        </tbody>
-      </table>
-      <button
-        className="btn green"
-        onClick={() => (puzzle.rows.every((_, ri) => pick[ri] === puzzle.solution[ri]) ? onSolved() : onWrong())}
-      >
-        {t('card.check')}
-      </button>
-    </div>
-  );
-}
 
 export function PuzzleRouter(props: PuzzleProps) {
   const p = props.puzzle;
@@ -107,7 +59,5 @@ export function PuzzleRouter(props: PuzzleProps) {
       return <ListenMap {...as(p)} />;
     case 'arcade':
       return <Arcade {...as(p)} />;
-    case 'logic-grid':
-      return <LogicGrid {...as(p)} />;
   }
 }

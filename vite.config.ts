@@ -6,15 +6,14 @@ import react from '@vitejs/plugin-react';
  * the client bundle. In dev, requests to /api/groq and /api/gemini go through
  * this proxy, which attaches the key server-side.
  *
- * A static production build has no proxy, so the mascot simply "sleeps" for
- * LLM features while every scene and every curated fact keeps working. When
- * wrapped with Tauri, the same /api/* calls can be served by a Rust command
- * that holds the keys (see README "Tauri").
+ * In production the same /api/* calls go to the Netlify functions in
+ * netlify/functions. Without keys the mascot simply "sleeps" for LLM features
+ * while every scene and every curated fact keeps working.
  */
 export default defineConfig(({ mode }) => {
   const env = loadEnv(mode, process.cwd(), '');
   return {
-    base: './', // relative asset paths: works from file:// and inside Tauri's webview
+    base: './', // relative asset paths: the build also works from file://
     plugins: [react()],
     // the voice and listening engines run in workers; declare them so the dev server does not rebuild mid-session
     optimizeDeps: { include: ['onnxruntime-web'], exclude: ['@huggingface/transformers'] },

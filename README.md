@@ -3,7 +3,7 @@
 A walkable 3D encyclopedia for kids. You walk through a topic instead of clicking through slides.
 It's inspired by Encarta Kids/Junior, MindMaze, Zoombinis, Periplus, Braingle and Different Strokes.
 
-The whole stack is free and open source, with no credit card anywhere. It runs light in the browser first and is structured to be wrapped with Tauri later.
+The whole stack is free and open source, with no credit card anywhere. It runs in the browser, with no install.
 
 ## Quick start
 
@@ -138,18 +138,19 @@ Controls: **WASD / ZQSD** to walk and strafe, **arrow keys** to walk and turn (t
 
 ## Deploy (live demo)
 
-The repo is ready for [Vercel](https://vercel.com): `vercel.json` builds the Vite app and
-routes `/api/groq/*` and `/api/gemini/*` to two small serverless functions in `api/`.
+The repo is ready for [Netlify](https://www.netlify.com): `netlify.toml` builds the Vite app, sets the
+security and cross-origin headers, and two small functions in `netlify/functions/` relay
+`/api/groq/*` and `/api/gemini/*` with the keys attached.
 
-1. Import the GitHub repo in Vercel (framework: Vite, no settings to change).
-2. Add two environment variables: `GROQ_API_KEY` and `GEMINI_API_KEY` (both free tier).
+1. In Netlify, "Add new site", "Import an existing project", pick the GitHub repo. The build settings are read from `netlify.toml`.
+2. Before the first deploy, add two environment variables: `GROQ_API_KEY` and `GEMINI_API_KEY` (both free tier).
 3. Deploy. The keys stay on the server; the browser only ever calls `/api/...`.
 
 Without the keys the site still works: every world, fact, quiz and game is curated and
-offline. Only the three AI features (chat with Wondoo, "Ask about anything", Wikipedia
+offline. Only the AI features (chat with Wondoo, "Ask about anything", Wikipedia
 "Learn more") switch off, and Wondoo naps instead.
 
-The relay (`api/_relay.js`) only forwards the two calls the app makes, caps reply size,
+The relay (`netlify/relay.mjs`) only forwards the two calls the app makes, caps reply size,
 and limits each visitor to 20 requests a minute.
 
 ## Team
@@ -180,11 +181,12 @@ src/
     themes.tsx              9 reskins of the template (colours + decor only)
     LivingWorld.tsx         FLAGSHIP (Animals): savanna, forest, pond
     MascotRoom.tsx          Wondoo's Den (Play / Chat / Sleep)
-  activities/               quiz, video, audio-match + 12 puzzle types
+  activities/               quiz, video, audio-match and every puzzle and game
   llm/                      transport (rate limits, quota → sleep), prompts, guards
   wiki/wikipedia.ts         retrieval: search → intro extract, per-language editions
   ui/                       glass card, HUD, Ask panel, badges, clickable narration
   i18n/                     react-i18next UI strings (en / fr / ar)
+netlify/                    the two key-holding API functions and their shared relay
 ```
 
 **Reuse is the point.** The flagship and all nine mini-scenes run on the same `SceneShell`, `Hotspot`, `InfoCard` and activity components. Adding a category means adding a `facts.json` and a theme entry.
@@ -226,7 +228,7 @@ Each `facts.json` has a `review` block. On 2026-10-09 every fact was searched on
 - The dictionary tooltip uses `Intl.Segmenter`, and Arabic lookup strips diacritics and common prefixes (ال، و، ب، ل…).
 - Wikipedia grounding queries fr/ar.wikipedia.org first. It falls back to Simple/English Wikipedia plus translation only when no local article matches, and the result is flagged "Translated from English Wikipedia".
 - Fonts: IBM Plex Sans and IBM Plex Sans Arabic (OFL), bundled locally via `@fontsource`.
-- TTS uses the Web Speech API for EN/FR/**MSA**. Dialect narration must be human recordings (see the comment in `src/audio/tts.ts`). Arabic voice availability depends on the OS; on Windows, install the Arabic speech pack.
+- Reading aloud uses the built-in Piper voices for EN, FR and Modern Standard Arabic (see "Voices and listening"), so nothing depends on the voices installed on the computer.
 
 ## Privacy
 
@@ -258,25 +260,14 @@ Each `facts.json` has a `review` block. On 2026-10-09 every fact was searched on
 See **[CREDITS.md](CREDITS.md)** for full attribution. The app also has a Credits panel, behind the small cog on the hub (the same quiet menu holds the language switch, so kids see fewer controls).
 
 
-- **3D:** `src/models/` holds 56 procedural "toy" models: animals, dinosaurs, sports gear, organs and portal emblems. They are built in code from cached primitives, so there are zero downloads. Each model is baked once into one mesh per material (about 4–8 draw calls per animal) and cloned for every instance. The same models render the picture thumbnails used in puzzles when there is no Wikimedia photo (for example, offline). The app uses no emoji anywhere; UI icons come from `lucide-react` (tree-shaken). Kenney CC0 packs are used for set dressing: see the next bullet. Shap-E/TripoSR generation is future work.
+- **3D:** `src/models/` holds 56 procedural "toy" models: animals, dinosaurs, sports gear, organs and portal emblems. They are built in code from cached primitives, so there are zero downloads. Each model is baked once into one mesh per material (about 4–8 draw calls per animal) and cloned for every instance. The same models render the picture thumbnails used in puzzles when there is no Wikimedia photo (for example, offline). The app uses no emoji anywhere; UI icons come from `lucide-react` (tree-shaken). Kenney CC0 packs are used for set dressing: see the next bullet.
 - **Kenney (CC0):** 39 **Nature Kit** models (trees, rocks, plants, logs, lily pads and more) dress the scenes. They are recoloured by material name to match our palette. 5 animated **Cube Pets** are Wondoo's plush friends in the Den; tap one and it dances. **Interface Sounds** and **UI Audio** provide the UI sounds, mapped in `public/audio/manifest.json`. Only the files used are shipped (about 1.3 MB), each scene loads its own models lazily, and Kenney's license files sit next to the assets.
 - **Lighting:** image-based lighting comes from a few light panels rendered once into a cube map, so no HDR file is downloaded. Contact shadows are rendered once per scene. There is no post-processing pass. The Living World measured 59 fps, 130 draw calls, on the dev machine.
 - **Audio:** Kenney CC0 UI sounds (see above). The WebAudio synth is still the fallback if a file fails to load.
 - **Photos/video:** optional, fetched from Wikipedia/Wikimedia Commons when online and always credited. The Mona Lisa and portraits are public-domain Commons images. The owl hotspot uses a Commons video when one exists; otherwise it shows a picture show of curated facts.
 
-## Tauri (desktop) path
-
-The app already uses relative asset paths (`base: './'`) and hash-free in-memory routing, so `dist/` works inside a native webview as-is. To wrap it:
-
-1. `npm create tauri-app` (or `npm i -D @tauri-apps/cli && npx tauri init`) with `frontendDist: ../dist`.
-2. Keep keys out of the webview: expose a Rust command (or a tiny local relay) that serves `/groq/*` and `/gemini/*` with the keys attached, and set `window.__WONDARTA_API_BASE__` to it (see `src/llm/transport.ts`).
-3. Note that WebKit (macOS/Linux) may not play Commons WebM video. The picture-show fallback covers that case.
-
-## Known gaps / next steps
+## Known gaps
 
 - A native-speaker read of the French and Arabic text (see above).
-- The LLM paths could not be exercised end to end during development (no keys were configured). The guards are unit-tested, and the no-key fallbacks were verified in the browser.
-- A `logic-grid` puzzle component exists, but no scene uses it yet.
-- Mini-scenes mix procedural models with Kenney set dressing. TripoSR / Shap-E generation for on-demand topics is still future work.
-- A plain static host has no LLM relay, so Wondoo sleeps for AI features there. On Vercel the relay in `api/` turns them on once the two keys are set (see Deploy).
+- The Arabic voice's dataset licence is not stated by its author, and Arabic speech recognition is weaker than English or French.
 - Game boards use the worlds' low-poly models; only the X-ray (scanned organs) and the fossil dig (a 1905 museum drawing) are true to life. The lion game shows a maned lion because no free lioness model exists yet.

@@ -4,6 +4,5 @@ dist
 .env.local
 .env.*.local
 *.log
-src-tauri/target
 .kenney/
 graphify-out/
