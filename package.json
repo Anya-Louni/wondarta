@@ -4,7 +4,7 @@
   "version": "0.1.0",
   "type": "module",
   "description": "Wondarta: a walkable 3D encyclopedia for kids.",
-  "license": "MIT",
+  "license": "UNLICENSED",
   "scripts": {
     "dev": "vite",
     "build": "npm run validate:content && tsc -b && vite build",

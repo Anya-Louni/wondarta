@@ -3,7 +3,7 @@
 A walkable 3D encyclopedia for kids. You walk through a topic instead of clicking through slides.
 It's inspired by Encarta Kids/Junior, MindMaze, Zoombinis, Periplus, Braingle and Different Strokes.
 
-The whole stack is free and open source, with no credit card anywhere. It runs in the browser, with no install.
+It runs in the browser, with no install, and is built only on free tools and services.
 
 ## Quick start
 
@@ -270,3 +270,7 @@ See **[CREDITS.md](CREDITS.md)** for full attribution. The app also has a Credit
 - A native-speaker read of the French and Arabic text (see above).
 - The Arabic voice's dataset licence is not stated by its author, and Arabic speech recognition is weaker than English or French.
 - Game boards use the worlds' low-poly models; only the X-ray (scanned organs) and the fossil dig (a 1905 museum drawing) are true to life. The lion game shows a maned lion because no free lioness model exists yet.
+
+## License
+
+Copyright (c) 2026 Anya-Louni. All rights reserved. See [LICENSE](LICENSE). Third-party assets keep their own licences, listed in [CREDITS.md](CREDITS.md).
