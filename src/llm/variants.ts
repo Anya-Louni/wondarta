@@ -6,7 +6,7 @@ import { brief, numbersGrounded, numbersIn } from './guards';
 import { rephraseSystem, variantSystem } from './prompts';
 
 /**
- * "I want more!" — Gemini may only rephrase / recombine facts already in the
+ * "I want more!", Gemini may only rephrase / recombine facts already in the
  * scene's locked facts.json. Output is machine-checked against the cited fact;
  * anything that fails falls back to a local reshuffle of curated content.
  */

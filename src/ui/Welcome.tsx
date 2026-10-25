@@ -3,6 +3,7 @@ import { useTranslation } from 'react-i18next';
 import { useApp, cleanName } from '../state/store';
 import { player } from '../three/playerState';
 import { sfx } from '../audio/sfx';
+import { speak, stopSpeaking, warmVoice } from '../audio/tts';
 import { LanguageSwitcher } from './Settings';
 import { WondooAvatar } from './Parts';
 
@@ -19,7 +20,7 @@ export function Welcome() {
   const name = useApp((s) => s.name);
   const setName = useApp((s) => s.setName);
   const setTourDone = useApp((s) => s.setTourDone);
-  // the ask step only makes sense when this deployment has the AI turned on
+  const lang = useApp((s) => s.lang);
   const STEPS = ALL;
   const [i, setI] = useState(0);
   const [draft, setDraft] = useState(name);
@@ -51,6 +52,13 @@ export function Welcome() {
   const named = (key: string) => (name ? t(`welcome.${key}`, { name }) : t(`welcome.${key}NoName`));
   const text = step === 'walk' || step === 'home' ? named(step) : t(`welcome.${step}`);
 
+  // Wondoo reads every step aloud, for explorers who are still learning to read
+  useEffect(() => {
+    warmVoice(lang);
+    speak(text, lang);
+  }, [text, lang]);
+  useEffect(() => () => stopSpeaking(), []);
+
   return (
     <section className="slab welcome" role="dialog" aria-modal="false" aria-label={t('welcome.label')}>
       <div className="welcome-mascot">
@@ -71,14 +79,7 @@ export function Welcome() {
               if (cleanName(draft)) next();
             }}
           >
-            <input
-              autoFocus
-              value={draft}
-              maxLength={16}
-              placeholder={t('welcome.namePlaceholder')}
-              aria-label={t('welcome.askName')}
-              onChange={(e) => setDraft(e.target.value)}
-            />
+            <input autoFocus value={draft} maxLength={16} placeholder={t('welcome.namePlaceholder')} aria-label={t('welcome.askName')} onChange={(e) => setDraft(e.target.value)} />
             <span className="muted">{t('welcome.nameNote')}</span>
           </form>
         )}

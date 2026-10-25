@@ -91,7 +91,9 @@ export async function chatReply(opts: {
   fallbackSay: string;
   openRecallTemplate: string;
 }): Promise<ChatTurn> {
-  const { lang, topics } = opts;
+  const { lang } = opts;
+  // the most recent topics only: a long visit would otherwise overflow the model's request limit
+  const topics = opts.topics.slice(-8);
   const allFacts = topics.flatMap((t) => t.facts.map((f) => ({ ...f, hotspotId: t.hotspotId })));
 
   const offline = (): ChatTurn => {

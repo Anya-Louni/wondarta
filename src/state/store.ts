@@ -16,7 +16,7 @@ export interface SavedWord {
 /** The little world Wondoo builds for a question: a hand-made one, or one made from Wikipedia. */
 export type WonderVisit =
   | { kind: 'built'; id: string }
-  | { kind: 'wiki'; title: string; parts: string[]; url: string; videoTitle?: string };
+  | { kind: 'wiki'; title: string; parts: string[]; url: string; videoTitle?: string; question?: string };
 
 export interface MascotSpeech {
   text: string;

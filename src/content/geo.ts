@@ -3,7 +3,7 @@
  *
  * Children's atlases put the animal on the map: a little icon where it lives,
  * a continent to point at, one line of "where in the world". That is all this
- * file is — a projection, a list of continents and the boxes that stand for
+ * file is, a projection, a list of continents and the boxes that stand for
  * them on the map.
  *
  * `public/images/map/world.png` is a cropped, recoloured version of Wikimedia
@@ -26,7 +26,7 @@ export function project({ lat, lon }: LatLon): { x: number; y: number } {
 }
 
 interface ContinentBox {
-  /** south, west, north, east — the tappable box drawn over the map. */
+  /** south, west, north, east, the tappable box drawn over the map. */
   box: [number, number, number, number];
 }
 

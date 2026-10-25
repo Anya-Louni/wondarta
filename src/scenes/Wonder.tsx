@@ -6,7 +6,7 @@ import { WONDERS } from '../content/wonders';
 import { SceneShell } from '../three/SceneShell';
 import { circleBounds } from '../three/Player';
 import { Glow, Twinkles } from '../three/Environment';
-import { FloorDisc } from '../three/props';
+import { FloorDisc, Grass, PineTree, Rock, RoundTree } from '../three/props';
 import { Label3D } from '../three/Label3D';
 import { Model } from '../models';
 import { WikiPicture } from '../three/WikiPicture';
@@ -27,7 +27,7 @@ export function stopPoints(visit: { kind: 'built'; id: string } | { kind: 'wiki'
 }
 export const GENERIC_STOPS: [number, number, number][] = [
   [-3.2, 1.6, 0],
-  [0, 2.4, -1.4],
+  [0, 1.3, 0.4],
   [3.2, 1.6, 0],
 ];
 
@@ -296,16 +296,44 @@ function WaterCycle() {
 
 // ---------------------------------------------------------------- any other question
 
-function WikiWorld({ title }: { title: string }) {
+const ring = (n: number, r: number, from = 0) => Array.from({ length: n }, (_, i) => [Math.cos(from + (i / n) * Math.PI * 2) * r, Math.sin(from + (i / n) * Math.PI * 2) * r] as [number, number]);
+const meadow = (i: number): [number, number] => {
+  const a = i * 2.39996;
+  const r = 4.5 + ((i * 0.618) % 1) * 10;
+  return [Math.cos(a) * r, Math.sin(a) * r];
+};
+
+/** A world made from a Wikipedia article: its picture on an easel, a reading stand, and a little garden around the stops. */
+function WikiWorld({ title, label }: { title: string; label: string }) {
   return (
     <group>
-      <WikiPicture title={title} position={[0, 2.6, -2.6]} width={3.4} height={2.6} />
-      <Model id="open-book" fit={1.6} position={[0, 0, -1]} />
-      <Label3D position={[0, 4.6, -2.6]} distanceFactor={10}>
-        <div className="plaque" style={{ fontSize: 18 }}>
-          {title}
-        </div>
-      </Label3D>
+      <group position={[0, 0, -2.6]}>
+        <WikiPicture title={title} position={[0, 2.7, 0]} width={3.4} height={2.6} />
+        {[-1.2, 1.2].map((x) => (
+          <mesh key={x} position={[x, 0.75, -0.15]} rotation={[0, 0, x > 0 ? -0.12 : 0.12]}>
+            <boxGeometry args={[0.12, 1.6, 0.12]} />
+            <meshStandardMaterial color="#8a5a32" roughness={0.8} />
+          </mesh>
+        ))}
+        <Label3D position={[0, 4.75, 0]} distanceFactor={10}>
+          <div className="plaque" style={{ fontSize: 18 }}>
+            {label}
+          </div>
+        </Label3D>
+      </group>
+      <mesh position={[0, 0.45, -0.6]}>
+        <cylinderGeometry args={[0.08, 0.14, 0.9, 10]} />
+        <meshStandardMaterial color="#8a5a32" roughness={0.8} />
+      </mesh>
+      <Model id="open-book" fit={1.4} position={[0, 0.9, -0.6]} rotation={[0.5, 0, 0]} />
+      {ring(9, 12.5, 0.3).map(([x, z], i) =>
+        i % 3 ? <RoundTree key={i} position={[x, 0, z]} scale={0.9 + (i % 2) * 0.3} color={i % 2 ? '#5cc85e' : '#7fd36a'} /> : <PineTree key={i} position={[x, 0, z]} scale={1.1} />,
+      )}
+      {ring(7, 8.5, 1).map(([x, z], i) => (
+        <Rock key={i} position={[x, 0.15, z]} scale={0.5 + (i % 3) * 0.25} color="#a9b4bc" />
+      ))}
+      <Grass count={260} area={meadow} color="#7ccf5a" />
+      <Twinkles count={40} scale={[14, 5, 14]} position={[0, 2.5, 0]} size={3} speed={0.3} color="#fff6c8" />
     </group>
   );
 }
@@ -331,12 +359,12 @@ export function WonderWorld() {
       clouds={!space}
       mascotChase={chase}
     >
-      <FloorDisc radius={16} color={space ? '#1b2448' : '#eaf3e4'} rim={space ? '#4a5aa0' : '#bfe0b0'} />
+      <FloorDisc radius={16} color={space ? '#1b2448' : '#d3eabf'} rim={space ? '#4a5aa0' : '#a9d68f'} />
       {space && <Twinkles count={160} scale={[60, 30, 60]} position={[0, 12, 0]} size={4} speed={0.1} color="#ffffff" />}
       {built?.id === 'volcano' && <Volcano />}
       {built?.id === 'solar-system' && <Planets />}
       {built?.id === 'water-cycle' && <WaterCycle />}
-      {visit?.kind === 'wiki' && <WikiWorld title={visit.title} />}
+      {visit?.kind === 'wiki' && <WikiWorld title={visit.title} label={visit.question ?? visit.title} />}
       <StopMarkers stops={stops} />
     </SceneShell>
   );

@@ -33,8 +33,8 @@ The hub is the room kids see first, so it is dressed: the floor is one inlaid
 medallion texture (`hallFloorTexture`) with a pale walkway running to each
 doorway and a warm amber one to Wondoo's Den, a planted ring circles the
 colonnade, and the fountain has flowing water and two fish in it. The ornament
-lives in `src/scenes/hubDecor.tsx` — garden ring, drifting petals, butterflies,
-pennants, lamp posts, benches, planters — and every piece of it is trimmed or
+lives in `src/scenes/hubDecor.tsx` (garden ring, drifting petals, butterflies,
+pennants, lamp posts, benches, planters), and every piece of it is trimmed or
 dropped on the low graphics tier. Lamp posts glow with an emissive globe and a
 painted pool of light rather than real point lights, which each cost every lit
 pixel in the scene.
@@ -54,7 +54,7 @@ an `origin` block (continents, one sentence of real range, and map pins in latit
 longitude); the card then shows a **Where in the world** panel with those pins dropped on
 a world map. The map in `public/images/map/world.png` is cropped to exactly the
 -180..180 / -90..90 frame, so `src/content/geo.ts` turns a coordinate into a percentage
-with nothing but arithmetic — a pin lands where the place really is. The `map-find`
+with nothing but arithmetic, a pin lands where the place really is. The `map-find`
 puzzle (Animals → *Where in the World?*) is the game built on it: an animal, a map, and
 "tap the continent it comes from".
 
@@ -71,7 +71,7 @@ Its five hotspots are curated and sourced like every other scene.
 Animals in the Living World are `<Critter>`s (`src/three/Critter.tsx`), not statues:
 they breathe, graze, hop or sway, turn their heads when you walk within a few metres,
 and react when tapped with a hop, a sound and a line from Wondoo. Every motion is one
-group transform per frame — no skeletons, no animation clips — so a meadow of animals
+group transform per frame, no skeletons, no animation clips, so a meadow of animals
 costs what a meadow of statues did.
 
 ### Activities and the play stage
@@ -82,11 +82,11 @@ Reading and playing are separate: a hotspot card shows what there is to read, th
 Puzzle types live in `src/types/content.ts` and are rendered by
 `src/activities/puzzles/PuzzleRouter.tsx`.
 
-Every card ends in a hands-on game, not a question list. The 27 `arcade` games
+Most cards end in a hands-on game, not a question list. The 27 `arcade` games
 (`src/activities/puzzles/Arcade.tsx`) each act out a fact from their card, and many
 reuse a game kids already know with a new theme: Snake as a hungry caterpillar,
 Breakout with a white blood cell, Flappy Bird with a pterosaur, Simon with colours,
-a penalty shoot-out, a Moon lander, a pyramid stacker, a letter catcher, a recycling
+a penalty shoot-out, a Moon lander, a pyramid stacker, whack-a-letter, a recycling
 sorter, a robot maze and a dinosaur runner. Others steer a blue whale through krill,
 carry pollen as a bee, creep up on a zebra as a lion or flip a candle's image through
 a pinhole as Ibn al-Haytham did. Most boards are small lit 3D worlds with grass,
@@ -131,10 +131,10 @@ the drawing buffer is capped at ~2.3 Mpx however large the window is, drei's
 `PerformanceMonitor` tunes the pixel ratio inside that cap, and a sustained shortfall
 drops to a `low` tier (fewer bubbles, no sparkles, thinner scatter, smaller shadow map).
 Grown-ups can force it from the hub's cog: **Picture → Smooth**. Materials avoid
-clearcoat/iridescence/sheen — the Frutiger Aero gloss comes from the environment map
+clearcoat/iridescence/sheen, the Frutiger Aero gloss comes from the environment map
 instead, which is far cheaper per pixel.
 
-Controls: **WASD / ZQSD** to walk and strafe, **arrow keys** to walk and turn (the keyboard alone is enough — no mouse needed), **Shift** to run, **drag** to look, **tap the floor** to walk there. Walk into a glowing doorway to enter it, and walk into (or click) a lens-flare marker to open a hotspot. In Wondoo's Den everything happens in the room: tap Wondoo to pet him or wake him, tap the ball to play, tap the nest to say goodnight, or use the small "Talk" action next to him.
+Controls: **WASD / ZQSD** to walk and strafe, **arrow keys** to walk and turn (the keyboard alone is enough, no mouse needed), **Shift** to run, **drag** to look, **tap the floor** to walk there. Walk into a glowing doorway to enter it, and walk into (or click) a lens-flare marker to open a hotspot. In Wondoo's Den everything happens in the room: tap Wondoo to pet him or wake him, tap the ball to play, tap the nest to say goodnight, or use the small "Talk" action next to him.
 
 ## Deploy (live demo)
 
@@ -157,10 +157,9 @@ and limits each visitor to 20 requests a minute.
 
 | Name | What they built |
 | --- | --- |
-| _TODO: full name_ | _TODO: one honest line_ |
-| _TODO: full name_ | _TODO: one honest line_ |
+| [Anya-Louni](https://github.com/Anya-Louni) | Everything: design, content, fact-checking, 3D worlds, games and code (solo project) |
 
-AI tools used: _TODO (required by the submission rules; list them plainly)._
+AI tools used: Claude (Anthropic), as a coding and research assistant.
 
 ## Architecture
 
@@ -168,7 +167,7 @@ AI tools used: _TODO (required by the submission rules; list them plainly)._
 src/
   types/content.ts          content model (every text field is { en, fr, ar })
   content/
-    scenes/<id>/facts.json  LOCKED, human-reviewed content, one per category
+    scenes/<id>/facts.json  curated, fact-checked content, one per category
     loader.ts               bundles facts at build time + dictionary lookup
   three/                    shared 3D systems
     SceneShell.tsx          player + mascot + hotspots + exit portal (used by EVERY scene)
@@ -176,7 +175,7 @@ src/
     Hotspot.tsx, Portal.tsx lens-flare markers, glowing doorways
     Mascot.tsx              Wondoo (follow / stay / sleep, reactions, speech bubble)
   scenes/
-    Hub.tsx                 walkable atrium: 10 category portals + separate Den portal
+    Hub.tsx                 walkable atrium: 11 category portals + separate Den portal
     MiniScene.tsx           the reusable mini-scene template
     themes.tsx              9 reskins of the template (colours + decor only)
     LivingWorld.tsx         FLAGSHIP (Animals): savanna, forest, pond
@@ -204,7 +203,7 @@ This is Wondarta's "safe browser", the curated-database approach Encarta used.
 | Mascot quiz framing | Groq | shown as the mascot's line | Must contain no numbers and must not reveal the answer; otherwise the pre-written line is used. |
 | Mascot Room chat | Groq, JSON: `{say, factId, askRecall}` | `ai-generated` (glue) + `curated` (fact) | The model **never states facts**. It picks a fact id and our code inserts the curated text verbatim. Recall questions come from curated quizzes and are graded locally. |
 
-Every card shows a small icon tag: *Checked by editors*, *AI, from a source*, or *AI chat*.
+Every card shows a small icon tag: *Fact-checked*, *AI, from a source*, or *AI chat*.
 
 ### Fact-check trail
 
@@ -260,7 +259,7 @@ Each `facts.json` has a `review` block. On 2026-10-09 every fact was searched on
 See **[CREDITS.md](CREDITS.md)** for full attribution. The app also has a Credits panel, behind the small cog on the hub (the same quiet menu holds the language switch, so kids see fewer controls).
 
 
-- **3D:** `src/models/` holds 56 procedural "toy" models: animals, dinosaurs, sports gear, organs and portal emblems. They are built in code from cached primitives, so there are zero downloads. Each model is baked once into one mesh per material (about 4–8 draw calls per animal) and cloned for every instance. The same models render the picture thumbnails used in puzzles when there is no Wikimedia photo (for example, offline). The app uses no emoji anywhere; UI icons come from `lucide-react` (tree-shaken). Kenney CC0 packs are used for set dressing: see the next bullet.
+- **3D:** `src/models/` holds 68 procedural "toy" models: animals, dinosaurs, sports gear, organs and portal emblems. They are built in code from cached primitives, so there are zero downloads. Each model is baked once into one mesh per material (about 4–8 draw calls per animal) and cloned for every instance. The same models render the picture thumbnails used in puzzles when there is no Wikimedia photo (for example, offline). The app uses no emoji anywhere; UI icons come from `lucide-react` (tree-shaken). Kenney CC0 packs are used for set dressing: see the next bullet.
 - **Kenney (CC0):** 39 **Nature Kit** models (trees, rocks, plants, logs, lily pads and more) dress the scenes. They are recoloured by material name to match our palette. 5 animated **Cube Pets** are Wondoo's plush friends in the Den; tap one and it dances. **Interface Sounds** and **UI Audio** provide the UI sounds, mapped in `public/audio/manifest.json`. Only the files used are shipped (about 1.3 MB), each scene loads its own models lazily, and Kenney's license files sit next to the assets.
 - **Lighting:** image-based lighting comes from a few light panels rendered once into a cube map, so no HDR file is downloaded. Contact shadows are rendered once per scene. There is no post-processing pass. The Living World measured 59 fps, 130 draw calls, on the dev machine.
 - **Audio:** Kenney CC0 UI sounds (see above). The WebAudio synth is still the fallback if a file fails to load.

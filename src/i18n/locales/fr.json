@@ -2,7 +2,9 @@
   "app": {
     "name": "Wondarta",
     "tagline": "Explore-le en marchant, pas en cliquant.",
-    "glError": "Un problème est survenu avec le monde en 3D. Recharge la page."
+    "glError": "Un problème est survenu avec le monde en 3D. Recharge la page.",
+    "oops": "Oups ! Quelque chose s’est emmêlé. On réessaie ?",
+    "reload": "Réessayer"
   },
   "lang": {
     "label": "Langue",
@@ -62,8 +64,8 @@
     "goThere": "Y aller"
   },
   "source": {
-    "curated": "Vérifié par l'équipe",
-    "curatedTip": "Écrit et relu par l'équipe de Wondarta.",
+    "curated": "Vérifié",
+    "curatedTip": "Écrit pour Wondarta et vérifié avec des sources fiables.",
     "aiGrounded": "IA, d'après une source",
     "aiGroundedTip": "Écrit par une IA uniquement à partir de la source indiquée. Vérifié automatiquement, mais pas relu par une personne.",
     "aiGenerated": "Discussion IA",
@@ -324,7 +326,7 @@
     "lion": "Un lion. Les lions sont les seuls félins à vivre en famille, en troupes.",
     "cub": "Un lionceau. Il restera avec sa mère environ deux ans.",
     "zebra": "Un zèbre. Chaque zèbre a son propre motif de rayures.",
-    "giraffe": "Une girafe — l'animal terrestre le plus grand.",
+    "giraffe": "Une girafe, l'animal terrestre le plus grand.",
     "rhino": "Un rhinocéros. Sa corne est faite de kératine, comme tes ongles.",
     "hippo": "Un hippopotame. Il passe les heures chaudes dans l'eau.",
     "fox": "Un renard. Les renards chassent en écoutant les tout petits bruits.",
@@ -416,7 +418,7 @@
   },
   "wonder": {
     "followMe": "Suis-moi ! Allons le voir en 3D !",
-    "introWiki": "Ooh, {{topic}} ! Suis-moi, je t’ai construit un petit monde là-dessus !",
+    "introWiki": "Ooh, quelle super question ! Suis-moi, je t’ai construit un petit monde là-dessus !",
     "follow": "Suis-moi !",
     "go": "C’est parti !",
     "end": "Waouh, on a réussi ! Tu as appris quelque chose de génial aujourd’hui.",
@@ -424,6 +426,8 @@
     "videoCredit": "Vidéo de Wikimedia Commons :",
     "fromWiki": "D’après Wikipédia :",
     "checked": "Vérifié avec :",
-    "askAgain": "Pose-moi une autre question"
+    "askAgain": "Pose-moi une autre question",
+    "step": "Étape {{n}}",
+    "doneTitle": "Bravo, tu as réussi !"
   }
 }

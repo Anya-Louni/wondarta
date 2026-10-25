@@ -101,7 +101,9 @@ export default function App() {
   const recordVisit = useApp((s) => s.recordVisit);
   const dpr = useQuality((s) => s.dpr);
 
-  useEffect(() => recordVisit(), [recordVisit]);
+  useEffect(() => {
+    recordVisit();
+  }, [recordVisit]);
   // Don't let a walk-in hotspot trigger while the kid is typing a question.
   useEffect(() => {
     player.frozen = askOpen;

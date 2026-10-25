@@ -13,6 +13,7 @@ import {
   Group,
   Mesh,
   MeshStandardMaterial,
+  type PerspectiveCamera,
 } from 'three';
 import { create } from 'zustand';
 import { Model, isToy, type ModelId } from '../../models';
@@ -43,9 +44,20 @@ const CAM = {
   side: { position: [0, 0, 17] as V3, fov: 42, look: [0, 0, 0] as V3 },
 };
 
-function Look({ at }: { at: V3 }) {
-  const camera = useThree((s) => s.camera);
-  useEffect(() => camera.lookAt(...at), [camera, at]);
+/**
+ * Aims the camera, and keeps the whole board in view sideways whatever the shape
+ * of the screen: on a tall phone the board area is squarer, so the camera opens up
+ * vertically instead of cutting off the sides.
+ */
+function Look({ at, fov }: { at: V3; fov: number }) {
+  const camera = useThree((s) => s.camera) as PerspectiveCamera;
+  const { width, height } = useThree((s) => s.size);
+  useEffect(() => {
+    const wide = Math.tan((fov * Math.PI) / 360) * (W / H);
+    camera.fov = (Math.atan(wide / (width / height || W / H)) * 360) / Math.PI;
+    camera.updateProjectionMatrix();
+    camera.lookAt(...at);
+  }, [camera, at, fov, width, height]);
   return null;
 }
 
@@ -73,7 +85,7 @@ export function Board3D({ view = 'top', className = '', onPoint, onDown, onUp, s
   return (
     <div className={`arcade-board three ${className}`} onPointerUp={onUp} onPointerLeave={onUp} onPointerCancel={onUp}>
       <Canvas shadows={shadows ? 'percentage' : false} dpr={[1, 1.75]} camera={{ position: cam.position, fov: cam.fov }} gl={{ antialias: true, alpha: true }}>
-        <Look at={cam.look} />
+        <Look at={cam.look} fov={cam.fov} />
         <hemisphereLight args={['#f2f9ff', '#8a9a6a', 1.05]} />
         <directionalLight
           position={view === 'top' ? [-9, 11, -4] : [5, 12, 9]}
@@ -256,8 +268,8 @@ export function Floor({ color, roughness = 0.9 }: { color: string; roughness?: n
 /** A strip of ground along the bottom of a side view. */
 export function GroundStrip({ y = -6, color = '#c9a94f', depth = 8 }: { y?: number; color?: string; depth?: number }) {
   return (
-    <mesh position={[0, y - 0.5, 0]} userData={{ ground: true }} receiveShadow>
-      <boxGeometry args={[40, 1, depth]} />
+    <mesh position={[0, y - 6, 0]} userData={{ ground: true }} receiveShadow>
+      <boxGeometry args={[40, 12, depth]} />
       <meshStandardMaterial color={color} roughness={1} />
     </mesh>
   );

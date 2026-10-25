@@ -12,7 +12,7 @@ type Card = { key: string; pairId: string; kind: 'picture' | 'word' };
 /**
  * Concentration: turn two cards over and keep them if the picture and the word
  * belong together. A staple of children's encyclopedias, and it rewards the
- * thing we actually want — connecting a name to what it looks like.
+ * thing we actually want, connecting a name to what it looks like.
  */
 export function MemoryPairs({ puzzle, lang, seed, onSolved, onWrong, photos }: PuzzleProps<MemoryPairsPuzzle>) {
   const { t } = useTranslation();

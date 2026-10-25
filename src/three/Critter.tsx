@@ -12,7 +12,7 @@ import { useQuality } from './quality';
  * A living animal: it breathes on the spot, turns its head as you walk past,
  * and does something when you tap it.
  *
- * Every motion is one group transform per frame — no skeletons, no clips — so
+ * Every motion is one group transform per frame, no skeletons, no clips, so
  * a meadow full of animals costs the same as a meadow full of statues.
  */
 
@@ -88,7 +88,7 @@ export function Critter({
     let turn = rotationY;
     switch (move) {
       case 'graze':
-        // head down, up, look around — the slow rhythm of an animal feeding
+        // head down, up, look around, the slow rhythm of an animal feeding
         tilt = Math.sin(t * 0.35) * 0.12 - 0.1 + s.notice * 0.12;
         y += Math.sin(t * 1.1) * 0.012 * fit;
         break;

@@ -2,7 +2,9 @@
   "app": {
     "name": "Wondarta",
     "tagline": "Walk through it. Don't click through it.",
-    "glError": "Something went wrong showing the 3D world. Please reload the page."
+    "glError": "Something went wrong showing the 3D world. Please reload the page.",
+    "oops": "Oops! Something got tangled up. Let’s try again.",
+    "reload": "Try again"
   },
   "lang": {
     "label": "Language",
@@ -62,8 +64,8 @@
     "goThere": "Go there"
   },
   "source": {
-    "curated": "Checked by editors",
-    "curatedTip": "Written and reviewed by the Wondarta team.",
+    "curated": "Fact-checked",
+    "curatedTip": "Written for Wondarta and checked against trusted sources.",
     "aiGrounded": "AI, from a source",
     "aiGroundedTip": "Written by AI using only the source shown. It was checked, but it was not reviewed by a person.",
     "aiGenerated": "AI chat",
@@ -324,7 +326,7 @@
     "lion": "A lion. Lions are the only cats that live in families, called prides.",
     "cub": "A lion cub. It will stay with its mother for about two years.",
     "zebra": "A zebra. Every zebra has its own pattern of stripes.",
-    "giraffe": "A giraffe — the tallest animal on land.",
+    "giraffe": "A giraffe, the tallest animal on land.",
     "rhino": "A rhino. That horn is made of keratin, like your fingernails.",
     "hippo": "A hippo. They spend the hot day in the water.",
     "fox": "A fox. Foxes hunt by listening for tiny sounds.",
@@ -416,7 +418,7 @@
   },
   "wonder": {
     "followMe": "Follow me! Let's go see it in 3D!",
-    "introWiki": "Ooh, {{topic}}! Follow me, I built a little world about it!",
+    "introWiki": "Ooh, what a great question! Follow me, I built a little world about it!",
     "follow": "Follow me!",
     "go": "Let's go!",
     "end": "Wow, we did it! You learned something amazing today.",
@@ -424,6 +426,8 @@
     "videoCredit": "Video from Wikimedia Commons:",
     "fromWiki": "From Wikipedia:",
     "checked": "Checked with:",
-    "askAgain": "Ask me something else"
+    "askAgain": "Ask me something else",
+    "step": "Step {{n}}",
+    "doneTitle": "You did it!"
   }
 }

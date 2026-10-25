@@ -29,11 +29,10 @@ export function WonderTour() {
   const points = useMemo(() => stopPoints(visit), [visit]);
   const stops = useMemo(() => {
     if (built) return built.stops.map((s) => ({ title: tx(s.title, lang), text: tx(s.text, lang) }));
-    if (visit?.kind === 'wiki')
-      return visit.parts.map((text, k) => ({ title: `${visit.title} · ${k + 1}`, text }));
+    if (visit?.kind === 'wiki') return visit.parts.map((text, k) => ({ title: t('wonder.step', { n: k + 1 }), text }));
     return [];
-  }, [built, visit, lang]);
-  const intro = built ? tx(built.intro, lang) : t('wonder.introWiki', { topic: visit?.kind === 'wiki' ? visit.title : '' });
+  }, [built, visit, lang, t]);
+  const intro = built ? tx(built.intro, lang) : t('wonder.introWiki');
   const atEnd = i >= stops.length;
 
   // look for a real video while the tour runs
@@ -69,12 +68,12 @@ export function WonderTour() {
   };
 
   return (
-    <section className="slab wonder-tour" role="dialog" aria-label={built ? tx(built.title, lang) : visit.kind === 'wiki' ? visit.title : ''}>
+    <section className="slab wonder-tour" role="dialog" aria-label={built ? tx(built.title, lang) : visit.kind === 'wiki' ? (visit.question ?? visit.title) : ''}>
       <div className="wonder-head">
         <WondooAvatar />
         <div>
-          <div className="who">{built ? tx(built.title, lang) : visit.kind === 'wiki' ? visit.title : ''}</div>
-          <strong>{i < 0 ? t('wonder.follow') : atEnd ? t('wonder.endTitle') : stops[i].title}</strong>
+          <div className="who">{built ? tx(built.title, lang) : visit.kind === 'wiki' ? (visit.question ?? visit.title) : ''}</div>
+          <strong>{i < 0 ? t('wonder.follow') : atEnd ? t(video ? 'wonder.endTitle' : 'wonder.doneTitle') : stops[i].title}</strong>
         </div>
         <span className="muted wonder-count" dir="ltr">
           {Math.min(Math.max(i + 1, 0), stops.length)} / {stops.length}
@@ -102,7 +101,7 @@ export function WonderTour() {
             <p className="muted" style={{ fontSize: 12 }}>
               {t('wonder.fromWiki')}{' '}
               <a href={visit.url} target="_blank" rel="noreferrer noopener">
-                Wikipedia
+                {visit.title}
               </a>
             </p>
           )}

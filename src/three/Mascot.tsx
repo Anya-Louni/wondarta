@@ -1,7 +1,7 @@
 import { useEffect, useRef } from 'react';
 import { useFrame } from '@react-three/fiber';
 import { Html } from '@react-three/drei';
-import { CatmullRomCurve3, DoubleSide, Group, MeshBasicMaterial, TubeGeometry, Vector3 } from 'three';
+import { CatmullRomCurve3, DoubleSide, Group, MeshBasicMaterial, TubeGeometry, Vector3, type Camera, type Object3D } from 'three';
 import { useApp } from '../state/store';
 import { mascotBus, player, type MascotReaction } from './playerState';
 import { Glow } from './Environment';
@@ -26,6 +26,16 @@ interface Props {
   onPoke?: () => void;
   showSpeech?: boolean;
   name?: string;
+}
+
+/** Where the speech bubble goes: above Wondoo, but never past the screen edges or under the top bar. */
+const at = new Vector3();
+function onScreen(el: Object3D, camera: Camera, size: { width: number; height: number }) {
+  at.setFromMatrixPosition(el.matrixWorld).project(camera);
+  const x = ((at.x + 1) / 2) * size.width;
+  const y = ((1 - at.y) / 2) * size.height;
+  const half = Math.min(125, size.width / 2 - 8);
+  return [Math.min(Math.max(x, half + 8), size.width - half - 8), Math.min(Math.max(y, 90), size.height - 60)];
 }
 
 /**
@@ -92,7 +102,7 @@ export function Mascot({ mode, home = [0, 1.2, 0], chase, sleeping: sleepProp, o
         body.current.position.y += Math.abs(Math.sin(k * 10)) * 0.35 * Math.max(0, 1 - k);
         body.current.rotation.y = k * Math.PI * 2 * Math.max(0, 1 - k / 1.2);
       } else if (rc.r === 'squish') {
-        const s = Math.sin(Math.min(k, 0.6) * Math.PI / 0.6) * 0.3;
+        const s = Math.sin((Math.min(k, 0.6) * Math.PI) / 0.6) * 0.3;
         sy = 1 - s;
         sx = 1 + s * 0.6;
       } else if (rc.r === 'sad') {
@@ -274,13 +284,15 @@ export function Mascot({ mode, home = [0, 1.2, 0], chase, sleeping: sleepProp, o
 
       {sleeping ? (
         <Html position={[0.35, 0.9, 0]} center zIndexRange={[12, 0]}>
-          <div className="zzz" aria-hidden>z Z z</div>
+          <div className="zzz" aria-hidden>
+            z Z z
+          </div>
         </Html>
       ) : (
         showSpeech &&
         !panelOpen &&
         speech && (
-          <Html key={speech.key} position={[0, 1.2, 0]} center distanceFactor={9} zIndexRange={[12, 0]}>
+          <Html key={speech.key} position={[0, 1.2, 0]} center calculatePosition={onScreen} zIndexRange={[12, 0]}>
             <div className="bubble3d">{speech.text}</div>
           </Html>
         )

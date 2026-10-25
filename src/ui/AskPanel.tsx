@@ -4,7 +4,7 @@ import { ArrowRight, Search, X, Sparkles } from 'lucide-react';
 import { askAnything, type GroundedResult } from '../llm/grounded';
 import { llmAwake, useApp, type WonderVisit } from '../state/store';
 import { matchWonder } from '../content/wonders';
-import { retrieve } from '../wiki/wikipedia';
+import { retrieve, topicOf } from '../wiki/wikipedia';
 import { looksUnsafe } from '../llm/guards';
 import { sfx } from '../audio/sfx';
 import { mascotBus } from '../three/playerState';
@@ -18,17 +18,12 @@ import { SleepLine } from './Hud';
  * retrieved text. Limited per free session (UI/business logic only;
  * `plan: 'unlimited'` in the store is the hook for a future tier).
  */
-/** "What is a rainbow?" -> "rainbow": search Wikipedia for the thing, not the question. */
-const QUESTION_WORDS = /^(what|who|why|how|where|when|which|is|are|was|do|does|did|can|could|a|an|the|of|tell|me|about|work|works|made|make|qu|est|ce|que|qui|quoi|comment|pourquoi|où|quand|quel|quelle|quels|quelles|un|une|le|la|les|l|des|du|de|d|c|fonctionne|marche|ما|ماذا|من|لماذا|كيف|أين|متى|هو|هي|هل|عن|تعمل|يعمل)$/i;
-function topicOf(question: string): string {
-  const words = question.replace(/[?؟!.,«»"“”]/g, ' ').split(/[\s']+/).filter(Boolean);
-  const kept = words.filter((w) => !QUESTION_WORDS.test(w));
-  return (kept.length ? kept : words).join(' ');
-}
-
 /** Split text into sentences for the tour's pages. */
 function sentences(text: string): string[] {
-  return (text.match(/[^.!?؟]+[.!?؟]+/g) ?? [text]).map((x) => x.trim()).filter((x) => x.length > 20).map((x) => (x.length > 280 ? x.slice(0, 277) + '…' : x));
+  return (text.match(/[^.!?؟]+[.!?؟]+/g) ?? [text])
+    .map((x) => x.trim())
+    .filter((x) => x.length > 20)
+    .map((x) => (x.length > 280 ? x.slice(0, 277) + '…' : x));
 }
 
 export function AskPanel() {
@@ -51,7 +46,10 @@ export function AskPanel() {
   const submit = async (text = q) => {
     const query = text.trim();
     if (!query || busy) return;
-    if (looksUnsafe(query)) return setRes({ status: 'unsuitable' });
+    if (looksUnsafe(query)) {
+      setOffer(null);
+      return setRes({ status: 'unsuitable' });
+    }
     sfx('click');
     setBusy(true);
     setRes(null);
@@ -67,18 +65,23 @@ export function AskPanel() {
     setBusy(false);
     say(null);
     setRes(r);
-    const kid = r && r !== 'limit' && r.status === 'ok' ? r.text : null;
-    const next: WonderVisit | null = built
-      ? { kind: 'built', id: built.id }
+    const ok = r && r !== 'limit' && r.status === 'ok' ? r : null;
+    const kid = ok ? ok.text : null;
+    // the world shows the article the answer came from, when there is one
+    const src = ok?.sourceMeta?.provider === 'wikipedia' ? ok.sourceMeta : null;
+    const shown = src
+      ? { title: src.title ?? '', url: src.url ?? '', en: src.wikiLang === 'en' || src.wikiLang === 'simple' }
       : page
-        ? {
-            kind: 'wiki',
-            title: page.title,
-            url: page.url,
-            parts: sentences(kid ?? page.text).slice(0, 3),
-            videoTitle: page.edition === 'en' || page.edition === 'simple' ? page.title : undefined,
-          }
+        ? { title: page.title, url: page.url, en: page.edition === 'en' || page.edition === 'simple' }
         : null;
+    const blocked = r && r !== 'limit' && r.status === 'unsuitable';
+    const next: WonderVisit | null = blocked
+      ? null
+      : built
+        ? { kind: 'built', id: built.id }
+        : shown
+          ? { kind: 'wiki', title: shown.title, url: shown.url, parts: sentences(kid ?? page?.text ?? '').slice(0, 3), videoTitle: shown.en ? shown.title : undefined, question: query }
+          : null;
     setOffer(next);
     if (kid) {
       sfx('correct');
@@ -102,7 +105,7 @@ export function AskPanel() {
         </IconButton>
       </header>
       <div className="slab-body">
-        {(
+        {
           <form
             className="field"
             onSubmit={(e) => {
@@ -124,12 +127,18 @@ export function AskPanel() {
               <ArrowRight className="i flip" />
             </IconButton>
           </form>
+        }
+        {busy && (
+          <p className="muted" style={{ marginBlockEnd: 0 }}>
+            {t('ask.thinking')}
+          </p>
         )}
-        {busy && <p className="muted" style={{ marginBlockEnd: 0 }}>{t('ask.thinking')}</p>}
         {awake && (res === 'limit' || (asksLeft <= 0 && !res)) && (
           <div className="answer-box">
             {t('ask.limit')}
-            <div className="muted" style={{ marginBlockStart: 4 }}>{t('ask.upgradeNote')}</div>
+            <div className="muted" style={{ marginBlockStart: 4 }}>
+              {t('ask.upgradeNote')}
+            </div>
           </div>
         )}
         {res && res !== 'limit' && (

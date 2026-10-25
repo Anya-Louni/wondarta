@@ -1,5 +1,5 @@
 /* ==========================================================================
-   Wondarta — "Aero Solid" design system
+   Wondarta: "Aero Solid" design system
    Frutiger Aero, but structured: glass slabs with a glossy title bar, crisp
    hairlines, small pressable controls. Logical properties only (RTL-safe).
    ========================================================================== */
@@ -869,8 +869,9 @@ html[lang='ar'] .play-kind { letter-spacing: 0; }
 .arcade { display: grid; gap: 10px; justify-items: center; inline-size: 100%; }
 .arcade-score { margin: 0; font-weight: 800; font-size: var(--fs-lg, 20px); color: var(--sky-700); }
 .arcade-board { inline-size: min(100%, 92vh); block-size: auto; max-block-size: 56vh; border-radius: var(--r-md); box-shadow: 0 0 0 1px rgba(0, 60, 120, 0.15), 0 8px 24px rgba(0, 60, 120, 0.12); touch-action: none; cursor: pointer; user-select: none; }
-.arcade-board.three { position: relative; aspect-ratio: 5 / 3; inline-size: min(100%, 93vh); max-block-size: none; overflow: hidden; }
+.arcade-board.three { direction: ltr; position: relative; aspect-ratio: 5 / 3; inline-size: min(100%, 93vh); max-block-size: none; overflow: hidden; }
 .arcade-board.three canvas { display: block; }
+@media (max-width: 600px) and (orientation: portrait) { .arcade-board.three { aspect-ratio: 1; } }
 .arcade-board.sky { background: linear-gradient(#9fd4f7, #dff2ff 70%); }
 .arcade-board.night { background: linear-gradient(#141d3a, #33457a); transition: background 0.6s; }
 .arcade-board.day { background: linear-gradient(#8fcdf5, #e6f6ff); transition: background 0.6s; }
@@ -878,8 +879,10 @@ html[lang='ar'] .play-kind { letter-spacing: 0; }
 .arcade-board.space { background: radial-gradient(circle at 70% 20%, #1c2a52, #070b18 70%); }
 .arcade-speed { margin: 0; font-weight: 800; color: #2d8a3e; }
 .arcade-speed.fast { color: #d23f2a; }
-.arcade-word { margin: 0; display: flex; gap: 10px; font: 800 26px/1 var(--font, inherit); letter-spacing: 0.04em; color: var(--ink-300, #8a97a8); }
-.arcade-word .got { color: #2f7fd0; }
+.arcade-word { margin: 0; display: flex; gap: 10px; font: 800 30px/1 var(--font, inherit); letter-spacing: 0.04em; color: #c3ccd8; }
+.arcade-word span { padding: 2px 6px; border-block-end: 3px solid #c3ccd8; }
+.arcade-word .got { color: #2f7fd0; border-color: #2f7fd0; }
+.arcade-word .next { color: #12283d; border-color: #f5b700; }
 .arcade-letter { font: 900 26px/1 var(--font, inherit); color: #fff; text-shadow: 0 1px 2px rgba(0,0,0,0.45); cursor: pointer; user-select: none; }
 .arcade-tag.bin { font-size: 12px; background: rgba(255,255,255,0.85); padding: 3px 7px; border-radius: 999px; }
 .arcade-tag { font: 800 15px/1 var(--font, inherit); color: #5a3a12; pointer-events: none; user-select: none; white-space: nowrap; }
@@ -1056,7 +1059,7 @@ html[dir='rtl'] .sheet.only { animation-name: sheet-away; }
 @keyframes mic-pulse { to { box-shadow: 0 0 0 8px rgba(229, 83, 61, 0.25); } }
 .spin { animation: spin 0.9s linear infinite; }
 @keyframes spin { to { transform: rotate(360deg); } }
-.voice-warm { position: fixed; z-index: 41; inset-block-end: 18px; inset-inline-start: 18px; padding: 8px 14px; font-size: var(--fs-sm); font-weight: 700; display: flex; gap: 8px; align-items: center; }
+.voice-warm { position: fixed; z-index: 41; inset-block-start: 76px; inset-inline: 0; margin-inline: auto; inline-size: fit-content; padding: 8px 14px; font-size: var(--fs-sm); font-weight: 700; display: flex; gap: 8px; align-items: center; }
 .voice-warm progress { inline-size: 90px; }
 
 /* ---------- wonder worlds ---------- */
@@ -1081,3 +1084,5 @@ html[dir='rtl'] .wonder-tour { translate: 50% 0; }
 .echo { display: grid; grid-template-columns: repeat(2, 110px); gap: 12px; }
 .echo-pad { inline-size: 110px; block-size: 110px; border: 0; border-radius: 22px; cursor: pointer; opacity: 0.55; box-shadow: inset 0 -6px 0 rgba(0,0,0,0.18); transition: opacity 0.1s, transform 0.1s; }
 .echo-pad.lit { opacity: 1; transform: scale(1.05); box-shadow: 0 0 24px currentColor, inset 0 -6px 0 rgba(0,0,0,0.18); }
+
+.oops { position: fixed; inset: 0; margin: auto; inline-size: min(360px, calc(100% - 32px)); block-size: fit-content; padding: 22px; text-align: center; display: grid; gap: 14px; font-weight: 600; }

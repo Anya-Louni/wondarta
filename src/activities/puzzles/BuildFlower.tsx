@@ -8,7 +8,7 @@ import { seeded, type PuzzleProps } from './types';
 /**
  * Build a flower. Parts go on in the order a real plant has them: roots,
  * stem and leaves from the ground up, then the flower itself from the outside
- * in (sepals, petals, stamens, pistil — the real order of a flower's rings).
+ * in (sepals, petals, stamens, pistil, the real order of a flower's rings).
  * Each part pops into the drawing with its job underneath.
  */
 const ART: Record<FlowerPartId, ReactNode> = {

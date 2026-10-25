@@ -17,6 +17,18 @@ export interface Retrieved {
   translatedFrom?: 'en' | 'simple';
 }
 
+/** "What is a rainbow?" -> "rainbow": search Wikipedia for the thing, not the question. */
+const QUESTION_WORDS =
+  /^(what|who|why|how|where|when|which|is|are|was|do|does|did|can|could|a|an|the|of|tell|me|about|work|works|made|make|qu|est|ce|que|qui|quoi|comment|pourquoi|où|quand|quel|quelle|quels|quelles|un|une|le|la|les|l|des|du|de|d|c|fonctionne|marche|ما|ماذا|من|لماذا|كيف|أين|متى|هو|هي|هل|عن|تعمل|يعمل)$/i;
+export function topicOf(question: string): string {
+  const words = question
+    .replace(/[?؟!.,«»"“”]/g, ' ')
+    .split(/[\s']+/)
+    .filter(Boolean);
+  const kept = words.filter((w) => !QUESTION_WORDS.test(w));
+  return (kept.length ? kept : words).join(' ');
+}
+
 const host = (e: Edition) => `https://${e}.wikipedia.org`;
 
 async function getJson<T>(url: string): Promise<T | null> {
@@ -37,21 +49,21 @@ async function search(e: Edition, q: string): Promise<string[]> {
 
 interface PageResp {
   query?: {
-    pages?: Record<
-      string,
-      { title: string; extract?: string; fullurl?: string; pageprops?: Record<string, string>; missing?: string }
-    >;
+    pages?: Record<string, { title: string; extract?: string; fullurl?: string; pageprops?: Record<string, string>; missing?: string }>;
   };
 }
 
-async function intro(e: Edition, title: string): Promise<Retrieved | null> {
-  const u = `${host(e)}/w/api.php?action=query&prop=extracts|pageprops|info&inprop=url&exintro=1&explaintext=1&redirects=1&titles=${encodeURIComponent(title)}&format=json&origin=*`;
+async function intro(e: Edition, title: string, full = false): Promise<Retrieved | null> {
+  const u = `${host(e)}/w/api.php?action=query&prop=extracts|pageprops|info&inprop=url${full ? '' : '&exintro=1'}&explaintext=1&redirects=1&titles=${encodeURIComponent(title)}&format=json&origin=*`;
   const d = await getJson<PageResp>(u);
   const page = d?.query?.pages && Object.values(d.query.pages)[0];
   if (!page || page.missing !== undefined || !page.extract) return null;
   if (page.pageprops && 'disambiguation' in page.pageprops) return null;
   // Keep the grounding context small: free-tier friendly and easy to verify against.
-  const text = page.extract.replace(/\s+/g, ' ').trim().slice(0, 1800);
+  const text = page.extract
+    .replace(/\s+/g, ' ')
+    .trim()
+    .slice(0, full ? 6000 : 1800);
   return { edition: e, title: page.title, text, url: page.fullurl ?? `${host(e)}/wiki/${encodeURIComponent(page.title)}` };
 }
 
@@ -82,6 +94,29 @@ async function tryEdition(e: Edition, query: string, matchLang: Lang): Promise<R
   return null;
 }
 
+/** The same article with more than its first paragraph, for when the intro does not answer the question. */
+export function retrieveMore(r: Retrieved): Promise<Retrieved | null> {
+  return intro(r.edition, r.title, true).then((m) => (m ? { ...m, translatedFrom: r.translatedFrom } : null));
+}
+
+/**
+ * An English article title (for example one the AI named), read in the kid's language:
+ * Wikipedia's own language link gives the same article in French or Arabic. Without
+ * one, the English text is used and flagged for translation.
+ */
+export async function retrieveTitle(enTitle: string, lang: Lang): Promise<Retrieved | null> {
+  const t = enTitle.trim().charAt(0).toUpperCase() + enTitle.trim().slice(1);
+  if (lang === 'en') return (await intro('simple', t)) ?? (await intro('en', t));
+  const d = await getJson<{ query?: { pages?: Record<string, { langlinks?: { '*': string }[] }> } }>(
+    `${host('en')}/w/api.php?action=query&prop=langlinks&lllang=${lang}&redirects=1&titles=${encodeURIComponent(t)}&format=json&origin=*`,
+  );
+  const local = d?.query?.pages && Object.values(d.query.pages)[0]?.langlinks?.[0]?.['*'];
+  const r = local ? await intro(lang, local) : null;
+  if (r) return r;
+  const en = await intro('en', t);
+  return en ? { ...en, translatedFrom: 'en' } : null;
+}
+
 /**
  * Query the matching-language Wikipedia first. English prefers Simple English
  * (kid reading level). French/Arabic fall back to Simple English / English only
@@ -106,9 +141,9 @@ export function wikiThumb(title: string) {
   if (!thumbCache.has(title)) {
     thumbCache.set(
       title,
-      getJson<{ thumbnail?: { source: string }; content_urls?: { desktop?: { page: string } } }>(
-        `https://en.wikipedia.org/api/rest_v1/page/summary/${encodeURIComponent(title)}`,
-      ).then((d) => (d?.thumbnail ? { src: d.thumbnail.source, page: d.content_urls?.desktop?.page ?? '' } : null)),
+      getJson<{ thumbnail?: { source: string }; content_urls?: { desktop?: { page: string } } }>(`https://en.wikipedia.org/api/rest_v1/page/summary/${encodeURIComponent(title)}`).then((d) =>
+        d?.thumbnail ? { src: d.thumbnail.source, page: d.content_urls?.desktop?.page ?? '' } : null,
+      ),
     );
   }
   return thumbCache.get(title)!;
@@ -122,14 +157,10 @@ interface VideoInfoResp {
 
 /** First video on an English Wikipedia article, resolved to a playable Commons URL. */
 export async function wikiVideo(title: string): Promise<{ src: string; file: string; page: string } | null> {
-  const list = await getJson<{ items?: { title: string; type: string }[] }>(
-    `https://en.wikipedia.org/api/rest_v1/page/media-list/${encodeURIComponent(title)}`,
-  );
+  const list = await getJson<{ items?: { title: string; type: string }[] }>(`https://en.wikipedia.org/api/rest_v1/page/media-list/${encodeURIComponent(title)}`);
   const file = list?.items?.find((i) => i.type === 'video')?.title;
   if (!file) return null;
-  const info = await getJson<VideoInfoResp>(
-    `https://commons.wikimedia.org/w/api.php?action=query&titles=${encodeURIComponent(file)}&prop=videoinfo&viprop=url|derivatives&format=json&origin=*`,
-  );
+  const info = await getJson<VideoInfoResp>(`https://commons.wikimedia.org/w/api.php?action=query&titles=${encodeURIComponent(file)}&prop=videoinfo&viprop=url|derivatives&format=json&origin=*`);
   const vi = info?.query?.pages && Object.values(info.query.pages)[0]?.videoinfo?.[0];
   if (!vi) return null;
   const small = vi.derivatives?.find((d) => /webm/.test(d.type) && /480|360/.test(d.src));
@@ -140,11 +171,16 @@ export async function wikiVideo(title: string): Promise<{ src: string; file: str
 export async function commonsVideo(name: string, isArticle = false): Promise<{ src: string; file: string; page: string } | null> {
   if (isArticle) return wikiVideo(name);
   const file = name.startsWith('File:') ? name : `File:${name}`;
-  const info = await getJson<VideoInfoResp>(
-    `https://commons.wikimedia.org/w/api.php?action=query&titles=${encodeURIComponent(file)}&prop=videoinfo&viprop=url|derivatives&format=json&origin=*`,
-  );
+  const info = await getJson<VideoInfoResp>(`https://commons.wikimedia.org/w/api.php?action=query&titles=${encodeURIComponent(file)}&prop=videoinfo&viprop=url|derivatives&format=json&origin=*`);
   const vi = info?.query?.pages && Object.values(info.query.pages)[0]?.videoinfo?.[0];
   if (!vi) return null;
   const small = vi.derivatives?.find((d) => /webm/.test(d.type) && /480|360/.test(d.src));
-  return { src: small?.src ?? vi.url, file: file.replace(/^File:/, '').replace(/_/g, ' '), page: vi.descriptionurl };
+  return {
+    src: small?.src ?? vi.url,
+    file: file
+      .replace(/^File:/, '')
+      .replace(/_/g, ' ')
+      .replace(/\.(webm|ogv|mp4)$/i, ''),
+    page: vi.descriptionurl,
+  };
 }

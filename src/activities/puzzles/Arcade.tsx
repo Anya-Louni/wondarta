@@ -2164,8 +2164,8 @@ function LetterMoles({ lang, onSolved, onWrong }: P) {
     <div className="arcade">
       <p className="arcade-word" dir={lang === 'ar' ? 'rtl' : 'ltr'}>
         {[...word].map((c, i) => (
-          <span key={i} className={s.won || i < s.pos ? 'got' : ''}>
-            {s.won || i < s.pos ? c : '_'}
+          <span key={i} className={s.won || i < s.pos ? 'got' : i === s.pos ? 'next' : ''}>
+            {c}
           </span>
         ))}
       </p>
@@ -2195,7 +2195,7 @@ function LetterMoles({ lang, onSolved, onWrong }: P) {
                     <meshStandardMaterial color={LETTER_COLOURS[mo.id % LETTER_COLOURS.length]} roughness={0.45} />
                   </mesh>
                   {mo.up > 0.55 && (
-                    <Html center position={[0, 0.82, 0.3]} zIndexRange={[5, 0]}>
+                    <Html center position={[0, 0.81, 0]} zIndexRange={[5, 0]}>
                       <span className="arcade-letter" onPointerDown={() => whack(i)}>
                         {mo.ch}
                       </span>

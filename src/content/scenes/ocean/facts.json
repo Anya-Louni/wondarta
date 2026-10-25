@@ -27,8 +27,8 @@
     {
       "id": "f-whale-longest",
       "text": {
-        "en": "A blue whale can grow about 30 metres long — about as long as three school buses.",
-        "fr": "La baleine bleue peut atteindre environ 30 mètres de long — à peu près comme trois bus scolaires.",
+        "en": "A blue whale can grow about 30 metres long, about as long as three school buses.",
+        "fr": "La baleine bleue peut atteindre environ 30 mètres de long, à peu près comme trois bus scolaires.",
         "ar": "يمكن أن يبلغ طول الحوت الأزرق نحو ٣٠ مترًا، أي بطول ثلاث حافلات مدرسية تقريبًا."
       },
       "sources": [
@@ -66,8 +66,8 @@
     {
       "id": "f-whale-heart",
       "text": {
-        "en": "The heaviest blue whale heart ever weighed was about 200 kilograms — heavier than two grown-ups.",
-        "fr": "Le cœur de baleine bleue le plus lourd jamais pesé faisait environ 200 kilos — plus que deux adultes.",
+        "en": "The heaviest blue whale heart ever weighed was about 200 kilograms, heavier than two grown-ups.",
+        "fr": "Le cœur de baleine bleue le plus lourd jamais pesé faisait environ 200 kilos, plus que deux adultes.",
         "ar": "أثقل قلب حوت أزرق جرى وزنه بلغ نحو ٢٠٠ كيلوغرام، أي أثقل من شخصين بالغين."
       },
       "sources": [
@@ -605,8 +605,8 @@
         "ar": "الحوت الأزرق أكبر حيوان عاش على الإطلاق، أكبر من أي ديناصور. طوله نحو ثلاث حافلات مدرسية، ومع ذلك يأكل من أصغر حيوانات البحر: الكريل!"
       },
       "learnMore": {
-        "en": "The heaviest blue whale heart ever weighed was about 200 kilograms — heavier than two grown-ups.",
-        "fr": "Le cœur de baleine bleue le plus lourd jamais pesé faisait environ 200 kilos — plus que deux adultes.",
+        "en": "The heaviest blue whale heart ever weighed was about 200 kilograms, heavier than two grown-ups.",
+        "fr": "Le cœur de baleine bleue le plus lourd jamais pesé faisait environ 200 kilos, plus que deux adultes.",
         "ar": "أثقل قلب حوت أزرق جرى وزنه بلغ نحو ٢٠٠ كيلوغرام، أي أثقل من شخصين بالغين."
       },
       "funFact": {

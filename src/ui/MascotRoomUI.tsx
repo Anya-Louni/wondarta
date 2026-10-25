@@ -40,7 +40,9 @@ function Chat() {
   const history = useRef<ChatMsg[]>([]);
   const end = useRef<HTMLDivElement>(null);
 
-  useEffect(() => end.current?.scrollIntoView({ behavior: 'smooth', block: 'nearest' }), [log]);
+  useEffect(() => {
+    end.current?.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+  }, [log]);
 
   const nimboSays = async (childText: string, gradeNote?: string, prefix?: string) => {
     setBusy(true);

@@ -60,7 +60,9 @@ export function groundedSystem(lang: Lang, translating: boolean) {
     'If the SOURCE TEXT does not answer the question, reply exactly: NOT_FOUND',
     'If the topic is not suitable for young children, reply exactly: UNSUITABLE',
     translating ? 'The SOURCE TEXT is in English. Translate faithfully into the answer language; do not add or change facts.' : '',
-    'Answer in at most 3 short, simple sentences. No markdown, no lists.',
+    'Explain it the way a great teacher talks to a curious 8-year-old: everyday words, short sentences, the real idea kept intact.',
+    'Never use a word an 8-year-old would not know (like "wavelength", "efficiently", "atmosphere" or "particulate"). Say it with everyday words instead ("the air", "bounces around", "tiny bits"). Keep the real cause or reason from the SOURCE TEXT.',
+    'Answer in at most 3 short sentences. No markdown, no lists, no emojis.',
   ]
     .filter(Boolean)
     .join('\n');

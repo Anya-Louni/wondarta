@@ -10,8 +10,8 @@ import { useQuality } from '../three/quality';
 /**
  * Decorations that make the Great Hall feel lived-in: a planted ring around
  * the colonnade, butterflies over the flower beds, planters and fish in the
- * fountain. Everything here is ornament — nothing a kid can
- * visit or read lives in this file — so the low tier trims it freely.
+ * fountain. Everything here is ornament, nothing a kid can
+ * visit or read lives in this file, so the low tier trims it freely.
  */
 
 /** Deterministic 0..1 from an index; the same hall every visit. */

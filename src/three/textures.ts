@@ -90,7 +90,7 @@ export function groundTexture() {
     const r = (n: number) => Math.random() * n;
     /**
      * Run `draw` at this tile, plus the neighbouring offsets a mark of radius
-     * `reach` could bleed into — so marks continue across the seam without
+     * `reach` could bleed into, so marks continue across the seam without
      * paying for nine copies of every single one.
      */
     const wrapped = (x: number, y: number, reach: number, draw: (dx: number, dy: number) => void) => {

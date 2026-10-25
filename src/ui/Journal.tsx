@@ -193,9 +193,6 @@ export function JournalPanel() {
           <button type="button" className="ibtn" aria-label={t('journal.prev')} disabled={at === 0} onClick={() => go(at - 1)}>
             <ChevronLeft className="i flip" />
           </button>
-          <span className="muted">
-            {at + 1} / {last + 1}
-          </span>
           <button type="button" className="ibtn" aria-label={t('journal.next')} disabled={at === last} onClick={() => go(at + 1)}>
             <ChevronRight className="i flip" />
           </button>

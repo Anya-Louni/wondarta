@@ -415,7 +415,7 @@
     {
       "id": "f-panda-bamboo",
       "text": {
-        "en": "Almost everything a panda eats is bamboo — about 9 to 14 kilograms of it a day.",
+        "en": "Almost everything a panda eats is bamboo, about 9 to 14 kilograms of it a day.",
         "fr": "Presque tout ce que mange un panda est du bambou : environ 9 à 14 kilos par jour.",
         "ar": "كل ما تأكله الباندا تقريبًا هو الخيزران: نحو ٩ إلى ١٤ كيلوغرامًا في اليوم."
       },
@@ -1467,7 +1467,7 @@
         "ar": "لكل حيوان عنوان على كوكبنا. بعضها يعيش في سلسلة جبال واحدة فقط، وبعضها يوجد في كل مكان تقريبًا. هيا نكتشف من يسكن أين!"
       },
       "learnMore": {
-        "en": "Giant pandas live only in the mountains of China, in Sichuan, Shaanxi and Gansu. Almost everything a panda eats is bamboo — about 9 to 14 kilograms of it a day. Red kangaroos live in mainland Australia, mostly in the dry grasslands and deserts. A big male red kangaroo can cover 8 to 9 metres in a single hop.",
+        "en": "Giant pandas live only in the mountains of China, in Sichuan, Shaanxi and Gansu. Almost everything a panda eats is bamboo, about 9 to 14 kilograms of it a day. Red kangaroos live in mainland Australia, mostly in the dry grasslands and deserts. A big male red kangaroo can cover 8 to 9 metres in a single hop.",
         "fr": "Les pandas géants vivent uniquement dans les montagnes de Chine : au Sichuan, au Shaanxi et au Gansu. Presque tout ce que mange un panda est du bambou : environ 9 à 14 kilos par jour. Les kangourous roux vivent sur le continent australien, surtout dans les prairies sèches et les déserts. Un grand kangourou roux mâle peut franchir 8 à 9 mètres en un seul bond.",
         "ar": "تعيش الباندا العملاقة في جبال الصين فقط: في سيتشوان وشنشي وقانسو. كل ما تأكله الباندا تقريبًا هو الخيزران: نحو ٩ إلى ١٤ كيلوغرامًا في اليوم. تعيش الكناغر الحمراء في البرّ الأسترالي، وغالبًا في السهول الجافة والصحاري. يمكن للكنغر الأحمر الكبير أن يقطع من ٨ إلى ٩ أمتار في قفزة واحدة."
       },
@@ -1849,8 +1849,8 @@
           "asia"
         ],
         "where": {
-          "en": "Africa south of the Sahara — and one small group of Asiatic lions in the Gir forest in India.",
-          "fr": "L'Afrique au sud du Sahara — et un petit groupe de lions d'Asie dans la forêt de Gir, en Inde.",
+          "en": "Africa south of the Sahara, and one small group of Asiatic lions in the Gir forest in India.",
+          "fr": "L'Afrique au sud du Sahara, et un petit groupe de lions d'Asie dans la forêt de Gir, en Inde.",
           "ar": "أفريقيا جنوب الصحراء، ومجموعة صغيرة من الأسود الآسيوية في غابة جير بالهند."
         },
         "pins": [

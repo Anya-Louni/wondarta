@@ -57,7 +57,9 @@ export function InfoCard({ hotspotId }: { hotspotId: string }) {
   const [tab, setTab] = useState<"learn" | "where" | "play">("learn");
 
   // get the reading voice ready in the background, so "listen" starts quickly
-  useEffect(() => warmVoice(lang), [lang]);
+  useEffect(() => {
+    warmVoice(lang);
+  }, [lang]);
   useEffect(() => {
     if (!h) return;
     markExplored(h.id);
