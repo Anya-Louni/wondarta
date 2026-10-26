@@ -127,6 +127,19 @@ export function SettingsMenu() {
               <GraphicsSwitch />
             </div>
             <div className="row">
+              <span>{t('premium.title')}</span>
+              <button
+                type="button"
+                className="btn"
+                onClick={() => {
+                  close();
+                  useApp.getState().setPremiumOpen(true);
+                }}
+              >
+                {t('premium.learn')}
+              </button>
+            </div>
+            <div className="row">
               <span>{t('settings.tour')}</span>
               <button
                 type="button"

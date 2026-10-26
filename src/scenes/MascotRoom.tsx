@@ -1,17 +1,17 @@
 import { Suspense, useEffect, useMemo, useRef, useState } from 'react';
 import { useFrame } from '@react-three/fiber';
 import { useTranslation } from 'react-i18next';
-import { Html } from '@react-three/drei';
+import { Html, Line } from '@react-three/drei';
 import { MessageCircle, Moon } from 'lucide-react';
 import { Label3D } from '../three/Label3D';
-import { Color, Mesh, ShaderMaterial, Vector3 } from 'three';
+import { Group, Mesh, ShaderMaterial, Vector3 } from 'three';
 import { useApp } from '../state/store';
 import { useLines } from '../i18n';
 import { sfx } from '../audio/sfx';
 import { Player, circleBounds } from '../three/Player';
 import { Portal } from '../three/Portal';
 import { Mascot } from '../three/Mascot';
-import { Bubbles, Glow, GradientSky, Twinkles } from '../three/Environment';
+import { Glow, GradientSky, Twinkles } from '../three/Environment';
 import { mascotBus, placePlayer, walkTo } from '../three/playerState';
 import { Atmosphere, GroundShadows } from '../three/World';
 import { Pet, type PetId } from '../models/kenney';
@@ -22,30 +22,97 @@ export const roomCtl = { throwReq: false };
 const HOME: [number, number, number] = [0, 1.15, -1.2];
 const NEST: [number, number, number] = [0, 0.95, -2.6];
 
-function Aurora() {
+/** The planetarium dome: twilight blue (never black), slowly turning stars and soft nebulae. */
+function StarDome() {
   const mat = useRef<ShaderMaterial>(null);
-  const uniforms = useMemo(() => ({ t: { value: 0 }, a: { value: new Color('#6fffc8') }, b: { value: new Color('#8f7bff') } }), []);
+  const uniforms = useMemo(() => ({ t: { value: 0 } }), []);
   useFrame((_, dt) => {
     if (mat.current) mat.current.uniforms.t.value += dt;
   });
   return (
-    <mesh position={[0, 2.9, -6.3]}>
-      <planeGeometry args={[6, 2.6]} />
+    <mesh>
+      <sphereGeometry args={[7.6, 64, 32, 0, Math.PI * 2, 0, Math.PI / 2]} />
       <shaderMaterial
         ref={mat}
+        side={1}
         uniforms={uniforms}
-        vertexShader="varying vec2 vUv; void main(){ vUv = uv; gl_Position = projectionMatrix * modelViewMatrix * vec4(position,1.0); }"
-        fragmentShader={`uniform float t; uniform vec3 a; uniform vec3 b; varying vec2 vUv;
+        vertexShader="varying vec3 vDir; void main(){ vDir = normalize(position); gl_Position = projectionMatrix * modelViewMatrix * vec4(position,1.0); }"
+        fragmentShader={`uniform float t; varying vec3 vDir;
+          float hash(vec3 p){ return fract(sin(dot(p, vec3(12.9898, 78.233, 37.719))) * 43758.5453); }
           void main(){
-            vec3 night = mix(vec3(0.03,0.08,0.2), vec3(0.1,0.2,0.4), vUv.y);
-            float band = sin(vUv.x * 6.0 + t * 0.6) * 0.12 + 0.55;
-            float glow = smoothstep(0.25, 0.0, abs(vUv.y - band));
-            vec3 c = night + glow * mix(a, b, vUv.x + sin(t * 0.3) * 0.2);
-            float star = step(0.995, fract(sin(dot(floor(vUv * 90.0), vec2(12.9898, 78.233))) * 43758.5453));
-            gl_FragColor = vec4(c + star * 0.8, 1.0);
+            float e = clamp(vDir.y, 0.0, 1.0);
+            vec3 sky = mix(vec3(0.62, 0.71, 0.96), vec3(0.20, 0.26, 0.55), smoothstep(0.0, 0.85, e));
+            // the sky turns slowly, like a real planetarium projector
+            float a = t * 0.015;
+            vec3 d = vec3(vDir.x * cos(a) - vDir.z * sin(a), vDir.y, vDir.x * sin(a) + vDir.z * cos(a));
+            float h = hash(floor(d * 140.0));
+            float star = step(0.9935, h) * (0.6 + 0.4 * sin(t * 2.0 + h * 50.0)) * smoothstep(0.08, 0.35, e);
+            float big = step(0.9993, hash(floor(d * 60.0))) * smoothstep(0.1, 0.4, e);
+            // soft nebulae in pink and teal
+            float n1 = smoothstep(0.45, 0.0, length(d.xz - vec2(0.35, -0.3))) * smoothstep(0.2, 0.6, e);
+            float n2 = smoothstep(0.4, 0.0, length(d.xz - vec2(-0.4, 0.25))) * smoothstep(0.2, 0.6, e);
+            vec3 c = sky + n1 * vec3(0.35, 0.15, 0.35) + n2 * vec3(0.1, 0.3, 0.32) + vec3(star * 0.9 + big * 1.2);
+            gl_FragColor = vec4(c, 1.0);
           }`}
       />
     </mesh>
+  );
+}
+
+/** A few constellations traced on the dome: dots joined by soft lines (azimuth, elevation). */
+const CONSTELLATIONS: [number, number][][] = [
+  // the Big Dipper
+  [[-2.4, 0.95], [-2.15, 1.0], [-1.9, 1.02], [-1.68, 0.98], [-1.55, 0.8], [-1.25, 0.82], [-1.28, 1.0], [-1.68, 0.98]],
+  // Cassiopeia, the W
+  [[0.6, 0.9], [0.8, 1.05], [1.0, 0.92], [1.2, 1.08], [1.4, 0.94]],
+  // Orion: shoulders and belt
+  [[2.4, 0.55], [2.55, 0.75], [2.7, 0.6], [2.62, 0.68], [2.5, 0.68], [2.38, 0.68], [2.5, 0.85], [2.75, 0.85]],
+];
+function Constellations() {
+  const pts = useMemo(
+    () => CONSTELLATIONS.map((c) => c.map(([az, el]) => new Vector3(Math.sin(az) * Math.cos(el) * 7.3, Math.sin(el) * 7.3, -Math.cos(az) * Math.cos(el) * 7.3))),
+    [],
+  );
+  return (
+    <group>
+      {pts.map((line, i) => (
+        <group key={i}>
+          <Line points={line} color="#e3ecff" lineWidth={1.6} transparent opacity={0.55} />
+          {line.map((p, k) => (
+            <Glow key={k} color="#fff8e1" size={0.45} opacity={0.95} position={[p.x, p.y, p.z]} />
+          ))}
+        </group>
+      ))}
+    </group>
+  );
+}
+
+/** Planets gliding round the dome, each on its own slow orbit. */
+function Planets() {
+  const g = useRef<Group>(null);
+  useFrame((_, dt) => {
+    g.current?.children.forEach((c, i) => (c.rotation.y += dt * (0.05 + i * 0.02)));
+  });
+  const planet = (r: number, y: number, size: number, color: string, ring?: string) => (
+    <group position={[r, y, 0]}>
+      <mesh>
+        <sphereGeometry args={[size, 32, 20]} />
+        <meshStandardMaterial color={color} roughness={0.5} emissive={color} emissiveIntensity={0.25} />
+      </mesh>
+      {ring && (
+        <mesh rotation-x={1.2}>
+          <ringGeometry args={[size * 1.4, size * 2.1, 48]} />
+          <meshStandardMaterial color={ring} side={2} transparent opacity={0.85} emissive={ring} emissiveIntensity={0.2} />
+        </mesh>
+      )}
+    </group>
+  );
+  return (
+    <group ref={g}>
+      <group>{planet(4.6, 4.4, 0.42, '#e8b36a', '#f3d9a6')}</group>
+      <group rotation-y={2}>{planet(5.2, 3.8, 0.28, '#d9634a')}</group>
+      <group rotation-y={4}>{planet(3.6, 4.9, 0.34, '#4f8fdc')}</group>
+    </group>
   );
 }
 
@@ -143,7 +210,7 @@ function Plush({ id, position, rotationY = 0 }: { id: PetId; position: [number, 
 }
 
 /**
- * Wondoo's Den: a cozy nest, not an exhibit hall. Play, Chat and Sleep modes;
+ * Wondoo's Den: a bright little planetarium, not an exhibit hall. Play, Chat and Sleep modes;
  * the Sleep visual is also what the kid sees when the free LLM tier runs out.
  */
 export function MascotRoom() {
@@ -170,15 +237,15 @@ export function MascotRoom() {
 
   return (
     <>
-      <GradientSky top="#ffcf9a" horizon="#fff1dc" bottom="#e9c9a0" />
-      <hemisphereLight args={['#fff1dc', '#b07a45', 0.7]} />
-      <Atmosphere sky="#ffe9c8" ground="#e9b77a" warm="#ffd59a" intensity={0.9} />
-      <GroundShadows size={14} far={1.2} opacity={0.35} />
-      <pointLight position={[0, 3.2, 0]} color="#ffc47d" intensity={sleeping ? 6 : 14} distance={14} />
-      <pointLight position={[0, 2, -4]} color="#9f8bff" intensity={sleeping ? 6 : 2} distance={8} />
+      <GradientSky top="#3a4a8c" horizon="#9fb5f2" bottom="#c9d3f3" />
+      <hemisphereLight args={['#e3e9ff', '#8d96d6', 1.0]} />
+      <Atmosphere sky="#c9d6ff" ground="#9aa6e0" warm="#ffe7b8" intensity={0.9} />
+      <GroundShadows size={14} far={1.2} opacity={0.3} />
+      <pointLight position={[0, 3.4, 0]} color="#fff1d6" intensity={sleeping ? 6 : 13} distance={14} />
+      <pointLight position={[0, 2, -4]} color="#b9a8ff" intensity={sleeping ? 6 : 3} distance={9} />
       <Player bounds={circleBounds(5.4)} speed={4.4} />
 
-      {/* floor (tap-to-walk) + rug */}
+      {/* floor (tap-to-walk): a light planetarium floor with rings, like rows of seats */}
       <mesh
         rotation-x={-Math.PI / 2}
         onClick={(e) => {
@@ -186,24 +253,23 @@ export function MascotRoom() {
           walkTo(e.point.x, e.point.z);
         }}
       >
-        <circleGeometry args={[7, 48]} />
-        <meshStandardMaterial color="#d9a871" />
+        <circleGeometry args={[7.6, 64]} />
+        <meshStandardMaterial color="#cdd6f4" roughness={0.8} />
       </mesh>
+      {[2.2, 3.6, 5.0, 6.4].map((r) => (
+        <mesh key={r} rotation-x={-Math.PI / 2} position={[0, 0.012, 0]}>
+          <ringGeometry args={[r, r + 0.08, 72]} />
+          <meshStandardMaterial color="#aab6e6" />
+        </mesh>
+      ))}
       <mesh rotation-x={-Math.PI / 2} position={[0, 0.02, -0.5]}>
-        <circleGeometry args={[3, 40]} />
-        <meshStandardMaterial color="#ffe0b8" />
+        <circleGeometry args={[1.9, 48]} />
+        <meshStandardMaterial color="#e6ebfb" />
       </mesh>
-      {/* rounded walls */}
-      <mesh position={[0, 2.5, 0]}>
-        <cylinderGeometry args={[7, 7, 5, 48, 1, true]} />
-        <meshStandardMaterial color="#f6dcb6" side={1} />
-      </mesh>
-      <mesh position={[0, 5, 0]} rotation-x={Math.PI / 2}>
-        <circleGeometry args={[7, 48]} />
-        <meshStandardMaterial color="#ffe7c6" side={2} />
-      </mesh>
-      <Aurora />
-      {/* woven nest + cushion: tap it to say goodnight */}
+      <StarDome />
+      <Constellations />
+      <Planets />
+      {/* the moon bed: tap it to say goodnight */}
       <group
         onClick={(e) => {
           if (e.delta > 6) return;
@@ -217,13 +283,14 @@ export function MascotRoom() {
         onPointerOver={() => (document.body.style.cursor = 'pointer')}
         onPointerOut={() => (document.body.style.cursor = '')}
       >
-      <mesh position={[NEST[0], 0.35, NEST[2]]} rotation-x={Math.PI / 2}>
-        <torusGeometry args={[1.1, 0.35, 10, 28]} />
-        <meshStandardMaterial color="#a86f3c" roughness={1} flatShading />
+      {/* a crescent-moon bed */}
+      <mesh position={[NEST[0], 0.55, NEST[2] - 0.25]} rotation-z={Math.PI / 2 + 0.35}>
+        <torusGeometry args={[0.9, 0.32, 16, 40, Math.PI * 1.1]} />
+        <meshStandardMaterial color="#ffd86b" roughness={0.6} emissive="#ffcf4a" emissiveIntensity={0.25} />
       </mesh>
-      <mesh position={[NEST[0], 0.3, NEST[2]]} scale={[1, 0.3, 1]}>
+      <mesh position={[NEST[0], 0.28, NEST[2]]} scale={[1, 0.3, 0.8]}>
         <sphereGeometry args={[1, 20, 12]} />
-        <meshStandardMaterial color="#ffcfdc" />
+        <meshStandardMaterial color="#c9d4ff" />
       </mesh>
       </group>
       {!sleeping && (
@@ -234,13 +301,13 @@ export function MascotRoom() {
         </Label3D>
       )}
       {/* tally plaque: the relationship remembers across sessions */}
-      <Label3D position={[0, 4.35, -6.2]} distanceFactor={10}>
+      <Label3D position={[0, 3.6, -5.6]} distanceFactor={10}>
         <div className="plaque">{t('hud.tally', { days, topics })}</div>
       </Label3D>
       {/* cushions */}
       {[
-        [-3, -1, '#9fe0ff'],
-        [3, -0.5, '#c9f5b4'],
+        [-3, -1, '#a9c8ff'],
+        [3, -0.5, '#d8c4ff'],
         [-2.6, 2, '#ffe28a'],
       ].map(([x, z, c], i) => (
         <mesh key={i} position={[x as number, 0.3, z as number]} scale={[1, 0.45, 1]}>
@@ -256,13 +323,7 @@ export function MascotRoom() {
         <Plush id="elephant" position={[2.4, 0, -3.6]} rotationY={-0.4} />
         <Plush id="penguin" position={[-2.3, 0, -3.7]} rotationY={0.4} />
       </Suspense>
-      {/* string lights */}
-      {Array.from({ length: 16 }, (_, i) => {
-        const a = (i / 16) * Math.PI * 2;
-        return <Glow key={i} color={i % 2 ? '#ffd257' : '#ffb3c8'} size={0.6} opacity={0.9} position={[Math.sin(a) * 6.6, 4.2 + Math.sin(i) * 0.15, Math.cos(a) * 6.6]} />;
-      })}
-      <Bubbles count={16} radius={5} height={4} />
-      <Twinkles count={25} scale={[10, 4, 10]} position={[0, 2.5, 0]} size={3} speed={0.2} color="#fff1c9" />
+      <Twinkles count={40} scale={[12, 5, 12]} position={[0, 3, 0]} size={3} speed={0.15} color="#fff8e1" />
 
       <Ball chase={chase} />
       <Mascot

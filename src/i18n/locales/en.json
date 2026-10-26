@@ -4,7 +4,8 @@
     "tagline": "Walk through it. Don't click through it.",
     "glError": "Something went wrong showing the 3D world. Please reload the page.",
     "oops": "Oops! Something got tangled up. Let’s try again.",
-    "reload": "Try again"
+    "reload": "Try again",
+    "loading": "Wondoo is opening the door…"
   },
   "lang": {
     "label": "Language",
@@ -248,7 +249,7 @@
   },
   "room2": {
     "talk": "Talk to Wondoo",
-    "hint": "Tap Wondoo to say hi, tap the ball to play, or tap the nest to say goodnight.",
+    "hint": "Tap Wondoo to say hi, tap the ball to play, or tap the moon bed to say goodnight.",
     "wake": "Tap Wondoo to wake him up",
     "closeChat": "Close chat"
   },
@@ -429,5 +430,22 @@
     "askAgain": "Ask me something else",
     "step": "Step {{n}}",
     "doneTitle": "You did it!"
+  },
+  "premium": {
+    "tag": "Premium",
+    "learn": "About Premium",
+    "title": "Wondarta Premium",
+    "asksLeft": "{{count}} free tries left this visit",
+    "askUsed": "You used your free Premium answers for this visit. You can still follow me into the 3D world, and come back next time for more!",
+    "chatUsed": "That was all my free chatting for this visit! I can still tell you checked facts and ask you questions. With Premium we can chat as long as you like.",
+    "intro": "With Premium, Wondoo writes answers just for you with AI, always from a trusted source, and chats with you about everything you have learned.",
+    "perk": {
+      "ask": "Ask as many questions as you like, with answers written for you",
+      "chat": "Chat with Wondoo for as long as you want",
+      "worlds": "New hand-built 3D worlds to explore",
+      "voices": "More voices and more languages"
+    },
+    "free": "Always free: all 11 worlds, all 27 games, every fact card, the 3D question worlds and your journal.",
+    "soon": "Premium is coming soon. Grown-ups: there is nothing to buy yet."
   }
 }

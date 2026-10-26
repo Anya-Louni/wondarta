@@ -26,9 +26,16 @@ export interface MascotSpeech {
 
 const today = () => new Date().toISOString().slice(0, 10);
 
-/** "Ask about anything" is capped per free session. Business logic only, no payments. */
+/**
+ * Wondarta Premium: the AI-written words (Ask answers and Den chat) are a
+ * Premium feature. Free explorers get a taste every visit; everything else
+ * (worlds, games, facts, journal, the 3D question worlds) stays free.
+ * Business logic only: no payments are taken in the app.
+ */
 export const FREE_ASKS_PER_SESSION = 3;
+export const FREE_CHATS_PER_SESSION = 5;
 const ASK_KEY = 'wondarta.asksUsed';
+const CHAT_KEY = 'wondarta.chatsUsed';
 
 interface State {
   // --- persisted (cross-session relationship memory) ---
@@ -38,8 +45,8 @@ interface State {
   stars: Record<string, number>;
   visitDays: string[];
   sound: boolean;
-  /** Placeholder for a future subscription tier. */
-  plan: 'free' | 'unlimited';
+  /** 'premium' unlocks unlimited AI answers and chat. */
+  plan: 'free' | 'premium';
   /** The explorer's first name. Kept on this device only, never sent to an AI. */
   name: string;
   tourDone: boolean;
@@ -55,6 +62,8 @@ interface State {
   openHotspot: string | null;
   askOpen: boolean;
   asksUsed: number;
+  chatsUsed: number;
+  premiumOpen: boolean;
   mascotSpeech: MascotSpeech | null;
   bedtime: boolean;
   providers: { groq: ProviderState; gemini: ProviderState };
@@ -77,6 +86,9 @@ interface State {
   setAskOpen: (v: boolean) => void;
   consumeAsk: () => boolean;
   asksLeft: () => number;
+  /** One AI chat reply from Wondoo; false once the free ones for this visit are used. */
+  consumeChat: () => boolean;
+  setPremiumOpen: (v: boolean) => void;
   say: (text: string | null) => void;
   setBedtime: (v: boolean) => void;
   setProvider: (p: 'groq' | 'gemini', s: ProviderState) => void;
@@ -122,6 +134,8 @@ export const useApp = create<State>()(
       openHotspot: null,
       askOpen: false,
       asksUsed: Number(safeSession.getItem(ASK_KEY) ?? 0) || 0,
+      chatsUsed: Number(safeSession.getItem(CHAT_KEY) ?? 0) || 0,
+      premiumOpen: false,
       mascotSpeech: null,
       bedtime: false,
       providers: {
@@ -150,14 +164,23 @@ export const useApp = create<State>()(
       toggleSound: () => set({ sound: !get().sound }),
       setAskOpen: (askOpen) => set({ askOpen, openHotspot: askOpen ? null : get().openHotspot }),
       consumeAsk: () => {
-        if (get().plan === 'unlimited') return true;
+        if (get().plan === 'premium') return true;
         if (get().asksUsed >= FREE_ASKS_PER_SESSION) return false;
         const asksUsed = get().asksUsed + 1;
         safeSession.setItem(ASK_KEY, String(asksUsed));
         set({ asksUsed });
         return true;
       },
-      asksLeft: () => (get().plan === 'unlimited' ? Infinity : Math.max(0, FREE_ASKS_PER_SESSION - get().asksUsed)),
+      asksLeft: () => (get().plan === 'premium' ? Infinity : Math.max(0, FREE_ASKS_PER_SESSION - get().asksUsed)),
+      consumeChat: () => {
+        if (get().plan === 'premium') return true;
+        if (get().chatsUsed >= FREE_CHATS_PER_SESSION) return false;
+        const chatsUsed = get().chatsUsed + 1;
+        safeSession.setItem(CHAT_KEY, String(chatsUsed));
+        set({ chatsUsed });
+        return true;
+      },
+      setPremiumOpen: (premiumOpen) => set({ premiumOpen, askOpen: false, openHotspot: premiumOpen ? null : get().openHotspot }),
       say: (text) => set({ mascotSpeech: text ? { text, key: ++speechKey } : null }),
       setBedtime: (bedtime) => set({ bedtime }),
       setProvider: (p, s) => set({ providers: { ...get().providers, [p]: s } }),

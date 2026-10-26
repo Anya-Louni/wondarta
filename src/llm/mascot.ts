@@ -90,6 +90,8 @@ export async function chatReply(opts: {
   gradeNote?: string;
   fallbackSay: string;
   openRecallTemplate: string;
+  /** No AI for this reply (the free Premium taste is used up): curated words only. */
+  curatedOnly?: boolean;
 }): Promise<ChatTurn> {
   const { lang } = opts;
   // the most recent topics only: a long visit would otherwise overflow the model's request limit
@@ -105,7 +107,7 @@ export async function chatReply(opts: {
       sourceType: 'curated',
     };
   };
-  if (!llmAwake('groq')) return offline();
+  if (opts.curatedOnly || !llmAwake('groq')) return offline();
 
   const factList = allFacts.map((f) => `[${f.id}] ${tx(f.text, 'en')}`).join('\n');
   try {

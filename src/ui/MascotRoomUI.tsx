@@ -13,6 +13,7 @@ import { mascotBus } from '../three/playerState';
 import { IconButton, WondooAvatar, WondooLine, SourceTag } from './Parts';
 import { MicButton } from './MicButton';
 import { SleepLine } from './Hud';
+import { PremiumButton, PremiumTag } from './Premium';
 
 interface Msg {
   from: 'kid' | 'nimbo';
@@ -20,12 +21,14 @@ interface Msg {
   fact?: string;
   question?: string;
   sourceType?: 'curated' | 'ai-generated';
+  /** the free AI replies for this visit are used up: show the Premium invitation */
+  premium?: boolean;
 }
 
 /**
- * Chat is NOT limited by the "Ask about anything" counter: the attachment
- * mechanic is the retention engine. It is only bounded by the free API tier;
- * when that runs out Wondoo simply falls asleep (zero API calls).
+ * Chatting with Wondoo in the AI's own words is Premium, with a few free replies
+ * every visit. After those, Wondoo keeps chatting with fact-checked lines and
+ * recall questions, and invites the family to Premium once.
  */
 function Chat() {
   const { t } = useTranslation();
@@ -44,9 +47,13 @@ function Chat() {
     end.current?.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
   }, [log]);
 
+  const consumeChat = useApp((s) => s.consumeChat);
+  const invited = useRef(false);
   const nimboSays = async (childText: string, gradeNote?: string, prefix?: string) => {
     setBusy(true);
+    const curatedOnly = !consumeChat();
     const turn = await chatReply({
+      curatedOnly,
       lang,
       history: history.current,
       topics,
@@ -60,11 +67,19 @@ function Chat() {
     const say = [prefix, turn.say].filter(Boolean).join(' ');
     history.current.push({ role: 'user', content: childText }, { role: 'assistant', content: turn.say });
     setLog((l) => [...l, { from: 'nimbo', text: say, fact: turn.fact, question: turn.recall?.question, sourceType: turn.sourceType }]);
+    if (curatedOnly && !invited.current) {
+      invited.current = true;
+      setLog((l) => [...l, { from: 'nimbo', text: t('premium.chatUsed'), sourceType: 'curated', premium: true }]);
+    }
     mascotBus.emit('wave');
     speak([say, turn.fact, turn.recall?.question].filter(Boolean).join(' '), lang);
   };
 
+  // one greeting per language, even when React runs the effect twice
+  const greeted = useRef<string | null>(null);
   useEffect(() => {
+    if (greeted.current === lang) return () => stopSpeaking();
+    greeted.current = lang;
     if (!topics.length) setLog([{ from: 'nimbo', text: t('mascot.noTopics'), sourceType: 'curated' }]);
     else void nimboSays('(The child just came to chat. Greet them warmly and invite a recall question.)');
     return () => stopSpeaking();
@@ -93,7 +108,7 @@ function Chat() {
         mascotBus.emit('happy');
       } else if (g === false) {
         prefix = t('mascot.recallWrong', { answer: recall.current.answer });
-        note = 'The child answered the recall question incorrectly; the correct answer was already shown. Encourage them kindly.';
+        note = 'The child did not give the answer to the recall question; the correct answer was already shown to them. Never say they got the question right. Encourage them kindly and reply to what they said.';
       }
     }
     if (!topics.length) {
@@ -117,7 +132,12 @@ function Chat() {
             {m.question && <span className="q">{m.question}</span>}
             {m.from === 'nimbo' && m.sourceType === 'ai-generated' && (
               <div style={{ marginBlockStart: 4 }}>
-                <SourceTag type="ai-generated" />
+                <SourceTag type="ai-generated" /> <PremiumTag />
+              </div>
+            )}
+            {m.premium && (
+              <div style={{ marginBlockStart: 8 }}>
+                <PremiumButton />
               </div>
             )}
           </div>

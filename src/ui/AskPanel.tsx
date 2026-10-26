@@ -12,11 +12,12 @@ import { speak } from '../audio/tts';
 import { Citation, IconButton, SourceTag } from './Parts';
 import { MicButton } from './MicButton';
 import { SleepLine } from './Hud';
+import { PremiumButton, PremiumTag } from './Premium';
 
 /**
  * "Ask about anything": Wikipedia retrieval first; Gemini may only restate the
- * retrieved text. Limited per free session (UI/business logic only;
- * `plan: 'unlimited'` in the store is the hook for a future tier).
+ * retrieved text. The AI-written answer is Premium (a few free ones per visit);
+ * the 3D question world itself is free for everyone.
  */
 /** Split text into sentences for the tour's pages. */
 function sentences(text: string): string[] {
@@ -97,7 +98,11 @@ export function AskPanel() {
     <section className="slab popover" role="dialog" aria-labelledby="ask-title">
       <header className="slab-head">
         <h2 id="ask-title">
-          {awake && <span className="kicker">{Number.isFinite(asksLeft) ? t('hud.asksLeft', { count: asksLeft }) : t('hud.asksUnlimited')}</span>}
+          {awake && (
+            <span className="kicker">
+              <PremiumTag /> {Number.isFinite(asksLeft) ? t('premium.asksLeft', { count: asksLeft }) : t('hud.asksUnlimited')}
+            </span>
+          )}
           {t('ask.title')}
         </h2>
         <IconButton small label={t('card2.close')} onClick={() => setAskOpen(false)}>
@@ -135,9 +140,9 @@ export function AskPanel() {
         )}
         {awake && (res === 'limit' || (asksLeft <= 0 && !res)) && (
           <div className="answer-box">
-            {t('ask.limit')}
-            <div className="muted" style={{ marginBlockStart: 4 }}>
-              {t('ask.upgradeNote')}
+            {t('premium.askUsed')}
+            <div style={{ marginBlockStart: 8 }}>
+              <PremiumButton />
             </div>
           </div>
         )}
@@ -146,7 +151,7 @@ export function AskPanel() {
             {res.status === 'ok' ? (
               <>
                 <p style={{ margin: '0 0 8px' }}>{res.text}</p>
-                <SourceTag type={res.sourceType} />
+                <SourceTag type={res.sourceType} /> <PremiumTag />
                 <Citation meta={res.sourceMeta} />
               </>
             ) : res.status === 'asleep' ? (

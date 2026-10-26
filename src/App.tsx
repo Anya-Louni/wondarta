@@ -1,7 +1,7 @@
 import { Component, Suspense, useEffect, useState, type ReactNode } from 'react';
 import { Canvas, useThree } from '@react-three/fiber';
 import { useGameOn } from './activities/puzzles/Board3D';
-import { PerformanceMonitor } from '@react-three/drei';
+import { PerformanceMonitor, useProgress } from '@react-three/drei';
 import { useTranslation } from 'react-i18next';
 import { useApp } from './state/store';
 import { player } from './three/playerState';
@@ -19,7 +19,9 @@ import { WonderTour } from './ui/WonderTour';
 import { WonderWorld } from './scenes/Wonder';
 import { InfoCard } from './ui/InfoCard';
 import { AskPanel } from './ui/AskPanel';
+import { PremiumPanel } from './ui/Premium';
 import { MascotRoomUI } from './ui/MascotRoomUI';
+import { WondooAvatar } from './ui/Parts';
 
 class GlBoundary extends Component<{ children: ReactNode; fallback: ReactNode }, { failed: boolean }> {
   state = { failed: false };
@@ -71,6 +73,27 @@ function DevHandle() {
   return null;
 }
 
+/** While a world's models stream in, a small card says so instead of an empty sky. */
+function Loading() {
+  const { t } = useTranslation();
+  const { active, progress } = useProgress();
+  const [show, setShow] = useState(false);
+  // only for real waits: a quick load never flashes the card
+  useEffect(() => {
+    if (!active) return setShow(false);
+    const id = window.setTimeout(() => setShow(true), 400);
+    return () => window.clearTimeout(id);
+  }, [active]);
+  if (!show) return null;
+  return (
+    <div className="slab loading-card" role="status">
+      <WondooAvatar />
+      <span>{t('app.loading')}</span>
+      <progress value={progress} max={100} />
+    </div>
+  );
+}
+
 function SceneSwitch() {
   const scene = useApp((s) => s.scene);
   switch (scene) {
@@ -93,6 +116,7 @@ export default function App() {
   const { t } = useTranslation();
   const scene = useApp((s) => s.scene);
   const openHotspot = useApp((s) => s.openHotspot);
+  const premiumOpen = useApp((s) => s.premiumOpen);
   const gameOn = useGameOn() > 0;
   const askOpen = useApp((s) => s.askOpen);
   const tourDone = useApp((s) => s.tourDone);
@@ -127,10 +151,12 @@ export default function App() {
           </Suspense>
         </Canvas>
       </GlBoundary>
+      <Loading />
 
       <Hud />
       {openHotspot && <InfoCard key={openHotspot} hotspotId={openHotspot} />}
       {askOpen && <AskPanel />}
+      {premiumOpen && <PremiumPanel />}
       {journalOpen && <JournalPanel />}
       <FishToast />
       <VoiceWarm />

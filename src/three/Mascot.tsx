@@ -47,10 +47,12 @@ export function Mascot({ mode, home = [0, 1.2, 0], chase, sleeping: sleepProp, o
   const root = useRef<Group>(null);
   const body = useRef<Group>(null);
   const eyes = useRef<Group>(null);
-  // the face: open eyes, happy ^^ arcs, eyebrows and cheeks, mixed per expression (no mouth)
+  // the face is drawn like an emoticon, no mouth and no eyebrows: dots, ^^, O O, > <, - -
   const open = useRef<Group[]>([]);
   const arcs = useRef<Group[]>([]);
-  const brows = useRef<Group[]>([]);
+  const rings = useRef<Group[]>([]);
+  const squints = useRef<Group[]>([]);
+  const lines = useRef<Group[]>([]);
   const cheeks = useRef<MeshBasicMaterial[]>([]);
   const look = useRef({ x: 0, y: 0, tx: 0, ty: 0, next: 1 });
   const arms = useRef<Group>(null);
@@ -156,21 +158,18 @@ export function Mascot({ mode, home = [0, 1.2, 0], chase, sleeping: sleepProp, o
     lk.x += (lk.tx - lk.x) * Math.min(1, dt * 8);
     lk.y += (lk.ty - lk.y) * Math.min(1, dt * 8);
     eyes.current.position.set(lk.x, lk.y, 0.385);
-    const openY = face === 'sleep' ? 0.12 : blink.current < 0 ? 0.15 : face === 'surprised' ? 1.3 : face === 'sad' ? 0.72 : face === 'talk' ? 1.05 + Math.sin(t * 9) * 0.05 : 1;
-    const openS = face === 'surprised' ? 1.18 : 1;
+    // ^^ happy, O O surprised, > < sad or squished, - - asleep (and for a blink), dots otherwise
+    const shut = face === 'sleep' || blink.current < 0;
+    const kind = face === 'happy' ? 'arc' : face === 'surprised' ? 'ring' : face === 'sad' ? 'squint' : shut ? 'line' : 'dot';
+    const talkY = face === 'talk' ? 1.05 + Math.sin(t * 9) * 0.05 : 1;
     open.current.forEach((o) => {
-      o.visible = face !== 'happy';
-      o.scale.set(openS, openY, 1);
+      o.visible = kind === 'dot';
+      o.scale.set(1, talkY, 1);
     });
-    arcs.current.forEach((a) => (a.visible = face === 'happy'));
-    brows.current.forEach((b, i) => {
-      const side = i === 0 ? -1 : 1;
-      const lift = face === 'surprised' ? 0.05 : face === 'think' && i === 1 ? 0.05 : face === 'happy' ? 0.02 : 0;
-      const tilt = face === 'sad' ? side * 0.45 : face === 'think' && i === 0 ? -side * 0.2 : face === 'sleep' ? 0 : side * -0.08;
-      b.position.y += (0.115 + lift - b.position.y) * Math.min(1, dt * 10);
-      b.rotation.z += (tilt - b.rotation.z) * Math.min(1, dt * 10);
-      b.visible = face !== 'sleep';
-    });
+    arcs.current.forEach((a) => (a.visible = kind === 'arc'));
+    rings.current.forEach((a) => (a.visible = kind === 'ring'));
+    squints.current.forEach((a) => (a.visible = kind === 'squint'));
+    lines.current.forEach((a) => (a.visible = kind === 'line'));
     const blush = face === 'happy' ? 1 : face === 'surprised' ? 0.9 : 0.75;
     cheeks.current.forEach((m) => (m.opacity += (blush - m.opacity) * Math.min(1, dt * 6)));
   });
@@ -262,11 +261,27 @@ export function Mascot({ mode, home = [0, 1.2, 0], chase, sleeping: sleepProp, o
                   <meshBasicMaterial color="#10283c" />
                 </mesh>
               </group>
-              {/* eyebrow */}
-              <group ref={(g) => void (g && (brows.current[i] = g))} position={[0, 0.115, 0.02]}>
+              {/* surprised: round O O */}
+              <group ref={(g) => void (g && (rings.current[i] = g))} visible={false} position={[0, 0, 0.01]}>
+                <mesh>
+                  <torusGeometry args={[0.05, 0.015, 8, 24]} />
+                  <meshBasicMaterial color="#10283c" />
+                </mesh>
+              </group>
+              {/* sad or squished: > < */}
+              <group ref={(g) => void (g && (squints.current[i] = g))} visible={false} position={[0, 0, 0.01]} scale={[i === 0 ? -1 : 1, 1, 1]}>
+                {[1, -1].map((up) => (
+                  <mesh key={up} position={[0, up * 0.02, 0]} rotation-z={up * -1.0}>
+                    <capsuleGeometry args={[0.013, 0.05, 4, 8]} />
+                    <meshBasicMaterial color="#10283c" />
+                  </mesh>
+                ))}
+              </group>
+              {/* asleep or blinking: - - */}
+              <group ref={(g) => void (g && (lines.current[i] = g))} visible={false} position={[0, -0.005, 0.01]}>
                 <mesh rotation-z={Math.PI / 2}>
-                  <capsuleGeometry args={[0.011, 0.05, 4, 8]} />
-                  <meshBasicMaterial color="#1b4d7a" />
+                  <capsuleGeometry args={[0.013, 0.06, 4, 8]} />
+                  <meshBasicMaterial color="#10283c" />
                 </mesh>
               </group>
             </group>

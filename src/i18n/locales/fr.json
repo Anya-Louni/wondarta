@@ -4,7 +4,8 @@
     "tagline": "Explore-le en marchant, pas en cliquant.",
     "glError": "Un problème est survenu avec le monde en 3D. Recharge la page.",
     "oops": "Oups ! Quelque chose s’est emmêlé. On réessaie ?",
-    "reload": "Réessayer"
+    "reload": "Réessayer",
+    "loading": "Wondoo ouvre la porte…"
   },
   "lang": {
     "label": "Langue",
@@ -248,7 +249,7 @@
   },
   "room2": {
     "talk": "Parler à Wondoo",
-    "hint": "Touche Wondoo pour lui dire bonjour, la balle pour jouer, ou le nid pour dire bonne nuit.",
+    "hint": "Touche Wondoo pour lui dire bonjour, la balle pour jouer, ou le lit en forme de lune pour dire bonne nuit.",
     "wake": "Touche Wondoo pour le réveiller",
     "closeChat": "Fermer la discussion"
   },
@@ -429,5 +430,22 @@
     "askAgain": "Pose-moi une autre question",
     "step": "Étape {{n}}",
     "doneTitle": "Bravo, tu as réussi !"
+  },
+  "premium": {
+    "tag": "Premium",
+    "learn": "Découvrir Premium",
+    "title": "Wondarta Premium",
+    "asksLeft": "encore {{count}} essais gratuits pour cette visite",
+    "askUsed": "Tu as utilisé tes réponses Premium gratuites pour cette visite. Tu peux quand même me suivre dans le monde en 3D, et revenir la prochaine fois pour en avoir d’autres !",
+    "chatUsed": "C’était tout mon bavardage gratuit pour cette visite ! Je peux encore te raconter des faits vérifiés et te poser des questions. Avec Premium, on peut discuter aussi longtemps que tu veux.",
+    "intro": "Avec Premium, Wondoo écrit des réponses rien que pour toi grâce à l’IA, toujours à partir d’une source fiable, et discute avec toi de tout ce que tu as appris.",
+    "perk": {
+      "ask": "Pose autant de questions que tu veux, avec des réponses écrites pour toi",
+      "chat": "Discute avec Wondoo aussi longtemps que tu veux",
+      "worlds": "De nouveaux mondes 3D à explorer",
+      "voices": "Plus de voix et plus de langues"
+    },
+    "free": "Toujours gratuit : les 11 mondes, les 27 jeux, toutes les fiches, les mondes 3D des questions et ton journal.",
+    "soon": "Premium arrive bientôt. Pour les parents : il n’y a encore rien à acheter."
   }
 }
