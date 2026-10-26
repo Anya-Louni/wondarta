@@ -4,5 +4,3 @@ dist
 .env.local
 .env.*.local
 *.log
-.kenney/
-graphify-out/

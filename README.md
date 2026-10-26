@@ -14,8 +14,11 @@ npm run dev          # http://localhost:5173
 
 Everything works **without any API keys**: all 11 category portals, every hotspot, quiz, puzzle, narration, and the Mascot Room's Play and Sleep modes. The LLM features (mascot chat, "Ask about anything", "I want more!" variants and Wikipedia-grounded Learn More) turn on when you add free-tier keys:
 
+Create a `.env.local` file in the project root:
+
 ```bash
-cp .env.example .env.local   # then fill GROQ_API_KEY and GEMINI_API_KEY
+GROQ_API_KEY=your-groq-key       # https://console.groq.com/keys (mascot chat)
+GEMINI_API_KEY=your-gemini-key   # https://aistudio.google.com/apikey (Ask about anything, Learn More)
 ```
 
 The keys are read **only by the Vite dev proxy** (`vite.config.ts`) and are never inlined into the client bundle.
